@@ -929,7 +929,7 @@ body { position: relative; z-index: 1; }
   align-items: center;
   gap: 48px;
   width: max-content;
-  animation: clients-scroll 20s linear infinite;
+  animation: clients-scroll 40s linear infinite;
 }
 .clients-track img {
   height: 72px;
