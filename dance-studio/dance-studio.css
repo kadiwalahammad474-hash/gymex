@@ -671,7 +671,7 @@ K.5px;
 
 /* ---------- SECTIONS ---------- */
 .mm-section { max-width: 1250px; margin: 0 auto; padding: 50px 24px; }
-.mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0 24px 40px; padding: 60px 40px; }
+.mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0 40px; padding: 60px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
 .mm-heading h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: none; }
 .mm-heading p { color: var(--gray-80); font-size: 15px; line-height: 1.7; }
