@@ -141,9 +141,20 @@ body {
 .dropdown-menu li { padding: 5px 9px; }
 .dropdown-menu li a { text-decoration: none; color: #000; }
 
-/* ── FOOTER ── */
+/* ── FOOTER (comprehensive fix) ── */
 .footer { background-color: var(--navy-100); border-radius: 0; }
 .footer__blue-text { color: var(--blue); }
+.footer, .footer * { box-sizing: border-box; }
+.footer a { color: #ccd3e6; text-decoration: none; transition: color .2s ease; }
+.footer a:hover { color: #fff; }
+.footer .nav__link { color: #ccd3e6 !important; font-size: 14px; }
+.footer .nav__link::after { display: none !important; }
+.footer .nav__link:hover { color: #fff !important; }
+.footer .contacts-info { color: #ccd3e6; font-size: 16px; font-weight: 700; line-height: 22px; }
+.footer .contacts-info a { color: #ccd3e6; font-weight: 700; }
+.footer .contacts-info a:hover { color: #fff; }
+.footer .footer__media img { filter: brightness(0) invert(0.8); }
+.footer .footer__media a:hover img { filter: brightness(0) invert(1); }
 
 /* ── COMMON COMPONENTS ── */
 .accent { color: var(--blue); }

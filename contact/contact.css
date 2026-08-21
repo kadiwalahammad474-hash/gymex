@@ -154,7 +154,7 @@
   content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
   margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
 }
-.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: #1c2436; font-size: 15.5px; line-height: 1.7; }
 
 /* ---------------------------------------------------------
    CONTACT FEATURE CARDS (Call / Email / Office)
@@ -172,7 +172,7 @@
   box-shadow: 0 10px 22px rgba(16, 40, 100, .14), inset 0 1px 0 rgba(255, 255, 255, .6);
 }
 .mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
-.mm-feature-card p { font-size: 13.5px; color: var(--gray-80); line-height: 1.65; }
+.mm-feature-card p { font-size: 13.5px; color: #1c2436; line-height: 1.65; }
 .mm-feature-card p a { font-weight: 600; }
 
 /* Map embed */
@@ -205,20 +205,20 @@
    --------------------------------------------------------- */
 .footer {
   margin-top: 40px; display: flex; justify-content: space-between;
-  border-radius: 20px; color: var(--white-80);
+  border-radius: 20px; color: #ccd3e6;
   padding: 59px 64px 54px; max-width: 1370px; margin-left: auto; margin-right: auto;
 }
 .footer__logo-wrap .logo { width: 140px; margin-bottom: 20px; }
 .footer__contact-col { width: 40%; }
 .footer .divider { height: 1px; width: 100%; background-color: #ffffff1a; margin: 20px 0 16px; }
-.footer__contact-col .contacts-info { color: var(--white-80); font-family: "Poppins", sans-serif; font-size: 16px; font-weight: 700; line-height: 22px; }
+.footer__contact-col .contacts-info { color: #ccd3e6; font-family: "Poppins", sans-serif; font-size: 16px; font-weight: 700; line-height: 22px; }
 .footer__contact-col .contacts-info:first-child { margin-bottom: 16px; }
 .footer__blue-text { color: var(--blue); font-size: 14px; font-weight: 400; display: block; margin-bottom: 2px; }
 .footer__contact-col .contacts-info a { transition: color .2s ease; }
 .footer__contact-col .contacts-info a:hover { color: var(--orange-100); }
 .footer__links-col { width: 60%; }
 .footer-list { display: flex; flex-wrap: wrap; gap: 24px; }
-.footer__links-col .nav__link { color: var(--white-80); font-size: 14px; }
+.footer__links-col .nav__link { color: #ccd3e6; font-size: 14px; }
 .footer__links-col .nav__link:hover { color: var(--orange-100); }
 .footer__media { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding-top: 30px; }
 .footer__media a { transition: transform .2s ease; }

@@ -342,19 +342,18 @@ body { position: relative; z-index: 1; }
 /* ---------- FOOTER ---------- */
 .footer {
   margin-top: 120px; display: flex; justify-content: space-between;
-  border-radius: 20px; color: var(--white-80); padding: 59px 64px 54px;
+  border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px;
 }
 .footer__contact-col { width: 40%; }
-.footer__contact-col .contacts-info { color: var(--white-80); font-family: "Poppins", sans-serif; font-size: 16px; font-weight: 700; line-height: 22px; }
+.footer__contact-col .contacts-info { color: #ccd3e6; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; line-height: 22px; }
 .footer__contact-col .contacts-info:first-child { margin-bottom: 16px; }
-.footer__contact-col .contacts-info a { transition: color .2s ease; }
-.footer__contact-col .contacts-info a:hover { color: var(--orange-100); }
+.footer__contact-col .contacts-info a { color: #ccd3e6; transition: color .2s ease; }
+.footer__contact-col .contacts-info a:hover { color: #fff; }
 .footer__links-col { width: 60%; }
-.footer__links-col 
-.footer__links-col .nav__link { color: var(--white-80); }
-.footer__links-col .nav__link::after { display: none; }
-.footer__links-col 
-.footer__media { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding-top: 30px; }
+.footer__links-col .nav__link { color: #ccd3e6 !important; font-size: 14px; }
+.footer__links-col .nav__link::after { display: none !important; }
+.footer__links-col .nav__link:hover { color: #fff !important; }
+.footer__media{ display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding-top: 30px; }
 .footer__media a { transition: transform .2s ease; }
 .footer__media a:hover { transform: translateY(-3px); }
 .footer__media img { width: 30px; height: 30px; }
@@ -363,8 +362,7 @@ body { position: relative; z-index: 1; }
 
 @media screen and (max-width: 1201px) {
   .footer { flex-direction: column; padding: 40px 24px; }
-  .footer 
-  .footer__contact-col .divider { display: none; }
+    .footer__contact-col .divider { display: none; }
   .footer .footer-list { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; margin-top: 40px; }
   .footer__contact-col, .footer__links-col { width: 100%; }
   .footer__media { justify-content: flex-start; padding: 0; }
