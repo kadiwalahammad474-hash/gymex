@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    { "source": "/index", "destination": "/index/index.html" },
+    { "source": "/about", "destination": "/about/about.html" },
+    { "source": "/features", "destination": "/features/features.html" },
+    { "source": "/pricing", "destination": "/pricing/pricing.html" },
+    { "source": "/contact", "destination": "/contact/contact.html" },
+    { "source": "/business", "destination": "/business/business.html" },
+    { "source": "/gym-management-software", "destination": "/gym-management-software/gym-management-software.html" },
+    { "source": "/yoga-studio", "destination": "/yoga-studio/yoga-studio.html" },
+    { "source": "/dance-studio", "destination": "/dance-studio/dance-studio.html" },
+    { "source": "/martial-arts-studio", "destination": "/martial-arts-studio/martial-arts-studio.html" },
+    { "source": "/health-and-fitness-centers", "destination": "/health-and-fitness-centers/health-and-fitness-centers.html" },
+    { "source": "/sport-academies", "destination": "/sport-academies/sport-academies.html" },
+    { "source": "/aerobics", "destination": "/aerobics/aerobics.html" },
+    { "source": "/pilates", "destination": "/pilates/pilates.html" },
+    { "source": "/pt-studio", "destination": "/pt-studio/pt-studio.html" },
+    { "source": "/swim-school", "destination": "/swim-school/swim-school.html" },
+    { "source": "/marketing-management", "destination": "/marketing-management/marketing-management.html" }
+  ],
+  "trailingSlash": false
+}
