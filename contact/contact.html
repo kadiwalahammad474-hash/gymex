@@ -159,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a class="nav__link" href="../about/about.html">About</a>
               <a class="nav__link" href="../contact/contact.html">Contact</a>
 
-              <button class="nav__link button open-modal-btn" Id="demobutton">
+              <button class="nav__link button " Id="demobutton">
                 <p class="button__text">GET YOUR FREE DEMO</p>
                 <img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
               </button>
@@ -171,7 +171,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
           </div>
         </div>
-
 
         <div class="menu-backdrop" id="menu-backdrop">
           <div class="menu">
@@ -217,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <a href="../contact/contact.html">Contact Us</a>
                   </li>
                   <li class="menu__link">
-                      <button class="button open-modal-btn">
+                      <button class="button ">
                           <p class="button__text">GET YOUR FREE DEMO</p>
                           <img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
                       </button>
@@ -232,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
           <h1 class="mm-h1">Ready To <span class="accent">Save Time</span> On Gym Management?</h1>
           <p class="mm-desc">Feeling the weight of the world on your shoulders as a gym owner? Don't worry, we've got you covered. All you just need to do is talk to us today.</p>
-          <button class="mm-btn mm-btn-orange open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
+          <button class="mm-btn mm-btn-orange ">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
         </div>
         <img class="mm-hero-img" src="../assets/contactus.png" alt="Talk to Gymex">
       </div>
@@ -266,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="mm-cta-banner">
       <h2>We're always ready to help. No matter how you choose to connect, we're here for you &mdash; <span class="accent">let's build your dream gym together</span>.</h2>
-      <button class="mm-btn mm-btn-orange open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
+      <button class="mm-btn mm-btn-orange ">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
     </div>
 
     <footer class="footer">
@@ -318,94 +317,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </footer>
 
-    <div class="backdrop" id="divemailpopup">
-      <div class="contact-us">
-        <span class="loader" id="loader"></span>
-        <button class="close-btn" id="close-contact-modal">
-          <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Frame%2045'%3e%3cg%20id='nemu'%3e%3cg%20id='Group%20427319310'%3e%3crect%20id='Rectangle%204'%20width='35'%20height='2'%20rx='1'%20transform='matrix(-0.707107%200.707107%200.707107%200.707107%2027.7488%203)'%20fill='%23525251'/%3e%3crect%20id='Rectangle%206'%20width='35'%20height='2'%20rx='1'%20transform='matrix(-0.707107%20-0.707107%20-0.707107%200.707107%2029.1631%2027.7485)'%20fill='%23525251'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="close">
-        </button>
-
-        <div class="form-body" id="form-body">
-          <h2 class="title">Schedule a Free Demo!</h2>
-
-          <form method="post" action="../contactus.php">
-            <input type="hidden" name="contact_number">
-
-            <div class="form-wrap">
-              <div class="contact-us__wrap">
-                <div>
-                  <div class="field">
-                    <input
-                      type="text"
-                      class="contact-us__input"
-                      placeholder="Name"
-                      pattern="\w{2,30}"
-                      autocomplete="off"
-                      name="firstname"
-                      id="first-name"
-                      required
-                    >
-                  </div>
-                  <div class="error" id="error-first-name"></div>
-                </div>
-
-                <div>
-                  <div class="field">
-                    <input
-                      type="text"
-                      class="contact-us__input"
-                      placeholder="Last Name"
-                      pattern="\w{2,30}"
-                      autocomplete="off"
-                      name="lastname"
-                      id="last-name"
-                      required
-                    >
-                  </div>
-                  <div class="error" id="error-last-name"></div>
-                </div>
-
-                <div class="field">
-                  <input
-                    type="text"
-                    class="contact-us__input"
-                    placeholder="Company"
-                    autocomplete="off"
-                    name="company"
-                    id="company"
-                  >
-                </div>
-
-                <div class="contact-us__email">
-                  <div class="field">
-                    <input
-                      type="email"
-                      class="contact-us__input"
-                      placeholder="Email"
-                      pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-                      autocomplete="off"
-                      name="email"
-                      id="email"
-                      required
-                    >
-                  </div>
-                  <div class="error" id="error-email"></div>
-                </div>
-
-                <div class="select-box">
-                  <div class="selected-option">
-                    <div id="remove">
-                      <strong>Select</strong>
-                    </div>
-                    <input type="tel" name="countrycode" placeholder="Code" id="hidecountrycode" style="display:none">
-                    <input type="tel" name="phonenumber" placeholder="Phone Number" id="txtmobile" onkeypress="return onlyNumberKey(event)">
-                  </div>
-                  <div class="options">
-                    <input type="text" class="search-box" placeholder="Search Country Names">
-                    <ol id="and"></ol>
-                  </div>
-                </div>
-              </div>
+    
 
               <div class="contact-us__message">
                 <textarea
@@ -446,7 +358,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   if (urlvalue.indexOf("email") != -1) {
     document.getElementById("form-body").classList.add("hide");
     document.getElementById("emailsuccessmsg").classList.add("show");
-    document.getElementById("divemailpopup").classList.add("show");
   }
 </script>
 
