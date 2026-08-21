@@ -380,7 +380,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 
-  </body>
+  
+<!-- Demo Modal -->
+<div class="demo-modal-overlay" id="demoModal">
+  <div class="demo-modal">
+    <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')">&times;</button>
+    <h2>Get Your <span style="color:var(--blue)">Free Demo</span></h2>
+    <p class="subtitle">See how Gymex can transform your gym management. Fill in the details below.</p>
+    <form action="../contactus.php" method="post">
+      <input type="hidden" name="backurl" value="">">
+      <div class="form-row">
+        <div><label>First Name *</label><input type="text" name="firstname" placeholder="John" required></div>
+        <div><label>Last Name *</label><input type="text" name="lastname" placeholder="Doe" required></div>
+      </div>
+      <div class="form-row">
+        <div><label>Email *</label><input type="email" name="email" placeholder="john@example.com" required></div>
+        <div><label>Phone *</label><input type="tel" name="phonenumber" placeholder="98765 43210" required></div>
+      </div>
+      <div><label>Company / Gym Name</label><input type="text" name="company" placeholder="Your Gym Name"></div>
+      <div><label>Message</label><textarea name="message" placeholder="Tell us about your gym..."></textarea></div>
+      <button type="submit" class="submit-btn">Submit &amp; Get Free Demo <i class="fa fa-arrow-right"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+document.querySelectorAll('.open-demo-modal').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('demoModal').classList.add('active');
+  });
+});
+document.getElementById('demoModal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('active');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('demoModal').classList.remove('active');
+});
+</script>
+
+</body>
 </html>
 
 <script type="text/javascript">
