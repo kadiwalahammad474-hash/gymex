@@ -523,9 +523,6 @@ K.5px;
   width: 60%;
 }
 
-.footer__links-col 
-
-.footer__links-col 
 
 .section-title {
   font-size: 44px;
@@ -714,11 +711,11 @@ K.5px;
   .footer__media { justify-content: flex-start; }
 }
 @media (max-width: 768px) {
-  body { margin-top: 120px; }
+  body { margin-top: 70px; }
   .header__title { font-size: 28px; line-height: 34px; }
 }
 @media (max-width: 425px) {
-  body { margin-top: 120px; }
+  body { margin-top: 70px; }
   .header__title { font-size: 24px; line-height: 30px; }
 }
 @media (hover: none) and (pointer: coarse) {

@@ -515,9 +515,7 @@ K.5px;
   width: 60%;
 }
 
-.footer__links-col 
 
-.footer__links-col 
 
 .section-title {
   font-size: 44px;
@@ -706,15 +704,14 @@ K.5px;
   .section-padding { margin-top: 120px; }
   .footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px; }
   .footer__contact-col, .footer__links-col { width: 100%; }
-  .footer__links-col 
-  .footer__media { justify-content: flex-start; }
+    .footer__media { justify-content: flex-start; }
 }
 @media (max-width: 768px) {
-  body { margin-top: 120px; }
+  body { margin-top: 70px; }
   .header__title { font-size: 28px; line-height: 34px; }
 }
 @media (max-width: 425px) {
-  body { margin-top: 120px; }
+  body { margin-top: 70px; }
   .header__title { font-size: 24px; line-height: 30px; }
 }
 @media (hover: none) and (pointer: coarse) {
