@@ -472,36 +472,17 @@ h1,h2,h3,h4,h5,h6 {
   opacity: 1;
 }
 
-.footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px; }
 
-.footer__contact-col {
-  width: 40%;
-}
 
-.footer__contact-col .contacts-info {
-  color: #ccd3e6;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-}
 
-.footer__contact-col .contacts-info:first-child {
-  margin-bottom: 16px;
-}
 
-.footer__blue-text {
-  color: var(--blue);
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  margin-right: 8px;
-}
 
-.footer__links-col {
-  width: 60%;
-}
+
+
+
+
+
+
 
 
 
@@ -920,13 +901,12 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ---------- MOBILE FOOTER ---------- */
 @media (max-width: 900px) {
-  .footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px; }
-  .footer__contact-col { width: 100%; margin-bottom: 24px; }
-  .footer__links-col { width: 100%; }
-    .footer__links-col  }
-  .footer__media { justify-content: flex-start; padding-top: 16px; }
-  .footer .divider { margin: 16px 0; }
-  .footer .footer-list { flex-wrap: wrap; gap: 12px; }
+  
+  
+  
+    
+  
+  
 }
 
 /* ---------- MOBILE CONTACT MODAL ---------- */
@@ -970,3 +950,28 @@ h1,h2,h3,h4,h5,h6 {
   .menu__link { padding: 8px 12px; font-size: 14px; }
 }
 
+/* ---------- FOOTER ---------- */
+.footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px; }
+.footer__contact-col { width: 40%; }
+.footer__contact-col .contacts-info { color: #ccd3e6; font-size: 16px; font-weight: 700; line-height: 22px; }
+.footer__contact-col .contacts-info:first-child { margin-bottom: 16px; }
+.footer__contact-col .contacts-info a { transition: color .2s ease; }
+.footer__contact-col .contacts-info a:hover { color: #fff; }
+.footer__links-col { width: 60%; }
+.footer__links-col .nav__link { color: #ccd3e6 !important; font-size: 14px; }
+.footer__links-col .nav__link::after { display: none !important; }
+.footer__links-col .nav__link:hover { color: #fff !important; }
+.footer__media { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding-top: 30px; }
+.footer__media a { transition: transform .2s ease; }
+.footer__media a:hover { transform: translateY(-3px); }
+.footer__media img { width: 30px; height: 30px; }
+.footer__media .small-icon { width: 23px; height: 23px; }
+.footer .divider { height: 1px; width: 100%; background-color: #ffffff1a; margin: 37px 0 16px; }
+@media screen and (max-width: 1201px) {
+  .footer { flex-direction: column; padding: 40px 24px; }
+  .footer__contact-col .divider { display: none; }
+  .footer .footer-list { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; margin-top: 40px; }
+  .footer__contact-col, .footer__links-col { width: 100%; }
+  .footer__media { justify-content: flex-start; padding: 0; }
+  .footer .divider { margin: 16px 0; }
+}
