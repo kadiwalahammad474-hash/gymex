@@ -86,36 +86,6 @@
 }
 .mm-btn-orange:hover { box-shadow: 0 18px 40px rgba(254, 79, 13, .42); }
 
-.button_sff {
-  display: flex; justify-content: center; align-items: center; gap: 16px;
-  height: 64px; padding: 4px 4px 4px 24px; border-radius: 60px;
-  background: linear-gradient(135deg, var(--orange-100), #e0450b);
-  color: #fff; font-family: "Poppins", sans-serif; font-size: 18px; font-weight: 600; line-height: 22px;
-  text-transform: uppercase; cursor: pointer; width: max-content;
-  box-shadow: 0 16px 36px rgba(254, 79, 13, .3);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.button_sff:hover { transform: translateY(-2px); box-shadow: 0 20px 44px rgba(254, 79, 13, .4); }
-.btn-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 56px; height: 56px; background-color: #fff; border-radius: 50%; cursor: pointer;
-}
-.btn-icon img { width: 24px; height: 24px; }
-.send-again-btn {
-  margin-top: 12px; padding: 12px 24px; border-radius: 60px;
-  background: var(--gray-7); color: var(--gray-100); font-weight: 600; cursor: pointer;
-}
-
-/* ---------------------------------------------------------
-   SECTIONS
-   --------------------------------------------------------- */
-.mm-section { max-width: 1250px; margin: 0 auto; padding: 40px 24px; }
-.mm-heading { text-align: center; max-width: 700px; margin: 0 auto 44px; }
-.mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
-.mm-heading h2::after {
-  content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
-  margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
-}
 .mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
 
 /* ---------------------------------------------------------

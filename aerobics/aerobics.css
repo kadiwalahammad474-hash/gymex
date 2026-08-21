@@ -367,47 +367,12 @@ K.5px;
   margin-bottom: 0;
 }
 
-.message-section .col.accent {
-  background-color: var(--blue);
-  border-radius: 0;
-  padding: 32px;
-}
 
-.message-section .bold-text-2 {
-  margin-bottom: 16px;
-  color: var(--white);
-}
 
-.message-section .text {
-  margin-bottom: 32px;
-  color: var(--white);
-}
 
-.message-section #email-form .button_sff {
-  position: absolute;
-  top: 0;
-  right: -10px;
-}
 
-.message-section .field {
-  border-radius: 0;
-  border: 1px solid #FBFBFB;
-  width: fit-content;
-  padding: 18px 130px 19px 24px;
-}
 
-.message-section .field .email-form-input {
-  color: var(--white, #FFFFFE);
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  background-color: inherit;
-}
 
-.message-section .field .email-form-input::placeholder {
-  color: var(--white, #FFFFFE);
-}
 
 @media (max-width: 991px) {
   .item .button-hover-wrap .button-hover {
@@ -425,17 +390,6 @@ K.5px;
 }
 
 @media screen and (max-width: 425px) {
-  .message-section .field {
-    padding: 18px 50px 19px 24px;
-  }
-  .message-section #email-form .button_sff {
-    background-color: inherit;
-    right: 0;
-  }
-  .message-section #email-form .button_sff span {
-    display: none;
-  }
-}
 
 .gymex-section .row-container.row-2 .gymex-col .text {
   max-width: 560px;
