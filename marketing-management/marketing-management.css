@@ -85,9 +85,7 @@ h1,h2,h3,h4,h5,h6 {
   cursor: pointer;
 }
 
-.nav .dark-mode {
-  display: none;
-}
+
 
 .section-title {
   font-size: 44px;
@@ -196,9 +194,9 @@ h1,h2,h3,h4,h5,h6 {
 .mm-breadcrumb span.current { color: var(--gray-100); }
 
 /* ---------- Hero ---------- */
-.mm-hero { padding: 24px 0 60px; background: linear-gradient(180deg, var(--BG) 0%, #ffffff 75%); }
-.mm-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-.mm-hero h1 { font-size: 44px; line-height: 1.15; font-weight: 700; margin: 10px 0 16px; text-transform: none; }
+.mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
+.mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-hero h1 { font-size: 44px; line-height: 1.15; font-weight: 700; margin: 10px 0 16px; text-transform: uppercase; }
 .mm-hero h1 .accent { color: var(--blue); display: block; }
 .mm-hero .mm-sub { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
 .mm-hero p.mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; max-width: 480px; margin-bottom: 26px; }
@@ -218,7 +216,7 @@ h1,h2,h3,h4,h5,h6 {
 .mm-section { padding: 70px 0; }
 .mm-section.grey { background: var(--gray-7); }
 .mm-heading { text-align: center; max-width: 720px; margin: 0 auto 44px; }
-.mm-heading h2 { font-size: 30px; font-weight: 700; margin-bottom: 10px; text-transform: none; }
+.mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
 .mm-heading h2 .accent { color: var(--blue); }
 .mm-heading p { color: var(--gray-80); font-size: 15px; line-height: 1.7; }
 .mm-heading .mm-underline { width: 46px; height: 4px; background: var(--blue); border-radius: 4px; margin: 8px auto 0; }
@@ -234,12 +232,12 @@ h1,h2,h3,h4,h5,h6 {
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .mm-feature-card { background: #fff; border-radius: 14px; padding: 30px 26px; box-shadow: 0 12px 40px rgba(16,40,100,.08); border: 1px solid #e7eaf3; }
 .mm-feature-icon { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 18px; }
-.mm-feature-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; text-transform: none; }
+.mm-feature-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
 .mm-feature-card p { font-size: 14px; color: var(--gray-80); line-height: 1.65; }
 
 /* ---------- Benefits banner ---------- */
 .mm-benefits { background: linear-gradient(120deg, #dbe8ff, var(--BG)); border-radius: 20px; padding: 46px 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-.mm-benefits h2 { font-size: 26px; font-weight: 700; margin-bottom: 20px; text-transform: none; }
+.mm-benefits h2 { font-size: 26px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
 .mm-benefits h2 .accent { color: var(--blue); }
 .mm-benefits ul { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
 .mm-benefits li { font-size: 14.5px; display: flex; gap: 8px; align-items: flex-start; }
@@ -250,7 +248,7 @@ h1,h2,h3,h4,h5,h6 {
 .mm-works { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .mm-works-step { flex: 1; min-width: 130px; text-align: center; }
 .mm-works-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; margin: 0 auto 14px; background: #fff; box-shadow: 0 12px 40px rgba(16,40,100,.08); }
-.mm-works-step h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; text-transform: none; }
+.mm-works-step h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; text-transform: uppercase; }
 .mm-works-step p { font-size: 12.5px; color: var(--gray-80); line-height: 1.5; }
 .mm-works-arrow { align-self: center; color: #b9c3da; font-size: 18px; margin-top: 20px; }
 
@@ -259,7 +257,7 @@ h1,h2,h3,h4,h5,h6 {
 .mm-compare-box { border-radius: 14px; padding: 30px; }
 .mm-compare-box.without { background: #fdeeee; }
 .mm-compare-box.with { background: #eaf7f0; }
-.mm-compare-box h3 { font-size: 17px; font-weight: 700; margin-bottom: 16px; text-transform: none; }
+.mm-compare-box h3 { font-size: 17px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; }
 .mm-compare-box.without h3 { color: #e5484d; }
 .mm-compare-box.with h3 { color: #1aa971; }
 .mm-compare-box li { font-size: 14px; display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
@@ -276,7 +274,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ---------- CTA banner ---------- */
 .mm-cta-banner { text-align: center; background: #fff; border: 1px solid #e7eaf3; border-radius: 20px; padding: 46px 30px; box-shadow: 0 12px 40px rgba(16,40,100,.08); }
-.mm-cta-banner h2 { font-size: 22px; font-weight: 700; max-width: 640px; margin: 0 auto 24px; line-height: 1.5; text-transform: none; }
+.mm-cta-banner h2 { font-size: 22px; font-weight: 700; max-width: 640px; margin: 0 auto 24px; line-height: 1.5; text-transform: uppercase; }
 .mm-cta-banner h2 .accent { color: var(--blue); }
 
 /* ---------- Responsive ---------- */
@@ -297,8 +295,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 1201px) {
   .nav { border-radius: 16px; margin: 0 8px; max-width: calc(100% - 16px); }
-  
-  
+
   .nav__menu { display: flex !important; }
   
 }

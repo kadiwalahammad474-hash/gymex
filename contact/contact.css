@@ -55,51 +55,13 @@
 /* ---------------------------------------------------------
    HERO — dark glass
    --------------------------------------------------------- */
-.mm-hero {
-  position: relative;
-  padding: 56px 24px 90px;
-  background:
-    radial-gradient(900px 560px at 85% -10%, rgba(2, 142, 206, .34), transparent 60%),
-    radial-gradient(760px 520px at -10% 20%, rgba(254, 79, 13, .20), transparent 60%),
-    linear-gradient(160deg, #05070d 0%, #0a0e18 55%, #0c1120 100%);
-  color: #fff;
-  overflow: hidden;
-}
-.mm-hero::before {
-  content: "";
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
-  background-size: 44px 44px, 44px 44px;
-  mask-image: radial-gradient(circle at 30% 15%, #000 0%, transparent 65%);
-  pointer-events: none;
-}
-.mm-hero::after {
-  content: "";
-  position: absolute; left: 0; right: 0; bottom: 0; height: 200px;
-  background:
-    radial-gradient(360px 200px at 22% 100%, rgba(2, 142, 206, .30), transparent 70%),
-    radial-gradient(320px 180px at 78% 100%, rgba(254, 79, 13, .22), transparent 70%),
-    linear-gradient(180deg, transparent 0%, rgba(9, 13, 24, .5) 35%, var(--BG) 100%);
-  pointer-events: none;
-}
-.mm-hero-grid {
-  position: relative; z-index: 1;
-  max-width: 1250px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center;
-}
-.mm-h1 { font-size: clamp(30px, 3.6vw, 46px); font-weight: 800; line-height: 1.16; letter-spacing: -0.02em; margin-bottom: 18px; color: #fff; }
-.mm-h1 .accent {
-  background: linear-gradient(100deg, #7fd7ff, var(--blue) 45%, var(--orange-100) 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.mm-desc { color: rgba(255, 255, 255, .68); font-size: 15.5px; line-height: 1.75; max-width: 480px; margin-bottom: 26px; }
-.mm-hero-img {
-  width: 100%; border-radius: var(--radius);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, .55), 0 0 0 8px rgba(2, 142, 206, .08);
-  border: 1px solid rgba(255, 255, 255, .14);
-}
+.mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
+
+.mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
+.mm-h1 .accent { color: var(--blue); }
+.mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
+.mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ---------------------------------------------------------
    BUTTONS (page-specific pill CTAs, not the nav button —
@@ -147,14 +109,14 @@
 /* ---------------------------------------------------------
    SECTIONS
    --------------------------------------------------------- */
-.mm-section { max-width: 1250px; margin: 0 auto; padding: 60px 24px; }
+.mm-section { max-width: 1250px; margin: 0 auto; padding: 40px 24px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 44px; }
-.mm-heading h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 12px; }
+.mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
 .mm-heading h2::after {
   content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
   margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
 }
-.mm-heading p { color: #1c2436; font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
 
 /* ---------------------------------------------------------
    CONTACT FEATURE CARDS (Call / Email / Office)
@@ -184,7 +146,7 @@
 .mm-cta-banner {
   position: relative;
   text-align: center; overflow: hidden;
-  background: linear-gradient(160deg, #05070d, #0a0e18);
+  background: var(--BG);
   border-radius: 0; padding: 60px 30px;
   max-width: 1250px; margin: 20px auto 60px;
 }
@@ -316,8 +278,8 @@
    --------------------------------------------------------- */
 @media (max-width: 900px) {
   .mm-hero { padding: 40px 16px 70px; border-radius: 0 0 20px 20px; }
-  .mm-hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .mm-h1 { font-size: 28px; }
+  .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
   .mm-desc { font-size: 14px; }
   .mm-section { padding: 36px 16px; }
   .mm-feature-grid { grid-template-columns: 1fr; gap: 14px; }

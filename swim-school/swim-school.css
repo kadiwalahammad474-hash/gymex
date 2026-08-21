@@ -93,9 +93,7 @@ h1,h2,h3,h4,h5,h6 {
   cursor: pointer;
 }
 
-.nav .dark-mode {
-  display: none;
-}
+
 
 K.5px;
   font-weight: 500;
@@ -655,17 +653,9 @@ K.5px;
 .mm-btn-orange { background: var(--orange-100); color: #fff; }
 
 /* ---------- HERO ---------- */
-.mm-hero {
-  padding: 48px 24px 40px;
-  background: radial-gradient(circle at 85% 0%, #dbe8ff 0%, transparent 45%), var(--BG);
-  border-radius: 0 0 32px 32px;
-  margin-bottom: 20px;
-}
-.mm-hero-grid {
-  max-width: 1250px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center;
-}
-.mm-h1 { font-size: 42px; font-weight: 800; line-height: 1.18; letter-spacing: -0.01em; margin-bottom: 18px; text-transform: none; }
+.mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
+.mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.75; margin-bottom: 24px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
@@ -673,7 +663,7 @@ K.5px;
 .mm-section { max-width: 1250px; margin: 0 auto; padding: 50px 24px; }
 .mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0 40px; padding: 60px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
-.mm-heading h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: none; }
+.mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
 .mm-heading p { color: var(--gray-80); font-size: 15px; line-height: 1.7; }
 
 /* ---------- FEATURE GRID ---------- */
@@ -684,7 +674,7 @@ K.5px;
   display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px;
   background: #e9f0ff; color: var(--blue);
 }
-.mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: none; }
+.mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
 .mm-feature-card p { font-size: 13.5px; color: var(--gray-80); line-height: 1.65; }
 
 /* ---------- FAQ ---------- */
@@ -698,15 +688,15 @@ K.5px;
 
 /* ---------- CTA BANNER ---------- */
 .mm-cta-banner { text-align: center; background: linear-gradient(120deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 44px 30px; max-width: 1250px; margin: 0 auto 50px; }
-.mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: none; }
+.mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: uppercase; }
 .mm-cta-banner .accent { color: #7fb0ff; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .mm-hero-grid { grid-template-columns: 1fr; }
+  .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .mm-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .mm-faq { grid-template-columns: 1fr; }
-  .mm-h1 { font-size: 30px; }
+  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
   .mm-section.grey { margin: 0 12px 30px; padding: 36px 20px; }
 }
 @media (max-width: 600px) {
@@ -715,8 +705,7 @@ K.5px;
 
 @media (max-width: 1201px) {
   .nav { border-radius: 0; margin: 0 8px; max-width: calc(100% - 16px); }
-  
-  
+
   .nav__menu { display: flex !important; }
   
 }

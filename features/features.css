@@ -85,9 +85,7 @@ h1,h2,h3,h4,h5,h6 {
   cursor: pointer;
 }
 
-.nav .dark-mode {
-  display: none;
-}
+
 
 K.5px;
   font-weight: 500;
@@ -647,17 +645,9 @@ K.5px;
 .mm-btn-orange { background: var(--orange-100); color: #fff; }
 
 /* ---------- HERO ---------- */
-.mm-hero {
-  padding: 48px 24px 40px;
-  background: radial-gradient(circle at 85% 0%, #dbe8ff 0%, transparent 45%), var(--BG);
-  border-radius: 0;
-  margin-bottom: 20px;
-}
-.mm-hero-grid {
-  max-width: 1250px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center;
-}
-.mm-h1 { font-size: 42px; font-weight: 800; line-height: 1.18; letter-spacing: -0.01em; margin-bottom: 18px; text-transform: none; }
+.mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
+.mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-desc { color: #1c2436; font-size: 15.5px; line-height: 1.75; margin-bottom: 24px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
@@ -665,8 +655,8 @@ K.5px;
 .mm-section { max-width: 1250px; margin: 0 auto; padding: 50px 24px; }
 .mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0 40px; padding: 60px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
-.mm-heading h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: none; }
-.mm-heading p { color: #1c2436; font-size: 15px; line-height: 1.7; }
+.mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
+.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
 
 /* ---------- FEATURE GRID ---------- */
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -676,7 +666,7 @@ K.5px;
   display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px;
   background: linear-gradient(135deg, #028ece, #01b8f0); color: #fff;
 }
-.mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: none; }
+.mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
 .mm-feature-card p { font-size: 13.5px; color: #1c2436; line-height: 1.65; }
 
 /* Features mega menu */
@@ -700,15 +690,15 @@ K.5px;
 
 /* ---------- CTA BANNER ---------- */
 .mm-cta-banner { text-align: center; background: linear-gradient(120deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 44px 30px; max-width: 1250px; margin: 0 auto 50px; }
-.mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: none; }
+.mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: uppercase; }
 .mm-cta-banner .accent { color: #7fb0ff; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .mm-hero-grid { grid-template-columns: 1fr; }
+  .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .mm-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .mm-faq { grid-template-columns: 1fr; }
-  .mm-h1 { font-size: 30px; }
+  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
   .mm-section.grey { margin: 0 12px 30px; padding: 36px 20px; }
 }
 @media (max-width: 600px) {
@@ -716,32 +706,12 @@ K.5px;
 }
 
 /* ---------- DARK 3-COLUMN FEATURES ---------- */
-.mm-section--dark {
-  position: relative;
-  max-width: none;
-  background: linear-gradient(160deg, #05070d, #0a0e18);
-  border-radius: 0;
-  margin: 0;
-  padding: 70px 40px;
-  overflow: hidden;
-}
-.mm-section--dark::before {
-  content: "";
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(560px 360px at 90% 0%, rgba(2,142,206,.18), transparent 65%),
-    radial-gradient(480px 320px at 5% 100%, rgba(254,79,13,.14), transparent 65%);
-  pointer-events: none;
-}
-.mm-section--dark .mm-heading { position: relative; z-index: 1; }
-.mm-section--dark .mm-heading h2 { color: #fff; }
-.mm-section--dark .mm-eyebrow { color: #7fd7ff; }
-.mm-features-dark {
-  position: relative; z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
+
+
+
+
+
+
 .mm-features-col-title {
   color: rgba(255,255,255,.45);
   font-size: 12px;
@@ -804,10 +774,10 @@ K.5px;
   text-transform: uppercase;
 }
 @media (max-width: 900px) {
-  .mm-features-dark { grid-template-columns: 1fr; gap: 24px; }
+  
 }
 @media (max-width: 600px) {
-  .mm-section--dark { margin: 0; padding: 44px 20px; }
+  
 }
 
 /* ---------- CLIENTS AUTO-SCROLL SLIDER ---------- */
@@ -857,8 +827,7 @@ K.5px;
 /* ---------- MOBILE NAV ---------- */
 @media (max-width: 1201px) {
   .nav { border-radius: 0; margin: 0; max-width: 100%; }
-  
-  
+
   .nav__menu { display: flex !important; }
   
 }
@@ -915,15 +884,8 @@ K.5px;
     border-radius: 0 0 20px 20px;
     margin-bottom: 16px;
   }
-  .mm-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .mm-h1 {
-    font-size: 28px;
-    line-height: 1.2;
-    margin-bottom: 12px;
-  }
+  .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
   .mm-desc {
     font-size: 14px;
     line-height: 1.6;
@@ -934,14 +896,14 @@ K.5px;
   }
 }
 @media (max-width: 600px) {
-  .mm-h1 { font-size: 24px; }
+  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
   .mm-desc { font-size: 13px; }
 }
 
 /* ---------- MOBILE FEATURE GRID ---------- */
 @media (max-width: 900px) {
   .mm-section { padding: 30px 16px; }
-  .mm-heading h2 { font-size: 24px; margin-bottom: 8px; }
+  .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
   .mm-heading p { font-size: 14px; line-height: 1.6; }
   .mm-feature-grid { grid-template-columns: 1fr; gap: 14px; }
   .mm-feature-card { padding: 24px 20px; border-radius: 0; }
@@ -951,7 +913,7 @@ K.5px;
 }
 @media (max-width: 600px) {
   .mm-section { padding: 24px 12px; }
-  .mm-heading h2 { font-size: 22px; }
+  .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
 }
 
 /* ---------- MOBILE FAQ ---------- */
@@ -974,15 +936,8 @@ K.5px;
 
 /* ---------- MOBILE DARK SECTION ---------- */
 @media (max-width: 900px) {
-  .mm-section--dark {
-    margin: 0;
-    padding: 36px 16px;
-    border-radius: 0;
-  }
-  .mm-features-dark {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+  
+  
   .mm-features-item { padding: 12px 10px; }
   .mm-features-item h4 { font-size: 14px; }
   .mm-features-item p { font-size: 12px; }
@@ -1036,8 +991,8 @@ K.5px;
 }
 @media (max-width: 425px) {
   body { margin-top: 70px; }
-  .mm-h1 { font-size: 22px; }
-  .mm-heading h2 { font-size: 20px; }
+  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
+  .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
   .section-title { font-size: 24px; line-height: 30px; }
 }
 
