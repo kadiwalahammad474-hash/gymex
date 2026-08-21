@@ -87,7 +87,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
-K.5px;
+
   font-weight: 500;
   line-height: 32px;
 }
@@ -246,19 +246,7 @@ K.5px;
   transform: scale(1.1);
 }
 
-:root {
-  --BG: #F6F6F6;
-  --orange-10: #FFEDE7;
-  --orange-100: #FE4F0D;
-  --gray-100: #525251;
-  --gray-80: rgba(82, 82, 81, .8);
-  --gray-7: #F3F3F3;
-  --navy-100: #000530;
-  --blue: #028ECE;
-  --white: #FFFFFE;
-  --white-80: #CCCDD5;
-  --black: #191919;
-}
+
 
 .row-4 .item.large .bold-text,.row-4 .item.large .lable {
   color: #fff;
@@ -515,9 +503,7 @@ K.5px;
   width: 60%;
 }
 
-.footer__links-col 
 
-.footer__links-col 
 
 .section-title {
   font-size: 44px;
@@ -626,14 +612,10 @@ K.5px;
 
 
 .mm { max-width: 1250px; margin: 0 auto; padding: 0 24px; }
-.mm-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 15px 28px; border-radius: 0; font-weight: 600; font-size: 15px;
-  cursor: pointer; border: none; transition: transform .15s ease, filter .15s ease;
-}
+.mm-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: 100px; font-weight: 600; font-size: 15px; cursor: pointer; border: none; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
 .mm-btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .mm-btn-primary { background: var(--blue); color: #fff; }
-.mm-btn-orange { background: var(--orange-100); color: #fff; }
+.mm-btn-orange { background: linear-gradient(135deg, var(--orange-100), #e0450b); color: #fff; box-shadow: 0 14px 32px rgba(254, 79, 13, .32); }
 
 /* ---------- HERO ---------- */
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
@@ -651,12 +633,8 @@ K.5px;
 
 /* ---------- FEATURE GRID ---------- */
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.mm-feature-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
-.mm-feature-icon {
-  width: 44px; height: 44px; border-radius: 0;
-  display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px;
-  background: linear-gradient(135deg, #028ece, #01b8f0); color: #fff;
-}
+.mm-feature-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
+.mm-feature-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; }
 .mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
 .mm-feature-card p { font-size: 13.5px; color: #1c2436; line-height: 1.65; }
 
@@ -672,7 +650,7 @@ K.5px;
 
 /* ---------- FAQ ---------- */
 .mm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 1000px; margin: 0 auto; }
-.mm-faq-item { background: #fff; border-radius: 0; padding: 18px 22px; cursor: pointer; box-shadow: var(--shadow); }
+.mm-faq-item { background: #fff; border-radius: var(--radius); padding: 18px 22px; cursor: pointer; box-shadow: var(--shadow); }
 .mm-faq-item summary { display: flex; justify-content: space-between; align-items: center; font-size: 14.5px; font-weight: 600; list-style: none; }
 .mm-faq-item summary::-webkit-details-marker { display: none; }
 .mm-faq-item summary::after { content: "+"; font-size: 20px; color: #1c2436; margin-left: 12px; }
@@ -680,7 +658,7 @@ K.5px;
 .mm-faq-item p { margin-top: 70px; font-size: 13.5px; color: #1c2436; line-height: 1.6; }
 
 /* ---------- CTA BANNER ---------- */
-.mm-cta-banner { text-align: center; background: linear-gradient(120deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 44px 30px; max-width: 1250px; margin: 0 auto 50px; }
+.mm-cta-banner { text-align: center; background: linear-gradient(160deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 52px 40px; max-width: 1250px; margin: 0 auto 50px; }
 .mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: uppercase; }
 .mm-cta-banner .accent { color: #7fb0ff; }
 
@@ -872,7 +850,7 @@ K.5px;
 @media (max-width: 900px) {
   .mm-hero {
     padding: 24px 16px 20px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0;
     margin-bottom: 16px;
   }
   .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -897,7 +875,7 @@ K.5px;
   .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
   .mm-heading p { font-size: 14px; line-height: 1.6; }
   .mm-feature-grid { grid-template-columns: 1fr; gap: 14px; }
-  .mm-feature-card { padding: 24px 20px; border-radius: 0; }
+  .mm-feature-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
   .mm-feature-card h3 { font-size: 15px; margin-bottom: 6px; }
   .mm-feature-card p { font-size: 13px; line-height: 1.55; }
   .mm-section.grey { margin: 0; padding: 32px 16px; border-radius: 0; }
@@ -945,8 +923,7 @@ K.5px;
   .footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px; }
   .footer__contact-col { width: 100%; margin-bottom: 24px; }
   .footer__links-col { width: 100%; }
-  .footer__links-col 
-  .footer__links-col K.5px; }
+    .footer__links-col  }
   .footer__media { justify-content: flex-start; padding-top: 16px; }
   .footer .divider { margin: 16px 0; }
   .footer .footer-list { flex-wrap: wrap; gap: 12px; }
@@ -982,7 +959,7 @@ K.5px;
 
 /* ---------- TOUCH FRIENDLY ---------- */
 @media (hover: none) and (pointer: coarse) {
-  .mm-feature-card:hover { transform: none; box-shadow: var(--shadow); }
+  .mm-feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
   .mm-features-item:hover { background: transparent; transform: none; }
   .mm-features-item:hover .mm-features-icon { transform: none; background: rgba(49,170,225,.15); }
 }
