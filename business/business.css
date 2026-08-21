@@ -90,16 +90,9 @@ body { font-family: "Poppins", sans-serif; color: var(--gray-100); }
 .nav__link:hover { color: var(--blue); }
 .nav .active-page { text-decoration-line: underline; }
 
-.nav__link.button {
-  display: flex; align-items: center; gap: 10px;
-  text-transform: uppercase; font-weight: 700; font-size: 13px;
-  background: linear-gradient(135deg, var(--orange-100), #e0450b);
-  color: #fff; padding: 12px 20px; border-radius: 60px; cursor: pointer;
-  box-shadow: 0 14px 32px rgba(254, 79, 13, .3);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.nav__link.button:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(254, 79, 13, .4); }
-.button__arrow { width: 20px; height: 20px; }
+
+
+
 
 .dropdown { position: relative; }
 .dropdown-content.mega-menu {
