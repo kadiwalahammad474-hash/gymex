@@ -128,7 +128,7 @@
   content: ""; position: absolute; bottom: -100px; right: 10%; width: 340px; height: 340px;
   border-radius: 50%; filter: blur(60px); background: rgba(254, 79, 13, .28); pointer-events: none;
 }
-.mm-cta-banner h2 { position: relative; z-index: 1; color: #fff; font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; margin-bottom: 26px; line-height: 1.4; }
+.mm-cta-banner h2 { position: relative; z-index: 1; color: var(--gray-100); font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; margin-bottom: 26px; line-height: 1.4; }
 .mm-cta-banner .mm-btn { position: relative; z-index: 1; }
 
 /* ---------------------------------------------------------
