@@ -736,5 +736,5 @@ K.5px;
 .text1:hover { color: var(--blue); }
 .features-mega .text1 { font-size: 11.5px; line-height: 1.3; color: #1c2436; }
 .features-mega .text1:hover { color: #028ece; }
-.mega-menu .icon { width: 28px; height: 28px; min-width: 28px; margin-right: 4px; }
+.mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
 .features-mega { width: 880px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(11,26,61,.16); border: 1px solid rgba(11,26,61,.05); }

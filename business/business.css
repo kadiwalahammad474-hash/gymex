@@ -106,7 +106,7 @@ body { font-family: "Poppins", sans-serif; color: var(--gray-100); }
 .mega-menu .column { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
 .mega-menu .inside { display: flex; align-items: center; padding: 4px 6px; margin-bottom: 1px; border-radius: 8px; transition: background .2s ease; }
 .mega-menu .inside:hover { background: #f5f8ff; }
-.mega-menu .icon { width: 28px; height: 28px; min-width: 28px; margin-right: 4px; }
+.mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
 .text1 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 11.5px; line-height: 1.3; color: #1c2436; text-decoration: none; display: block; }
 .text1:hover { color: var(--blue); }
 
