@@ -1603,19 +1603,3 @@ body { position: relative; z-index: 1; }
   .mm-awards-row { gap: 12px; }
 }
 
-/* Hero Background Image */
-.mm-hero.header {
-  background-image: url('../assets/img.png');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-/* Hero Background Image */
-.mm-hero.header {
-  background-image: url('../assets/img.png');
-  background-size: 70%;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-blend-mode: soft-light;
-}
