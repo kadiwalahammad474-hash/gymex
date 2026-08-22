@@ -126,10 +126,10 @@ body {
 }
 
 .mega-menu .column { display: flex; flex-direction: column; gap: 4px; width: 220px; flex: none; }
-.mega-menu .inside { display: flex; gap: 10px; padding: 8px; border-radius: 8px; transition: background .2s ease; align-items: flex-start; margin-bottom: 4px; }
+.mega-menu .inside { display: flex; gap: 8px; padding: 6px 8px; border-radius: 8px; transition: background .2s ease; align-items: flex-start; margin-bottom: 2px; }
 .mega-menu .inside:hover { background: var(--gray-7); }
 .mega-col-title { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(28,36,54,.45); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(28,36,54,.08); }
-.mega-icon { width: 24px; height: 24px; min-width: 24px; border-radius: 6px; background: rgba(2,142,206,.08); display: flex; align-items: center; justify-content: center; color: #028ece; font-size: 11px; flex-shrink: 0; }
+.mega-icon { width: 20px; height: 20px; min-width: 20px; border-radius: 5px; background: rgba(2,142,206,.08); display: flex; align-items: center; justify-content: center; color: #028ece; font-size: 10px; flex-shrink: 0; }
 .mega-badge { display: inline-block; background: #ef4444; color: #fff; font-size: 8px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
 .mega-desc { font-size: 10px; color: rgba(28,36,54,.55); line-height: 1.4; margin: 3px 0 0; }
 .text1 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 13px; color: var(--gray-100); text-decoration: none; display: block; margin-bottom: 2px; }
@@ -173,7 +173,7 @@ body {
 /* ── MEGA MENU — Features specific (dark text on white bg) ── */
 .mega-menu:not(.features-mega) .text1 { color: var(--gray-100); }
 .mega-menu:not(.features-mega) .text1:hover { color: var(--blue); }
-.mega-menu:not(.features-mega) .mega-icon { width: 24px; height: 24px; min-width: 24px; border-radius: 6px; background: rgba(2,142,206,.08); display: flex; align-items: center; justify-content: center; color: #028ece; font-size: 11px; flex-shrink: 0; }
+.mega-menu:not(.features-mega) .mega-icon { width: 20px; height: 20px; min-width: 20px; border-radius: 5px; background: rgba(2,142,206,.08); display: flex; align-items: center; justify-content: center; color: #028ece; font-size: 10px; flex-shrink: 0; }
 .mega-menu:not(.features-mega) .mega-col-title { color: rgba(28,36,54,.45); border-bottom: 1px solid rgba(28,36,54,.08); padding-bottom: 8px; margin-bottom: 12px; }
 
 /* ── DEMO MODAL ── */
