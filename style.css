@@ -64,7 +64,7 @@ body {
 .nav__link:not(.button)::after {
   content: ""; position: absolute; left: 0; bottom: 4px;
   width: 0; height: 2px; border-radius: 2px;
-  background: linear-gradient(90deg, var(--blue), var(--orange-100));
+  background: var(--blue);
   transition: width .25s ease;
 }
 .nav__link:not(.button):hover::after { width: 100%; }
