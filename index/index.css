@@ -1575,3 +1575,30 @@ body { position: relative; z-index: 1; }
   object-fit: cover;
   border: 2px solid #eef1f8;
 }
+
+/* Awards Row Layout */
+.mm-awards-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.mm-awards-row img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 2px 12px rgba(11,26,61,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.mm-awards-row img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(11,26,61,.12);
+}
+@media (max-width: 768px) {
+  .mm-awards-row img { width: 80px; height: 80px; }
+  .mm-awards-row { gap: 12px; }
+}
