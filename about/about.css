@@ -91,6 +91,26 @@
 .features-mega .text1:hover { color: #028ece; }
 .mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
 
+
+/* ---------- MOBILE MENU ---------- */
+.menu {
+  position: fixed; top: -100%;
+  background-color: #fff; z-index: 10;
+  width: 100%; height: fit-content;
+  display: flex; padding: 0 16px 32px;
+  flex-direction: column; align-items: center; gap: 32px; flex-shrink: 0;
+  transition: .4s ease-in;
+}
+.menu__list { display: flex; flex-direction: column; align-items: center; gap: 18px; padding-top: 76px; }
+.menu__link { padding: 16px; color: var(--gray-100); font-size: 16px; font-weight: 500; line-height: 32px; }
+.menu__link:last-of-type { padding: 16px 0; width: 100%; }
+.menu-backdrop {
+  width: 100%; height: 100vh; position: fixed; top: 0; left: 0; visibility: hidden;
+  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+}
+.visible { visibility: visible; }
+.visible .menu { top: 0; }
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .mm-hero-grid { grid-template-columns: 1fr; gap: 24px; }
