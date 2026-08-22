@@ -154,8 +154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
               <a class="nav__link" href="../pricing/pricing.html">Pricing</a>
               <a class="nav__link" href="#">Blog</a>
-              
-              <a class="nav__link" href="../career/career.html">Career</a>
+              <a class="nav__link" href="../about/about.html">About</a>
               <a class="nav__link" href="../contact/contact.html">Contact</a>
 
               <button class="nav__link button " Id="demobutton">
@@ -208,10 +207,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="../features/features.html">POS MODULE</a></li><br>
     </ul>
 </li>
-                  
                   <li class="menu__link">
-                      <a href="../career/career.html">Career</a>
-                  </li>
+                      <a href="../about/about.html">About Us</a>
                   </li>
                   <li class="menu__link">
                       <a href="../contact/contact.html">Contact Us</a>
@@ -318,42 +315,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </footer>
 
-<!-- Demo Form Section -->
-<section class="mm-section" id="demo-form" style="padding-top:40px;">
-  <div class="mm-heading">
-    <h2>Get Your <span class="accent">Free Demo</span></h2>
-    <p>See how Gymex can transform your gym management. Fill in the details below.</p>
-  </div>
-  <div style="max-width:700px;margin:0 auto;background:#fff;border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);border:1px solid #eef1f8;">
-    <form action="#" method="post" onsubmit="return validateDemoCaptcha()">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">Your Name *</label><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;"></div>
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">Gym Name *</label><input type="text" name="gname" placeholder="Gym Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;"></div>
+<!-- Demo Modal -->
+<div class="demo-modal-overlay" id="demoModal">
+  <div class="demo-modal">
+    <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')">&times;</button>
+    <h2>Get Your <span style="color:var(--blue)">Free Demo</span></h2>
+    <p class="subtitle">See how Gymex can transform your gym management. Fill in the details below.</p>
+    <form action="../contactus.php" method="post">
+      <input type="hidden" name="backurl" value="">">
+      <div class="form-row">
+        <div><label>First Name *</label><input type="text" name="firstname" placeholder="John" required></div>
+        <div><label>Last Name *</label><input type="text" name="lastname" placeholder="Doe" required></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">State *</label><input type="text" name="sname" placeholder="State" required style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;"></div>
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">City *</label><input type="text" name="cname" placeholder="City" required style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;"></div>
+      <div class="form-row">
+        <div><label>Email *</label><input type="email" name="email" placeholder="john@example.com" required></div>
+        <div><label>Phone *</label><input type="tel" name="phonenumber" placeholder="98765 43210" required></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">Mobile *</label><input type="tel" name="mobile" placeholder="Mobile" required style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;"></div>
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">Email *</label><input type="email" name="email" placeholder="Email Id" required style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;"></div>
-      </div>
-      <div style="margin-top:16px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">Message</label><textarea name="comment" placeholder="Message" rows="4" style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;font-family:Poppins,sans-serif;color:var(--gray-100);outline:none;resize:vertical;"></textarea></div>
-      <div style="margin-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <div id="captcha-box" style="background:#fff;border:1px solid #ccc;border-radius:6px;padding:4px 18px;font-size:18px;font-weight:bold;letter-spacing:6px;color:#535353;font-family:'Courier New',monospace;user-select:none;"></div>
-        <button type="button" onclick="generateDemoCaptcha()" style="background:#fff;border:1px solid #ccc;border-radius:6px;color:#535353;font-size:16px;padding:4px 12px;cursor:pointer;">&#8635;</button>
-        <input type="text" id="captcha-input" placeholder="Enter CAPTCHA" maxlength="6" autocomplete="off" style="background:#fff;border:1px solid #ccc;border-radius:6px;color:#535353;padding:8px 14px;font-size:14px;width:144px;outline:none;">
-        <input type="hidden" id="captcha-value" name="captcha_value">
-      </div>
-      <p id="captcha-error" style="color:#eb5757;font-size:13px;margin-top:6px;display:none;font-weight:600;">Incorrect CAPTCHA. Please try again.</p>
-      <button type="submit" style="width:100%;padding:14px;margin-top:16px;background:linear-gradient(135deg,var(--orange-100),#e0450b);color:#fff;border:none;border-radius:100px;font-size:15px;font-weight:700;font-family:Poppins,sans-serif;cursor:pointer;box-shadow:0 10px 26px rgba(254,79,13,.32);">Submit &amp; Get Free Demo <i class="fa fa-arrow-right"></i></button>
+      <div><label>Company / Gym Name</label><input type="text" name="company" placeholder="Your Gym Name"></div>
+      <div><label>Message</label><textarea name="message" placeholder="Tell us about your gym..."></textarea></div>
+      <button type="submit" class="submit-btn">Submit &amp; Get Free Demo <i class="fa fa-arrow-right"></i></button>
     </form>
   </div>
-</section>
+</div>
+
 
 <script>
-var demoCurrentCaptcha='';
-function generateDemoCaptcha(){var c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789',r='';for(var i=0;i<6;i++)r+=c.charAt(Math.floor(Math.random()*c.length));demoCurrentCaptcha=r;var b=document.getElementById('captcha-box');if(b)b.innerText=r;var v=document.getElementById('captcha-value');if(v)v.value=r;var inp=document.getElementById('captcha-input');if(inp)inp.value='';}
-function validateDemoCaptcha(){var u=(document.getElementById('captcha-input')||{}).value||'';u=u.trim();if(u===''){var e=document.getElementById('captcha-error');if(e){e.innerHTML='CAPTCHA is required.';e.style.display='block';}return false;}if(u!==demoCurrentCaptcha){var e=document.getElementById('captcha-error');if(e){e.innerHTML='Incorrect CAPTCHA. Please try again.';e.style.display='block';}generateDemoCaptcha();return false;}var e=document.getElementById('captcha-error');if(e)e.style.display='none';return true;}
-window.onload=function(){generateDemoCaptcha();};
+document.querySelectorAll('.open-demo-modal').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('demoModal').classList.add('active');
+  });
+});
+document.getElementById('demoModal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('active');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('demoModal').classList.remove('active');
+});
 </script>
+
+<script>
+(function(){
+var T=document.getElementById("menu-backdrop"),b=document.getElementById("open-menu");
+if(b</body></body>T){b.addEventListener("click",function(){T.classList.toggle("visible");b.classList.toggle("menu-animated");b.classList.remove("visible");T.classList.contains("visible")?document.body.style.overflow="hidden":document.body.style.overflow="auto"});
+document.body.addEventListener("click",function(e){if(e.target===T){T.classList.remove("visible");b.classList.remove("menu-animated");b.classList.add("visible");document.body.style.overflow="auto"}});
+document.querySelectorAll(".menu__link").forEach(function(c){c.addEventListener("click",function(){T.classList.remove("visible");b.classList.add("visible");b.classList.remove("menu-animated");document.body.style.overflow="auto"})});
+}
+document.querySelectorAll(".open-demo-modal").forEach(function(btn){
+  btn.addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("demoModal").classList.add("active");
+  });
+});
+var dm=document.getElementById("demoModal");
+if(dm){dm.addEventListener("click",function(e){if(e.target===this)this.classList.remove("active")});}
+document.addEventListener("keydown",function(e){if(e.key==="Escape"</body></body>dm)dm.classList.remove("active");});
+})();
+</script>
+</body>
+</html>
