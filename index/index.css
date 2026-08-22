@@ -1461,7 +1461,7 @@ body { position: relative; z-index: 1; }
 .testi-track {
   display: flex;
   gap: 24px;
-  animation: testiScroll 80s linear infinite;
+  animation: testiScroll 120s linear infinite;
   width: max-content;
 }
 .testi-track:hover {
