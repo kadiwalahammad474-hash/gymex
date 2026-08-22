@@ -74,15 +74,15 @@ body {
 .nav .button {
   border-radius: 100px;
   background: linear-gradient(135deg, var(--orange-100), #e0450b);
-  padding: 12px 22px 12px 20px;
+  padding: 0 6px 0 20px;
   height: 46px;
   box-shadow: 0 10px 26px rgba(254, 79, 13, .32);
   transition: transform .2s ease, box-shadow .2s ease;
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 10px;
 }
 .nav .button:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(254, 79, 13, .4); }
-.nav .button .button__text { color: #fff; font-size: 13px; letter-spacing: .02em; font-weight: 500; margin: 0; }
-.nav .button .button__arrow { width: 20px; height: 20px; filter: brightness(0) invert(1); }
+.nav .button .button__text { color: #fff; font-size: 12px; letter-spacing: .06em; font-weight: 700; margin: 0; text-transform: uppercase; }
+.nav .button .button__arrow { width: 34px; height: 34px; border-radius: 50%; background: #fff; filter: none; padding: 7px; box-sizing: border-box; flex-shrink: 0; }
 .nav .active-page { text-decoration-line: underline; }
 
 /* Mobile Menu Button */
