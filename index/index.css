@@ -190,6 +190,10 @@ body { position: relative; z-index: 1; }
     radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
     radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%),
     var(--BG);
+  background-image: url("../assets/img.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
   border-radius: 0;
   overflow: visible;
 }
@@ -1603,10 +1607,3 @@ body { position: relative; z-index: 1; }
   .mm-awards-row { gap: 12px; }
 }
 
-/* Hero Background Image */
-.mm-hero.header {
-  background-image: url('../assets/img.png');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
