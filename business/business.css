@@ -69,13 +69,11 @@ body { font-family: "Poppins", sans-serif; color: var(--gray-100); }
    NAV
    --------------------------------------------------------- */
 .nav {
-  position: sticky; top: 0; z-index: 50;
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  backdrop-filter: blur(16px) saturate(160%);
-  background-color: var(--gray-80);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 97;
+  background-color: #fff;
   transition: box-shadow .3s ease, background-color .3s ease;
 }
-.nav.nav--scrolled { box-shadow: 0 16px 40px rgba(2, 8, 40, .16); background-color: var(--gray-80); }
+.nav.nav--scrolled { box-shadow: 0 2px 12px rgba(11, 26, 61, .06); background-color: #fff; }
 .nav__logo-links-container { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1370px; margin: 0 auto; }
 .nav__logo-wrap { display: flex; align-items: center; cursor: pointer; }
 .nav__logo-wrap .logo { width: 140px; }
@@ -200,7 +198,7 @@ body { font-family: "Poppins", sans-serif; color: var(--gray-100); }
 .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-h1 .accent { color: var(--blue); }
-.mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
+.mm-desc { color: #fff; font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ---------------------------------------------------------
@@ -213,7 +211,7 @@ body { font-family: "Poppins", sans-serif; color: var(--gray-100); }
   content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
   margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
 }
-.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: #fff; font-size: 15.5px; line-height: 1.7; }
 
 /* ---------------------------------------------------------
    BUSINESS TYPE GRID
