@@ -40,11 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	 
 	  <title>About Us</title>
-    <script type="module" crossorigin src="../assets/about-nkCRy7Fi.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/swiper-Uoj_s9kr.js">
-    
-    <link rel="stylesheet" crossorigin href="../assets/swiper-XvW90xyx.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="about.css">
   <script src="../javascript.js"></script>
@@ -163,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a class="nav__link" href="../about/about.html">About</a>
               <a class="nav__link" href="../contact/contact.html">Contact</a>
 
-              <button class="nav__link button " Id="demobutton">
+              <button class="nav__link button open-demo-modal" Id="demobutton">
                 <p class="button__text">GET YOUR FREE DEMO</p>
                 <img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
               </button>
@@ -220,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <a href="../contact/contact.html">Contact Us</a>
                   </li>
                   <li class="menu__link">
-                      <button class="button ">
+                      <button class="button open-demo-modal">
                           <p class="button__text">GET YOUR FREE DEMO</p>
                           <img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
                       </button>
@@ -235,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
           <h1 class="mm-h1">Making Club Management Easy <span class="accent">For Business Owners</span></h1>
           <p class="mm-desc">Imagine a world where running a gym is as easy as swiping across your phone's screen. A world where you don't have to combine several different applications just to complete daily tasks. A world where you actually enjoy the profits of running a gym.</p>
-          <button class="mm-btn mm-btn-orange ">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
+          <button class="mm-btn mm-btn-orange open-demo-modal">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
         </div>
         <img class="mm-hero-img" src="../assets/gymex-software-making-club-management.jpeg" alt="Gymex club management">
       </div>
@@ -310,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="mm-cta-banner">
       <h2>Stay informed with what's important to you &mdash; <span class="accent">get in touch for special offers</span> today.</h2>
-      <button class="mm-btn mm-btn-orange ">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
+      <button class="mm-btn mm-btn-orange open-demo-modal">Get Your Free Demo <i class="fa fa-arrow-right"></i></button>
     </div>
 
 <footer class="footer">
@@ -392,6 +388,8 @@ document.querySelectorAll('.open-demo-modal').forEach(function(btn) {
     document.getElementById('demoModal').classList.add('active');
   });
 });
+var db=document.getElementById('demobutton');
+if(db){db.addEventListener('click',function(e){e.preventDefault();document.getElementById('demoModal').classList.add('active');});}
 document.getElementById('demoModal').addEventListener('click', function(e) {
   if (e.target === this) this.classList.remove('active');
 });
