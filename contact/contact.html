@@ -420,20 +420,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
-</body></body>T){b.addEventListener("click",function(){T.classList.toggle("visible");b.classList.toggle("menu-animated");b.classList.remove("visible");T.classList.contains("visible")?document.body.style.overflow="hidden":document.body.style.overflow="auto"});
-document.body.addEventListener("click",function(e){if(e.target===T){T.classList.remove("visible");b.classList.remove("menu-animated");b.classList.add("visible");document.body.style.overflow="auto"}});
-document.querySelectorAll(".menu__link").forEach(function(c){c.addEventListener("click",function(){T.classList.remove("visible");b.classList.add("visible");b.classList.remove("menu-animated");document.body.style.overflow="auto"})});
-}
-document.querySelectorAll(".open-demo-modal").forEach(function(btn){
-  btn.addEventListener("click",function(e){
-    e.preventDefault();
-    document.getElementById("demoModal").classList.add("active");
-  });
-});
-var dm=document.getElementById("demoModal");
-if(dm){dm.addEventListener("click",function(e){if(e.target===this)this.classList.remove("active")});}
-document.addEventListener("keydown",function(e){if(e.key==="Escape"</body></body>dm)dm.classList.remove("active");});
-})();
-</script>
 </body>
 </html>
