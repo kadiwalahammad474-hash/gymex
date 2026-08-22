@@ -1602,3 +1602,32 @@ body { position: relative; z-index: 1; }
   .mm-awards-row img { width: 80px; height: 80px; }
   .mm-awards-row { gap: 12px; }
 }
+
+/* Hero Background Image */
+.mm-hero-bg {
+  background: url('../assets/img.png') center/cover no-repeat;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+.mm-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.75) 100%);
+  z-index: 0;
+}
+.mm-hero-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.mm-hero-bg .mm-hero-grid {
+  grid-template-columns: 1fr;
+}
+.mm-hero-bg .mm-h1 {
+  max-width: 600px;
+}
+@media (max-width: 768px) {
+  .mm-hero-bg { min-height: 400px; }
+}
