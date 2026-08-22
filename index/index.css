@@ -1568,3 +1568,10 @@ body { position: relative; z-index: 1; }
   background: linear-gradient(90deg, var(--blue), var(--orange-100));
   margin: 0 auto 16px;
 }
+.testi-avatar img, img.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eef1f8;
+}
