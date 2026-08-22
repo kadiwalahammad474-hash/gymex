@@ -308,8 +308,8 @@ body { position: relative; z-index: 1; }
 
 /* ---------- AWARDS & RECOGNITION ---------- */
 .mm-awards { text-align: center; }
-.mm-awards-badges { display: flex; flex-wrap: wrap; gap: 34px; align-items: center; justify-content: center; padding: 14px 10px 6px; margin: 0 0 44px; }
-.mm-awards-badges img { height: 105px; width: auto; object-fit: contain; transition: transform .25s ease; }
+.mm-awards-badges { display: flex; flex-wrap: wrap; gap: 44px; align-items: center; justify-content: center; padding: 24px 10px 14px; margin: 0 0 44px; }
+.mm-awards-badges img { height: 130px; width: auto; object-fit: contain; transition: transform .25s ease; }
 .mm-awards-badges img:hover { transform: translateY(-4px); }
 .mm-chip {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
