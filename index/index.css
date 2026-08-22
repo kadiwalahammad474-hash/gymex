@@ -1561,3 +1561,10 @@ body { position: relative; z-index: 1; }
   .testi-card p { min-height: auto; }
   .testi-section { padding: 40px 0 30px; }
 }
+.testi-heading .testi-line {
+  width: 50px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--orange-100));
+  margin: 0 auto 16px;
+}
