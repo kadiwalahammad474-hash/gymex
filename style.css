@@ -162,11 +162,11 @@ body {
 .mm-btn-orange:hover { box-shadow: 0 18px 40px rgba(254, 79, 13, .42); }
 
 /* ── FOOTER ── */
-.footer { background-color: var(--navy-100); border-radius: 0; margin-top: 80px; color: #ccd3e6; padding: 50px 0 0; }
+.footer { background-color: var(--navy-100); border-radius: 0; margin-top: 80px; color: #ccd3e6; padding: 59px 64px 54px; }
 .footer, .footer * { box-sizing: border-box; }
 .footer a { color: #ccd3e6; text-decoration: none; transition: color .2s ease; }
 .footer a:hover { color: #fff; }
-.footer__top { display: flex; justify-content: space-between; padding: 0 64px 40px; gap: 40px; }
+.footer__top { display: flex; justify-content: space-between; padding: 0 0 40px; gap: 40px; }
 .footer__about { flex: 1; }
 .footer__about h3, .footer__contact-us h3, .footer__follow h3 { color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 14px; }
 .footer__about p { color: #aab4c8; font-size: 14px; line-height: 1.7; }
@@ -175,14 +175,14 @@ body {
 .footer__sales-support { display: flex; gap: 40px; }
 .footer__sales-support h4 { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 12px; }
 .footer__sales-support .contact-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; }
-.footer__sales-support .contact-item img { width: 28px; height: 28px; border-radius: 50%; background: var(--blue); padding: 6px; flex-shrink: 0; }
+.footer__sales-support .contact-item svg { flex-shrink: 0; }
 .footer__follow { flex: 0.6; display: flex; flex-direction: column; align-items: flex-start; }
 .footer__follow h3 { text-align: left; }
 .footer__social { display: flex; gap: 14px; margin-top: 6px; }
 .footer__social a { transition: transform .2s ease; }
 .footer__social a:hover { transform: translateY(-3px); }
-.footer__social img { width: 36px; height: 36px; }
-.footer__bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 18px 64px; display: flex; justify-content: space-between; align-items: center; }
+.footer__social svg { width: 36px; height: 36px; }
+.footer__bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 18px 0 0; display: flex; justify-content: space-between; align-items: center; }
 .footer__bottom-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer__bottom-links a { font-size: 13px; color: #8a95aa; }
 .footer__bottom-links a:hover { color: #fff; }
