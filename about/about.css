@@ -1,30 +1,27 @@
-/* GYMEX — ABOUT PAGE (page-specific styles) */
-/* Shared base (nav, nav links, dropdown base, body) from ../style.css */
+/* GYMEX — ABOUT PAGE (page-specific styles only)
+   Shared base (nav, footer, buttons, dropdown, mobile menu) from style.css */
 
-/* ---------- BUTTONS ---------- */
-.mm-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 15px 28px; border-radius: 0; font-weight: 600; font-size: 15px;
-  cursor: pointer; border: none; transition: transform .15s ease, filter .15s ease;
+/* ── HERO ── */
+.mm-hero {
+  position: relative; margin-top: 72px; padding: 20px 24px 24px;
+  background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%),
+              radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
+              var(--BG);
+  border-radius: 0; overflow: visible;
 }
-.mm-btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
-.mm-btn-orange { background: var(--orange-100); color: #fff; }
-
-/* ---------- HERO ---------- */
-.mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
 .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-desc { color: #1c2436; font-size: 15.5px; line-height: 1.75; margin-bottom: 24px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
-/* ---------- SECTIONS ---------- */
+/* ── SECTIONS ── */
 .mm-section { max-width: 1250px; margin: 0 auto; padding: 50px 24px; }
 .mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0 40px; padding: 60px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
 .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
 .mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
 
-/* ---------- FEATURE GRID ---------- */
+/* ── FEATURE GRID ── */
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .mm-feature-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
 .mm-feature-icon {
@@ -35,7 +32,7 @@
 .mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
 .mm-feature-card p { font-size: 13.5px; color: #1c2436; line-height: 1.65; }
 
-/* ---------- FAQ ---------- */
+/* ── FAQ ── */
 .mm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 1000px; margin: 0 auto; }
 .mm-faq-item { background: #fff; border-radius: 0; padding: 18px 22px; cursor: pointer; box-shadow: var(--shadow); }
 .mm-faq-item summary { display: flex; justify-content: space-between; align-items: center; font-size: 14.5px; font-weight: 600; list-style: none; }
@@ -44,88 +41,23 @@
 .mm-faq-item[open] summary::after { content: "\2212"; }
 .mm-faq-item p { margin-top: 12px; font-size: 13.5px; color: #1c2436; line-height: 1.6; }
 
-/* ---------- CTA BANNER ---------- */
+/* ── CTA BANNER ── */
 .mm-cta-banner { text-align: center; background: linear-gradient(120deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 44px 30px; max-width: 1250px; margin: 0 auto 50px; }
 .mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: uppercase; }
 .mm-cta-banner .accent { color: #7fb0ff; }
 
-/* ---------- ICONS ---------- */
-.icon { width: 24px; height: 24px; min-width: 24px; }
-.small-icon { width: 23px; height: 23px; }
-
-/* ---------- DIVIDER ---------- */
-.divider { height: 1px; width: 100%; background-color: #ffffff1a; margin: 37px 0 16px; }
-
-/* ---------- FOOTER ---------- */
-.footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 0; color: #ccd3e6; padding: 59px 64px 54px; background-color: var(--navy-100); }
-.footer__contact-col { width: 40%; }
-.footer__logo-wrap { display: inline-block; margin-bottom: 16px; }
-.footer__logo-wrap .logo { width: 155px; height: 35px; }
-.footer__contact-col .contacts-info { color: #ccd3e6; font-size: 16px; font-weight: 700; line-height: 22px; }
-.footer__contact-col .contacts-info:first-child { margin-bottom: 16px; }
-.footer__links-col { width: 60%; }
-.footer .footer-list { display: flex; flex-wrap: wrap; gap: 20px; }
-.footer .footer-list .nav__link { color: #ccd3e6 !important; font-size: 14px; }
-.footer .footer-list .nav__link::after { display: none !important; }
-.footer .footer-list .nav__link:hover { color: #fff !important; }
-.footer__media { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding-top: 30px; }
-.footer__media a { transition: transform .2s ease; }
-.footer__media a:hover { transform: translateY(-3px); }
-.footer__media img { width: 30px; height: 30px; filter: brightness(0) invert(0.8); }
-.footer__media .small-icon { width: 23px; height: 23px; }
-.footer__media a:hover img { filter: brightness(0) invert(1); }
-
-/* ---------- DROPDOWN MEGA MENU ---------- */
-.mega-menu:not(.features-mega) .text1 { color: var(--gray-100); }
-.mega-menu:not(.features-mega) .text1:hover { color: var(--blue); }
-.mega-menu:not(.features-mega) .mega-icon { background: rgba(2,142,206,.1); color: #028ece; }
-.mega-menu:not(.features-mega) .inside:hover { background: var(--gray-7); }
-.features-mega .inside { padding: 4px 6px; margin-bottom: 1px; border-radius: 8px; transition: background .2s ease; }
-.features-mega .inside:hover { background: #f5f8ff; }
-.features-mega .inside > div { flex: 1; min-width: 0; }
-.features-mega .column { gap: 4px; }
-.features-mega { overflow: visible; width: 880px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(11,26,61,.16); border: 1px solid rgba(11,26,61,.05); }
-.text1 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 12.5px; color: var(--gray-100); text-decoration: none; display: block; margin-bottom: 1px; }
-.text1:hover { color: var(--blue); }
-.features-mega .text1 { font-size: 11.5px; line-height: 1.3; color: #1c2436; }
-.features-mega .text1:hover { color: #028ece; }
-.mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
-
-
-/* ---------- MOBILE MENU ---------- */
-.menu {
-  position: fixed; top: -100%;
-  background-color: #fff; z-index: 10;
-  width: 100%; height: fit-content;
-  display: flex; padding: 0 16px 32px;
-  flex-direction: column; align-items: center; gap: 32px; flex-shrink: 0;
-  transition: .4s ease-in;
-}
-.menu__list { display: flex; flex-direction: column; align-items: center; gap: 18px; padding-top: 76px; }
-.menu__link { padding: 16px; color: var(--gray-100); font-size: 16px; font-weight: 500; line-height: 32px; }
-.menu__link:last-of-type { padding: 16px 0; width: 100%; }
-.menu-backdrop {
-  width: 100%; height: 100vh; position: fixed; top: 0; left: 0; visibility: hidden;
-  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
-}
-.visible { visibility: visible; }
-.visible .menu { top: 0; }
-
-/* ---------- RESPONSIVE ---------- */
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
+  .mm-hero { padding: 40px 16px 60px; }
   .mm-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .mm-section { padding: 36px 16px; }
+  .mm-section.grey { margin: 0 12px 30px; padding: 36px 20px; }
   .mm-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .mm-faq { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
+  .mm-hero { padding: 24px 12px 40px; }
+  .mm-section { padding: 24px 12px; }
   .mm-feature-grid { grid-template-columns: 1fr; }
-  .mm-section.grey { margin: 0 12px 30px; padding: 36px 20px; }
-}
-@media (max-width: 1201px) {
-  .footer { flex-direction: column; padding: 40px 24px; }
-  .footer__contact-col .divider { display: none; }
-  .footer .footer-list { flex-direction: column; gap: 24px; margin-top: 40px; }
-  .footer__contact-col, .footer__links-col { width: 100%; }
-  .footer__media { justify-content: flex-start; padding: 0; }
-  .footer > .divider { margin: 16px 0; }
+  .mm-cta-banner { padding: 28px 16px; }
 }

@@ -85,7 +85,7 @@ body {
 .nav .button .button__arrow { width: 20px; height: 20px; filter: brightness(0) invert(1); }
 .nav .active-page { text-decoration-line: underline; }
 
-/* Mobile Menu */
+/* Mobile Menu Button */
 .nav__menu {
   display: none; position: relative; z-index: 99;
   width: 40px; height: 40px;
@@ -98,7 +98,7 @@ body {
 .nav .menu-animated span:nth-child(2) { opacity: 0; }
 .nav .menu-animated span:last-child { transform-origin: bottom left; transform: rotate(-45deg) translate(1px,2px); width: 24px; }
 
-/* Dropdown Mega Menu */
+/* ── DROPDOWN MEGA MENU ── */
 .dropdown { position: relative; }
 .dropdown-content {
   position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-12px) scale(0.97);
@@ -235,22 +235,15 @@ body {
 .features-mega { width: 880px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(11,26,61,.16); border: 1px solid rgba(11,26,61,.05); }
 .mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
 
-/* ── MOBILE RESPONSIVE ── */
-@media (max-width: 1201px) {
-  .nav__list { display: none !important; }
-  .nav__menu { display: flex !important; }
-  .nav__logo-links-container { margin: 0 16px; }
-  .footer { flex-direction: column; padding: 40px 24px; }
-  .footer__contact-col .divider { display: none; }
-  .footer .footer-list { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; margin-top: 40px; }
-  .footer__contact-col, .footer__links-col { width: 100%; }
-  .footer__media { justify-content: flex-start; padding: 0; }
-  .footer .divider { margin: 16px 0; }
-}
-@media (max-width: 768px) {
-  .nav { border-radius: 0; margin: 0; max-width: 100%; }
-  .nav__logo-links-container { padding: 10px 14px; }
-  .footer { margin-top: 40px; }
+/* ── SECTION COMMON ── */
+.mm-hero { position: relative; margin-top: 72px; }
+.mm-hero-grid { max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-section { max-width: 1250px; margin: 0 auto; padding: 60px 24px; }
+.mm-heading { text-align: center; max-width: 700px; margin: 0 auto 44px; }
+.mm-cta-banner {
+  position: relative; text-align: center; overflow: hidden;
+  background: var(--navy-100); border-radius: 0; padding: 60px 30px;
+  max-width: 1250px; margin: 20px auto 60px;
 }
 
 /* ── DEMO MODAL ── */
@@ -361,7 +354,98 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(254, 79, 13, .4);
 }
-@media (max-width: 600px) {
-  .demo-modal { padding: 28px 20px; margin: 16px; }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — All pages
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (≤1201px) ── */
+@media (max-width: 1201px) {
+  .nav__list { display: none !important; }
+  .nav__menu { display: flex !important; }
+  .nav__logo-links-container { margin: 0 16px; }
+  .footer { flex-direction: column; padding: 40px 24px; }
+  .footer__contact-col .divider { display: none; }
+  .footer .footer-list { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; margin-top: 40px; }
+  .footer__contact-col, .footer__links-col { width: 100%; }
+  .footer__media { justify-content: flex-start; padding: 0; }
+  .footer .divider { margin: 16px 0; }
+}
+
+/* ── Mobile Large (≤768px) ── */
+@media (max-width: 768px) {
+  body { margin-top: 60px; }
+  .nav { border-radius: 0; margin: 0; max-width: 100%; }
+  .nav__logo-links-container { padding: 10px 14px; }
+  .logo { width: 120px; height: 28px; }
+  .container { padding: 0 16px; }
+  .mm-hero { margin-top: 60px; }
+  .mm-hero-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 8px; }
+  .mm-section { padding: 40px 16px; }
+  .mm-heading { margin-bottom: 28px; }
+  .mm-cta-banner { margin: 16px 12px 40px; padding: 40px 20px; }
+  .footer { margin-top: 40px; padding: 32px 20px; }
+  .footer__contact-col, .footer__links-col { width: 100%; }
+  .footer .footer-list { flex-direction: column; gap: 16px; margin-top: 24px; }
+  .footer__media { gap: 16px; }
+  .features-mega { width: 100%; max-width: 100%; padding: 16px; }
+  .features-mega .column { width: 100%; }
+  .dropdown-content { display: none !important; }
+  .mm-btn { padding: 14px 24px; font-size: 14px; }
+  .demo-modal { padding: 28px 20px; margin: 16px; max-width: calc(100% - 32px); }
+  .demo-modal h2 { font-size: 22px; }
   .demo-modal .form-row { grid-template-columns: 1fr; }
+}
+
+/* ── Mobile Medium (≤600px) ── */
+@media (max-width: 600px) {
+  body { margin-top: 56px; }
+  .nav__logo-links-container { padding: 8px 12px; }
+  .logo { width: 110px; height: 26px; }
+  .nav .button { padding: 10px 16px; height: 40px; }
+  .nav .button .button__text { font-size: 11px; }
+  .nav .button .button__arrow { width: 16px; height: 16px; }
+  .container { padding: 0 12px; }
+  .mm-hero { margin-top: 56px; }
+  .mm-hero-grid { gap: 24px; }
+  .mm-section { padding: 32px 12px; }
+  .mm-cta-banner { padding: 32px 16px; margin: 12px 8px 32px; }
+  .footer { padding: 28px 16px; margin-top: 32px; }
+  .footer__media { gap: 12px; flex-wrap: wrap; }
+  .footer__media img { width: 24px; height: 24px; }
+  .mm-btn { padding: 12px 20px; font-size: 13px; border-radius: 10px; }
+  .mm-btn i { display: none; }
+  .demo-modal { padding: 24px 16px; margin: 12px; border-radius: 14px; }
+  .demo-modal h2 { font-size: 20px; }
+  .demo-modal .submit-btn { font-size: 14px; padding: 12px; }
+  .menu__list { padding-top: 60px; gap: 10px; }
+  .menu__link { padding: 10px 14px; font-size: 15px; }
+}
+
+/* ── Mobile Small (≤425px) ── */
+@media (max-width: 425px) {
+  .logo { width: 100px; height: 24px; }
+  .nav .button { padding: 8px 14px; height: 36px; border-radius: 50px; }
+  .nav .button .button__text { font-size: 10px; letter-spacing: 0; }
+  .nav .button .button__arrow { width: 14px; height: 14px; }
+  .mm-hero-grid { gap: 20px; }
+  .footer { padding: 24px 14px; }
+  .footer .contacts-info { font-size: 14px; }
+  .footer__media img { width: 20px; height: 20px; }
+}
+
+/* ── Touch Friendly ── */
+@media (hover: none) and (pointer: coarse) {
+  .mm-btn:hover { transform: none; filter: none; }
+  .mm-btn:hover i { transform: none; }
+  .nav .button:hover { transform: none; }
+  .footer__media a:hover { transform: none; }
+  .mega-menu .inside:hover { background: transparent; }
+  .features-mega .inside:hover { background: transparent; }
+}
+
+/* ── Landscape Mobile ── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .menu__list { padding-top: 20px; gap: 8px; }
+  .menu__link { padding: 8px 12px; font-size: 14px; }
 }

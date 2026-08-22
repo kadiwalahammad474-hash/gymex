@@ -1,96 +1,39 @@
 /* ================================================================
    GYMEX — CONTACT PAGE (page-specific styles only)
-   Nav, mega-menu, footer colour, resets, and CSS vars all live in
-   style.css (loaded before this file on every page). This file only
-   has what's unique to the contact page: hero, feature cards, map,
-   CTA banner, footer layout, and the demo/lead modal.
+   Shared styles (nav, footer, buttons, dropdown, mobile menu)
+   come from style.css loaded before this file.
    ================================================================ */
 
-/* style.css doesn't define --black — add the one extra token this
-   page needs, without touching anything style.css already owns. */
-:root {
-  --black: #191919;
-}
+:root { --black: #191919; }
 
-/* ---------------------------------------------------------
-   MOBILE MENU OVERLAY — style.css defines the hamburger button
-   (.nav__menu) and the submenu toggle (.dropdown-menu) but NOT
-   the fullscreen mobile panel itself. Without this, .menu renders
-   inline in normal document flow (always visible, pushed under
-   the nav) instead of as a hidden slide-down overlay.
-   --------------------------------------------------------- */
-.menu-backdrop {
-  width: 100%; height: 100vh; position: fixed; top: 0; left: 0;
-  visibility: hidden;
-  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
-  background: rgba(4, 17, 23, .35);
-  z-index: 90;
+/* ── HERO ── */
+.mm-hero {
+  position: relative; margin-top: 72px; padding: 20px 24px 24px;
+  background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%),
+              radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
+              var(--BG);
+  border-radius: 0; overflow: visible;
 }
-.visible { visibility: visible; }
-.visible .menu { top: 0; }
-.menu {
-  position: fixed; top: -100%; left: 0;
-  background-color: #fff; z-index: 95;
-  width: 100%; height: fit-content; max-height: 100vh; overflow-y: auto;
-  display: flex; padding: 20px 16px 40px;
-  flex-direction: column; align-items: center; gap: 32px;
-  border-radius: 0 0 24px 24px;
-  box-shadow: 0 20px 60px rgba(11, 26, 61, .15);
-  transition: top .4s ease-in;
+.mm-hero-grid {
+  position: relative; z-index: 1; max-width: 1250px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
-.menu__list {
-  display: flex; flex-direction: column; align-items: center; gap: 14px;
-  padding-top: 70px; width: 100%; max-width: 400px; margin: 0 auto;
-}
-.menu__link {
-  padding: 12px 16px; color: var(--gray-100);
-  font-size: 16px; font-weight: 500; line-height: 32px;
-  width: 100%; text-align: left; border-radius: 10px;
-  transition: background .2s ease;
-}
-.menu__link:hover { background: var(--gray-7); }
-.menu__link a { display: block; width: 100%; }
-.menu__link .fa-chevron-down { margin-left: 6px; font-size: 12px; }
-
-/* ---------------------------------------------------------
-   HERO — dark glass
-   --------------------------------------------------------- */
-.mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
-
-.mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-h1 .accent { color: var(--blue); }
 .mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
-/* ---------------------------------------------------------
-   BUTTONS (page-specific pill CTAs, not the nav button —
-   that one is styled by style.css's .nav .button)
-   --------------------------------------------------------- */
-.mm-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 16px 30px; border-radius: 100px;
-  font-weight: 700; font-size: 15px; letter-spacing: .03em; text-transform: uppercase;
-  cursor: pointer; border: none;
-  position: relative; overflow: hidden;
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+/* ── SECTION ── */
+.mm-section { max-width: 1250px; margin: 0 auto; padding: 60px 24px; }
+.mm-heading { text-align: center; max-width: 700px; margin: 0 auto 44px; }
+.mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
+.mm-heading h2::after {
+  content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
+  margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
 }
-.mm-btn:hover { transform: translateY(-2px); filter: brightness(1.03); }
-.mm-btn i { transition: transform .2s ease; }
-.mm-btn:hover i { transform: translateX(3px); }
-.mm-btn-primary { background: var(--blue); color: #fff; box-shadow: 0 14px 32px rgba(2, 142, 206, .3); }
-.mm-btn-orange {
-  background: linear-gradient(135deg, var(--orange-100), #e0450b);
-  color: #fff;
-  box-shadow: 0 14px 32px rgba(254, 79, 13, .32);
-}
-.mm-btn-orange:hover { box-shadow: 0 18px 40px rgba(254, 79, 13, .42); }
-
 .mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
 
-/* ---------------------------------------------------------
-   CONTACT FEATURE CARDS (Call / Email / Office)
-   --------------------------------------------------------- */
+/* ── CONTACT FEATURE CARDS ── */
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .mm-feature-card {
   background: #fff; border-radius: var(--radius); padding: 30px 26px;
@@ -110,14 +53,10 @@
 /* Map embed */
 .mm-map-wrap { margin-top: 24px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid #eef1f8; }
 
-/* ---------------------------------------------------------
-   CTA BANNER — dark glow
-   --------------------------------------------------------- */
+/* ── CTA BANNER ── */
 .mm-cta-banner {
-  position: relative;
-  text-align: center; overflow: hidden;
-  background: var(--BG);
-  border-radius: 0; padding: 60px 30px;
+  position: relative; text-align: center; overflow: hidden;
+  background: var(--BG); border-radius: 0; padding: 60px 30px;
   max-width: 1250px; margin: 20px auto 60px;
 }
 .mm-cta-banner::before {
@@ -131,59 +70,8 @@
 .mm-cta-banner h2 { position: relative; z-index: 1; color: var(--gray-100); font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; margin-bottom: 26px; line-height: 1.4; }
 .mm-cta-banner .mm-btn { position: relative; z-index: 1; }
 
-/* ---------------------------------------------------------
-   FOOTER LAYOUT — style.css only sets the navy background;
-   the rest of the footer's structure lives here
-   --------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1201px) {
-  
-  
-  
-  
-}
-
-/* ---------------------------------------------------------
-   CONTACT MODAL (demo / lead form)
-   --------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ── CONTACT FORM (demo / lead) ── */
 .error { font-size: 12px; line-height: 18px; color: #eb5757; display: none; }
-
-
-
-/* Country-code select box inside the form */
 .select-box { position: relative; }
 .selected-option {
   display: flex; align-items: center; background: var(--gray-7);
@@ -214,67 +102,19 @@
 .options .option.hide { display: none; }
 .options .option .iconify { margin-right: 8px; }
 
-@media screen and (max-width: 768px) {
-  
-  
-  
-  
-  .selected-option { flex-wrap: wrap; }
-}
-
-/* ---------------------------------------------------------
-   RESPONSIVE — page sections only (nav responsiveness lives
-   in style.css)
-   --------------------------------------------------------- */
+/* ── RESPONSIVE (page-specific only) ── */
 @media (max-width: 900px) {
-  .mm-hero { padding: 40px 16px 70px; border-radius: 0 0 20px 20px; }
-  .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-  .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
+  .mm-hero { padding: 40px 16px 70px; }
+  .mm-hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .mm-desc { font-size: 14px; }
   .mm-section { padding: 36px 16px; }
   .mm-feature-grid { grid-template-columns: 1fr; gap: 14px; }
   .mm-cta-banner { margin: 20px 12px 40px; padding: 40px 20px; }
 }
-
-/* ---------- FOOTER ---------- */
-.footer { margin-top: 120px; display: flex; justify-content: space-between; border-radius: 20px; color: #ccd3e6; padding: 59px 64px 54px; }
-.footer__contact-col { width: 40%; }
-.footer__contact-col .contacts-info { color: #ccd3e6; font-size: 16px; font-weight: 700; line-height: 22px; }
-.footer__contact-col .contacts-info:first-child { margin-bottom: 16px; }
-.footer__contact-col .contacts-info a { transition: color .2s ease; }
-.footer__contact-col .contacts-info a:hover { color: #fff; }
-.footer__links-col { width: 60%; }
-.footer__links-col .nav__link { color: #ccd3e6 !important; font-size: 14px; }
-.footer__links-col .nav__link::after { display: none !important; }
-.footer__links-col .nav__link:hover { color: #fff !important; }
-.footer__media { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding-top: 30px; }
-.footer__media a { transition: transform .2s ease; }
-.footer__media a:hover { transform: translateY(-3px); }
-.footer__media img { width: 30px; height: 30px; }
-.footer__media .small-icon { width: 23px; height: 23px; }
-.footer .divider { height: 1px; width: 100%; background-color: #ffffff1a; margin: 37px 0 16px; }
-@media screen and (max-width: 1201px) {
-  .footer { flex-direction: column; padding: 40px 24px; }
-  .footer__contact-col .divider { display: none; }
-  .footer .footer-list { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; margin-top: 40px; }
-  .footer__contact-col, .footer__links-col { width: 100%; }
-  .footer__media { justify-content: flex-start; padding: 0; }
-  .footer .divider { margin: 16px 0; }
+@media (max-width: 600px) {
+  .mm-hero { padding: 24px 12px 40px; }
+  .mm-section { padding: 24px 12px; }
+  .mm-feature-grid { gap: 12px; }
+  .mm-feature-card { padding: 20px 18px; }
+  .selected-option { flex-wrap: wrap; }
 }
-
-/* Dropdown mega-menu (same as home) */
-.mega-menu:not(.features-mega) .text1 { color: var(--gray-100); }
-.mega-menu:not(.features-mega) .text1:hover { color: var(--blue); }
-.mega-menu:not(.features-mega) .mega-icon { background: rgba(2,142,206,.1); color: #028ece; }
-.mega-menu:not(.features-mega) .inside:hover { background: var(--gray-7); }
-.features-mega .inside { padding: 4px 6px; margin-bottom: 1px; border-radius: 8px; transition: background .2s ease; }
-.features-mega .inside:hover { background: #f5f8ff; }
-.features-mega .inside > div { flex: 1; min-width: 0; }
-.features-mega .column { gap: 4px; }
-.features-mega { overflow: visible; }
-.text1 { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 12.5px; color: var(--gray-100); text-decoration: none; display: block; margin-bottom: 1px; }
-.text1:hover { color: var(--blue); }
-.features-mega .text1 { font-size: 11.5px; line-height: 1.3; color: #1c2436; }
-.features-mega .text1:hover { color: #028ece; }
-.mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
-.features-mega { width: 880px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(11,26,61,.16); border: 1px solid rgba(11,26,61,.05); }
