@@ -78,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a class="nav__link" href="../index/index.html">Home</a>
 
               <div class="dropdown">
-                <a class="nav__link" href="../business/business.html">Business Types <i class="fa fa-chevron-down"></i></a>
+                <a class="nav__link" href="../business/business.html">Business Types <i class="fa fa-chevron-down" style="font-size:10px;"></i></a>
                 <div class="dropdown-content mega-menu">
                     <div class="column">
                       <p class="mega-col-title">Gym &amp; Fitness</p>
@@ -185,7 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <a href="../index/index.html">Home</a>
                   </li>
                   <li class="dropdown">
-                      <a href="../business/business.html" id="business-types-link">Business Types <i class="fa fa-chevron-down"></i></a>
+                      <a href="../business/business.html" id="business-types-link">Business Types <i class="fa fa-chevron-down" style="font-size:10px;"></i></a>
                       <ul class="dropdown-menu" id="dropdown-menu">
                           <li ><a href="../gym-management-software/gym-management-software.html" >GYM</a></li><br>
                           <li><a href="../pt-studio/pt-studio.html">PT STUDIO</a></li><br>
@@ -300,15 +300,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Links Bar -->
         <div style="padding:16px 0; border-bottom:1px solid rgba(255,255,255,.08);">
           <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-            <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:center;">
-              <a href="index.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">HOME</a>
-              <a href="../about/about.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">ABOUT US</a>
-              <a href="../pricing/pricing.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">PRICING</a>
-              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">BLOG</a>
-              <a href="../contact/contact.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">CONTACT US</a>
-              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">TERMS &amp; CONDITIONS</a>
-              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">PRIVACY POLICY</a>
-              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px;">REFUND POLICY</a>
+            <div style="display:flex; gap:28px; align-items:center; flex-wrap:nowrap; overflow-x:auto;">
+              <a href="index.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">HOME</a>
+              <a href="../about/about.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">ABOUT US</a>
+              <a href="../pricing/pricing.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">PRICING</a>
+              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">BLOG</a>
+              <a href="../contact/contact.html" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">CONTACT US</a>
+              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">TERMS &amp; CONDITIONS</a>
+              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">PRIVACY POLICY</a>
+              <a href="#" style="color:rgba(255,255,255,.6); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; white-space:nowrap;">REFUND POLICY</a>
             </div>
             <a class="open-demo-modal" href="#" style="background:#f26522; color:#fff; padding:10px 24px; border-radius:50px; font-size:13px; font-weight:600; text-decoration:none; white-space:nowrap;">ASK FOR DEMO</a>
           </div>
@@ -383,16 +383,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="subtitle">See how Gymex can transform your gym management. Fill in the details below.</p>
     <form action="../contactus.php" method="post">
       <input type="hidden" name="backurl" value="">">
-      <div class="form-row">
+      <div class="form-row" style="margin-bottom:16px;">
         <div><label>First Name *</label><input type="text" name="firstname" placeholder="John" required></div>
         <div><label>Last Name *</label><input type="text" name="lastname" placeholder="Doe" required></div>
       </div>
-      <div class="form-row">
+      <div class="form-row" style="margin-bottom:16px;">
         <div><label>Email *</label><input type="email" name="email" placeholder="john@example.com" required></div>
         <div><label>Phone *</label><input type="tel" name="phonenumber" placeholder="98765 43210" required></div>
       </div>
-      <div><label>Company / Gym Name</label><input type="text" name="company" placeholder="Your Gym Name"></div>
-      <div><label>Message</label><textarea name="message" placeholder="Tell us about your gym..."></textarea></div>
+      <div style="margin-bottom:16px;"><label>Country</label>
+        <select name="country" style="width:100%; padding:10px 14px; border:1.5px solid #e2e8f0; border-radius:10px; font-size:14px; font-family:'Poppins',sans-serif; color:#333; background:#fff; outline:none; appearance:auto; -webkit-appearance:auto; cursor:pointer;">
+          <option value="">Select Country</option>
+          <option value="IN">India</option>
+          <option value="AE">UAE</option>
+          <option value="SA">Saudi Arabia</option>
+          <option value="OM">Oman</option>
+          <option value="BH">Bahrain</option>
+          <option value="KW">Kuwait</option>
+          <option value="QA">Qatar</option>
+          <option value="US">United States</option>
+          <option value="GB">United Kingdom</option>
+          <option value="SG">Singapore</option>
+          <option value="MY">Malaysia</option>
+          <option value="TH">Thailand</option>
+          <option value="PH">Philippines</option>
+          <option value="ID">Indonesia</option>
+          <option value="AU">Australia</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="JP">Japan</option>
+          <option value="KR">South Korea</option>
+          <option value="ZA">South Africa</option>
+          <option value="NG">Nigeria</option>
+          <option value="EG">Egypt</option>
+          <option value="OTHER">Other</option>
+        </select>
+      </div>
+      <div class="form-row" style="margin-bottom:16px;">
+        <div><label>State</label><input type="text" name="state" placeholder="Your State"></div>
+        <div><label>City</label><input type="text" name="city" placeholder="Your City"></div>
+      </div>
+      <div style="margin-bottom:16px;"><label>Company / Gym Name</label><input type="text" name="company" placeholder="Your Gym Name"></div>
+      <div style="margin-bottom:16px;"><label>Business Type</label>
+        <select name="business_type" style="width:100%; padding:10px 14px; border:1.5px solid #e2e8f0; border-radius:10px; font-size:14px; font-family:'Poppins',sans-serif; color:#333; background:#fff; outline:none; appearance:auto; -webkit-appearance:auto; cursor:pointer;">
+          <option value="">Select Business Type</option>
+          <option value="gym">Gym</option>
+          <option value="yoga_studio">Yoga Studio</option>
+          <option value="dance_studio">Dance Studio</option>
+          <option value="swim_school">Swim School</option>
+          <option value="sports_academy">Sports Academy</option>
+          <option value="martial_arts">Martial Arts Studio</option>
+          <option value="pt_studio">PT Studio</option>
+          <option value="pilates">Pilates</option>
+          <option value="aerobics">Aerobics</option>
+          <option value="health_fitness">Health &amp; Fitness Center</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div style="margin-bottom:16px;"><label>Message</label><textarea name="message" placeholder="Tell us about your gym..."></textarea></div>
       
       <div class="captcha-section" style="margin:16px 0 8px;">
         <label style="display:block;font-size:13px;font-weight:600;color:var(--gray-100);margin-bottom:6px;">CAPTCHA *</label>
