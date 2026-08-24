@@ -179,19 +179,21 @@ body { position: relative; z-index: 1; }
   gap: 12px;
 }
 .mm-btn-orange:hover { box-shadow: 0 18px 40px rgba(254, 79, 13, .42); }
-.mm-btn i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
-  background: #fff;
-  color: var(--orange-100);
-  font-size: 16px;
-  transition: transform .2s ease;
-  transform: rotate(45deg);
+.mm-btn-orange i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: var(--orange-100) !important;
+  font-size: 16px !important;
+  transition: transform .2s ease !important;
+  transform: rotate(45deg) !important;
+  padding: 0 !important;
+  line-height: 1 !important;
 }
 .mm-btn:hover i { transform: translateX(3px); }
 
