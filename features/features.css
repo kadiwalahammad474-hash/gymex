@@ -600,7 +600,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ---------- HERO ---------- */
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
-.mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -645,7 +645,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .mm-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .mm-faq { grid-template-columns: 1fr; }
   .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
@@ -834,7 +834,7 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 0;
     margin-bottom: 16px;
   }
-  .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
   .mm-desc {
     font-size: 14px;

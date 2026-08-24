@@ -195,7 +195,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ---------- Hero ---------- */
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
-.mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-hero h1 { font-size: 44px; line-height: 1.15; font-weight: 700; margin: 10px 0 16px; text-transform: uppercase; }
 .mm-hero h1 .accent { color: var(--blue); display: block; }
 .mm-hero .mm-sub { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
