@@ -89,7 +89,7 @@
   display: flex; align-items: center;
   justify-content: space-between;
   cursor: pointer; padding: 24px 28px;
-  gap: 16px; flex-wrap: wrap;
+  gap: 16px; flex-wrap: nowrap;
 }
 .gx-career-header:hover { background: #fafcff; }
 
@@ -101,12 +101,12 @@
   font-size: 13.5px; color: #666;
   line-height: 1.6; margin: 0;
 }
-.gx-career-meta {
+.gx-career-meta { flex-shrink: 0;
   font-size: 13px; color: #555;
   white-space: nowrap;
 }
 .gx-career-meta p { margin: 4px 0; }
-.gx-apply-btn {
+.gx-apply-btn { flex-shrink: 0;
   background: var(--blue); color: #fff;
   padding: 10px 26px; border-radius: 10px;
   text-decoration: none; font-size: 14px;
@@ -150,14 +150,14 @@
   .career-hero-card { max-width: 100%; margin: 0 auto; }
   .mm-section { padding: 36px 16px; }
   .gx-career-header { flex-direction: column; align-items: flex-start; }
-  .gx-career-meta { display: flex; gap: 16px; }
-  .gx-apply-btn { align-self: flex-start; }
+  .gx-career-meta { flex-shrink: 0; display: flex; gap: 16px; }
+  .gx-apply-btn { flex-shrink: 0; align-self: flex-start; }
 }
 @media (max-width: 600px) {
   .mm-hero { padding: 24px 12px 32px; }
   .mm-section { padding: 24px 12px; }
   .gx-career-header { padding: 18px 16px; }
   .gx-career-details { padding: 0 16px 18px; }
-  .gx-career-meta { flex-direction: column; gap: 0; }
+  .gx-career-meta { flex-shrink: 0; flex-direction: column; gap: 0; }
   .mm-cta-banner { padding: 28px 16px; }
 }
