@@ -375,10 +375,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="subtitle">See how Gymex can transform your gym management. Fill in the details below.</p>
     <form action="../contactus.php" method="post">
       <input type="hidden" name="backurl" value="">">
-      <div class="form-row" style="margin-bottom:16px;">
-        <div><label>First Name *</label><input type="text" name="firstname" placeholder="John" required></div>
-        <div><label>Last Name *</label><input type="text" name="lastname" placeholder="Doe" required></div>
-      </div>
+      <div style="margin-bottom:16px;"><label>Your Name *</label><input type="text" name="fullname" placeholder="Your Full Name" required></div>
       <div class="form-row" style="margin-bottom:16px;">
         <div><label>Email *</label><input type="email" name="email" placeholder="john@example.com" required></div>
         <div><label>Phone *</label><input type="tel" name="phonenumber" placeholder="98765 43210" required></div>
@@ -416,22 +413,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label>City</label><input type="text" name="city" placeholder="Your City"></div>
       </div>
       <div style="margin-bottom:16px;"><label>Company / Gym Name</label><input type="text" name="company" placeholder="Your Gym Name"></div>
-      <div style="margin-bottom:16px;"><label>Business Type</label>
-        <select name="business_type" style="width:100%; padding:10px 14px; border:1.5px solid #e2e8f0; border-radius:10px; font-size:14px; font-family:'Poppins',sans-serif; color:#333; background:#fff; outline:none; appearance:auto; -webkit-appearance:auto; cursor:pointer;">
-          <option value="">Select Business Type</option>
-          <option value="gym">Gym</option>
-          <option value="yoga_studio">Yoga Studio</option>
-          <option value="dance_studio">Dance Studio</option>
-          <option value="swim_school">Swim School</option>
-          <option value="sports_academy">Sports Academy</option>
-          <option value="martial_arts">Martial Arts Studio</option>
-          <option value="pt_studio">PT Studio</option>
-          <option value="pilates">Pilates</option>
-          <option value="aerobics">Aerobics</option>
-          <option value="health_fitness">Health &amp; Fitness Center</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
+      
       <div style="margin-bottom:16px;"><label>Message</label><textarea name="message" placeholder="Tell us about your gym..."></textarea></div>
       
       <div class="captcha-section" style="margin:16px 0 8px;">
