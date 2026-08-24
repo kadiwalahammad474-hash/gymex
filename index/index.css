@@ -185,11 +185,7 @@ body { position: relative; z-index: 1; }
   position: relative;
   margin-top: 0;
   padding: 20px 24px 24px;
-  background:
-    radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%),
-    radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
-    radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%),
-    var(--BG);
+  background: var(--BG);
   border-radius: 0;
   overflow: visible;
 }
