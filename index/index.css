@@ -185,7 +185,7 @@ body { position: relative; z-index: 1; }
   position: relative;
   margin-top: 0;
   padding: 20px 24px 24px;
-  background: var(--BG);
+  background: url("../assets/img.png") center/cover no-repeat var(--BG);
   border-radius: 0;
   overflow: visible;
 }
