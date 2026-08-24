@@ -403,26 +403,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')" style="position:absolute;top:14px;right:18px;z-index:10;background:none;border:none;font-size:28px;color:#999;cursor:pointer;line-height:1;">&times;</button>
     <div style="padding:32px 36px 28px;">
       <h2 style="text-align:center;font-size:22px;font-weight:800;letter-spacing:1px;margin:0 0 24px;font-family:'Poppins',sans-serif;color:#1a1a2e;">SCHEDULE A FREE DEMO!</h2>
-      <form action="../contact/contact.html" method="get" style="display:flex;gap:20px;">
-        <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
-          <input type="text" name="fullname" placeholder="Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;">
-          <input type="text" name="lastname" placeholder="Last Name" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;">
-          <input type="text" name="company" placeholder="Company" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;">
-          <input type="email" name="email" placeholder="Email" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;">
-          <div style="display:flex;gap:0;">
-            <select name="country_code" style="padding:12px 10px;border:1.5px solid #e0e0e0;border-radius:8px 0 0 8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;background:#fff;outline:none;cursor:pointer;border-right:none;appearance:auto;-webkit-appearance:auto;min-width:80px;">
-              <option value="+91">+91</option>
-              <option value="+971">+971</option>
-              <option value="+966">+966</option>
-              <option value="+1">+1</option>
-              <option value="+44">+44</option>
-              <option value="+65">+65</option>
-            </select>
-            <input type="tel" name="phone" placeholder="Phone Number" style="flex:1;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:0 8px 8px 0;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;">
+            <form action="https://www.gymex.online/contactus.php" method="post" style="display:flex;gap:20px;">
+        <div style="flex:1;display:flex;flex-direction:column;gap:12px;">
+          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Name *</label><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Gym / Company Name</label><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+          <div style="display:flex;gap:10px;">
+            <div style="flex:1;"><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">State</label><input type="text" name="sname" placeholder="State" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+            <div style="flex:1;"><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">City</label><input type="text" name="cname" placeholder="City" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+          </div>
+          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Email *</label><input type="email" name="email" placeholder="you@example.com" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Mobile *</label><input type="tel" name="mobile" placeholder="98765 43210" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">CAPTCHA *</label>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div id="captcha-box" style="background:#fff;border:1.5px solid #e0e0e0;border-radius:8px;padding:8px 14px;font-size:16px;font-weight:bold;letter-spacing:5px;color:#333;font-family:'Courier New',monospace;user-select:none;min-width:100px;text-align:center;"></div>
+              <button type="button" onclick="generateCaptcha()" title="Refresh" style="background:#fff;border:1.5px solid #e0e0e0;border-radius:8px;color:#555;font-size:14px;padding:6px 10px;cursor:pointer;">&#8635;</button>
+              <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter" maxlength="6" autocomplete="off" style="flex:1;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;">
+              <input type="hidden" id="captcha-value" name="captcha_value">
+            </div>
+            <p id="captcha-error" style="color:#ef4444;font-size:12px;margin-top:4px;display:none;font-weight:600;">Incorrect CAPTCHA. Please try again.</p>
           </div>
         </div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
-          <textarea name="message" placeholder="Your message .." style="flex:1;min-height:160px;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;"></textarea>
+        <div style="flex:1;display:flex;flex-direction:column;gap:12px;">
+          <div style="flex:1;"><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Message</label><textarea name="comment" placeholder="Tell us about your gym.." style="flex:1;min-height:140px;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;width:100%;"></textarea></div>
           <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#f26522;color:#fff;border:none;border-radius:50px;padding:14px 28px;font-size:14px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;align-self:flex-end;white-space:nowrap;">
             GET YOUR FREE DEMO
             <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:14px;">&#8599;</span>
