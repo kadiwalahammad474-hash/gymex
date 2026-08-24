@@ -629,7 +629,8 @@ body { position: relative; z-index: 1; }
 
 /* ---------- BUTTONS: magnetic + ripple + glow ---------- */
 .magnetic-btn { transition: transform .15s ease-out, box-shadow .2s ease; will-change: transform; }
-.mm-btn, .button_sff { position: relative; overflow: hidden; }
+.button_sff { position: relative; overflow: hidden; }
+.mm-btn { position: relative; }
 .mm-ripple {
   position: absolute; border-radius: 50%;
   background: rgba(255,255,255,.5);
@@ -1070,6 +1071,8 @@ body { position: relative; z-index: 1; }
     padding: 12px 20px;
     font-size: 13px;
   }
+  .mm-btn-orange { padding: 4px 4px 4px 18px; gap: 8px; }
+  .mm-btn-orange i { width: 34px; height: 34px; min-width: 34px; font-size: 13px; }
   .mm-phone-frame {
     max-width: 220px;
     margin: 0 auto;
@@ -1382,7 +1385,15 @@ body { position: relative; z-index: 1; }
     border-radius: 10px;
   }
   .mm-btn-orange {
+    padding: 4px 4px 4px 18px;
+    gap: 8px;
     box-shadow: 0 10px 24px rgba(254, 79, 13, .25);
+  }
+  .mm-btn-orange i {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 13px;
   }
 }
 
