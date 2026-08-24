@@ -183,16 +183,15 @@ body { position: relative; z-index: 1; }
 /* ---------- HERO ---------- */
 .mm-hero {
   position: relative;
-  margin: 0 -50vw;
-  width: 100vw;
-  padding: 40px calc(50vw - 50%) 24px;
+  margin: 0;
+  width: 100%;
+  padding: 40px 0 24px;
   background: url("../assets/img.png") center top/cover no-repeat var(--BG);
   border-radius: 0;
-  overflow: hidden;
 }
 .mm-hero-grid {
   position: relative; z-index: 1;
-  width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px;
+  width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 40px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; }
