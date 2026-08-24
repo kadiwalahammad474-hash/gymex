@@ -184,14 +184,14 @@ body { position: relative; z-index: 1; }
 .mm-hero {
   position: relative;
   margin-top: 0;
-  padding: 20px 24px 24px;
-  background: url("../assets/img.png") center/cover no-repeat var(--BG);
+  padding: 40px 0 24px;
+  background: url("../assets/img.png") center top/100% auto no-repeat var(--BG);
   border-radius: 0;
   overflow: visible;
 }
 .mm-hero-grid {
   position: relative; z-index: 1;
-  max-width: 1250px; margin: 0 auto;
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; }
