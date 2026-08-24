@@ -578,13 +578,13 @@ K.5px;
 
 /* ---------- HERO ---------- */
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
-.mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.75; margin-bottom: 24px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ---------- SECTIONS ---------- */
-.mm-section { max-width: 1250px; margin: 0 auto; padding: 50px 24px; }
+.mm-section { width: 100%; max-width: 100%; padding: 60px 40px; margin: 0 auto; }
 .mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0 40px; padding: 60px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
 .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
@@ -617,7 +617,7 @@ K.5px;
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .mm-hero-grid { position: relative; z-index: 1; max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .mm-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .mm-faq { grid-template-columns: 1fr; }
   .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
