@@ -175,9 +175,24 @@ body { position: relative; z-index: 1; }
   background: linear-gradient(135deg, var(--orange-100), #e0450b);
   color: #fff;
   box-shadow: 0 14px 32px rgba(254, 79, 13, .32);
+  padding: 6px 6px 6px 28px;
+  gap: 12px;
 }
 .mm-btn-orange:hover { box-shadow: 0 18px 40px rgba(254, 79, 13, .42); }
-.mm-btn i { transition: transform .2s ease; }
+.mm-btn i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--orange-100);
+  font-size: 16px;
+  transition: transform .2s ease;
+  transform: rotate(45deg);
+}
 .mm-btn:hover i { transform: translateX(3px); }
 
 /* ---------- HERO ---------- */
@@ -352,7 +367,8 @@ body { position: relative; z-index: 1; }
 .footer__links-col .nav__link::after { display: none !important; }
 .footer__links-col .nav__link:hover { color: #fff !important; }
 .footer__media{ display: flex; justify-content: flex-end; align-items: center; gap: 40px; padding-top: 30px; }
-.footer__media a { transition: transform .2s ease; }
+.footer__media a { transition: transform .2s ease;
+  transform: rotate(45deg); }
 .footer__media a:hover { transform: translateY(-3px); }
 .footer__media img { width: 30px; height: 30px; }
 .footer__media .small-icon { width: 23px; height: 23px; }
