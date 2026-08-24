@@ -296,6 +296,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 
+
+<!-- Footer Mobile Responsive -->
+<style>
+@media (max-width: 768px) {
+  .footer > div { flex-direction: column !important; }
+  .footer [style*="display:flex"][style*="justify-content:space-between"] { 
+    flex-direction: column !important; gap: 20px !important; align-items: flex-start !important; 
+  }
+  .footer [style*="flex:1"], .footer [style*="flex:1.3"], .footer [style*="flex:1.4"], .footer [style*="flex:0.5"] {
+    flex: 1 1 100% !important; max-width: 100% !important;
+  }
+  .footer [style*="flex-wrap:nowrap"] { flex-wrap: wrap !important; }
+  .footer [style*="overflow-x:auto"] { overflow-x: visible !important; }
+  .footer [style*="gap:40px"] { gap: 20px !important; }
+  .footer [style*="gap:36px"] { gap: 16px !important; }
+}
+@media (max-width: 480px) {
+  .footer [style*="font-size:13px"] { font-size: 12px !important; }
+}
+</style>
 <!-- Footer -->
 <div class="footer" style="background:#0b1a3d; padding:0;">
   <!-- Links Bar -->
@@ -455,6 +475,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
+
+<script>
+(function(){
+var T=document.getElementById('menu-backdrop'),b=document.getElementById('open-menu');
+if(b&&T){b.addEventListener('click',function(){T.classList.toggle('visible');b.classList.toggle('menu-animated');document.body.style.overflow=T.classList.contains('visible')?'hidden':'auto'});
+document.body.addEventListener('click',function(e){if(e.target===T){T.classList.remove('visible');b.classList.remove('menu-animated');document.body.style.overflow='auto'}});
+document.querySelectorAll('.menu__link').forEach(function(c){c.addEventListener('click',function(){T.classList.remove('visible');b.classList.remove('menu-animated');document.body.style.overflow='auto'})});
+}
+// Mobile dropdown toggle
+document.querySelectorAll('.dropdown > a').forEach(function(trigger){
+  trigger.addEventListener('click',function(e){
+    var menu=this.nextElementSibling;
+    if(menu&&menu.classList.contains('dropdown-menu')){
+      e.preventDefault();
+      menu.classList.toggle('show');
+      var icon=this.querySelector('.fa-chevron-down');
+      if(icon)icon.style.transform=menu.classList.contains('show')?'rotate(180deg)':'rotate(0)';
+    }
+  });
+});
+})();
+</script>
+
 document.querySelectorAll('.open-demo-modal').forEach(function(btn) {
   btn.addEventListener('click', function(e) {
     e.preventDefault();

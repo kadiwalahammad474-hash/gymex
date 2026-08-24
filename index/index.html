@@ -548,6 +548,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 
+
+<!-- Footer Mobile Responsive -->
+<style>
+@media (max-width: 768px) {
+  .footer > div { flex-direction: column !important; }
+  .footer [style*="display:flex"][style*="justify-content:space-between"] { 
+    flex-direction: column !important; gap: 20px !important; align-items: flex-start !important; 
+  }
+  .footer [style*="flex:1"], .footer [style*="flex:1.3"], .footer [style*="flex:1.4"], .footer [style*="flex:0.5"] {
+    flex: 1 1 100% !important; max-width: 100% !important;
+  }
+  .footer [style*="flex-wrap:nowrap"] { flex-wrap: wrap !important; }
+  .footer [style*="overflow-x:auto"] { overflow-x: visible !important; }
+  .footer [style*="gap:40px"] { gap: 20px !important; }
+  .footer [style*="gap:36px"] { gap: 16px !important; }
+}
+@media (max-width: 480px) {
+  .footer [style*="font-size:13px"] { font-size: 12px !important; }
+}
+</style>
 <!-- Footer -->
 <div class="footer" style="background:#0b1a3d; padding:0;">
   <!-- Links Bar -->
@@ -725,6 +745,19 @@ var dm=document.getElementById('demoModal');
 if(dm){dm.addEventListener('click',function(e){if(e.target===this)this.classList.remove('active')});}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&dm)dm.classList.remove('active');});
 })();
+
+// Mobile dropdown toggle
+document.querySelectorAll('.menu__link .dropdown > a').forEach(function(trigger) {
+  trigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    var menu = this.nextElementSibling;
+    if (menu && menu.classList.contains('dropdown-menu')) {
+      menu.classList.toggle('show');
+      var icon = this.querySelector('.fa-chevron-down');
+      if (icon) icon.style.transform = menu.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
+    }
+  });
+});
 </script>
 
     <script>

@@ -357,95 +357,164 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — All pages
+   MOBILE RESPONSIVE — Inline Footer + All Sections
    ══════════════════════════════════════════════════════════════ */
 
-/* ── Tablet (≤1201px) ── */
+/* ── FOOTER MOBILE: Stack inline flex containers ── */
+@media (max-width: 768px) {
+  /* Footer: make everything stack */
+  .footer [style*="display:flex"][style*="flex-direction:row"],
+  .footer [style*="display:flex; justify-content"] {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+  }
+  .footer [style*="flex:1"],
+  .footer [style*="flex:1.3"],
+  .footer [style*="flex:1.4"],
+  .footer [style*="flex:0.5"] {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+  /* Links bar: wrap */
+  .footer [style*="flex-wrap:nowrap"],
+  .footer [style*="flex-wrap: nowrap"] {
+    flex-wrap: wrap !important;
+  }
+  .footer [style*="overflow-x:auto"] {
+    overflow-x: visible !important;
+  }
+  /* Sales/Support columns */
+  .footer [style*="gap:36px"],
+  .footer [style*="gap:36px"] {
+    gap: 16px !important;
+  }
+  .footer [style*="gap:40px"],
+  .footer [style*="gap: 40px"] {
+    gap: 20px !important;
+  }
+}
+
+/* ── NAV: Hide desktop links, show hamburger ── */
 @media (max-width: 1201px) {
   .nav__list { display: none !important; }
   .nav__menu { display: flex !important; }
-  .nav__logo-links-container { margin: 0 16px; }
-  .footer { flex-direction: column; padding: 40px 24px; }
-  .footer__top { flex-direction: column; padding: 0 24px 32px; }
-  .footer__sales-support { flex-direction: column; gap: 20px; }
-  .footer__about, .footer__contact-us, .footer__follow { width: 100%; }
-  .footer__bottom { flex-direction: column; gap: 12px; padding: 16px 24px; }
-  .footer__bottom-links { gap: 14px; }
+}
+@media (max-width: 768px) {
+  .nav__menu { width: 44px; height: 44px; display: flex !important; }
+  .nav__menu span { width: 22px; height: 2px; }
 }
 
-/* ── Mobile Large (≤768px) ── */
+/* ── HERO GRID: Stack on mobile ── */
+@media (max-width: 900px) {
+  .mm-hero-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .mm-hero-tags { gap: 14px !important; }
+  .mm-hero-tags span { font-size: 12px !important; }
+  .mm-hero [style*="max-width:700px"],
+  .mm-hero [style*="max-width: 700px"] { max-width: 100% !important; }
+}
+
+/* ── BUSINESS TYPE GRID: Responsive columns ── */
+@media (max-width: 1100px) {
+  .mm-type-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
 @media (max-width: 768px) {
-  body { margin-top: 60px; }
-  .nav { border-radius: 0; margin: 0; max-width: 100%; }
-  .nav__logo-links-container { padding: 10px 14px; }
-  .logo { width: 120px; height: 28px; }
-  .container { padding: 0 16px; }
-  .mm-hero { margin-top: 60px; }
-  .mm-hero-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 8px; }
-  .mm-section { padding: 40px 16px; }
-  .mm-heading { margin-bottom: 28px; }
-  .mm-cta-banner { margin: 16px 12px 40px; padding: 40px 20px; }
-  .footer { margin-top: 40px; padding: 32px 20px; }
-  .footer__contact-col, .footer__links-col { width: 100%; }
-  .footer .footer-list { flex-direction: column; gap: 16px; margin-top: 24px; }
-  .footer__media { gap: 16px; }
-  .features-mega { width: 100%; max-width: 100%; padding: 16px; }
-  .features-mega .column { width: 100%; }
-  .dropdown-content { display: none !important; }
-  .mm-btn { padding: 14px 24px; font-size: 14px; }
-  .demo-modal { padding: 28px 20px; margin: 16px; max-width: calc(100% - 32px); }
+  .mm-type-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+}
+@media (max-width: 480px) {
+  .mm-type-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+}
+
+/* ── FEATURE GRID: Stack on mobile ── */
+@media (max-width: 1100px) {
+  .mm-feature-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 768px) {
+  .mm-feature-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+
+/* ── DEMO MODAL: Mobile optimized ── */
+@media (max-width: 768px) {
+  .demo-modal { margin: 16px; padding: 28px 20px; max-width: calc(100% - 32px); }
   .demo-modal h2 { font-size: 22px; }
   .demo-modal .form-row { grid-template-columns: 1fr; }
-}
-
-/* ── Mobile Medium (≤600px) ── */
-@media (max-width: 600px) {
-  body { margin-top: 56px; }
-  .nav__logo-links-container { padding: 8px 12px; }
-  .logo { width: 110px; height: 26px; }
-  .nav .button { padding: 10px 16px; height: 40px; }
-  .nav .button .button__text { font-size: 11px; }
-  .nav .button .button__arrow { width: 16px; height: 16px; }
-  .container { padding: 0 12px; }
-  .mm-hero { margin-top: 56px; }
-  .mm-hero-grid { gap: 24px; }
-  .mm-section { padding: 32px 12px; }
-  .mm-cta-banner { padding: 32px 16px; margin: 12px 8px 32px; }
-  .footer { padding: 28px 16px; margin-top: 32px; }
-  .footer__media { gap: 12px; flex-wrap: wrap; }
-  .footer__media img { width: 24px; height: 24px; }
-  .mm-btn { padding: 12px 20px; font-size: 13px; border-radius: 10px; }
-  .mm-btn i { display: none; }
-  .demo-modal { padding: 24px 16px; margin: 12px; border-radius: 14px; }
-  .demo-modal h2 { font-size: 20px; }
   .demo-modal .submit-btn { font-size: 14px; padding: 12px; }
-  .menu__list { padding-top: 60px; gap: 10px; }
-  .menu__link { padding: 10px 14px; font-size: 15px; }
 }
 
-/* ── Mobile Small (≤425px) ── */
+/* ── STAT GRID: Responsive ── */
+@media (max-width: 600px) {
+  .mm-awards-stats { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 400px) {
+  .mm-awards-stats { grid-template-columns: 1fr !important; }
+}
+
+/* ── AWARDS BADGES: Smaller on mobile ── */
+@media (max-width: 768px) {
+  .mm-awards-badges img { height: 80px !important; }
+  .mm-awards-badges { gap: 20px !important; padding: 20px 14px !important; }
+}
+
+/* ── CLIENTS SLIDER: Smaller on mobile ── */
+@media (max-width: 768px) {
+  .clients-track img { height: 50px !important; }
+  .clients-track { gap: 28px !important; }
+}
+
+/* ── SECTIONS: Reduce padding ── */
+@media (max-width: 768px) {
+  .mm-section { padding: 32px 16px !important; }
+  .mm-heading { margin-bottom: 28px !important; }
+  .mm-heading h2 { font-size: 24px !important; }
+  .mm-heading p { font-size: 14px !important; }
+}
+
+/* ── BENEFITS: Stack on mobile ── */
+@media (max-width: 768px) {
+  .mm-benefits, .mm-benefits.reverse { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .mm-benefits.reverse .mm-benefits-img,
+  .mm-benefits.reverse .mm-benefits-img-wrap { order: 0 !important; }
+}
+
+/* ── SPOTLIGHT: Stack on mobile ── */
+@media (max-width: 768px) {
+  .mm-spotlight { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .mm-spotlight-sticky { position: static !important; }
+}
+
+/* ── CTA BANNER: Mobile ── */
+@media (max-width: 768px) {
+  .mm-cta-banner { padding: 32px 16px !important; margin: 12px 8px 32px !important; }
+  .mm-cta-showcase { padding: 40px 16px !important; }
+  .mm-cta-deco { display: none !important; }
+}
+
+/* ── DARK SECTIONS: Mobile ── */
+@media (max-width: 768px) {
+  .mm-section--dark, .mm-section--soft-dark { padding: 32px 16px !important; }
+  .mm-features-dark { grid-template-columns: 1fr !important; }
+}
+
+/* ── SMALL MOBILE: Extra compact ── */
 @media (max-width: 425px) {
-  .logo { width: 100px; height: 24px; }
-  .nav .button { padding: 8px 14px; height: 36px; border-radius: 50px; }
-  .nav .button .button__text { font-size: 10px; letter-spacing: 0; }
-  .nav .button .button__arrow { width: 14px; height: 14px; }
-  .mm-hero-grid { gap: 20px; }
-  .footer { padding: 24px 14px; }
-  .footer .contacts-info { font-size: 14px; }
-  .footer__media img { width: 20px; height: 20px; }
+  .mm-hero-tags { gap: 8px !important; }
+  .mm-hero-tags span { font-size: 11px !important; }
+  .mm-btn { padding: 10px 16px !important; font-size: 12px !important; }
+  .mm-heading h2 { font-size: 20px !important; }
+  .mm-stat h3 { font-size: 22px; }
+  .mm-stat { padding: 0 8px !important; }
 }
 
-/* ── Touch Friendly ── */
+/* ── TOUCH FRIENDLY ── */
 @media (hover: none) and (pointer: coarse) {
   .mm-btn:hover { transform: none; filter: none; }
   .mm-btn:hover i { transform: none; }
   .nav .button:hover { transform: none; }
-  .footer__media a:hover { transform: none; }
   .mega-menu .inside:hover { background: transparent; }
   .features-mega .inside:hover { background: transparent; }
 }
 
-/* ── Landscape Mobile ── */
+/* ── LANDSCAPE MOBILE ── */
 @media (max-height: 500px) and (orientation: landscape) {
   .menu__list { padding-top: 20px; gap: 8px; }
   .menu__link { padding: 8px 12px; font-size: 14px; }
