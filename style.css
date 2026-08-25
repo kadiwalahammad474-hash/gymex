@@ -536,35 +536,6 @@ body {
    COMPREHENSIVE MOBILE RESPONSIVE — All Sections
    ══════════════════════════════════════════════════════════════ */
 
-/* ── FOOTER: Stack everything on mobile ── */
-@media (max-width: 768px) {
-  .footer {
-    padding: 24px 16px !important;
-  }
-  .footer > div {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 18px !important;
-    align-items: flex-start !important;
-  }
-  .footer > div > div {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-  .footer > div:first-child {
-    flex-wrap: wrap !important;
-    gap: 12px !important;
-  }
-  .footer > div:first-child > div {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-  }
-  .footer > div:first-child > a {
-    margin-left: 0 !important;
-  }
-}
 
 /* ── DEMO MODAL: Full width on mobile ── */
 @media (max-width: 768px) {
