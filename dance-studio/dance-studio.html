@@ -418,20 +418,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Demo Modal -->
 <div class="demo-modal-overlay" id="demoModal">
-  <div class="demo-modal" style="max-width:740px;width:95%;padding:0;overflow:hidden;border-radius:16px;position:relative;">
-    <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')" style="position:absolute;top:14px;right:18px;z-index:10;background:none;border:none;font-size:28px;color:#999;cursor:pointer;line-height:1;">&times;</button>
-    <div style="padding:32px 36px 28px;">
-      <h2 style="text-align:center;font-size:24px;font-weight:800;letter-spacing:0.5px;margin:0 0 6px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Ask For Free Demo</h2>
-      <p style="text-align:center;font-size:14px;color:#666;margin:0 0 24px;font-family:'Poppins',sans-serif;">Get your hands on before officially using it</p>
-      <form action="https://www.gymex.online/contactus.php" method="post" id="demoForm">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div><input type="text" name="sname" placeholder="State" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div><input type="text" name="cname" placeholder="City" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+  <div class="demo-modal" style="max-width:680px;width:95%;padding:0;overflow:hidden;border-radius:16px;position:relative;">
+    <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')" style="position:absolute;top:12px;right:16px;z-index:10;background:none;border:none;font-size:24px;color:#999;cursor:pointer;line-height:1;">&times;</button>
+    <div style="padding:28px 32px 24px;">
+      <h2 style="text-align:center;font-size:22px;font-weight:800;letter-spacing:0.5px;margin:0 0 4px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Ask For Free Demo</h2>
+      <p style="text-align:center;font-size:13px;color:#666;margin:0 0 20px;font-family:'Poppins',sans-serif;">Get your hands on before officially using it</p>
+      <form action="contactus.php" method="post" onsubmit="return validateCaptcha()">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="sname" placeholder="State" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="cname" placeholder="City" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
           <div>
             <div style="display:flex;gap:0;">
-              <select name="country_code" style="width:100px;padding:12px 8px;border:1.5px solid #e0e0e0;border-right:none;border-radius:8px 0 0 8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;flex-shrink:0;">
+              <select name="country_code" style="width:80px;padding:10px 6px;border:1.5px solid #e0e0e0;border-right:none;border-radius:8px 0 0 8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;flex-shrink:0;">
                 <option value="+91">+91</option>
                 <option value="+971">+971</option>
                 <option value="+966">+966</option>
@@ -443,26 +443,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <option value="+1">+1</option>
                 <option value="+44">+44</option>
               </select>
-              <input type="tel" name="mobile" placeholder="Mobile" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:0 8px 8px 0;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;">
+              <input type="tel" name="mobile" placeholder="Mobile" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:0 8px 8px 0;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;">
             </div>
           </div>
-          <div><input type="email" name="email" placeholder="Email Id" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="email" name="email" placeholder="Email Id" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
         </div>
-        <div style="margin-top:14px;">
-          <textarea name="comment" placeholder="Message" rows="4" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;"></textarea>
+        <div style="margin-top:12px;">
+          <textarea name="comment" placeholder="Message" rows="3" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:12px;">
-          <div class="g-recaptcha" data-sitekey="6LeG2Q0UAAAAAJkUm1atTN5mPSsbcM8b4t66vBBw" data-size="normal" style="transform:scale(0.85);transform-origin:left;"></div>
-          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:14px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap;gap:10px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <div id="captcha-box" style="background:white;border:1px solid #ccc;border-radius:4px;padding:4px 14px;font-size:16px;font-weight:bold;letter-spacing:4px;color:#535353;font-family:'Courier New',monospace;user-select:none;min-width:100px;text-align:center;"></div>
+            <button type="button" onclick="generateCaptcha()" title="Refresh CAPTCHA" style="background:white;border:1px solid #ccc;border-radius:4px;color:#535353;font-size:14px;padding:4px 10px;cursor:pointer;">&#8635;</button>
+            <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter CAPTCHA" maxlength="6" autocomplete="off" style="background:white;border:1px solid #ccc;border-radius:4px;color:#535353;padding:8px 12px;font-size:13px;width:120px;outline:none;">
+            <input type="hidden" id="captcha-value" name="captcha_value">
+          </div>
+          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;">
             SUBMIT
-            <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:14px;">&#8599;</span>
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:12px;">&#8599;</span>
           </button>
         </div>
+        <p id="captcha-error" style="color:white;font-size:12px;margin-top:6px;display:none;font-weight:600;"></p>
       </form>
     </div>
   </div>
 </div>
 
+<script>
+var currentCaptcha = '';
+function generateCaptcha() {
+  var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+  var captcha = '';
+  for (var i = 0; i < 6; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  currentCaptcha = captcha;
+  var box = document.getElementById('captcha-box');
+  if (box) box.innerText = captcha;
+  var val = document.getElementById('captcha-value');
+  if (val) val.value = captcha;
+  var inp = document.getElementById('captcha-input');
+  if (inp) inp.value = '';
+}
+function validateCaptcha() {
+  var userInput = document.getElementById('captcha-input').value.trim();
+  if (userInput === '') {
+    document.getElementById('captcha-error').innerHTML = 'Captcha is required.';
+    document.getElementById('captcha-error').style.display = 'block';
+    return false;
+  }
+  if (userInput !== currentCaptcha) {
+    document.getElementById('captcha-error').innerHTML = 'Incorrect CAPTCHA. Please try again.';
+    document.getElementById('captcha-error').style.display = 'block';
+    generateCaptcha();
+    return false;
+  }
+  document.getElementById('captcha-error').style.display = 'none';
+  return true;
+}
+window.addEventListener('load', function() { generateCaptcha(); });
+</script>
 
 <script>
 
