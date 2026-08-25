@@ -387,28 +387,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Demo Modal -->
 <div class="demo-modal-overlay" id="demoModal">
-  <div class="demo-modal" style="max-width:700px;width:95%;padding:0;overflow:hidden;border-radius:16px;">
+  <div class="demo-modal" style="max-width:740px;width:95%;padding:0;overflow:hidden;border-radius:16px;position:relative;">
     <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')" style="position:absolute;top:14px;right:18px;z-index:10;background:none;border:none;font-size:28px;color:#999;cursor:pointer;line-height:1;">&times;</button>
     <div style="padding:32px 36px 28px;">
-      <h2 style="text-align:center;font-size:22px;font-weight:800;letter-spacing:1px;margin:0 0 24px;font-family:'Poppins',sans-serif;color:#1a1a2e;">SCHEDULE A FREE DEMO!</h2>
-            <form action="https://www.gymex.online/contactus.php" method="post" style="display:flex;gap:20px;">
-        <div style="flex:1;display:flex;flex-direction:column;gap:12px;">
-          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Name *</label><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
-          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Gym / Company Name</label><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
-          <div style="display:flex;gap:10px;">
-            <div style="flex:1;"><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">State</label><input type="text" name="sname" placeholder="State" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
-            <div style="flex:1;"><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">City</label><input type="text" name="cname" placeholder="City" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
+      <h2 style="text-align:center;font-size:24px;font-weight:800;letter-spacing:0.5px;margin:0 0 6px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Ask For Free Demo</h2>
+      <p style="text-align:center;font-size:14px;color:#666;margin:0 0 24px;font-family:'Poppins',sans-serif;">Get your hands on before officially using it</p>
+      <form action="https://www.gymex.online/contactus.php" method="post" id="demoForm">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="sname" placeholder="State" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="cname" placeholder="City" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div>
+            <div style="display:flex;gap:0;">
+              <select name="country_code" style="width:100px;padding:12px 8px;border:1.5px solid #e0e0e0;border-right:none;border-radius:8px 0 0 8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;flex-shrink:0;">
+                <option value="+91">+91</option>
+                <option value="+971">+971</option>
+                <option value="+966">+966</option>
+                <option value="+973">+973</option>
+                <option value="+974">+974</option>
+                <option value="+968">+968</option>
+                <option value="+965">+965</option>
+                <option value="+20">+20</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+              </select>
+              <input type="tel" name="mobile" placeholder="Mobile" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:0 8px 8px 0;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;">
+            </div>
           </div>
-          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Email *</label><input type="email" name="email" placeholder="you@example.com" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
-          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Mobile *</label><input type="tel" name="mobile" placeholder="98765 43210" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;"></div>
-          <div><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Verify *</label>
-            <div class="g-recaptcha" data-sitekey="6LeG2Q0UAAAAAJkUm1atTN5mPSsbcM8b4t66vBBw" data-size="normal" style="transform:scale(0.85);transform-origin:left;"></div>
-          </div>
+          <div><input type="email" name="email" placeholder="Email Id" required style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
         </div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:12px;">
-          <div style="flex:1;"><label style="display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:4px;">Message</label><textarea name="comment" placeholder="Tell us about your gym.." style="flex:1;min-height:140px;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;width:100%;"></textarea></div>
-          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#f26522;color:#fff;border:none;border-radius:50px;padding:14px 28px;font-size:14px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;align-self:flex-end;white-space:nowrap;">
-            GET YOUR FREE DEMO
+        <div style="margin-top:14px;">
+          <textarea name="comment" placeholder="Message" rows="4" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;"></textarea>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:12px;">
+          <div class="g-recaptcha" data-sitekey="6LeG2Q0UAAAAAJkUm1atTN5mPSsbcM8b4t66vBBw" data-size="normal" style="transform:scale(0.85);transform-origin:left;"></div>
+          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:14px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;">
+            SUBMIT
             <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:14px;">&#8599;</span>
           </button>
         </div>
@@ -416,6 +431,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
+
 
 <script>
 

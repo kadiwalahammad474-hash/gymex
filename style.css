@@ -850,3 +850,54 @@ body {
     padding: 24px 16px !important;
   }
 }
+
+/* ── DEMO MODAL: Mobile responsive ── */
+@media (max-width: 768px) {
+  .demo-modal-overlay .demo-modal {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  .demo-modal-overlay .demo-modal form {
+    display: block !important;
+  }
+  .demo-modal-overlay .demo-modal form > div[style*="grid"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .demo-modal-overlay .demo-modal form > div[style*="grid"] > div {
+    width: 100% !important;
+  }
+  .demo-modal-overlay .demo-modal form > div[style*="grid"] > div > div[style*="display:flex"] {
+    flex-direction: row !important;
+  }
+  .demo-modal-overlay .demo-modal form > div[style*="grid"] > div > div[style*="display:flex"] > select {
+    width: 90px !important;
+    font-size: 14px !important;
+  }
+  .demo-modal-overlay .demo-modal form > div[style*="grid"] > div > div[style*="display:flex"] > input[type="tel"] {
+    font-size: 14px !important;
+  }
+  .demo-modal-overlay .demo-modal form textarea {
+    min-height: 100px !important;
+  }
+  .demo-modal-overlay .demo-modal form > div:last-child {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .demo-modal-overlay .demo-modal form > div:last-child .g-recaptcha {
+    transform: scale(0.75) !important;
+    transform-origin: left !important;
+  }
+  .demo-modal-overlay .demo-modal form > div:last-child button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .demo-modal-overlay .demo-modal [style*="padding:32px"] {
+    padding: 24px 16px !important;
+  }
+}
