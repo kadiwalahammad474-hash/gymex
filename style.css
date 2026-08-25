@@ -76,11 +76,9 @@ body {
   background: linear-gradient(135deg, var(--orange-100), #e0450b);
   padding: 0 6px 0 20px;
   height: 46px;
-  box-shadow: 0 10px 26px rgba(254, 79, 13, .32);
   transition: transform .2s ease, box-shadow .2s ease;
   display: flex; align-items: center; gap: 10px;
 }
-.nav .button:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(254, 79, 13, .4); }
 .nav .button .button__text { color: #fff; font-size: 12px; letter-spacing: .06em; font-weight: 700; margin: 0; text-transform: uppercase; }
 .nav .button .button__arrow { width: 34px; height: 34px; border-radius: 50%; background: #fff; filter: none; padding: 7px; box-sizing: border-box; flex-shrink: 0; }
 .nav .active-page { text-decoration-line: underline; }
@@ -157,9 +155,7 @@ body {
 .mm-btn-orange {
   background: linear-gradient(135deg, var(--orange-100), #e0450b);
   color: #fff;
-  box-shadow: 0 14px 32px rgba(254, 79, 13, .32);
 }
-.mm-btn-orange:hover { box-shadow: 0 18px 40px rgba(254, 79, 13, .42); }
 .mm-btn-orange i {
   display: inline-flex !important;
   align-items: center !important;
@@ -363,13 +359,11 @@ body {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  box-shadow: 0 10px 26px rgba(254, 79, 13, .32);
   transition: transform .2s ease, box-shadow .2s ease;
   margin-top: 8px;
 }
 .demo-modal .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(254, 79, 13, .4);
 }
 
 /* ══════════════════════════════════════════════════════════════

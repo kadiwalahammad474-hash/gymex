@@ -596,7 +596,6 @@ h1,h2,h3,h4,h5,h6 {
 .mm-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: 100px; font-weight: 600; font-size: 15px; cursor: pointer; border: none; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
 .mm-btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .mm-btn-primary { background: var(--blue); color: #fff; }
-.mm-btn-orange { background: linear-gradient(135deg, var(--orange-100), #e0450b); color: #fff; box-shadow: 0 14px 32px rgba(254, 79, 13, .32); }
 
 /* ---------- HERO ---------- */
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
