@@ -1460,17 +1460,11 @@ body { position: relative; z-index: 1; }
 }
 .testi-track {
   display: flex;
-  gap: 40px;
-  animation: testiScroll 120s linear infinite;
+  gap: 24px;
   width: max-content;
+  transition: transform 0.5s ease;
 }
-.testi-track:hover {
-  animation-play-state: paused;
-}
-@keyframes testiScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 12px)); }
-}
+
 .testi-card {
   flex: 0 0 380px;
   background: #fff;
