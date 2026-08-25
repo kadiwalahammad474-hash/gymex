@@ -16,7 +16,9 @@
     { "source": "/pilates", "destination": "/pilates/pilates.html" },
     { "source": "/pt-studio", "destination": "/pt-studio/pt-studio.html" },
     { "source": "/swim-school", "destination": "/swim-school/swim-school.html" },
-    { "source": "/marketing-management", "destination": "/marketing-management/marketing-management.html" }
+    { "source": "/marketing-management", "destination": "/marketing-management/marketing-management.html" },
+    { "source": "/blog", "destination": "/blog/blog.html" },
+    { "source": "/blog/article", "destination": "/blog/article.html" }
   ],
   "trailingSlash": false
 }
