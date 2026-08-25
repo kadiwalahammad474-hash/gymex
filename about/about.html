@@ -365,9 +365,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <!-- Follow Us On -->
-    <div style="flex:0.5;">
+    <div style="flex:0.5; text-align:right;">
       <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">Follow Us On</h3>
-      <div style="display:flex; gap:12px;">
+      <div style="display:flex; gap:12px; justify-content:flex-end;">
         <a href="https://www.facebook.com/gymexsoftware" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#1877F2;border-radius:50%;transition:transform .2s;text-decoration:none;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
@@ -391,87 +391,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Footer Mobile -->
 <style>
-@media(max-width:768px){
-  .footer-wrap,.footer-wrap>[style*="display:flex"]{flex-direction:column!important;gap:18px!important;align-items:flex-start!important}
-  .footer-wrap [style*="flex:1"],.footer-wrap [style*="flex:1.4"],.footer-wrap [style*="flex:0.5"]{flex:1 1 100%!important;max-width:100%!important}
-  .footer-wrap [style*="flex-wrap:nowrap"]{flex-wrap:wrap!important}
-  .footer-wrap [style*="gap:40px"]{gap:16px!important}
-}
-</style>
-
-<script>
-var currentCaptcha = '';
-function generateCaptcha() {
-  var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
-  var captcha = '';
-  for (var i = 0; i < 6; i++) {
-    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  currentCaptcha = captcha;
-  var box = document.getElementById('captcha-box');
-  if (box) box.innerText = captcha;
-  var val = document.getElementById('captcha-value');
-  if (val) val.value = captcha;
-  var inp = document.getElementById('captcha-input');
-  if (inp) inp.value = '';
-}
-function validateCaptcha() {
-  var userInput = document.getElementById('captcha-input').value.trim();
-  if (userInput === '') {
-    document.getElementById('captcha-error').innerHTML = 'Captcha is required.';
-    document.getElementById('captcha-error').style.display = 'block';
-    return false;
-  }
-  if (userInput !== currentCaptcha) {
-    document.getElementById('captcha-error').innerHTML = 'Incorrect CAPTCHA. Please try again.';
-    document.getElementById('captcha-error').style.display = 'block';
-    generateCaptcha();
-    return false;
-  }
-  document.getElementById('captcha-error').style.display = 'none';
-  return true;
-}
-window.addEventListener('load', function() { generateCaptcha(); });
-</script>
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KPCRHTFH');</script>
-<!-- End Google Tag Manager -->
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="GYMEX">
-    <meta name="keywords" content="gym">
-    <meta name="description" content="Manage your gym in a Few Simple Clicks">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta content="https://gymex.com" property="og:url">
-    <meta property="og:title" content="GYMEX">
-    <meta property="og:description" content="Manage your gym in a Few Simple Clicks">
-    <meta property="og:image" content="../assets/fourier.png">
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta content="https://gymex.com" property="twitter:url">
-    <meta property="twitter:title" content="GYMEX">
-    <meta property="twitter:description" content="Manage your gym in a Few Simple Clicks">
-    <meta property="twitter:image" content="../assets/fourier.png">
-    <link rel="icon" type="image/x-icon" href="../assets/gymex-favicon-U7mChGv0.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	 
-	  <title>About Us</title>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="about.css">
-  <script src="../javascript.js"></script>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-
-</body>
-</html>
