@@ -332,12 +332,12 @@ body { position: relative; z-index: 1; }
   border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 36px 20px; margin-bottom: 46px;
 }
-.mm-stat { position: relative; padding: 0 14px; }
+.mm-stat { position: relative; padding: 0 14px; text-align: center; }
 .mm-stat + .mm-stat::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: #dbe4f7; }
 .mm-stat i { font-size: 20px; color: var(--blue); margin-bottom: 10px; display: block; }
 .mm-stat h3 { font-size: 30px; font-weight: 800; color: var(--gray-100); margin-bottom: 6px; }
 .mm-stat p { font-size: 13px; color: var(--gray-80); font-weight: 500; }
-.mm-awards-clients-label { font-size: 14px; color: var(--gray-80); margin-bottom: 22px; font-weight: 500; }
+.mm-awards-clients-label { font-size: 14px; color: var(--gray-80); margin-bottom: 22px; font-weight: 500; text-align: center; }
 .mm-awards-clients { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; }
 .mm-awards-clients img { height: 92px; width: auto; object-fit: contain; filter: grayscale(25%); opacity: .85; transition: all .25s ease; }
 .mm-awards-clients img:hover { filter: none; opacity: 1; transform: scale(1.06); }
