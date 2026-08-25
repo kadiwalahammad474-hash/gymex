@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "n95oax955q");
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KPCRHTFH');</script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="GYMEX Blogs">
+    <meta name="keywords" content="gym management, fitness business, gym software, member retention, billing">
+    <meta name="description" content="Tips, guides and insights to help you run and grow your fitness business.">
+    <meta property="og:type" content="website">
+    <meta content="https://gymex.global/blog/blog.html" property="og:url">
+    <meta property="og:title" content="GYMEX Blogs">
+    <meta property="og:description" content="Tips, guides and insights to help you run and grow your fitness business.">
+    <meta property="og:image" content="../assets/fourier.png">
+    <link rel="icon" type="image/x-icon" href="../assets/gymex-favicon-U7mChGv0.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Gymex Blogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+
+<style>
+/* Blog-specific styles */
+.blog-wrap { font-family: 'Inter', sans-serif; color: #333; background: #fff; font-size: 15px; line-height: 1.6; }
+.blog-wrap *, .blog-wrap *::before, .blog-wrap *::after { box-sizing: border-box; }
+.blog-wrap a { text-decoration: none; color: inherit; }
+.hidden { display: none !important; }
+
+/* Hero */
+.blog-hero { background: #fff; border-bottom: 1px solid #e0e6f0; }
+.blog-hero-inner { display: flex; align-items: center; max-width: 1180px; margin: 0 auto; padding: 48px 40px; gap: 48px; }
+.blog-hero-left { flex: 1; }
+.blog-hero-left h1 { font-size: 52px; font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; color: #111; }
+.blog-hero-left h1 span { color: #1565C0; }
+.blog-hero-left p { font-size: 16px; color: #666; margin-top: 14px; line-height: 1.55; }
+.blog-search { display: flex; align-items: center; margin-top: 26px; border: 1.8px solid #e0e6f0; border-radius: 9px; overflow: hidden; width: 400px; transition: border-color .2s; }
+.blog-search:focus-within { border-color: #1565C0; }
+.blog-search input { flex: 1; border: none; outline: none; padding: 13px 18px; font-size: 14px; color: #333; font-family: 'Inter', sans-serif; background: transparent; }
+.blog-search input::placeholder { color: #aaa; }
+.blog-search button { background: #E85D04; border: none; padding: 13px 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+.blog-search button:hover { background: #c74e03; }
+.blog-search button svg { width: 18px; height: 18px; }
+.search-results { position: relative; margin-top: 8px; background: #fff; border: 1.5px solid #e0e6f0; border-radius: 9px; box-shadow: 0 6px 28px rgba(21,101,192,.13); width: 400px; overflow: hidden; z-index: 100; }
+.search-result-item { padding: 12px 18px; font-size: 13.5px; color: #333; cursor: pointer; border-bottom: 1px solid #e0e6f0; transition: background .15s; display: flex; align-items: center; gap: 10px; }
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover { background: #e8f0fe; color: #1565C0; }
+.search-no-results { padding: 16px 18px; font-size: 13.5px; color: #666; text-align: center; }
+.blog-hero-right { flex: 0 0 380px; height: 260px; border-radius: 12px; overflow: hidden; background: linear-gradient(135deg, #dde8fb 0%, #bfd0f5 100%); display: flex; align-items: center; justify-content: center; }
+.blog-hero-right span { font-size: 12px; color: #1565C0; opacity: .4; font-weight: 600; }
+
+/* Categories */
+.blog-cats { background: #f8f9fc; padding: 52px 40px; border-bottom: 1px solid #e0e6f0; }
+.blog-section-title { text-align: center; font-size: 20px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; color: #111; margin-bottom: 30px; }
+.blog-section-title span { color: #1565C0; }
+.blog-cats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; max-width: 1060px; margin: 0 auto; }
+.blog-cat-card { background: #fff; border: 1.8px solid #e0e6f0; border-radius: 12px; padding: 22px 12px 18px; text-align: center; cursor: pointer; transition: box-shadow .2s, border-color .2s, transform .2s; }
+.blog-cat-card:hover { box-shadow: 0 6px 28px rgba(21,101,192,.13); border-color: #1565C0; transform: translateY(-2px); }
+.blog-cat-card.active { border-color: #1565C0; background: #e8f0fe; box-shadow: 0 6px 28px rgba(21,101,192,.13); }
+.blog-cat-icon { width: 44px; height: 44px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: #1565C0; }
+.blog-cat-icon svg { width: 30px; height: 30px; }
+.blog-cat-name { font-size: 12px; font-weight: 700; color: #111; margin-bottom: 5px; line-height: 1.3; }
+.blog-cat-count { font-size: 12px; color: #999; font-weight: 500; }
+
+/* Featured */
+.blog-featured { padding: 52px 40px; max-width: 1300px; margin: 0 auto; }
+.blog-feat-card { display: flex; border: 1.8px solid #e0e6f0; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,.07); }
+.blog-feat-content { flex: 1; padding: 40px 44px; display: flex; flex-direction: column; justify-content: center; }
+.blog-feat-label { font-size: 11.5px; font-weight: 700; color: #1565C0; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+.blog-feat-content h2 { font-size: 28px; font-weight: 900; line-height: 1.2; color: #111; margin-bottom: 18px; text-transform: uppercase; }
+.blog-feat-content p { font-size: 14px; color: #666; margin-bottom: 22px; line-height: 1.75; max-width: 400px; }
+.blog-feat-meta { display: flex; align-items: center; gap: 22px; margin-bottom: 30px; font-size: 12.5px; color: #888; }
+.blog-feat-meta span { display: flex; align-items: center; gap: 7px; }
+.blog-feat-meta svg { width: 14px; height: 14px; }
+.blog-btn-orange { display: inline-flex; align-items: center; gap: 8px; background: #E85D04; color: #fff; font-size: 13px; font-weight: 700; padding: 13px 28px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: .4px; text-transform: uppercase; width: fit-content; transition: background .2s, transform .15s; }
+.blog-btn-orange:hover { background: #c74e03; transform: translateY(-1px); }
+.blog-btn-orange svg { width: 16px; height: 16px; }
+.blog-feat-image { flex: 0 0 500px; background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7a 55%, #1565C0 100%); display: flex; align-items: center; justify-content: center; min-height: 320px; }
+
+/* Latest */
+.blog-latest { padding: 8px 40px 52px; max-width: 1300px; margin: 0 auto; }
+.blog-latest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+.blog-latest-header h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; color: #111; letter-spacing: .5px; }
+.blog-latest-header h2 span { color: #1565C0; }
+.blog-view-all { font-size: 13.5px; font-weight: 600; color: #1565C0; display: flex; align-items: center; gap: 4px; transition: text-decoration .2s; }
+.blog-view-all:hover { text-decoration: underline; }
+.blog-active-filter { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; background: #e8f0fe; border: 1.5px solid #c5d8f7; border-radius: 8px; padding: 10px 16px; width: fit-content; }
+.blog-active-filter span { font-size: 13.5px; font-weight: 600; color: #1565C0; }
+.blog-active-filter button { background: none; border: 1.5px solid #1565C0; color: #1565C0; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all .2s; }
+.blog-active-filter button:hover { background: #1565C0; color: #fff; }
+.blog-articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.blog-article-card { border: 1.8px solid #e0e6f0; border-radius: 12px; overflow: hidden; background: #fff; transition: box-shadow .25s, transform .25s, border-color .25s; }
+.blog-article-card:hover { box-shadow: 0 6px 28px rgba(21,101,192,.13); border-color: #1565C0; transform: translateY(-3px); }
+.blog-art-img { height: 200px; overflow: hidden; }
+.blog-art-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; transition: transform .35s; }
+.blog-article-card:hover .blog-art-placeholder { transform: scale(1.04); }
+.bg1 { background: linear-gradient(135deg, #2d4a7a, #1565C0); }
+.bg2 { background: linear-gradient(135deg, #1a1a2e, #3a3a5c); }
+.bg3 { background: linear-gradient(135deg, #1e3a5f, #2a6096); }
+.bg4 { background: linear-gradient(135deg, #1a2e40, #2d5875); }
+.bg5 { background: linear-gradient(135deg, #2a1a4e, #6b3fa0); }
+.bg6 { background: linear-gradient(135deg, #1a3a2e, #1d7a55); }
+.blog-art-body { padding: 20px 20px 22px; }
+.blog-art-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 9px; color: #E85D04; }
+.blog-art-body h3 { font-size: 16.5px; font-weight: 800; line-height: 1.38; color: #111; margin-bottom: 10px; }
+.blog-art-body p { font-size: 13.5px; color: #666; line-height: 1.68; margin-bottom: 14px; }
+.blog-art-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: #aaa; margin-bottom: 14px; }
+.blog-art-meta span { display: flex; align-items: center; gap: 6px; }
+.blog-art-meta svg { width: 13px; height: 13px; }
+.blog-read-more { font-size: 13.5px; font-weight: 700; color: #1565C0; display: inline-flex; align-items: center; gap: 4px; transition: gap .2s; }
+.blog-read-more:hover { gap: 8px; text-decoration: underline; }
+.blog-no-results { grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: #666; }
+.blog-no-results p { font-size: 16px; font-weight: 600; margin-bottom: 18px; }
+.blog-no-results button { background: #1565C0; color: #fff; border: none; padding: 11px 28px; border-radius: 8px; font-size: 13.5px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: background .2s; }
+.blog-no-results button:hover { background: #0d47a1; }
+
+/* CTA */
+.blog-cta { padding: 0 40px 52px; max-width: 1300px; margin: 0 auto; }
+.blog-cta-card { background: #e8f0fe; border: 1.8px solid #c5d8f7; border-radius: 16px; display: flex; align-items: center; padding: 44px 52px; gap: 44px; }
+.blog-cta-left { flex: 1; }
+.blog-cta-left h3 { font-size: 22px; font-weight: 900; text-transform: uppercase; color: #111; margin-bottom: 10px; line-height: 1.25; }
+.blog-cta-left p { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.65; }
+.blog-cta-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
+.blog-cta-feat { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: #333; font-weight: 500; }
+.blog-check-icon { width: 22px; height: 22px; background: #1565C0; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.blog-check-icon svg { width: 12px; height: 12px; }
+.blog-cta-right { flex: 0 0 400px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+.blog-dash-header { background: #1565C0; padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+.blog-dash-header span { font-size: 12.5px; font-weight: 600; color: #fff; }
+.blog-dash-body { padding: 16px 18px; }
+.blog-dash-title { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 14px; }
+.blog-dash-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+.blog-dash-label { font-size: 9.5px; color: #999; margin-bottom: 3px; line-height: 1.3; }
+.blog-dash-value { font-size: 15px; font-weight: 800; color: #111; }
+.blog-dash-value.sm { font-size: 12.5px; }
+.blog-dash-value.blue { color: #1565C0; }
+.blog-dash-chart { height: 70px; background: #f0f4ff; border-radius: 6px; overflow: hidden; }
+.blog-dash-days { display: flex; justify-content: space-between; margin-top: 7px; padding: 0 2px; }
+.blog-dash-days span { font-size: 9px; color: #bbb; }
+
+/* Mobile responsive */
+@media(max-width:768px) {
+  .blog-hero-inner { flex-direction: column; padding: 28px 16px; gap: 20px; }
+  .blog-hero-left h1 { font-size: 32px; }
+  .blog-search, .search-results { width: 100%; }
+  .blog-hero-right { display: none; }
+  .blog-cats { padding: 28px 16px; }
+  .blog-cats-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-featured { padding: 28px 16px; }
+  .blog-feat-card { flex-direction: column; }
+  .blog-feat-image { flex: none; height: 200px; }
+  .blog-latest { padding: 8px 16px 28px; }
+  .blog-articles-grid { grid-template-columns: 1fr; }
+  .blog-cta { padding: 0 16px 28px; }
+  .blog-cta-card { flex-direction: column; padding: 28px 20px; }
+  .blog-cta-right { flex: none; width: 100%; }
+  .blog-dash-stats { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+  </head>
+
+  <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPCRHTFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="container">
+      <nav class="nav" id="nav">
+        <div class="nav__logo-links-container">
+          <a class="nav__logo-wrap" href="../index/index.html">
+            <img class="logo" src="../assets/Gymex-logo-wit6Qpcs.svg" alt="logo">
+          </a>
+          <div class="flex-center">
+            <div class="nav__list">
+              <a class="nav__link" href="../index/index.html">Home</a>
+              <div class="dropdown">
+                <a class="nav__link" href="../business/business.html">Business Types <i class="fa fa-chevron-down" style="font-size:10px;"></i></a>
+                <div class="dropdown-content mega-menu">
+                  <div class="column">
+                    <p class="mega-col-title">Gym &amp; Fitness</p>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/gym.svg" alt="gym"><a href="../gym-management-software/gym-management-software.html" class="text1">GYM</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/ptstudio.svg" alt="pt"><a href="../pt-studio/pt-studio.html" class="text1">PT STUDIO</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/yoga-RKEkgKCN.svg" alt="yoga"><a href="../yoga-studio/yoga-studio.html" class="text1">YOGA STUDIO</a></div>
+                    <div style="display: flex;" class="inside"><img src="../assets/Icons.svg" class="icon"><a href="../swim-school/swim-school.html" class="text1">SWIM SCHOOL</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/sport.svg" alt="sport"><a href="../sport-academies/sport-academies.html" class="text1">SPORTS ACADEMY</a></div>
+                  </div>
+                  <div class="column">
+                    <p class="mega-col-title">Studios &amp; Specialty</p>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/martial.svg" alt="martial"><a href="../martial-arts-studio/martial-arts-studio.html" class="text1">MARTIAL ARTS STUDIO</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/pilates.svg" alt="pilates"><a href="../pilates/pilates.html" class="text1">PILATES</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/aerobics.svg" alt="aerobics"><a href="../aerobics/aerobics.html" class="text1">AEROBICS</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/dance.svg" alt="dance"><a href="../dance-studio/dance-studio.html" class="text1">DANCE STUDIO</a></div>
+                    <div style="display: flex;" class="inside"><img class="icon" src="../assets/health.svg" alt="health"><a href="../health-and-fitness-centers/health-and-fitness-centers.html" class="text1">HEALTH AND FITNESS CENTER</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <a class="nav__link" href="../features/features.html">Features <i class="fa fa-chevron-down"></i></a>
+                <div class="dropdown-content mega-menu features-mega">
+                  <div class="column">
+                    <p class="mega-col-title">MEMBER MANAGEMENT</p>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-user-plus"></i></div><div><a href="../features/features.html" class="text1">Member Self-Serve <span class="mega-badge">NEW</span></a><p class="mega-desc">Public sign-up, trial booking &amp; payments</p></div></div>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-users"></i></div><div><a href="../features/features.html" class="text1">Member Management</a><p class="mega-desc">Complete member profiles, history, subscriptions</p></div></div>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-bullhorn"></i></div><div><a href="../features/features.html" class="text1">Lead Management</a><p class="mega-desc">Capture leads, track follow-ups, convert enquiries</p></div></div>
+                  </div>
+                  <div class="column">
+                    <p class="mega-col-title">OPERATIONS</p>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-magic"></i></div><div><a href="../features/features.html" class="text1">AI Business Pack <span class="mega-badge">NEW</span></a><p class="mega-desc">AI insights, assistant &amp; member coach</p></div></div>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-comment"></i></div><div><a href="../features/features.html" class="text1">WhatsApp Marketing <span class="mega-badge">NEW</span></a><p class="mega-desc">Official WABA, bulk campaigns, auto-replies</p></div></div>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-bell"></i></div><div><a href="../features/features.html" class="text1">WhatsApp Automation</a><p class="mega-desc">Payment reminders, birthday wishes, expiry alerts</p></div></div>
+                  </div>
+                  <div class="column">
+                    <p class="mega-col-title">BILLING &amp; PLANS</p>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-credit-card"></i></div><div><a href="../features/features.html" class="text1">Payment Gateway <span class="mega-badge">NEW</span></a><p class="mega-desc">Your own Razorpay gateway — UPI, cards &amp; banking</p></div></div>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-file-text"></i></div><div><a href="../features/features.html" class="text1">Billing &amp; Invoicing</a><p class="mega-desc">GST invoices, partial payments &amp; payment tracking</p></div></div>
+                    <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><i class="fa fa-money"></i></div><div><a href="../features/features.html" class="text1">Payment Integration</a><p class="mega-desc">Accept payments via Razorpay — UPI, cards, banking</p></div></div>
+                  </div>
+                </div>
+              </div>
+              <a class="nav__link" href="../pricing/pricing.html">Pricing</a>
+              <a class="nav__link" href="blog.html" style="color:#1565C0;font-weight:700;">Blog</a>
+              <a class="nav__link" href="../about/about.html">About</a>
+              <a class="nav__link" href="../career/career.html">Career</a>
+              <a class="nav__link" href="../contact/contact.html">Contact</a>
+              <button class="nav__link button open-demo-modal" Id="demobutton">
+                <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+              </button>
+            </div>
+            <button class="nav__menu" id="open-menu"><span></span><span></span><span></span></button>
+          </div>
+        </div>
+        <div class="menu-backdrop" id="menu-backdrop">
+          <div class="menu">
+              <ul class="menu__list">
+                  <li class="menu__link"><a href="../index/index.html">Home</a></li>
+                  <li class="dropdown">
+                      <a href="../business/business.html" id="business-types-link">Business Types <i class="fa fa-chevron-down" style="font-size:10px;"></i></a>
+                      <ul class="dropdown-menu" id="dropdown-menu">
+                          <li><a href="../gym-management-software/gym-management-software.html">GYM</a></li><br>
+                          <li><a href="../pt-studio/pt-studio.html">PT STUDIO</a></li><br>
+                          <li><a href="../yoga-studio/yoga-studio.html">YOGA STUDIO</a></li><br>
+                          <li><a href="../swim-school/swim-school.html">SWIM SCHOOL</a></li><br>
+                          <li><a href="../sport-academies/sport-academies.html">SPORTS ACADEMY</a></li><br>
+                          <li><a href="../martial-arts-studio/martial-arts-studio.html">MARTIAL ARTS STUDIO</a></li><br>
+                          <li><a href="../pilates/pilates.html">PILATES</a></li><br>
+                          <li><a href="../aerobics/aerobics.html">AEROBICS</a></li><br>
+                          <li><a href="../dance-studio/dance-studio.html">DANCE STUDIO</a></li><br>
+                          <li><a href="../health-and-fitness-centers/health-and-fitness-centers.html">HEALTH AND FITNESS CENTER</a></li><br>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../features/features.html" id="features-link">Features <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu" id="features-dropdown-menu">
+                        <li><a href="../features/features.html">ALL FEATURES</a></li><br>
+                        <li><a href="../features/features.html">MEMBER MANAGEMENT</a></li><br>
+                        <li><a href="../features/features.html">LEAD MANAGEMENT</a></li><br>
+                        <li><a href="../features/features.html">BILLING &amp; PAYMENTS</a></li><br>
+                        <li><a href="../features/features.html">MOBILE APP</a></li><br>
+                    </ul>
+                  </li>
+                  <li class="menu__link"><a href="../about/about.html">About Us</a></li>
+                  <li class="menu__link"><a href="../career/career.html">Career</a></li>
+                  <li class="menu__link"><a href="../contact/contact.html">Contact Us</a></li>
+                  <li class="menu__link">
+                      <button class="button">
+                          <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+                      </button>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      </nav>
+
+<!-- ========== BLOG CONTENT ========== -->
+<div class="blog-wrap">
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="blog-hero-left">
+      <h1>GYMEX <span>BLOGS</span></h1>
+      <p>Tips, guides and insights to help you run and grow your fitness business.</p>
+      <div class="blog-search">
+        <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off">
+        <button id="searchBtn" onclick="doSearch()">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="2.5" fill="none"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div id="searchResults" class="search-results hidden"></div>
+    </div>
+    <div class="blog-hero-right">
+      <svg viewBox="0 0 120 120" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="35" r="18" fill="none" stroke="#1565C0" stroke-width="3" opacity="0.4"/>
+        <rect x="20" y="65" width="80" height="8" rx="4" fill="#1565C0" opacity="0.25"/>
+        <rect x="10" y="72" width="15" height="30" rx="4" fill="#1565C0" opacity="0.2"/>
+        <rect x="95" y="72" width="15" height="30" rx="4" fill="#1565C0" opacity="0.2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="blog-cats">
+  <h2 class="blog-section-title">EXPLORE TOP <span>CATEGORIES</span></h2>
+  <div class="blog-cats-grid">
+    <div class="blog-cat-card" data-category="gym-management" onclick="filterCategory(this)">
+      <div class="blog-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+      <div class="blog-cat-name">Gym Management</div>
+      <div class="blog-cat-count">24</div>
+    </div>
+    <div class="blog-cat-card" data-category="billing-payments" onclick="filterCategory(this)">
+      <div class="blog-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></div>
+      <div class="blog-cat-name">Billing &amp; Payments</div>
+      <div class="blog-cat-count">18</div>
+    </div>
+    <div class="blog-cat-card" data-category="marketing" onclick="filterCategory(this)">
+      <div class="blog-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 3L11 13"/><polygon points="22 3 15 21 11 13 3 9 22 3"/></svg></div>
+      <div class="blog-cat-name">Marketing</div>
+      <div class="blog-cat-count">20</div>
+    </div>
+    <div class="blog-cat-card" data-category="crm" onclick="filterCategory(this)">
+      <div class="blog-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="blog-cat-name">CRM</div>
+      <div class="blog-cat-count">12</div>
+    </div>
+    <div class="blog-cat-card" data-category="member-retention" onclick="filterCategory(this)">
+      <div class="blog-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div class="blog-cat-name">Member Retention</div>
+      <div class="blog-cat-count">15</div>
+    </div>
+    <div class="blog-cat-card" data-category="all" onclick="filterCategory(this)">
+      <div class="blog-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <div class="blog-cat-name">All Articles</div>
+      <div class="blog-cat-count">100+</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="blog-featured">
+  <div class="blog-feat-card">
+    <div class="blog-feat-content">
+      <div class="blog-feat-label">Featured Article</div>
+      <h2>BEST GYM MANAGEMENT<br>SOFTWARE FOR MODERN<br>FITNESS CENTERS</h2>
+      <p>Discover how automation can improve memberships, billing, attendance, lead management and member retention while helping your fitness business grow.</p>
+      <div class="blog-feat-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Gym Management</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 Min Read</span>
+      </div>
+      <a href="article.html" class="blog-btn-orange">
+        READ ARTICLE
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="blog-feat-image">
+      <svg viewBox="0 0 200 160" width="140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="50" width="160" height="60" rx="8" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+        <rect x="30" y="60" width="60" height="40" rx="4" fill="rgba(255,255,255,0.12)"/>
+        <rect x="100" y="62" width="70" height="8" rx="2" fill="rgba(255,255,255,0.18)"/>
+        <rect x="100" y="76" width="50" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
+        <rect x="100" y="88" width="60" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST ARTICLES -->
+<section class="blog-latest">
+  <div class="blog-latest-header">
+    <h2>LATEST <span>ARTICLES</span></h2>
+    <a href="#" class="blog-view-all">View All Articles →</a>
+  </div>
+
+  <div id="activeFilterLabel" class="blog-active-filter hidden">
+    <span id="filterLabelText"></span>
+    <button onclick="clearFilter()">✕ Clear Filter</button>
+  </div>
+
+  <div class="blog-articles-grid" id="articlesGrid">
+    <!-- Card 1 -->
+    <div class="blog-article-card" data-category="member-retention" data-title="10 Proven Ways To Improve Gym Member Retention">
+      <div class="blog-art-img"><div class="blog-art-placeholder bg1"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="11" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><circle cx="52" cy="22" r="11" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M6 52 C6 39 16 33 28 33 C36 33 43 37 40 42 C37 37 44 33 52 33 C64 33 74 39 74 52" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/></svg></div></div>
+      <div class="blog-art-body">
+        <div class="blog-art-cat">Member Retention</div>
+        <h3>10 Proven Ways To Improve<br>Gym Member Retention</h3>
+        <p>Learn practical strategies to reduce cancellations and keep members engaged longer.</p>
+        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 10, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 Min read</span></div>
+        <a href="article.html" class="blog-read-more">Read More →</a>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="blog-article-card" data-category="billing-payments" data-title="How Automated Billing Saves Gym Owners Time">
+      <div class="blog-art-img"><div class="blog-art-placeholder bg2"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="10" width="50" height="40" rx="5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><line x1="15" y1="22" x2="65" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><rect x="22" y="28" width="12" height="6" rx="2" fill="rgba(255,255,255,0.2)"/><rect x="22" y="36" width="36" height="4" rx="2" fill="rgba(255,255,255,0.2)"/></svg></div></div>
+      <div class="blog-art-body">
+        <div class="blog-art-cat">Billing &amp; Payments</div>
+        <h3>How Automated Billing<br>Saves Gym Owners Time</h3>
+        <p>Eliminate manual payment collection and reduce missed renewals.</p>
+        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 8, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 Min read</span></div>
+        <a href="article.html" class="blog-read-more">Read More →</a>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="blog-article-card" data-category="crm" data-title="Why Every Gym Needs A CRM System In 2026">
+      <div class="blog-art-img"><div class="blog-art-placeholder bg3"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="20" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M18 52 C18 38 28 32 40 32 C52 32 62 38 62 52" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/></svg></div></div>
+      <div class="blog-art-body">
+        <div class="blog-art-cat">Fitness CRM</div>
+        <h3>Why Every Gym Needs<br>A CRM System In 2026</h3>
+        <p>Manage leads, follow-ups and member communication efficiently.</p>
+        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 5, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 Min read</span></div>
+        <a href="article.html" class="blog-read-more">Read More →</a>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="blog-article-card" data-category="gym-management" data-title="Top 5 Features Every Gym Management Software Must Have">
+      <div class="blog-art-img"><div class="blog-art-placeholder bg4"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="15" width="60" height="35" rx="4" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/><line x1="10" y1="25" x2="70" y2="25" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><rect x="16" y="30" width="15" height="12" rx="2" fill="rgba(255,255,255,0.18)"/><rect x="36" y="30" width="15" height="12" rx="2" fill="rgba(255,255,255,0.18)"/></svg></div></div>
+      <div class="blog-art-body">
+        <div class="blog-art-cat">Gym Management</div>
+        <h3>Top 5 Features Every Gym<br>Management Software Must Have</h3>
+        <p>From attendance tracking to billing automation — here's what matters most.</p>
+        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 3, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 Min read</span></div>
+        <a href="article.html" class="blog-read-more">Read More →</a>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="blog-article-card" data-category="marketing" data-title="How To Get More Gym Members With Digital Marketing">
+      <div class="blog-art-img"><div class="blog-art-placeholder bg5"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><path d="M8 46 L25 26 L40 36 L56 16 L72 20" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.5" stroke-linecap="round"/><circle cx="25" cy="26" r="3" fill="rgba(255,255,255,0.5)"/><circle cx="40" cy="36" r="3" fill="rgba(255,255,255,0.5)"/><circle cx="56" cy="16" r="3" fill="rgba(255,255,255,0.5)"/></svg></div></div>
+      <div class="blog-art-body">
+        <div class="blog-art-cat">Marketing</div>
+        <h3>How To Get More Gym Members<br>With Digital Marketing</h3>
+        <p>Practical tips on social media, Google Ads, and local SEO to grow your gym.</p>
+        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 1, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 Min read</span></div>
+        <a href="article.html" class="blog-read-more">Read More →</a>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="blog-article-card" data-category="member-retention" data-title="5 Email Strategies To Re-Engage Inactive Gym Members">
+      <div class="blog-art-img"><div class="blog-art-placeholder bg6"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="15" width="60" height="35" rx="4" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/><polyline points="10,15 40,38 70,15" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/></svg></div></div>
+      <div class="blog-art-body">
+        <div class="blog-art-cat">Member Retention</div>
+        <h3>5 Email Strategies To<br>Re-Engage Inactive Members</h3>
+        <p>Win back lost members with targeted email campaigns and special offers.</p>
+        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 28, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 4 Min read</span></div>
+        <a href="article.html" class="blog-read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div id="noResults" class="blog-no-results hidden">
+      <p>No articles found.</p>
+      <button onclick="clearFilter()">Show All Articles</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blog-cta">
+  <div class="blog-cta-card">
+    <div class="blog-cta-left">
+      <h3>READY TO GROW YOUR GYM BUSINESS?</h3>
+      <p>Optimize your gym operations, automate billing, improve engagement and grow your revenue.</p>
+      <div class="blog-cta-features">
+        <div class="blog-cta-feat"><div class="blog-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> All-in-one gym management</div>
+        <div class="blog-cta-feat"><div class="blog-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Automated billing &amp; payments</div>
+        <div class="blog-cta-feat"><div class="blog-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Smart insights &amp; analytics</div>
+        <div class="blog-cta-feat"><div class="blog-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Marketing tools to get more members</div>
+      </div>
+      <a href="#" class="blog-btn-orange open-demo-modal">
+        GET YOUR FREE DEMO
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="blog-cta-right">
+      <div class="blog-dash-header"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Dashboard</span></div>
+      <div class="blog-dash-body">
+        <div class="blog-dash-title">Overview</div>
+        <div class="blog-dash-stats">
+          <div><div class="blog-dash-label">Total Members</div><div class="blog-dash-value">2,350</div></div>
+          <div><div class="blog-dash-label">Active Members</div><div class="blog-dash-value">1,760</div></div>
+          <div><div class="blog-dash-label">Monthly Revenue</div><div class="blog-dash-value sm">₹2,45,000</div></div>
+          <div><div class="blog-dash-label">New Leads</div><div class="blog-dash-value blue">320</div></div>
+        </div>
+        <div class="blog-dash-chart">
+          <svg viewBox="0 0 380 70" width="100%" height="70" preserveAspectRatio="none"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1565C0" stop-opacity="0.18"/><stop offset="100%" stop-color="#1565C0" stop-opacity="0"/></linearGradient></defs><path d="M0 52 C40 48 70 58 110 42 C140 28 165 52 200 38 C230 24 255 46 290 30 C318 16 348 38 380 24 L380 70 L0 70 Z" fill="url(#cg)"/><path d="M0 52 C40 48 70 58 110 42 C140 28 165 52 200 38 C230 24 255 46 290 30 C318 16 348 38 380 24" fill="none" stroke="#1565C0" stroke-width="2"/><circle cx="110" cy="42" r="3.5" fill="#1565C0"/><circle cx="200" cy="38" r="3.5" fill="#1565C0"/><circle cx="290" cy="30" r="3.5" fill="#1565C0"/><circle cx="380" cy="24" r="3.5" fill="#1565C0"/></svg>
+        </div>
+        <div class="blog-dash-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- end blog-wrap -->
+
+<!-- FOOTER -->
+<div style="background:#0b1a3d; padding:0;">
+  <div style="max-width:1200px; margin:0 auto; padding:20px 24px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+    <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center;">
+      <a href="../index/index.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">HOME</a>
+      <a href="../about/about.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">ABOUT US</a>
+      <a href="../pricing/pricing.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">PRICING</a>
+      <a href="blog.html" style="color:#4da6ff; font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">BLOG</a>
+      <a href="../contact/contact.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">CONTACT US</a>
+      <a href="#" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">TERMS &amp; CONDITIONS</a>
+      <a href="../privacy-policy/privacy-policy.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">PRIVACY POLICY</a>
+      <a href="#" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">REFUND POLICY</a>
+    </div>
+    <a class="open-demo-modal" href="#" style="background:#f26522; color:#fff; padding:10px 26px; border-radius:50px; font-size:13px; font-weight:700; text-decoration:none; white-space:nowrap; letter-spacing:.5px;">ASK FOR DEMO</a>
+  </div>
+  <div style="max-width:1200px; margin:0 auto; padding:40px 24px 36px; display:flex; justify-content:space-between; gap:40px;">
+    <div style="flex:1;">
+      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">About Us</h3>
+      <p style="color:rgba(255,255,255,.7); font-size:14px; line-height:1.8;">Gymex is a powerful cloud based gym management software built to facilitate to effectively manage gym &amp; fitness related businesses.</p>
+    </div>
+    <div style="flex:1.4;">
+      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">Contact Us</h3>
+      <p style="color:rgba(255,255,255,.7); font-size:14px; line-height:1.8; margin-bottom:24px;">GreyBits Technologies, Office No. 2, An-Nazir Building, Momin Nagar, Patel&nbsp;Estate&nbsp;Road, Jogeshwari West, Mumbai - 400102</p>
+      <div style="display:flex; gap:40px;">
+        <div>
+          <h4 style="color:#fff; font-size:15px; font-weight:700; margin-bottom:12px;">For Sales</h4>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+917710862007" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">+91 7710862007</a></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:sales@gymex.online" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">sales@gymex.online</a></div>
+        </div>
+        <div>
+          <h4 style="color:#fff; font-size:15px; font-weight:700; margin-bottom:12px;">For Support</h4>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+918291682083" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">+91 8291682083</a></div>
+          <div style="display:flex; align-items:center; gap:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:support@gymex.online" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">support@gymex.online</a></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:0.5;">
+      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">Follow Us On</h3>
+      <div style="display:flex; gap:12px;">
+        <a href="https://www.facebook.com/gymexsoftware" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#1877F2;border-radius:50%;"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/gymexclubmanagement" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.linkedin.com/company/gymex-club-management-software/" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#0A66C2;border-radius:50%;"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.1); padding:16px 0;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px; text-align:center;">
+      <p style="color:rgba(255,255,255,.5); font-size:13px;">&copy; 2024 Gymex Club Management Software. All Rights Reserved.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const ALL_ARTICLES = [
+  { title: "10 Proven Ways To Improve Gym Member Retention", category: "member-retention", catLabel: "Member Retention" },
+  { title: "How Automated Billing Saves Gym Owners Time", category: "billing-payments", catLabel: "Billing & Payments" },
+  { title: "Why Every Gym Needs A CRM System In 2026", category: "crm", catLabel: "Fitness CRM" },
+  { title: "Top 5 Features Every Gym Management Software Must Have", category: "gym-management", catLabel: "Gym Management" },
+  { title: "How To Get More Gym Members With Digital Marketing", category: "marketing", catLabel: "Marketing" },
+  { title: "5 Email Strategies To Re-Engage Inactive Gym Members", category: "member-retention", catLabel: "Member Retention" },
+  { title: "Best Gym Management Software For Modern Fitness Centers", category: "gym-management", catLabel: "Gym Management" },
+  { title: "How To Set Up Automated Payments For Your Gym", category: "billing-payments", catLabel: "Billing & Payments" },
+  { title: "Using WhatsApp Marketing To Grow Your Gym", category: "marketing", catLabel: "Marketing" },
+  { title: "CRM Best Practices For Gym Owners", category: "crm", catLabel: "Fitness CRM" },
+  { title: "Gym Attendance Tracking: Why It Matters", category: "gym-management", catLabel: "Gym Management" },
+  { title: "Reduce Gym Membership Cancellations With These Tips", category: "member-retention", catLabel: "Member Retention" },
+];
+
+const CATEGORY_NAMES = { "gym-management":"Gym Management","billing-payments":"Billing & Payments","marketing":"Marketing","crm":"CRM","member-retention":"Member Retention","all":"All Articles" };
+let activeCategory = null;
+
+function filterCategory(el) {
+  const cat = el.dataset.category;
+  if (activeCategory === cat) { clearFilter(); return; }
+  activeCategory = cat;
+  document.querySelectorAll('.blog-cat-card').forEach(c => c.classList.toggle('active', c.dataset.category === cat));
+  let vis = 0;
+  document.querySelectorAll('.blog-article-card').forEach(c => { const m = cat === 'all' || c.dataset.category === cat; c.style.display = m ? 'block' : 'none'; if (m) vis++; });
+  document.getElementById('noResults').classList.toggle('hidden', vis > 0);
+  const lbl = document.getElementById('activeFilterLabel');
+  document.getElementById('filterLabelText').textContent = 'Showing: ' + CATEGORY_NAMES[cat];
+  lbl.classList.remove('hidden');
+  document.querySelector('.blog-latest').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function clearFilter() {
+  activeCategory = null;
+  document.querySelectorAll('.blog-cat-card').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.blog-article-card').forEach(c => c.style.display = 'block');
+  document.getElementById('noResults').classList.add('hidden');
+  document.getElementById('activeFilterLabel').classList.add('hidden');
+}
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+searchInput.addEventListener('keyup', function(e) {
+  if (e.key === 'Enter') { doSearch(); return; }
+  const q = this.value.trim();
+  if (q.length >= 2) showSearchDropdown(q); else hideSearchDropdown();
+});
+document.addEventListener('click', function(e) { if (!e.target.closest('.blog-search') && !e.target.closest('.search-results')) hideSearchDropdown(); });
+function showSearchDropdown(q) {
+  const matches = ALL_ARTICLES.filter(a => a.title.toLowerCase().includes(q.toLowerCase()) || a.catLabel.toLowerCase().includes(q.toLowerCase()));
+  searchResults.innerHTML = matches.length === 0 ? `<div class="search-no-results">No articles found for "<strong>${esc(q)}</strong>"</div>` : '';
+  if (matches.length > 0) matches.slice(0,6).forEach(a => {
+    const d = document.createElement('div'); d.className = 'search-result-item';
+    d.innerHTML = `<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#1565C0;fill:none;stroke-width:2;flex-shrink:0;"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke-linecap="round"/></svg><span><strong>${hl(a.title,q)}</strong> &nbsp;<small style="color:#aaa;font-weight:400;">${a.catLabel}</small></span>`;
+    d.onclick = () => { searchInput.value = a.title; hideSearchDropdown(); const cc = document.querySelector(`.blog-cat-card[data-category="${a.category}"]`); if (cc) filterCategory(cc); };
+    searchResults.appendChild(d);
+  });
+  searchResults.classList.remove('hidden');
+}
+function hideSearchDropdown() { searchResults.classList.add('hidden'); searchResults.innerHTML = ''; }
+function doSearch() { const q = searchInput.value.trim(); if (!q) { clearFilter(); return; } showSearchDropdown(q); }
+function hl(t,q) { if (!q) return esc(t); return esc(t).replace(new RegExp(`(${esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi'),'<mark style="background:#fff3e0;color:#E85D04;border-radius:2px;padding:0 2px;">$1</mark>'); }
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+</script>
+
+</body>
+</html>
