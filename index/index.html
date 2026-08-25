@@ -802,42 +802,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <script>
-// Testimonial slider
-var testiTrack = document.querySelector('.testi-track');
-var testiIndex = 0;
-var testiAutoInterval;
-
-function scrollTesti(dir) {
-  if (!testiTrack) return;
-  var cards = testiTrack.children;
-  var cardWidth = cards[0].offsetWidth + 24;
-  var maxScroll = testiTrack.scrollWidth - testiTrack.parentElement.offsetWidth;
+// Testimonial slider — smooth continuous scroll + arrow control
+(function() {
+  var track = document.querySelector('.testi-track');
+  if (!track) return;
   
-  testiIndex += dir;
-  if (testiIndex < 0) testiIndex = 0;
-  if (testiIndex >= cards.length) testiIndex = 0;
+  var scrollPos = 0;
+  var speed = 0.5; // pixels per frame (~30px/sec = slow smooth)
+  var isPaused = false;
+  var resumeTimer = null;
+  var cardWidth = 404; // 380px card + 24px gap
   
-  testiTrack.style.transform = 'translateX(-' + (testiIndex * cardWidth) + 'px)';
-  testiTrack.style.transition = 'transform 0.4s ease';
+  function getMaxScroll() {
+    return track.scrollWidth - track.parentElement.offsetWidth;
+  }
   
-  // Reset autoplay
-  clearInterval(testiAutoInterval);
-  testiAutoInterval = setInterval(function() { scrollTesti(1); }, 4000);
-}
-
-// Auto-play
-if (testiTrack) {
-  testiAutoInterval = setInterval(function() { scrollTesti(1); }, 4000);
+  function animate() {
+    if (!isPaused) {
+      scrollPos += speed;
+      if (scrollPos >= getMaxScroll()) {
+        scrollPos = 0; // loop back
+      }
+      track.style.transform = 'translateX(-' + scrollPos + 'px)';
+    }
+    requestAnimationFrame(animate);
+  }
+  
+  // Arrow handlers
+  window.scrollTesti = function(dir) {
+    isPaused = true;
+    scrollPos += dir * cardWidth * 2;
+    if (scrollPos < 0) scrollPos = 0;
+    if (scrollPos > getMaxScroll()) scrollPos = 0;
+    track.style.transform = 'translateX(-' + scrollPos + 'px)';
+    
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() { isPaused = false; }, 3000);
+  };
   
   // Pause on hover
   var carousel = document.querySelector('.testi-carousel');
   if (carousel) {
-    carousel.addEventListener('mouseenter', function() { clearInterval(testiAutoInterval); });
+    carousel.addEventListener('mouseenter', function() { isPaused = true; });
     carousel.addEventListener('mouseleave', function() {
-      testiAutoInterval = setInterval(function() { scrollTesti(1); }, 4000);
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function() { isPaused = false; }, 1000);
     });
   }
-}
+  
+  requestAnimationFrame(animate);
+})();
 </script>
 
 </body>
