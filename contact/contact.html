@@ -348,5 +348,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- Footer Mobile -->
-<style>
+
+<div class="demo-modal-overlay" id="demoModal">
+  <div class="demo-modal" style="max-width:680px;width:95%;padding:0;overflow:hidden;border-radius:16px;position:relative;">
+    <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')" style="position:absolute;top:12px;right:16px;z-index:10;background:none;border:none;font-size:24px;color:#999;cursor:pointer;line-height:1;">&times;</button>
+    <div style="padding:28px 32px 24px;">
+      <h2 style="text-align:center;font-size:22px;font-weight:800;letter-spacing:0.5px;margin:0 0 4px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Ask For Free Demo</h2>
+      <p style="text-align:center;font-size:13px;color:#666;margin:0 0 20px;font-family:'Poppins',sans-serif;">Get your hands on before officially using it</p>
+      <form action="https://www.gymex.online/contactus.php" method="post" onsubmit="return validateCaptcha()">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="sname" placeholder="State" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div><input type="text" name="cname" placeholder="City" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+          <div>
+            <div style="display:flex;gap:0;">
+              <select name="country_code" style="width:80px;padding:10px 6px;border:1.5px solid #e0e0e0;border-right:none;border-radius:8px 0 0 8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;flex-shrink:0;">
+                <option value="+91">+91</option><option value="+971">+971</option><option value="+966">+966</option><option value="+973">+973</option><option value="+974">+974</option><option value="+968">+968</option><option value="+965">+965</option><option value="+20">+20</option><option value="+1">+1</option><option value="+44">+44</option>
+              </select>
+              <input type="tel" name="mobile" placeholder="Mobile" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:0 8px 8px 0;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;">
+            </div>
+          </div>
+          <div><input type="email" name="email" placeholder="Email Id" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+        </div>
+        <div style="margin-top:12px;">
+          <textarea name="comment" placeholder="Message" rows="3" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap;gap:10px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <div id="captcha-box" style="background:white;border:1px solid #ccc;border-radius:4px;padding:4px 14px;font-size:16px;font-weight:bold;letter-spacing:4px;color:#535353;font-family:'Courier New',monospace;user-select:none;min-width:100px;text-align:center;"></div>
+            <button type="button" onclick="generateCaptcha()" title="Refresh" style="background:white;border:1px solid #ccc;border-radius:4px;color:#535353;font-size:14px;padding:4px 10px;cursor:pointer;">&#8635;</button>
+            <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter CAPTCHA" maxlength="6" autocomplete="off" style="background:white;border:1px solid #ccc;border-radius:4px;color:#535353;padding:8px 12px;font-size:13px;width:120px;outline:none;">
+            <input type="hidden" id="captcha-value" name="captcha_value">
+          </div>
+          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;">
+            SUBMIT <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:12px;">&#8599;</span>
+          </button>
+        </div>
+        <p id="captcha-error" style="color:#ef4444;font-size:12px;margin-top:6px;display:none;font-weight:600;"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var currentCaptcha='';
+function generateCaptcha(){var c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789',r='';for(var i=0;i<6;i++)r+=c.charAt(Math.floor(Math.random()*c.length));currentCaptcha=r;var b=document.getElementById('captcha-box');if(b)b.innerText=r;var v=document.getElementById('captcha-value');if(v)v.value=r;var inp=document.getElementById('captcha-input');if(inp)inp.value='';}
+window.addEventListener('load',function(){generateCaptcha();});
+function validateCaptcha(){
+  var u=document.getElementById('captcha-input');
+  if(!u||u.value.trim()===''){
+    var e=document.getElementById('captcha-error');
+    if(e){e.innerHTML='CAPTCHA is required.';e.style.display='block';}
+    return false;
+  }
+  if(u.value.trim()!==currentCaptcha){
+    var e=document.getElementById('captcha-error');
+    if(e){e.innerHTML='Incorrect CAPTCHA. Please try again.';e.style.display='block';}
+    generateCaptcha();
+    return false;
+  }
+  var e=document.getElementById('captcha-error');
+  if(e)e.style.display='none';
+  return true;
+}
+document.querySelectorAll('.open-demo-modal').forEach(function(btn){
+  btn.addEventListener('click',function(e){
+    e.preventDefault();
+    var m=document.getElementById('demoModal');
+    if(m){m.classList.add('active');generateCaptcha();}
+  });
+});
+var db=document.getElementById('demobutton');
+if(db){db.addEventListener('click',function(e){
+  e.preventDefault();
+  var m=document.getElementById('demoModal');
+  if(m){m.classList.add('active');generateCaptcha();}
+});}
+var dm=document.getElementById('demoModal');
+if(dm){dm.addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){var m=document.getElementById('demoModal');if(m)m.classList.remove('active');}
+});
+</script>
+</body>
+</html>
