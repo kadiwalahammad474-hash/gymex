@@ -761,27 +761,60 @@ document.addEventListener('keydown',function(e){
 
 
 <script>
-// Testimonial arrow navigation
+// Testimonial: auto-scroll + arrow navigation
 (function(){
   var track = document.querySelector('.testi-track');
   if(!track) return;
-  var scrollAmount = 420; // card width + gap
-  
-  // Pause infinite animation on load
-  track.style.animationPlayState = 'paused';
-  
+  var wrapper = track.parentElement;
+  var scrollAmount = 420;
+  var resumeTimer = null;
+
+  // Keep auto-scroll running (don't pause it)
+  track.style.animationPlayState = 'running';
+
   window.scrollTesti = function(dir) {
+    // Pause auto-scroll
+    track.style.animationPlayState = 'paused';
     track.style.animation = 'none';
-    track.scrollLeft = (track.scrollLeft || 0) + (dir * scrollAmount);
-    // Use transform instead since track might not be scrollable
-    var current = parseFloat(track.style.transform.replace(/[^-d.]/g,'')) || 0;
-    var maxScroll = -(track.scrollWidth - track.parentElement.offsetWidth);
+
+    // Get current X position from computed transform
+    var style = window.getComputedStyle(track);
+    var matrix = style.transform || style.webkitTransform || 'none';
+    var current = 0;
+    if(matrix && matrix !== 'none') {
+      var vals = matrix.match(/matrix.*((.+))/);
+      if(vals) {
+        var parts = vals[1].split(',');
+        current = parseFloat(parts[4]) || 0;
+      }
+    }
+
     var next = current - (dir * scrollAmount);
+    var maxScroll = -(track.scrollWidth - wrapper.offsetWidth);
     if(next > 0) next = 0;
     if(next < maxScroll) next = maxScroll;
+
     track.style.transform = 'translateX(' + next + 'px)';
     track.style.transition = 'transform .4s ease';
+
+    // Resume auto-scroll after 4 seconds
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() {
+      track.style.transition = 'none';
+      track.style.animation = 'testiScroll 120s linear infinite';
+      track.style.animationPlayState = 'running';
+    }, 4000);
   };
+
+  // Pause on hover, resume on leave
+  wrapper.addEventListener('mouseenter', function(){
+    track.style.animationPlayState = 'paused';
+  });
+  wrapper.addEventListener('mouseleave', function(){
+    if(!resumeTimer) {
+      track.style.animationPlayState = 'running';
+    }
+  });
 })();
 </script>
 
