@@ -640,12 +640,7 @@ body { position: relative; z-index: 1; }
 
 /* Benefits — steel glow frame around image + floating premium badge */
 .mm-benefits-img-wrap { position: relative; }
-.mm-benefits-img-wrap::before {
-  content: "";
-  position: absolute; inset: -14px; border-radius: calc(var(--radius) + 14px);
-  background: linear-gradient(135deg, rgba(2,142,206,.18), rgba(254,79,13,.12));
-  filter: blur(18px); z-index: -1;
-}
+.mm-benefits-img-wrap::before { display: none; }
 .mm-benefits-badge {
   position: absolute; bottom: -14px; right: -14px; z-index: 2;
   display: flex; align-items: center; gap: 10px;
@@ -829,7 +824,7 @@ body { position: relative; z-index: 1; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .mm-section--soft-dark .mm-desc { color: rgba(255,255,255,.66); }
-.mm-section--soft-dark .mm-benefits-img { box-shadow: 0 30px 70px rgba(0,0,0,.4); }
+.mm-section--soft-dark .mm-benefits-img { box-shadow: none; }
 
 /* ---------- DARK 3-COLUMN FEATURES ---------- */
 .mm-features-dark {
@@ -1181,7 +1176,7 @@ body { position: relative; z-index: 1; }
     font-size: 11px;
   }
   .mm-benefits-img {
-    border-radius: 14px;
+    border-radius: 0;
   }
   .mm-section--soft-dark {
     margin: 0 12px;

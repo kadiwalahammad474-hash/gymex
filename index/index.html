@@ -799,5 +799,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 })();
 </script>
 
+
+<script>
+// Testimonial slider
+var testiTrack = document.querySelector('.testi-track');
+var testiIndex = 0;
+var testiAutoInterval;
+
+function scrollTesti(dir) {
+  if (!testiTrack) return;
+  var cards = testiTrack.children;
+  var cardWidth = cards[0].offsetWidth + 24;
+  var maxScroll = testiTrack.scrollWidth - testiTrack.parentElement.offsetWidth;
+  
+  testiIndex += dir;
+  if (testiIndex < 0) testiIndex = 0;
+  if (testiIndex >= cards.length) testiIndex = 0;
+  
+  testiTrack.style.transform = 'translateX(-' + (testiIndex * cardWidth) + 'px)';
+  testiTrack.style.transition = 'transform 0.4s ease';
+  
+  // Reset autoplay
+  clearInterval(testiAutoInterval);
+  testiAutoInterval = setInterval(function() { scrollTesti(1); }, 4000);
+}
+
+// Auto-play
+if (testiTrack) {
+  testiAutoInterval = setInterval(function() { scrollTesti(1); }, 4000);
+  
+  // Pause on hover
+  var carousel = document.querySelector('.testi-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', function() { clearInterval(testiAutoInterval); });
+    carousel.addEventListener('mouseleave', function() {
+      testiAutoInterval = setInterval(function() { scrollTesti(1); }, 4000);
+    });
+  }
+}
+</script>
+
 </body>
 </html>
