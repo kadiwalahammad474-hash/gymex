@@ -1609,3 +1609,14 @@ body { position: relative; z-index: 1; }
   .mm-awards-row img { width: 80px; height: 80px; }
   .mm-awards-row { gap: 12px; }
 }
+/* Testimonial Arrows */
+.testi-arrow:hover {
+  background: var(--blue) !important;
+  color: #fff !important;
+  border-color: var(--blue) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+}
+.testi-arrow:active { transform: translateY(-50%) scale(0.95) !important; }
+@media (max-width: 768px) {
+  .testi-arrow { display: none !important; }
+}

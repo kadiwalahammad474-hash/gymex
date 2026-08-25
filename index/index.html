@@ -490,7 +490,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2>What Our <span class="accent">Clients Say</span></h2>
           <div class="testi-line"></div>
         </div>
-        <div class="testi-track-wrapper">
+        <div class="testi-carousel" style="position:relative;">
+          <button class="testi-arrow testi-arrow-left" onclick="scrollTesti(-1)" style="position:absolute;left:-16px;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid #e0e6f0;box-shadow:0 4px 14px rgba(0,0,0,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#1565C0;transition:all .2s;">&#8592;</button>
+          <div class="testi-track-wrapper">
           <div class="testi-track">
             <div class="testi-card">
               <div class="testi-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
@@ -555,6 +557,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-arrow testi-arrow-right" onclick="scrollTesti(1)" style="position:absolute;right:-16px;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid #e0e6f0;box-shadow:0 4px 14px rgba(0,0,0,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#1565C0;transition:all .2s;">&#8594;</button>
+        </div>
       </div>
     </section>
 
@@ -753,6 +757,32 @@ document.getElementById('demoModal').addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape')document.getElementById('demoModal').classList.remove('active');
 });
+</script>
+
+
+<script>
+// Testimonial arrow navigation
+(function(){
+  var track = document.querySelector('.testi-track');
+  if(!track) return;
+  var scrollAmount = 420; // card width + gap
+  
+  // Pause infinite animation on load
+  track.style.animationPlayState = 'paused';
+  
+  window.scrollTesti = function(dir) {
+    track.style.animation = 'none';
+    track.scrollLeft = (track.scrollLeft || 0) + (dir * scrollAmount);
+    // Use transform instead since track might not be scrollable
+    var current = parseFloat(track.style.transform.replace(/[^-d.]/g,'')) || 0;
+    var maxScroll = -(track.scrollWidth - track.parentElement.offsetWidth);
+    var next = current - (dir * scrollAmount);
+    if(next > 0) next = 0;
+    if(next < maxScroll) next = maxScroll;
+    track.style.transform = 'translateX(' + next + 'px)';
+    track.style.transition = 'transform .4s ease';
+  };
+})();
 </script>
 
 </body>
