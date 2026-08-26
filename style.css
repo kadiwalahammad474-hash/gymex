@@ -239,6 +239,13 @@ body {
 .mega-menu:not(.features-mega) .mega-icon { width: 16px; height: 16px; min-width: 16px; border-radius: 4px; background: rgba(2,142,206,.08); display: flex; align-items: center; justify-content: center; color: #028ece; font-size: 8px; flex-shrink: 0; }
 .mega-menu:not(.features-mega) .mega-col-title { color: rgba(28,36,54,.45); border-bottom: 1px solid rgba(28,36,54,.08); padding-bottom: 8px; margin-bottom: 12px; }
 
+
+/* Business Types dropdown — dark text on white bg */
+.dropdown:not(.dropdown.active) .dropdown-content .text1 { color: #1c2436; }
+.dropdown:not(.dropdown.active) .dropdown-content .text1:hover { color: #2563eb; }
+.dropdown:not(.dropdown.active) .dropdown-content .mega-col-title { color: rgba(28,36,54,.45); border-bottom: 1px solid rgba(28,36,54,.08); padding-bottom: 8px; margin-bottom: 12px; }
+.dropdown:not(.dropdown.active) .dropdown-content .mega-icon { background: rgba(2,142,206,.08); color: #028ece; }
+
 /* ══════════════════════════════════════════════════════════════
    FEATURES MEGA MENU — 100% Image Match
    ══════════════════════════════════════════════════════════════ */
