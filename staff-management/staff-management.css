@@ -412,8 +412,8 @@
 .sm-cta-banner h2 .accent { color: var(--blue, #028ece); }
 
 /* ── FAQ ── */
-.sm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.sm-faq-item {
+.sm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.sm-faq-item { isolation: isolate; position: relative; z-index: 1; 
   background: var(--gray-7, #f5f7fb);
   border-radius: 10px;
   padding: 16px 20px;
