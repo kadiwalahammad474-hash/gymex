@@ -546,3 +546,35 @@ h1,h2,h3,h4,h5,h6 { font-size: inherit; font-weight: inherit; margin: 0; }
 @media (max-width: 600px) {
   .contact-us { padding: 20px; }
 }
+
+/* ── mm-btn-orange (home page style) ── */
+.mm-btn-orange {
+  background: linear-gradient(135deg, var(--orange-100), #e0450b);
+  color: #fff;
+  padding: 6px 6px 6px 28px;
+  gap: 12px;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: .5px;
+}
+.mm-btn-orange i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  color: var(--orange-100);
+}
+.mm-btn-orange:hover {
+  transform: translateY(-1px);
+}
