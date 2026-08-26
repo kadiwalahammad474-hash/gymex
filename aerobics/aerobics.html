@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
   
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -405,57 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 
 <!-- Demo Modal -->
-<div class="demo-modal-overlay" id="demoModal">
-  <div class="demo-modal" style="max-width:680px;width:95%;padding:0;overflow:hidden;border-radius:16px;position:relative;">
-    <button class="demo-modal-close" onclick="document.getElementById('demoModal').classList.remove('active')" style="position:absolute;top:12px;right:16px;z-index:10;background:none;border:none;font-size:24px;color:#999;cursor:pointer;line-height:1;">&times;</button>
-    <div style="padding:28px 32px 24px;">
-      <h2 style="text-align:center;font-size:22px;font-weight:800;letter-spacing:0.5px;margin:0 0 4px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Ask For Free Demo</h2>
-      <p style="text-align:center;font-size:13px;color:#666;margin:0 0 20px;font-family:'Poppins',sans-serif;">Get your hands on before officially using it</p>
-      <form action="https://www.gymex.online/contactus.php" method="post" >
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div><input type="text" name="gname" placeholder="Gym Name" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div><input type="text" name="sname" placeholder="State" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div><input type="text" name="cname" placeholder="City" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-          <div>
-            <div style="display:flex;gap:0;">
-              <select name="country_code" style="width:80px;padding:10px 6px;border:1.5px solid #e0e0e0;border-right:none;border-radius:8px 0 0 8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;flex-shrink:0;">
-                <option value="+91">+91</option>
-                <option value="+971">+971</option>
-                <option value="+966">+966</option>
-                <option value="+973">+973</option>
-                <option value="+974">+974</option>
-                <option value="+968">+968</option>
-                <option value="+965">+965</option>
-                <option value="+20">+20</option>
-                <option value="+1">+1</option>
-                <option value="+44">+44</option>
-              </select>
-              <input type="tel" name="mobile" placeholder="Mobile" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:0 8px 8px 0;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;">
-            </div>
-          </div>
-          <div><input type="email" name="email" placeholder="Email Id" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
-        </div>
-        <div style="margin-top:12px;">
-          <textarea name="comment" placeholder="Message" rows="3" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
-        </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap;gap:10px;">
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <div id="captcha-box" style="background:white;border:1px solid #ccc;border-radius:4px;padding:4px 14px;font-size:16px;font-weight:bold;letter-spacing:4px;color:#535353;font-family:'Courier New',monospace;user-select:none;min-width:100px;text-align:center;"></div>
-            <button type="button" onclick="generateCaptcha()" title="Refresh CAPTCHA" style="background:white;border:1px solid #ccc;border-radius:4px;color:#535353;font-size:14px;padding:4px 10px;cursor:pointer;">&#8635;</button>
-            <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter CAPTCHA" maxlength="6" autocomplete="off" style="background:white;border:1px solid #ccc;border-radius:4px;color:#535353;padding:8px 12px;font-size:13px;width:120px;outline:none;">
-            <input type="hidden" id="captcha-value" name="captcha_value">
-          </div>
-          <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;">
-            SUBMIT
-            <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:12px;">&#8599;</span>
-          </button>
-        </div>
-        <p id="captcha-error" style="color:white;font-size:12px;margin-top:6px;display:none;font-weight:600;"></p>
-      </form>
-    </div>
-  </div>
-</div>
+
 
 <script>
 var currentCaptcha = '';
@@ -517,20 +467,263 @@ document.querySelectorAll('.dropdown > a').forEach(function(trigger){
 </script>
 
 <script>
-document.querySelectorAll('.open-demo-modal').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('demoModal').classList.add('active');
-  });
-});
-document.getElementById('demoModal').addEventListener('click', function(e) {
-  if (e.target === this) this.classList.remove('active');
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') document.getElementById('demoModal').classList.remove('active');
-});
+
 </script>
 
+    <!-- Backdrop Modal (Imran's version) -->
+    <div class="backdrop" id="divemailpopup">
+      <div class="contact-us">
+        <span class="loader" id="loader"></span>
+        <button class="close-btn" id="close-contact-modal" style="position:absolute;top:16px;right:16px;z-index:10;background:none;border:none;cursor:pointer;padding:8px;">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="35" height="2" rx="1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 27.7488 3)" fill="#525251"/><rect width="35" height="2" rx="1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 29.1631 27.7485)" fill="#525251"/></svg>
+        </button>
+        <div class="form-body" id="form-body">
+          <h2 class="title" style="text-align:center;font-size:22px;font-weight:800;margin-bottom:20px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Schedule a Free Demo!</h2>
+          <form id="contact-form">
+            <div class="form-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div>
+                <div class="field"><input type="text" class="contact-us__input" placeholder="Name" name="firstname" id="first-name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+                <div class="error" id="error-first-name" style="color:#ef4444;font-size:12px;display:none;"></div>
+              </div>
+              <div>
+                <div class="field"><input type="text" class="contact-us__input" placeholder="Last Name" name="lastname" id="last-name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+                <div class="error" id="error-last-name" style="color:#ef4444;font-size:12px;display:none;"></div>
+              </div>
+              <div class="field" style="grid-column:1/-1;"><input type="text" class="contact-us__input" placeholder="Company / Gym Name" name="company" id="company" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+              <div class="field" style="grid-column:1/-1;"><input type="email" class="contact-us__input" placeholder="Email" name="email" id="email" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+              <div class="field" style="grid-column:1/-1;"><input type="tel" id="number" name="phonenumber" placeholder="Phone Number" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+            </div>
+            <div style="margin-top:12px;">
+              <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
+            </div>
+            <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
+              <span>GET YOUR FREE DEMO</span>
+              <div style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M9.47576 24.5163L7.59014 22.6307L18.9039 11.317H8.53295V8.63941H23.467V23.5735H20.7895V13.2026L9.47576 24.5163Z" fill="white"/></svg></div>
+            </button>
+          </form>
+        </div>
+        <div class="form-submission-message" id="emailsuccessmsg" style="display:none;text-align:center;padding:40px 20px;">
+          <h2 class="title" style="font-size:20px;font-weight:800;margin-bottom:12px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Thank you for showing interest in <span style="color:#1565C0;">Gymex Club</span> Management Software!</h2>
+          <h3 class="text" style="font-size:15px;color:#666;font-weight:500;">We have received your inquiry. Our team will reach out to you soon!</h3>
+          <button class="send-again-btn" style="margin-top:20px;background:#1565C0;color:#fff;border:none;border-radius:50px;padding:10px 24px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;">Send Another</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <script>
+    // Modal open/close
+    document.querySelectorAll('.open-modal-btn').forEach(function(btn){
+      btn.addEventListener('click',function(e){
+        e.preventDefault();
+        document.getElementById('divemailpopup').classList.add('show');
+        document.body.style.overflow='hidden';
+      });
+    });
+    var db=document.getElementById('demobutton');
+    if(db){db.addEventListener('click',function(e){
+      e.preventDefault();
+      document.getElementById('divemailpopup').classList.add('show');
+      document.body.style.overflow='hidden';
+    });}
+    document.getElementById('close-contact-modal').addEventListener('click',function(){
+      document.getElementById('divemailpopup').classList.remove('show');
+      document.body.style.overflow='auto';
+      document.getElementById('emailsuccessmsg').style.display='none';
+      document.getElementById('form-body').style.display='block';
+    });
+    document.getElementById('divemailpopup').addEventListener('click',function(e){
+      if(e.target===this){
+        this.classList.remove('show');
+        document.body.style.overflow='auto';
+      }
+    });
+    document.querySelector('.send-again-btn').addEventListener('click',function(){
+      document.getElementById('emailsuccessmsg').style.display='none';
+      document.getElementById('form-body').style.display='block';
+    });
+
+    // EmailJS init
+    emailjs.init('AmP09sgXBaIgn9Juz');
+
+    // intl-tel-input
+    var phoneInput=document.getElementById('number');
+    if(phoneInput){
+      var iti=window.intlTelInput(phoneInput,{
+        utilsScript:'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+        separateDialCode:true,
+        initialCountry:'in'
+      });
+    }
+
+    // Form submit
+    document.getElementById('contact-form').onsubmit=function(e){
+      e.preventDefault();
+      var loader=document.getElementById('loader');
+      loader.classList.add('show');
+      document.getElementById('divemailpopup').classList.add('show');
+      
+      var fullNumber=iti ? iti.getNumber() : phoneInput.value;
+      
+      emailjs.send('service_1o6wljl','template_6dewzmp',{
+        firstname:document.getElementById('first-name').value,
+        lastname:document.getElementById('last-name').value,
+        company:document.getElementById('company').value,
+        email:document.getElementById('email').value,
+        phonenumber:fullNumber,
+        message:this.message.value
+      }).then(function(){
+        loader.classList.remove('show');
+        document.getElementById('form-body').style.display='none';
+        document.getElementById('emailsuccessmsg').style.display='block';
+      },function(err){
+        loader.classList.remove('show');
+        alert('Thank you! Your demo request has been submitted.');
+        document.getElementById('divemailpopup').classList.remove('show');
+        document.body.style.overflow='auto';
+      });
+    };
+
+    // ESC to close
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){
+        document.getElementById('divemailpopup').classList.remove('show');
+        document.body.style.overflow='auto';
+      }
+    });
+    </script>
+
+
+<script>
+// Reveal on scroll
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+
+<script>
+// Testimonial slider — smooth continuous scroll + arrow control
+(function() {
+  var track = document.querySelector('.testi-track');
+  if (!track) return;
+  
+  var scrollPos = 0;
+  var speed = 0.5; // pixels per frame (~30px/sec = slow smooth)
+  var isPaused = false;
+  var resumeTimer = null;
+  var cardWidth = 404; // 380px card + 24px gap
+  
+  function getMaxScroll() {
+    return track.scrollWidth - track.parentElement.offsetWidth;
+  }
+  
+  function animate() {
+    if (!isPaused) {
+      scrollPos += speed;
+      if (scrollPos >= getMaxScroll()) {
+        scrollPos = 0; // loop back
+      }
+      track.style.transform = 'translateX(-' + scrollPos + 'px)';
+    }
+    requestAnimationFrame(animate);
+  }
+  
+  // Arrow handlers
+  window.scrollTesti = function(dir) {
+    isPaused = true;
+    scrollPos += dir * cardWidth * 2;
+    if (scrollPos < 0) scrollPos = 0;
+    if (scrollPos > getMaxScroll()) scrollPos = 0;
+    track.style.transform = 'translateX(-' + scrollPos + 'px)';
+    
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() { isPaused = false; }, 3000);
+  };
+  
+  // Pause on hover
+  var carousel = document.querySelector('.testi-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', function() { isPaused = true; });
+    carousel.addEventListener('mouseleave', function() {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function() { isPaused = false; }, 1000);
+    });
+  }
+  
+  requestAnimationFrame(animate);
+})();
+</script>
+
+
+<script>
+// Counter animation on scroll
+(function() {
+  var stats = document.querySelectorAll('.mm-stat h3[data-count]');
+  if (!stats.length) return;
+  
+  var animated = false;
+  
+  function animateCounters() {
+    if (animated) return;
+    animated = true;
+    
+    stats.forEach(function(el) {
+      var target = parseInt(el.getAttribute('data-count'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = 2000; // 2 seconds
+      var start = 0;
+      var startTime = null;
+      
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        // Ease out cubic
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.floor(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      
+      requestAnimationFrame(step);
+    });
+  }
+  
+  // Use IntersectionObserver to trigger when stats come into view
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  var statsSection = document.querySelector('.mm-awards-stats');
+  if (statsSection) observer.observe(statsSection);
+})();
+</script>
+
+</body>
+</html>
 </body>
 </html>
 
