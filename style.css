@@ -245,15 +245,13 @@ body {
 
 .features-mega {
   width: 940px;
-  padding: 30px 36px;
+  padding: 24px 28px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 25px 80px rgba(0,0,0,.14);
   border: 1px solid rgba(0,0,0,.04);
   display: flex;
-  gap: 36px;
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
+  gap: 28px;
 }
 
 .features-mega .column {
@@ -279,9 +277,9 @@ body {
 .features-mega .inside {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 11px 12px;
-  margin-bottom: 2px;
+  gap: 12px;
+  padding: 8px 10px;
+  margin-bottom: 1px;
   border-radius: 10px;
   transition: background .15s ease;
   cursor: pointer;
@@ -293,10 +291,10 @@ body {
 }
 
 .features-mega .mega-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
   background: #eef4fd;
   display: flex;
   align-items: center;
@@ -305,8 +303,8 @@ body {
 }
 
 .features-mega .mega-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: #2563eb;
   stroke: none;
 }
@@ -318,13 +316,13 @@ body {
 
 .features-mega .text1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   color: #1e293b;
   text-decoration: none;
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .features-mega .text1:hover {
@@ -333,10 +331,10 @@ body {
 
 .features-mega .mega-desc {
   font-family: 'Poppins', sans-serif;
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 400;
   color: #64748b;
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -373,8 +371,8 @@ body {
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    max-height: calc(100vh - 60px) !important;
-    overflow-y: auto !important;
+    
+    
     transform: none !important;
     border-radius: 0 !important;
     padding: 12px 16px !important;
