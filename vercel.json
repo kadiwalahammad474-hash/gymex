@@ -6,6 +6,9 @@
     { "source": "/pricing", "destination": "/pricing/pricing.html" },
     { "source": "/contact", "destination": "/contact/contact.html" },
     { "source": "/business", "destination": "/business/business.html" },
+    { "source": "/career", "destination": "/career/career.html" },
+    { "source": "/blog", "destination": "/blog/blog.html" },
+    { "source": "/blog/article", "destination": "/blog/article.html" },
     { "source": "/gym-management-software", "destination": "/gym-management-software/gym-management-software.html" },
     { "source": "/yoga-studio", "destination": "/yoga-studio/yoga-studio.html" },
     { "source": "/dance-studio", "destination": "/dance-studio/dance-studio.html" },
@@ -17,8 +20,8 @@
     { "source": "/pt-studio", "destination": "/pt-studio/pt-studio.html" },
     { "source": "/swim-school", "destination": "/swim-school/swim-school.html" },
     { "source": "/marketing-management", "destination": "/marketing-management/marketing-management.html" },
-    { "source": "/blog", "destination": "/blog/blog.html" },
-    { "source": "/blog/article", "destination": "/blog/article.html" }
+    { "source": "/privacy-policy", "destination": "/privacy-policy/privacy-policy.html" },
+    { "source": "/refund-policy", "destination": "/refund-policy/refund-policy.html" }
   ],
   "trailingSlash": false
 }
