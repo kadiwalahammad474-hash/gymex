@@ -91,6 +91,10 @@
     {
       "source": "/staff-management",
       "destination": "/staff-management/staff-management.html"
+    },
+    {
+      "source": "/lead-management",
+      "destination": "/lead-management/lead-management.html"
     }
   ],
   "trailingSlash": false
