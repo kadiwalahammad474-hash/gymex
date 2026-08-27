@@ -450,3 +450,7 @@ body {
   }
 }
 }
+
+/* Fix: ensure <a> inside mega-menu works as flex container */
+a.mega-menu .inside,
+.mega-menu a.inside { display: flex !important; align-items: flex-start; text-decoration: none !important; width: 100%; }
