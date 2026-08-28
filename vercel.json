@@ -95,6 +95,10 @@
     {
       "source": "/lead-management",
       "destination": "/lead-management/lead-management.html"
+    },
+    {
+      "source": "/member-management",
+      "destination": "/member-management/member-management.html"
     }
   ],
   "trailingSlash": false
