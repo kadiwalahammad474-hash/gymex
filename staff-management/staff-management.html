@@ -1,311 +1,1259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Gym Staff Management Software | Manage Staff & Trainers | Gymex</title>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "n95oax955q");</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KPCRHTFH');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gym Staff Management Software | Manage Staff &amp; Trainers | Gymex</title>
 <meta name="description" content="Manage gym staff, trainers, roles, attendance, schedules, performance, and payroll from one connected platform with Gymex Staff Management Software.">
 <meta name="keywords" content="Gym Staff Management Software, Gym Staff Management System, Staff Management Software for Gyms, Gym Employee Management Software, Gym Trainer Management Software">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="../assets/gymex-favicon.png" type="image/png">
-<link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
-<script src="../assets/scripts/jquery.min.js"></script>
-<script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
-<link href="../assets/aos/aos.css" rel="stylesheet">
-<script src="../assets/aos/aos.js"></script>
-<link rel="stylesheet" href="../style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gym Staff Management Software | Gymex">
+<meta property="og:description" content="Manage gym staff, trainers, roles, attendance, schedules, performance, and payroll from one connected platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../assets/gymex-favicon-U7mChGv0.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "n95oax955q");</script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],d=document.createElement(s);dl=l!='dataLayer'?'&l='+l:'';d.async=true;d.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(d,f);})(window,document,'script','dataLayer','GTM-KPCRHTFH');</script>
-<style>
-body{font-family:'Inter','Segoe UI',sans-serif;margin:0;color:#1e293b;background:#fff;}
-a{text-decoration:none;color:inherit;}
-
-/* Staff Management — Orange/Warm Theme */
-.stf{background:#fff;min-height:100vh;}
-.stf-hero{background:linear-gradient(135deg,#1a0f00 0%,#7c2d12 40%,#ea580c 100%);padding:80px 24px 90px;position:relative;overflow:hidden;}
-.stf-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,#fff,transparent);}
-.stf-hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2;}
-.stf-hero-badge{display:inline-block;background:rgba(255,255,255,.15);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;padding:8px 18px;border-radius:6px;margin-bottom:24px;backdrop-filter:blur(4px);}
-.stf-hero h1{font-size:42px;font-weight:900;color:#fff;line-height:1.15;margin:0 0 20px;}
-.stf-hero h1 .hl{color:#fbbf24;}
-.stf-hero p{font-size:17px;color:rgba(255,255,255,.8);line-height:1.75;margin:0 0 32px;}
-.stf-hero-mockup{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:32px;backdrop-filter:blur(8px);}
-.stf-mockup-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
-.stf-mockup-dot{width:12px;height:12px;border-radius:50%;}
-.stf-mockup-row{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
-.stf-mockup-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;}
-.stf-mockup-text{flex:1;}
-.stf-mockup-text span{display:block;font-size:13px;color:rgba(255,255,255,.8);font-weight:600;}
-.stf-mockup-text small{font-size:11px;color:rgba(255,255,255,.4);}
-.stf-mockup-badge{font-size:10px;padding:4px 10px;border-radius:20px;font-weight:600;}
-
-/* Stats strip */
-.stf-stats{background:#fff;border-bottom:1px solid #e5e7eb;padding:36px 24px;}
-.stf-stats-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
-.stf-stat-num{font-size:36px;font-weight:900;color:#ea580c;}
-.stf-stat-label{font-size:13px;color:#6b7280;margin-top:4px;}
-
-/* Feature blocks — alternating left/right with mockup cards */
-.stf-feature{padding:80px 24px;}
-.stf-feature-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.stf-feature-grid.rev{direction:rtl;}
-.stf-feature-grid.rev>*{direction:ltr;}
-.stf-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:12px;display:block;color:#ea580c;}
-.stf-title{font-size:30px;font-weight:900;color:#0f172a;line-height:1.2;margin:0 0 16px;}
-.stf-desc{font-size:15px;color:#64748b;line-height:1.8;margin:0 0 20px;}
-.stf-list{list-style:none;padding:0;margin:0;}
-.stf-list li{font-size:14px;color:#475569;padding:8px 0 8px 24px;position:relative;line-height:1.6;}
-.stf-list li::before{content:'✓';position:absolute;left:0;top:8px;color:#ea580c;font-weight:700;}
-.stf-mockup-card{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:16px;padding:24px;min-height:240px;}
-
-/* Grid features — 2x3 */
-.stf-grid-section{padding:80px 24px;background:#f8fafc;}
-.stf-grid-inner{max-width:1100px;margin:0 auto;}
-.stf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.stf-grid-card{background:#fff;border-radius:16px;padding:28px;border:1.5px solid #e2e8f0;transition:all .25s;}
-.stf-grid-card:hover{border-color:#ea580c;box-shadow:0 8px 30px rgba(234,88,12,.1);transform:translateY(-4px);}
-.stf-grid-card i{font-size:32px;color:#ea580c;margin-bottom:14px;display:block;}
-.stf-grid-card h4{font-size:16px;font-weight:700;color:#0f172a;margin:0 0 8px;}
-.stf-grid-card p{font-size:13.5px;color:#64748b;line-height:1.7;margin:0;}
-
-/* CTA */
-.stf-cta{padding:80px 24px;background:linear-gradient(135deg,#7c2d12,#ea580c);text-align:center;}
-.stf-cta h2{font-size:34px;font-weight:900;color:#fff;margin:0 0 16px;}
-.stf-cta p{font-size:17px;color:rgba(255,255,255,.85);margin:0 0 32px;line-height:1.7;}
-
-/* FAQ */
-.stf-faq{padding:80px 24px;background:#fff;}
-.stf-faq-inner{max-width:1100px;margin:0 auto;}
-.stf-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.stf-faq-item{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:14px;overflow:hidden;transition:border-color .2s;}
-.stf-faq-item:hover{border-color:#ea580c;}
-.stf-faq-item summary{padding:18px 22px;font-size:15px;font-weight:600;color:#0f172a;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
-.stf-faq-item summary::-webkit-details-marker{display:none;}
-.stf-faq-item summary .arr{width:28px;height:28px;background:#fff3e0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#ea580c;transition:transform .2s;flex-shrink:0;}
-.stf-faq-item[open] summary .arr{transform:rotate(45deg);}
-.stf-faq-item .fb{padding:0 22px 18px;font-size:14px;color:#64748b;line-height:1.8;}
-
-@media(max-width:992px){.stf-hero-grid,.stf-feature-grid{grid-template-columns:1fr;}.stf-grid{grid-template-columns:1fr 1fr;}.stf-faq-grid{grid-template-columns:1fr;}}
-@media(max-width:576px){.stf-hero h1{font-size:28px;}.stf-grid{grid-template-columns:1fr;}.stf-stats-grid{grid-template-columns:1fr 1fr;}}
-
-</style>
-</head><body>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="staff-management.css">
+<script src="../javascript.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPCRHTFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container"><nav class="nav" id="nav">
         <div class="nav__logo-links-container">
           <a class="nav__logo-wrap" href="../index/index.html">
             <img class="logo" src="../assets/Gymex-logo-wit6Qpcs.svg" alt="logo">
           </a>
+          
           <div class="flex-center">
             <div class="nav__list">
               <a class="nav__link" href="../index/index.html">Home</a>
+
               <div class="dropdown">
                 <a class="nav__link" href="../business/business.html">Business Types <i class="fa fa-chevron-down"></i></a>
                 <div class="dropdown-content mega-menu">
-                  <div class="column"><p class="mega-col-title">Gym &amp; Fitness</p>
-                    <div style="display:flex;" class="inside">
-                      <div><a href="../business/health-and-fitness-centers.html"><span class="mm-emoji">🏋️</span>Health &amp; Fitness</a><a href="../business/gym-management-software.html"><span class="mm-emoji">💪</span>Gym Management</a></div>
-                    </div>
-                  </div>
-                  <div class="column"><p class="mega-col-title">Studio</p>
-                    <div style="display:flex;" class="inside">
-                      <div><a href="../business/yoga-studio.html"><span class="mm-emoji">🧘</span>Yoga Studio</a><a href="../business/dance-studio.html"><span class="mm-emoji">💃</span>Dance Studio</a><a href="../business/pilates.html"><span class="mm-emoji">🤸</span>Pilates</a></div>
-                    </div>
-                  </div>
-                  <div class="column"><p class="mega-col-title">Specialty</p>
-                    <div style="display:flex;" class="inside">
-                      <div><a href="../business/martial-arts-studio.html"><span class="mm-emoji">🥋</span>Martial Arts</a><a href="../business/swim-school.html"><span class="mm-emoji">🏊</span>Swim School</a><a href="../business/sport-academies.html"><span class="mm-emoji">🏅</span>Sports Academy</a><a href="../business/pt-studio.html"><span class="mm-emoji">🎯</span>PT Studio</a><a href="../business/aerobics.html"><span class="mm-emoji">🩰</span>Aerobics</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown">
-                <a class="nav__link" href="#">Features <i class="fa fa-chevron-down"></i></a>
-                <div class="dropdown-content mega-menu features-mega">
-                  <div class="column"><p class="mega-col-title">Core Operations</p>
-                    <div style="display:flex;" class="inside">
-                      <div>
-                        <a href="../staff-management/staff-management.html"><span class="mm-emoji">👥</span>Staff Management</a>
-                        <a href="../lead-management/lead-management.html"><span class="mm-emoji">📈</span>Lead Management</a>
-                        <a href="../marketing-management/marketing-management.html"><span class="mm-emoji">📣</span>Marketing Management</a>
-                        <a href="../member-management/member-management.html"><span class="mm-emoji">👤</span>Member Management</a>
+                    <div class="column">
+                      <p class="mega-col-title">Gym &amp; Fitness</p>
+                      <div style="display: flex;" class="inside">
+                      <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_903_1352)'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20.9926%2013.0602C21.4082%2013.1337%2022.0153%2013.3252%2022.3081%2013.8647C22.9495%2015.0465%2022.4197%2016.1699%2021.8513%2016.8684C21.4803%2017.324%2021.0029%2017.7528%2020.4474%2018.0154C20.3314%2018.0708%2020.0953%2018.1736%2019.8231%2018.1736C19.3157%2018.1736%2018.8185%2017.9609%2018.4106%2017.6951C18.3334%2017.9371%2018.2587%2018.2029%2018.1943%2018.4845C18.0669%2019.0249%2017.9979%2019.5755%2017.9882%2020.1284C18.8923%2019.8594%2019.8171%2019.8879%2020.6139%2020.3024C21.2124%2019.8685%2021.9012%2019.5527%2022.6378%2019.3745C23.754%2019.1047%2025.0935%2019.1419%2026.3103%2019.8887C27.1818%2020.4242%2027.8421%2021.4329%2027.9752%2022.5364C28.1143%2023.6866%2027.6807%2024.9444%2026.3695%2025.9111C25.4439%2026.593%2024.0331%2026.8564%2022.7348%2026.9522C21.391%2027.0518%2019.9717%2026.9838%2018.87%2026.8707C16.8281%2026.6618%2015.2602%2026.1366%2014.1646%2025.5947C13.4459%2025.2387%2012.4627%2024.7467%2012.151%2023.9928C11.9407%2023.4817%2011.9956%2022.8615%2012.0471%2022.3299C12.1158%2021.633%2012.2841%2020.7628%2012.5993%2019.8199C13.2278%2017.9379%2014.4582%2015.711%2016.7002%2014.0039C17.3897%2013.4786%2018.5437%2013.1527%2019.5097%2013.0436C20.0077%2012.9874%2020.5315%2012.9795%2020.9926%2013.0602Z'%20fill='%23028ECE'/%3e%3crect%20x='-1.33826'%20y='9.19873'%20width='21.0324'%20height='20.4713'%20rx='10.2356'%20transform='rotate(-30%20-1.33826%209.19873)'%20fill='url(%23paint0_linear_903_1352)'%20fill-opacity='0.5'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1352'%20x1='9.17794'%20y1='9.19873'%20x2='9.17794'%20y2='29.67'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3cclipPath%20id='clip0_903_1352'%3e%3crect%20width='32'%20height='32'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="gym">
+                       <a href="../gym-management-software/gym-management-software.html" class="text1">GYM</a><br>
                       </div>
+                      <div style="display: flex;" class="inside">
+                        <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.0711%2016.3242L12.5211%2018.8742C12.357%2019.0382%2012.1521%2019.1241%2011.9064%2019.1319C11.6606%2019.1396%2011.448%2019.0537%2011.2684%2018.8742C11.1044%2018.7101%2011.0188%2018.5052%2011.0116%2018.2595C11.0045%2018.0137%2011.0826%2017.8011%2011.2461%2017.6215L11.8947%2016.9505L11.2684%2016.3242C11.0895%2016.1452%2011%2015.9365%2011%2015.6979C11%2015.4593%2011.0895%2015.2505%2011.2684%2015.0715L12.5211%2013.8189L11.8724%2013.1479C11.7083%2012.9838%2011.6263%2012.7789%2011.6263%2012.5332C11.6263%2012.2874%2011.7158%2012.0748%2011.8947%2011.8952C12.0588%2011.7312%2012.264%2011.6456%2012.5103%2011.6384C12.7567%2011.6313%2012.969%2011.7094%2013.1474%2011.8729L13.8184%2012.5215L15.0711%2011.2689C15.25%2011.09%2015.4588%2011.0005%2015.6974%2011.0005C15.936%2011.0005%2016.1447%2011.09%2016.3237%2011.2689L16.95%2011.8952L17.6211%2011.2465C17.7851%2011.0825%2017.9903%2011.0005%2018.2366%2011.0005C18.483%2011.0005%2018.6953%2011.09%2018.8737%2011.2689C19.0377%2011.4329%2019.1197%2011.6417%2019.1197%2011.8952C19.1197%2012.1487%2019.0377%2012.3575%2018.8737%2012.5215L16.3237%2015.0715L23.9289%2022.6768L26.4789%2020.1268C26.643%2019.9628%2026.8482%2019.8772%2027.0945%2019.87C27.3409%2019.8629%2027.5532%2019.9485%2027.7316%2020.1268C27.8956%2020.2908%2027.9815%2020.496%2027.9893%2020.7424C27.997%2020.9887%2027.9186%2021.2011%2027.7539%2021.3794L27.1053%2022.0505L27.7316%2022.6768C27.9105%2022.8558%2028%2023.0645%2028%2023.3031C28%2023.5417%2027.9105%2023.7505%2027.7316%2023.9294L26.4789%2025.1821L27.1276%2025.8531C27.2917%2026.0172%2027.3737%2026.222%2027.3737%2026.4678C27.3737%2026.7136%2027.2842%2026.9262%2027.1053%2027.1058C26.9412%2027.2698%2026.7363%2027.3557%2026.4906%2027.3634C26.2448%2027.3712%2026.0322%2027.2928%2025.8526%2027.1281L25.1816%2026.4794L23.9289%2027.7321C23.75%2027.911%2023.5412%2028.0005%2023.3026%2028.0005C23.064%2028.0005%2022.8553%2027.911%2022.6763%2027.7321L22.05%2027.1058L21.3789%2027.7544C21.2149%2027.9185%2021.01%2028.0005%2020.7643%2028.0005C20.5185%2028.0005%2020.3059%2027.911%2020.1263%2027.7321C19.9623%2027.568%2019.8803%2027.3593%2019.8803%2027.1058C19.8803%2026.8522%2019.9623%2026.6435%2020.1263%2026.4794L22.6763%2023.9294L15.0711%2016.3242Z'%20fill='%23028ECE'/%3e%3crect%20x='-1.33826'%20y='9.19873'%20width='21.0324'%20height='20.4713'%20rx='10.2356'%20transform='rotate(-30%20-1.33826%209.19873)'%20fill='url(%23paint0_linear_903_1372)'%20fill-opacity='0.5'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1372'%20x1='9.17794'%20y1='9.19873'%20x2='9.17794'%20y2='29.67'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="pt studio">
+                        <a href="../pt-studio/pt-studio.html" class="text1">PT STUDIO</a><br>
+                       </div>
+                       <div style="display: flex;" class="inside">
+                        <img class="icon" src="../assets/yoga-RKEkgKCN.svg" alt="yoga">
+                        <a href="../yoga-studio/yoga-studio.html" class="text1">YOGA STUDIO</a><br>
+                       </div>
+                       <div style="display: flex;" class="inside">
+                        <img src="../assets/Icons.svg" class="icon"> <a href="../swim-school/swim-school.html" class="text1">SWIM SCHOOL</a><br>
+                       </div>
+                       <div style="display: flex;width:232px;" class="inside">
+                     <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.75%208.99951C16.8216%208.99951%2014.9366%209.57134%2013.3332%2010.6427C11.7298%2011.714%2010.4801%2013.2368%209.74218%2015.0183C9.00422%2016.7999%208.81114%2018.7603%209.18735%2020.6516C9.56355%2022.543%2010.4922%2024.2802%2011.8557%2025.6438C13.2193%2027.0074%2014.9566%2027.936%2016.8479%2028.3122C18.7392%2028.6884%2020.6996%2028.4953%2022.4812%2027.7573C24.2627%2027.0194%2025.7855%2025.7697%2026.8568%2024.1663C27.9282%2022.5629%2028.5%2020.6779%2028.5%2018.7495C28.4973%2016.1645%2027.4692%2013.6861%2025.6413%2011.8582C23.8134%2010.0303%2021.335%209.00224%2018.75%208.99951ZM19.5%2012.6914L21.8241%2011.0929C23.1547%2011.629%2024.3234%2012.5011%2025.2159%2013.6242L24.4659%2016.1498C24.4472%2016.1498%2024.4275%2016.1592%2024.4088%2016.1658L22.2694%2016.8604C22.2373%2016.8707%2022.206%2016.8832%2022.1756%2016.8979L19.5%2015.0576V12.7495V12.6914ZM15.6788%2011.0929L18%2012.6914V15.0576L15.3225%2016.9017C15.2922%2016.887%2015.2609%2016.8745%2015.2288%2016.8642L13.0894%2016.1695C13.0706%2016.1629%2013.0509%2016.1583%2013.0322%2016.1536L12.2822%2013.6279C13.1756%2012.5029%2014.346%2011.6293%2015.6788%2011.0929ZM14.46%2023.1951H11.8031C11.0254%2021.9859%2010.5795%2020.5934%2010.5103%2019.1573L12.5728%2017.5748C12.5906%2017.5827%2012.6087%2017.5896%2012.6272%2017.5954L14.7675%2018.2911C14.7961%2018.2997%2014.8252%2018.3066%2014.8547%2018.3117L15.8663%2021.2573C15.8522%2021.2742%2015.8381%2021.2911%2015.825%2021.3089L14.5031%2023.1286C14.4876%2023.15%2014.4732%2023.1722%2014.46%2023.1951ZM20.8772%2026.7183C19.4834%2027.0895%2018.0166%2027.0895%2016.6228%2026.7183L15.6797%2024.0558C15.6919%2024.0408%2015.705%2024.0267%2015.7163%2024.0108L17.0391%2022.1901C17.0546%2022.1691%2017.069%2022.1472%2017.0822%2022.1245H20.4178C20.431%2022.1472%2020.4454%2022.1691%2020.4609%2022.1901L21.7838%2024.0108C21.795%2024.0267%2021.8081%2024.0408%2021.8203%2024.0558L20.8772%2026.7183ZM23.04%2023.1923C23.0268%2023.1694%2023.0124%2023.1472%2022.9969%2023.1258L21.6741%2021.3089C21.6609%2021.2911%2021.6469%2021.2742%2021.6328%2021.2573L22.6444%2018.3117C22.6738%2018.3066%2022.703%2018.2997%2022.7316%2018.2911L24.8719%2017.5954C24.8904%2017.5896%2024.9085%2017.5827%2024.9263%2017.5748L26.9888%2019.1573C26.9195%2020.5934%2026.4737%2021.9859%2025.6959%2023.1951L23.04%2023.1923Z'%20fill='%23028ECE'/%3e%3crect%20x='-1.33826'%20y='9.19873'%20width='21.0324'%20height='20.4713'%20rx='10.2356'%20transform='rotate(-30%20-1.33826%209.19873)'%20fill='url(%23paint0_linear_903_1366)'%20fill-opacity='0.5'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1366'%20x1='9.17794'%20y1='9.19873'%20x2='9.17794'%20y2='29.67'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="health">
+                        <a href="../sport-academies/sport-academies.html" class="text1">SPORTS ACADEMY  </a><br>
+                       </div>
                     </div>
-                  </div>
+  
+                    <div class="column">
+                      <p class="mega-col-title">Studios &amp; Specialty</p>
+                      <div style="display: flex;width: 265px;" class="inside">
+                    <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='31'%20viewBox='0%200%2032%2031'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M25.6823%2010.9768L19.4442%2016.0152L18.4323%2015.1562L20.5062%2013.975C20.617%2013.9118%2020.7116%2013.8244%2020.7828%2013.7193C20.854%2013.6143%2020.8998%2013.4946%2020.9168%2013.3693C20.9337%2013.244%2020.9214%2013.1166%2020.8806%2012.9968C20.8399%2012.877%2020.7718%2012.768%2020.6818%2012.6783L18.2149%2010.2417C18.0586%2010.0872%2017.8465%2010.0005%2017.6254%2010.0005C17.4043%2010.0005%2017.1922%2010.0872%2017.0359%2010.2417C16.8795%2010.3961%2016.7917%2010.6056%2016.7917%2010.824C16.7917%2011.0424%2016.8795%2011.2519%2017.0359%2011.4063L18.7334%2013.083L14.2178%2015.6517C14.0283%2015.7602%2013.8899%2015.9384%2013.8331%2016.1473L13.0304%2019.0299C12.9718%2019.2447%2012.9969%2019.4677%2013.114%2019.6659L14.569%2022.1603C14.8032%2022.5568%2015.3133%2022.689%2015.7146%2022.4659C16.116%2022.2347%2016.2498%2021.7308%2016.024%2021.3344L14.7446%2019.1373L15.0457%2018.0718L17.6881%2019.5668L18.056%2026.1745C18.0811%2026.6371%2018.4658%2027.0005%2018.9341%2027.0005C19.4024%2027.0005%2019.787%2026.6371%2019.8121%2026.1745L20.1884%2018.7409L26.7694%2012.1662C26.9135%2012.02%2026.9959%2011.8252%2026.9999%2011.6212C27.0038%2011.4172%2026.9289%2011.2194%2026.7905%2011.068C26.6521%2010.9166%2026.4605%2010.8229%2026.2547%2010.8059C26.0489%2010.789%2025.8442%2010.8501%2025.6823%2010.9768Z'%20fill='%23028ECE'/%3e%3cpath%20d='M14.5%2014.0005C15.3284%2014.0005%2016%2013.3289%2016%2012.5005C16%2011.6721%2015.3284%2011.0005%2014.5%2011.0005C13.6716%2011.0005%2013%2011.6721%2013%2012.5005C13%2013.3289%2013.6716%2014.0005%2014.5%2014.0005Z'%20fill='%23028ECE'/%3e%3crect%20x='0.606445'%20y='9.46484'%20width='18.9296'%20height='16.3345'%20transform='rotate(-30%200.606445%209.46484)'%20fill='url(%23paint0_linear_903_1320)'%20fill-opacity='0.5'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1320'%20x1='10.0713'%20y1='9.46484'%20x2='10.0713'%20y2='25.7993'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="health">
+                       <a href="../martial-arts-studio/martial-arts-studio.html" class="text1">MARTIAL ARTS STUDIO</a><br>
+                      </div>
+                      <div style="display: flex;" class="inside">
+                        <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.7142%2018.2005L18.857%2020.6005L19.7142%2023.0005M19.7142%2018.2005L17.5713%2017.0005L17.1427%2020.6005M19.7142%2018.2005L22.7142%2019.8005V24.2005M19.7142%2023.0005H18.4284L17.1427%2020.6005M19.7142%2023.0005L22.7142%2024.2005M17.1427%2020.6005V14.2005L20.5713%2011.0005M17.1427%2020.6005L17.9999%2023.0005M17.9999%2023.0005H14.5713L11.9999%2027.0005M17.9999%2023.0005L18.857%2017.8005L17.9999%2020.2005V23.0005ZM26.9999%2027.0005L22.7142%2024.2005M21.4284%2016.2005C21.2011%2016.2005%2020.9831%2016.1162%2020.8224%2015.9662C20.6616%2015.8161%2020.5713%2015.6127%2020.5713%2015.4005C20.5713%2015.1883%2020.6616%2014.9848%2020.8224%2014.8348C20.9831%2014.6848%2021.2011%2014.6005%2021.4284%2014.6005C21.6558%2014.6005%2021.8738%2014.6848%2022.0345%2014.8348C22.1953%2014.9848%2022.2856%2015.1883%2022.2856%2015.4005C22.2856%2015.6127%2022.1953%2015.8161%2022.0345%2015.9662C21.8738%2016.1162%2021.6558%2016.2005%2021.4284%2016.2005Z'%20stroke='%23028ECE'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3crect%20x='0.772705'%20y='10.1313'%20width='19.1188'%20height='18.6087'%20transform='rotate(-30%200.772705%2010.1313)'%20fill='url(%23paint0_linear_903_1359)'%20fill-opacity='0.5'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1359'%20x1='10.3321'%20y1='10.1313'%20x2='10.3321'%20y2='28.74'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="health">
+                        <a href="../pilates/pilates.html" class="text1">PILATES</a><br>
+                       </div>
+                       <div style="display: flex;" class="inside">
+                        <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%2028.0005H15L16.5%2025.0005M24%2028.0005L23%2023.0005H18L19%2016.0005M18%2012.0005C18%2012.2657%2018.1054%2012.5201%2018.2929%2012.7076C18.4804%2012.8951%2018.7348%2013.0005%2019%2013.0005C19.2652%2013.0005%2019.5196%2012.8951%2019.7071%2012.7076C19.8946%2012.5201%2020%2012.2657%2020%2012.0005C20%2011.7353%2019.8946%2011.4809%2019.7071%2011.2934C19.5196%2011.1058%2019.2652%2011.0005%2019%2011.0005C18.7348%2011.0005%2018.4804%2011.1058%2018.2929%2011.2934C18.1054%2011.4809%2018%2011.7353%2018%2012.0005Z'%20stroke='%23028ECE'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M11%2018.0005L15%2017.0005L19%2016.0005L23%2017.5005L27%2019.0005'%20stroke='%23028ECE'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3crect%20x='-1.33826'%20y='9.19873'%20width='21.0324'%20height='20.4713'%20rx='10.2356'%20transform='rotate(-30%20-1.33826%209.19873)'%20fill='url(%23paint0_linear_903_1311)'%20fill-opacity='0.5'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1311'%20x1='9.17794'%20y1='9.19873'%20x2='9.17794'%20y2='29.67'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="health">
+                        <a href="../aerobics/aerobics.html" class="text1">AEROBICS</a><br>
+                       </div>
+                       <div style="display: flex;" class="inside">
+                        <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_903_1326)'%3e%3cpath%20d='M23.2764%2022.5523C23.6088%2023.2172%2023.1253%2023.9995%2022.3819%2023.9995H22V28.9995C22%2029.5518%2021.5523%2029.9995%2021%2029.9995C20.4477%2029.9995%2020%2029.5518%2020%2028.9995V23.9995H17.88L16.34%2025.9295L17.9985%2027.581C18.3912%2027.9721%2018.3918%2028.6076%2018%2028.9995C17.6081%2029.3914%2016.9725%2029.3907%2016.5815%2028.998L14.93%2027.3395C14.58%2026.9995%2014.38%2026.5295%2014.35%2026.0395C14.32%2025.5495%2014.47%2025.0595%2014.78%2024.6795L15.32%2023.9995C14.7135%2023.9995%2014.3191%2023.3613%2014.5903%2022.8189L16%2019.9995V16.9995C15.38%2017.4695%2014.88%2018.0695%2014.53%2018.7595C14.3307%2019.1581%2014.1865%2019.5761%2014.0993%2020.0062C13.9896%2020.5474%2013.5523%2020.9995%2013%2020.9995C12.4477%2020.9995%2011.9927%2020.5495%2012.0714%2020.0028C12.2856%2018.5149%2012.975%2017.1255%2014.0505%2016.0501C15.3632%2014.7374%2017.1435%2013.9998%2019%2013.9995C20.33%2013.9995%2021.6%2013.4695%2022.54%2012.5395C23.2347%2011.8373%2023.7062%2010.9509%2023.9003%209.9929C24.01%209.45161%2024.4477%208.99951%2025%208.99951C25.5523%208.99951%2026.0073%209.44952%2025.9276%209.99603C25.7863%2010.9659%2025.4401%2011.9007%2024.91%2012.7295C24.2039%2013.8478%2023.1947%2014.7425%2022%2015.3095V19.9995L23.2764%2022.5523ZM21%2010.9995C21%2011.3995%2020.88%2011.7795%2020.66%2012.1095C20.44%2012.4395%2020.13%2012.6995%2019.77%2012.8495C19.4038%2012.9996%2019.0013%2013.038%2018.6133%2012.9597C18.2254%2012.8814%2017.8693%2012.6899%2017.59%2012.4095C17.31%2012.1295%2017.12%2011.7795%2017.04%2011.3895C16.96%2010.9995%2017%2010.5995%2017.15%2010.2395C17.3%209.86951%2017.56%209.55951%2017.89%209.33951C18.22%209.11951%2018.6%208.99951%2019%208.99951C19.53%208.99951%2020.04%209.20951%2020.41%209.58951C20.79%209.95951%2021%2010.4695%2021%2010.9995Z'%20fill='%23028ECE'/%3e%3crect%20x='-3.05176e-05'%20y='10'%20width='19.5143'%20height='17.7477'%20transform='rotate(-30%20-3.05176e-05%2010)'%20fill='url(%23paint0_linear_903_1326)'%20fill-opacity='0.5'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_903_1326'%20x1='9.7571'%20y1='10'%20x2='9.7571'%20y2='27.7477'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3cclipPath%20id='clip0_903_1326'%3e%3crect%20width='32'%20height='32'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="health">
+                        <a href="../dance-studio/dance-studio.html" class="text1">DANCE STUDIO</a><br>
+                       </div>
+                       <div style="display: flex;width:332px;" class="inside">
+                         <img class="icon" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16.2501%2025.9676C13.3071%2023.7126%209.28809%2019.9876%209.28809%2016.4656C9.28809%2010.5816%2014.7881%208.38463%2019.2881%2012.9286C23.7881%208.38463%2029.2881%2010.5816%2029.2881%2016.4656C29.2881%2019.9876%2025.2681%2023.7126%2022.3261%2025.9676C20.9941%2026.9876%2020.3281%2027.4986%2019.2881%2027.4986C18.2481%2027.4986%2017.5821%2026.9886%2016.2501%2025.9676ZM23.7881%2013.7486C23.987%2013.7486%2024.1778%2013.8277%2024.3184%2013.9683C24.4591%2014.109%2024.5381%2014.2997%2024.5381%2014.4986V15.7486H25.7881C25.987%2015.7486%2026.1778%2015.8277%2026.3184%2015.9683C26.4591%2016.109%2026.5381%2016.2997%2026.5381%2016.4986C26.5381%2016.6975%2026.4591%2016.8883%2026.3184%2017.029C26.1778%2017.1696%2025.987%2017.2486%2025.7881%2017.2486H24.5381V18.4986C24.5381%2018.6975%2024.4591%2018.8883%2024.3184%2019.029C24.1778%2019.1696%2023.987%2019.2486%2023.7881%2019.2486C23.5892%2019.2486%2023.3984%2019.1696%2023.2578%2019.029C23.1171%2018.8883%2023.0381%2018.6975%2023.0381%2018.4986V17.2486H21.7881C21.5892%2017.2486%2021.3984%2017.1696%2021.2578%2017.029C21.1171%2016.8883%2021.0381%2016.6975%2021.0381%2016.4986C21.0381%2016.2997%2021.1171%2016.109%2021.2578%2015.9683C21.3984%2015.8277%2021.5892%2015.7486%2021.7881%2015.7486H23.0381V14.4986C23.0381%2014.2997%2023.1171%2014.109%2023.2578%2013.9683C23.3984%2013.8277%2023.5892%2013.7486%2023.7881%2013.7486Z'%20fill='%2331AAE1'/%3e%3crect%20y='11.5161'%20width='21.0324'%20height='15.1179'%20transform='rotate(-30%200%2011.5161)'%20fill='url(%23paint0_linear_314_8032)'%20fill-opacity='0.5'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_314_8032'%20x1='10.5162'%20y1='11.5161'%20x2='10.5162'%20y2='26.634'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2331AAE1'/%3e%3cstop%20offset='1'%20stop-color='%2331AAE1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e" alt="health">
+                        <a href="../health-and-fitness-centers/health-and-fitness-centers.html" class="text1">HEALTH AND FITNESS CENTER</a><br>
+                       </div>
+                    </div>
+  
                 </div>
               </div>
-              <a class="nav__link" href="../pricing/pricing.html">Pricing</a>
-              <a class="nav__link" href="../blog/blog.html">Blog</a>
-              <a class="nav__link" href="../contact/contact.html">Contact Us</a>
-            </div>
-            <button class="nav__cta open-modal-btn">Get Your Free Demo</button>
-          </div>
-        </div>
-        <button class="menu__icon" id="open-menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-      <div class="mobile-nav-content" id="mobile-nav">
-        <a href="../index/index.html">Home</a>
-        <div class="dropdown"><a href="#">Business Types <i class="fa fa-chevron-down"></i></a><div class="dropdown-menu"><a href="../business/health-and-fitness-centers.html">Health &amp; Fitness</a><a href="../business/gym-management-software.html">Gym Management</a><a href="../business/yoga-studio.html">Yoga Studio</a><a href="../business/dance-studio.html">Dance Studio</a><a href="../business/pilates.html">Pilates</a><a href="../business/martial-arts-studio.html">Martial Arts</a><a href="../business/swim-school.html">Swim School</a><a href="../business/sport-academies.html">Sports Academy</a></div></div>
-        <div class="dropdown"><a href="#">Features <i class="fa fa-chevron-down"></i></a><div class="dropdown-menu"><a href="../staff-management/staff-management.html">Staff Management</a><a href="../lead-management/lead-management.html">Lead Management</a><a href="../marketing-management/marketing-management.html">Marketing Management</a><a href="../member-management/member-management.html">Member Management</a></div></div>
-        <a href="../pricing/pricing.html">Pricing</a>
-        <a href="../blog/blog.html">Blog</a>
-        <a href="../contact/contact.html">Contact Us</a>
-        <a class="nav__cta open-modal-btn" style="text-align:center;">Get Your Free Demo</a>
-      </div>
-    </div>
-<div class="stf">
-<section class="stf-hero">
-  <div class="stf-hero-grid">
-    <div>
-      <span class="stf-hero-badge">STAFF MANAGEMENT SOFTWARE</span>
-      <h1>Manage Your Gym <span class="hl">Team</span> from One Place</h1>
-      <p>Managing a gym team involves more than keeping staff records. You need to manage roles, schedules, attendance, trainers, and performance — while making sure everyone has access to the right information.</p>
-      <button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
-    </div>
-    <div class="stf-hero-mockup">
-      <div class="stf-mockup-header"><div class="stf-mockup-dot" style="background:#ef4444;"></div><div class="stf-mockup-dot" style="background:#fbbf24;"></div><div class="stf-mockup-dot" style="background:#22c55e;"></div><span style="color:rgba(255,255,255,.5);font-size:12px;margin-left:auto;">Staff Dashboard</span></div>
-      <div class="stf-mockup-row"><div class="stf-mockup-avatar">JS</div><div class="stf-mockup-text"><span>John Smith</span><small>Manager · Management</small></div><span class="stf-mockup-badge" style="background:rgba(34,197,94,.2);color:#4ade80;">Active</span></div>
-      <div class="stf-mockup-row"><div class="stf-mockup-avatar">PS</div><div class="stf-mockup-text"><span>Priya Sharma</span><small>Trainer · Training</small></div><span class="stf-mockup-badge" style="background:rgba(34,197,94,.2);color:#4ade80;">Active</span></div>
-      <div class="stf-mockup-row"><div class="stf-mockup-avatar">RV</div><div class="stf-mockup-text"><span>Rahul Verma</span><small>Fitness Instructor · Training</small></div><span class="stf-mockup-badge" style="background:rgba(34,197,94,.2);color:#4ade80;">Active</span></div>
-      <div class="stf-mockup-row"><div class="stf-mockup-avatar">AP</div><div class="stf-mockup-text"><span>Anita Patel</span><small>Sales Executive · Sales</small></div><span class="stf-mockup-badge" style="background:rgba(251,191,36,.2);color:#fbbf24;">On Leave</span></div>
-    </div>
-  </div>
-</section>
 
-<section class="stf-stats">
-  <div class="stf-stats-grid">
-    <div><div class="stf-stat-num">500+</div><div class="stf-stat-label">Gyms Using Gymex</div></div>
-    <div><div class="stf-stat-num">40%</div><div class="stf-stat-label">Less Admin Work</div></div>
-    <div><div class="stf-stat-num">100%</div><div class="stf-stat-label">Role-Based Access</div></div>
-    <div><div class="stf-stat-num">24/7</div><div class="stf-stat-label">Cloud Access</div></div>
-  </div>
-</section>
-
-<section class="stf-feature" style="background:#fff;">
-  <div class="stf-feature-grid">
-    <div>
-      <span class="stf-tag">Staff Profiles</span>
-      <h2 class="stf-title">Gymex Staff Management Software Brings Everything Together</h2>
-      <p class="stf-desc">Gymex Staff Management Software brings these everyday tasks together in one connected platform, helping gym owners and managers organize their teams, reduce manual work, and keep daily operations running smoothly.</p>
-      <ul class="stf-list">
-        <li>Centralized staff directory with roles and departments</li>
-        <li>Qualification and certification tracking</li>
-        <li>Contact details and emergency information</li>
-        <li>Performance history and notes</li>
-      </ul>
+<div class="dropdown">
+  <a class="nav__link" href="../features/features.html">Features <i class="fa fa-chevron-down"></i></a>
+  <div class="dropdown-content mega-menu features-mega">
+        <div class="column">
+      <p class="mega-col-title">MEMBER MANAGEMENT</p>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><path d="M2 8c0-3.3 2.7-6 6-6"/><path d="M22 8c0-3.3-2.7-6-6-6"/></svg></div><div><a href="../marketing-management/marketing-management.html" class="text1">Marketing Management <span class="mega-badge">NEW</span></a><p class="mega-desc">Campaigns, promotions & member engagement</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg></div><div><a href="../lead-management/lead-management.html" class="text1">Lead Management</a><p class="mega-desc">Capture leads, follow-ups & conversions</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><div><a href="../features/member-management.html" class="text1">Member Management</a><p class="mega-desc">Profiles, plans, payments & history</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div><div><a href="../staff-management/staff-management.html" class="text1">Staff Management</a><p class="mega-desc">Roles, access & staff performance</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v12"/><path d="M15 9.5c0-1.38-1.34-2.5-3-2.5s-3 1.12-3 2.5 1.34 2.5 3 2.5 3 1.12 3 2.5-1.34 2.5-3 2.5"/></svg></div><div><a href="../features/expense-management.html" class="text1">Expense Management</a><p class="mega-desc">Track costs & business expenses</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div><div><a href="../features/features.html" class="text1">Task Management</a><p class="mega-desc">Assign tasks & track progress</p></div></div>
     </div>
-    <div class="stf-mockup-card" style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border-color:#fed7aa;">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;"><div style="width:48px;height:48px;background:#ea580c;border-radius:14px;display:flex;align-items:center;justify-content:center;"><i class="fa fa-users" style="color:#fff;font-size:20px;"></i></div><div><h4 style="margin:0;font-size:16px;font-weight:700;">Staff Directory</h4><p style="margin:0;font-size:12px;color:#92400e;">12 active members</p></div></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <div style="background:#fff;border-radius:10px;padding:14px;text-align:center;"><div style="font-size:22px;font-weight:800;color:#ea580c;">8</div><div style="font-size:11px;color:#92400e;">Trainers</div></div>
-        <div style="background:#fff;border-radius:10px;padding:14px;text-align:center;"><div style="font-size:22px;font-weight:800;color:#ea580c;">2</div><div style="font-size:11px;color:#92400e;">Sales</div></div>
-        <div style="background:#fff;border-radius:10px;padding:14px;text-align:center;"><div style="font-size:22px;font-weight:800;color:#ea580c;">1</div><div style="font-size:11px;color:#92400e;">Front Desk</div></div>
-        <div style="background:#fff;border-radius:10px;padding:14px;text-align:center;"><div style="font-size:22px;font-weight:800;color:#ea580c;">1</div><div style="font-size:11px;color:#92400e;">Manager</div></div>
-      </div>
+    <div class="column">
+      <p class="mega-col-title">OPERATIONS</p>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M11 2v20c5.07-.5 9-4.79 9-10s-3.93-9.5-9-10zM2 12c0 4.42 3.13 8.09 7.3 8.94V12H2zm13.7-6.58C17.13 7.52 18 9.66 18 12h-5.7V5.42z"/></svg></div><div><a href="../features/data-analysis-and-dashboard.html" class="text1">Data Analysis & Dashboard</a><p class="mega-desc">Trends, insights & performance reports</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg></div><div><a href="../features/appointment-and-class.html" class="text1">Appointment & Class Booking</a><p class="mega-desc">Appointments, classes & bookings</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M17.81 4.47c-.08 0-.16-.02-.23-.06C15.66 3.42 14 3 12.01 3c-1.98 0-3.86.47-5.57 1.41-.24.13-.54.04-.68-.2-.13-.24-.04-.55.2-.68C7.82 2.52 9.86 2 12.01 2c2.13 0 3.99.47 6.03 1.52.25.13.34.43.21.67-.09.18-.26.28-.44.28zM3.5 9.72c-.1 0-.2-.03-.29-.09-.23-.16-.28-.47-.12-.7.99-1.4 2.25-2.5 3.75-3.27C9.98 4.04 14 4.03 17.15 5.65c1.5.77 2.76 1.86 3.75 3.25.16.22.11.54-.12.7-.23.16-.54.11-.7-.12-.9-1.26-2.04-2.25-3.39-2.94-2.87-1.47-6.54-1.47-9.4.01-1.36.7-2.5 1.7-3.4 2.96-.08.14-.23.21-.39.21zm6.25 12.07c-.13 0-.26-.05-.35-.15-.87-.87-1.34-1.43-2.01-2.64-.69-1.23-1.05-2.73-1.05-4.34 0-2.97 2.54-5.39 5.66-5.39s5.66 2.42 5.66 5.39c0 .28-.22.5-.5.5s-.5-.22-.5-.5c0-2.42-2.09-4.39-4.66-4.39-2.57 0-4.66 1.97-4.66 4.39 0 1.44.32 2.77.93 3.85.64 1.15 1.08 1.64 1.85 2.42.19.2.19.51 0 .71-.11.1-.24.15-.37.15zm7.17-1.85c-1.19 0-2.24-.3-3.1-.89-1.49-1.01-2.38-2.65-2.38-4.39 0-.28.22-.5.5-.5s.5.22.5.5c0 1.41.72 2.74 1.94 3.56.71.48 1.54.71 2.54.71.24 0 .64-.03 1.04-.1.27-.05.53.13.58.41.05.27-.13.53-.41.58-.57.11-1.07.12-1.21.12zM14.91 22c-.04 0-.09-.01-.13-.02-4.91-1.31-7.78-6.14-7.78-9.64 0-2.65 2.76-4.8 6.16-4.8 3.4 0 6.16 2.15 6.16 4.8 0 1.65-1.35 2.99-3 2.99s-3-1.34-3-2.99c0-.28.22-.5.5-.5s.5.22.5.5c0 1.1.9 1.99 2 1.99s2-.89 2-1.99c0-2.11-2.29-3.8-5.16-3.8-2.87 0-5.16 1.69-5.16 3.8 0 3.11 2.58 7.55 6.98 8.72.27.07.42.35.35.62-.06.22-.26.37-.48.37z"/></svg></div><div><a href="../features/biometric-and-access-control.html" class="text1">Biometric & Access Control</a><p class="mega-desc">Biometric attendance & secure access</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div><div><a href="../features/intelligent-alerts.html" class="text1">Intelligent Alerts & Reminder</a><p class="mega-desc">Smart alerts, reminders & updates</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></div><div><a href="../features/features.html" class="text1">WhatsApp Automation <span class="mega-badge">NEW</span></a><p class="mega-desc">WhatsApp campaigns, reminders & auto-replies</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div><div><a href="../features/mobile-apps.html" class="text1">Mobile Apps</a><p class="mega-desc">Member, staff & admin mobile apps</p></div></div>
     </div>
-  </div>
-</section>
-
-<section class="stf-feature" style="background:#f8fafc;">
-  <div class="stf-feature-grid rev">
-    <div>
-      <span class="stf-tag">Roles &amp; Permissions</span>
-      <h2 class="stf-title">Control Who Sees What</h2>
-      <p class="stf-desc">Define roles for trainers, front-desk staff, sales teams, and managers. Each role gets exactly the access it needs — nothing more, nothing less.</p>
-      <ul class="stf-list">
-        <li>Create custom roles with specific permissions</li>
-        <li>Limit access to sensitive financial data</li>
-        <li>Allow trainers to view schedules but not invoices</li>
-        <li>Audit trail for all permission changes</li>
-      </ul>
+    <div class="column">
+      <p class="mega-col-title">BILLING & TOOLS</p>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 10h0"/><path d="M18 10h0"/></svg></div><div><a href="../features/payroll-and-commission.html" class="text1">Payroll & Commission</a><p class="mega-desc">Salaries, commissions & staff payouts</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43l-1.43-1.43L17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14 1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43l8.57 8.57L12 20.57l1.43 1.43 1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg></div><div><a href="../features/features.html" class="text1">Workout & Diet Planner</a><p class="mega-desc">Personalized workouts & diet plans</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm-8 8H6v-2h1.5v2zm0-4H6v-2h1.5v2zm0-4H6V7h1.5v2zm8 8h-2v-6h2v6zm4 0h-2V7h2v10z"/></svg></div><div><a href="../features/pos.html" class="text1">POS & Locker Management</a><p class="mega-desc">POS sales, transactions & lockers</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg></div><div><a href="../features/features.html" class="text1">Club Facilities</a><p class="mega-desc">Facilities, services & member access</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div><div><a href="../features/features.html" class="text1">Equipment Inventory</a><p class="mega-desc">Equipment, stock & maintenance tracking</p></div></div>
+      <div style="display: flex; gap:6px; align-items:center;" class="inside"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M13.5 2C9.36 2 6 5.36 6 9.5c0 2.06.81 3.93 2.13 5.32l-.01.01C7.08 15.88 6 17.82 6 20c0 2.21 1.79 4 4 4s4-1.79 4-4c0-1.49-.81-2.79-2.01-3.48.57-.96.94-2.06.94-3.26 0-3.04-2.46-5.5-5.5-5.5h-.93zM12 4h1.5c1.93 0 3.5 1.57 3.5 3.5 0 1.08-.49 2.05-1.26 2.7l-.24.2v1.1c0 .55-.45 1-1 1s-1-.45-1-1V8.5c0-.28.22-.5.5-.5s.5.22.5.5v.5h-1.5c-.83 0-1.5-.67-1.5-1.5S11.17 6 12 6s1.5.67 1.5 1.5v1h-1c-.28 0-.5.22-.5.5s.22.5.5.5h1c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-.5v1.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5V12h-.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 5 12 5h.5V4z"/></svg></div><div><a href="../features/features.html" class="text1">Integrations</a><p class="mega-desc">Connect with tools & business platforms</p></div></div>
     </div>
-    <div class="stf-mockup-card" style="background:linear-gradient(135deg,#fef2f2,#fee2e2);border-color:#fecaca;">
-      <h4 style="font-size:15px;font-weight:700;margin:0 0 14px;">Trainer Permissions</h4>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-radius:8px;"><span style="font-size:13px;">View Members</span><span style="color:#22c55e;font-size:16px;">✓</span></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-radius:8px;"><span style="font-size:13px;">Manage Attendance</span><span style="color:#22c55e;font-size:16px;">✓</span></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-radius:8px;"><span style="font-size:13px;">Create Invoices</span><span style="color:#ef4444;font-size:16px;">✕</span></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-radius:8px;"><span style="font-size:13px;">View Reports</span><span style="color:#ef4444;font-size:16px;">✕</span></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-radius:8px;"><span style="font-size:13px;">Manage Staff</span><span style="color:#ef4444;font-size:16px;">✕</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="stf-grid-section">
-  <div class="stf-grid-inner">
-    <span class="stf-tag">Everything You Need</span>
-    <h2 class="stf-title" style="margin-bottom:40px;">Built for Performance</h2>
-    <div class="stf-grid">
-      <div class="stf-grid-card"><i class="fa fa-clock-o"></i><h4>Attendance Tracking</h4><p>Track check-ins, work hours, overtime, and leave with automatic logs.</p></div>
-      <div class="stf-grid-card"><i class="fa fa-calendar"></i><h4>Schedule Management</h4><p>Create shift schedules, assign trainers to classes, and manage availability.</p></div>
-      <div class="stf-grid-card"><i class="fa fa-money"></i><h4>Payroll &amp; Commission</h4><p>Auto-calculate salaries, bonuses, and trainer commissions from membership sales.</p></div>
-      <div class="stf-grid-card"><i class="fa fa-star"></i><h4>Performance Reviews</h4><p>Track member feedback, class ratings, and sales targets per staff member.</p></div>
-      <div class="stf-grid-card"><i class="fa fa-bell"></i><h4>Shift Reminders</h4><p>Automatic notifications for upcoming shifts, schedule changes, and pending tasks.</p></div>
-      <div class="stf-grid-card"><i class="fa fa-bar-chart"></i><h4>Staff Reports</h4><p>Detailed reports on attendance, performance, hours worked, and commission earned.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="stf-cta">
-  <div style="max-width:800px;margin:0 auto;">
-    <h2>Organize Your Team. Grow Your Gym.</h2>
-    <p>Your staff is your greatest asset. Give them the tools to perform better while reducing the admin burden on yourself.</p>
-    <button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn" style="font-size:16px;padding:18px 40px;">Get Your Free Demo <i class="fa fa-arrow-up" style="font-size:14px;"></i></button>
-  </div>
-</section>
-
-<section class="stf-faq">
-  <div class="stf-faq-inner">
-    <h2 class="stf-title" style="text-align:center;margin-bottom:40px;">Frequently Asked Questions</h2>
-    <div class="stf-faq-grid">
-      <div>
-        <details class="stf-faq-item"><summary>What is gym staff management software?<span class="arr">+</span></summary><div class="fb">Gym staff management software helps gym owners organize employee information, roles, schedules, attendance, performance, and payroll from one connected platform.</div></details>
-        <details class="stf-faq-item" style="margin-top:12px;"><summary>Can I set different permissions for trainers and admin staff?<span class="arr">+</span></summary><div class="fb">Yes. Gymex lets you create custom roles with specific permissions so each team member sees only what they need.</div></details>
-        <details class="stf-faq-item" style="margin-top:12px;"><summary>How does staff scheduling work?<span class="arr">+</span></summary><div class="fb">You can create shift schedules, assign trainers to classes, manage availability, and send automatic reminders for upcoming shifts.</div></details>
-      </div>
-      <div>
-        <details class="stf-faq-item"><summary>Can I track staff attendance automatically?<span class="arr">+</span></summary><div class="fb">Yes. Gymex tracks check-ins, work hours, overtime, and leave with automatic logging and reporting.</div></details>
-        <details class="stf-faq-item" style="margin-top:12px;"><summary>Does Gymex handle payroll and commissions?<span class="arr">+</span></summary><div class="fb">Yes. Auto-calculate salaries, bonuses, and trainer commissions from membership sales and class attendance.</div></details>
-        <details class="stf-faq-item" style="margin-top:12px;"><summary>Can staff access their schedules from mobile?<span class="arr">+</span></summary><div class="fb">Yes. Staff can view their schedules, attendance, and shift details through the Gymex mobile app.</div></details>
-      </div>
-    </div>
-  </div>
-</section>
-</div><div style="background:#0b1a3d; padding:0;">
-  <div style="max-width:1200px; margin:0 auto; padding:36px 24px 16px;">
-    <div style="display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:center; border-bottom:1px solid rgba(255,255,255,.12); padding-bottom:20px; margin-bottom:24px;">
-      <a href="../index/index.html" style="color:rgba(255,255,255,.65); font-size:13px;">Home</a>
-      <a href="../about/about.html" style="color:rgba(255,255,255,.65); font-size:13px;">About Us</a>
-      <a href="../pricing/pricing.html" style="color:rgba(255,255,255,.65); font-size:13px;">Pricing</a>
-      <a href="../blog/blog.html" style="color:rgba(255,255,255,.65); font-size:13px;">Blog</a>
-      <a href="../contact/contact.html" style="color:rgba(255,255,255,.65); font-size:13px;">Contact Us</a>
-      <a href="../privacy-policy/privacy-policy.html" style="color:rgba(255,255,255,.65); font-size:13px;">Privacy Policy</a>
-      <a href="../refund-policy/refund-policy.html" style="color:rgba(255,255,255,.65); font-size:13px;">Refund Policy</a>
-    </div>
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 0.5fr; gap:40px; margin-bottom:24px;">
-      <div><h4 style="color:#fff; font-size:15px; margin:0 0 12px;">About Gymex</h4><p style="color:rgba(255,255,255,.55); font-size:13px; line-height:1.7; margin:0;">Gymex is a powerful cloud-based gym management software built to help fitness businesses manage operations, members, and growth.</p></div>
-      <div><h4 style="color:#fff; font-size:15px; margin:0 0 12px;">Contact</h4><p style="color:rgba(255,255,255,.55); font-size:13px; line-height:1.7; margin:0;">Office No. 2, An-Nazir Building, Jogeshwari West, Mumbai – 400102</p><p style="color:rgba(255,255,255,.55); font-size:13px; margin:8px 0 0;">Sales: +91 7710862007</p></div>
-      <div><h4 style="color:#fff; font-size:15px; margin:0 0 12px;">Follow Us</h4><div style="display:flex; gap:12px;"><a href="https://www.facebook.com/gymexsoftware" target="_blank" style="color:rgba(255,255,255,.55); font-size:20px;"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/gymexclubmanagement" target="_blank" style="color:rgba(255,255,255,.55); font-size:20px;"><i class="fa fa-instagram"></i></a></div><img src="../assets/gymex-logo-wit6Qpcs.svg" alt="Gymex" style="height:28px; margin-top:16px; opacity:.5;"></div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,.1); padding-top:16px; text-align:center;"><p style="color:rgba(255,255,255,.4); font-size:12px; margin:0;">© 2024 Gymex Club Management Software. All Rights Reserved.</p></div>
   </div>
 </div>
-<div class="backdrop" id="divemailpopup"><div class="contact-popup"><button id="close-contact-modal" class="close-btn">&times;</button><div id="loader" style="display:none;text-align:center;padding:40px;"><i class="fa fa-spinner fa-spin" style="font-size:32px;color:#1565C0;"></i></div><div id="form-body"><h3>Get Your Free Demo</h3><p>See how Gymex fits your workflow.</p><form id="contact-form"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><input type="text" id="first-name" placeholder="First Name *" required style="padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;"><input type="text" id="last-name" placeholder="Last Name *" required style="padding:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;"></div><input type="text" id="company" placeholder="Gym Name *" required style="width:100%;padding:12px;margin-top:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"><input type="email" id="email" placeholder="Email *" required style="width:100%;padding:12px;margin-top:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"><input type="tel" id="number" placeholder="Phone *" required style="width:100%;padding:12px;margin-top:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"><textarea id="message" placeholder="Message" rows="3" style="width:100%;padding:12px;margin-top:12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;"></textarea><div style="display:flex;align-items:center;gap:10px;margin-top:12px;"><div id="captcha-box" style="background:#fff;border:1px solid #ccc;border-radius:4px;padding:4px 14px;font-size:16px;font-weight:bold;letter-spacing:4px;font-family:monospace;color:#333;"></div><button type="button" onclick="generateCaptcha()" style="background:#fff;border:1px solid #ccc;border-radius:4px;padding:4px 10px;cursor:pointer;">&#8635;</button><input type="text" id="captcha-input" placeholder="Enter CAPTCHA" maxlength="6" style="padding:8px 12px;border:1px solid #ccc;border-radius:4px;font-size:13px;width:120px;"><input type="hidden" id="captcha-value"></div><p id="captcha-error" style="color:red;font-size:12px;margin-top:4px;display:none;"></p><button type="submit" style="width:100%;padding:14px;background:#f26522;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;margin-top:16px;">Submit</button></form></div><div id="emailsuccessmsg" style="display:none;text-align:center;padding:40px;"><i class="fa fa-check-circle" style="font-size:48px;color:#16a34a;"></i><h3 style="margin-top:16px;">Thank You!</h3><p style="color:#666;">We'll contact you soon.</p><button class="send-again-btn" style="margin-top:16px;padding:10px 24px;background:#1565C0;color:#fff;border:none;border-radius:8px;cursor:pointer;">Send Another</button></div></div></div>
-<script>var cc="";function generateCaptcha(){var c="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",r="";for(var i=0;i<6;i++)r+=c.charAt(Math.floor(Math.random()*c.length));cc=r;var b=document.getElementById('captcha-box');if(b)b.innerText=r;var v=document.getElementById('captcha-value');if(v)v.value=r;var inp=document.getElementById('captcha-input');if(inp)inp.value='';}
-window.addEventListener('load',function(){generateCaptcha();});</script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+              <a class="nav__link" href="../pricing/pricing.html">Pricing</a>
+              <a class="nav__link" href="../blog/blog.html">Blog</a>
+              <a class="nav__link" href="../about/about.html">About</a>
+              <a class="nav__link" href="../contact/contact.html">Contact</a>
+
+              <button class="nav__link button open-modal-btn" Id="demobutton">
+                <p class="button__text">GET YOUR FREE DEMO</p>
+                <img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+              </button>
+            </div>
+            <button class="nav__menu" id="open-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-backdrop" id="menu-backdrop">
+          <div class="menu">
+              <ul class="menu__list">
+                  <li class="menu__link">
+                      <a href="../index/index.html">Home</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="../business/business.html" id="business-types-link">Business Types <i class="fa fa-chevron-down"></i></a>
+                      <ul class="dropdown-menu" id="dropdown-menu">
+                          <li ><a href="../gym-management-software/gym-management-software.html" >GYM</a></li><br>
+                          <li><a href="../pt-studio/pt-studio.html">PT STUDIO</a></li><br>
+                          <li><a href="../yoga-studio/yoga-studio.html">YOGA STUDIO</a></li><br>
+                          <li><a href="../swim-school/swim-school.html">SWIM SCHOOL</a></li><br>
+                          <li><a href="../sport-academies/sport-academies.html">SPORTS ACADEMY</a></li><br>
+  
+                          <li><a href="../martial-arts-studio/martial-arts-studio.html">MARTIAL ARTS STUDIO</a></li><br>
+                          <li><a href="../pilates/pilates.html">PILATES</a></li><br>
+                          <li><a href="../aerobics/aerobics.html">AEROBICS</a></li><br>
+                          <li><a href="../dance-studio/dance-studio.html">DANCE STUDIO</a></li><br>
+                          <li><a href="../health-and-fitness-centers/health-and-fitness-centers.html">HEALTH AND FITNESS CENTER</a></li><br>
+                      </ul>
+                  </li>
+              <li class="dropdown">
+    <a href="../features/features.html" id="features-link">Features <i class="fa fa-chevron-down"></i></a>
+    <ul class="dropdown-menu" id="features-dropdown-menu">
+        <li><a href="../features/features.html">ALL FEATURES</a></li><br>
+        <li><a href="../features/features.html">MEMBER MANAGEMENT</a></li><br>
+        <li><a href="../features/features.html">LEAD MANAGEMENT</a></li><br>
+        <li><a href="../features/features.html">ATTENDANCE &amp; ACCESS</a></li><br>
+        <li><a href="../features/features.html">BILLING &amp; PAYMENTS</a></li><br>
+        <li><a href="../features/features.html">MOBILE APP</a></li><br>
+        <li><a href="../marketing-management/marketing-management.html">MARKETING AUTOMATION</a></li><br>
+        <li><a href="../features/features.html">ALERTS &amp; NOTIFICATIONS</a></li><br>
+        <li><a href="../features/features.html">CLASS SCHEDULING</a></li><br>
+        <li><a href="../features/features.html">POS MODULE</a></li><br>
+    </ul>
+</li>
+                  <li class="menu__link">
+                      <a href="../about/about.html">About Us</a>
+                  </li>
+                  <li class="menu__link">
+                      <a href="../contact/contact.html">Contact Us</a>
+                  </li>
+                  <li class="menu__link">
+                      <button class="button ">
+                          <p class="button__text">GET YOUR FREE DEMO</p>
+                          <img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+                      </button>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      </nav></div>
+
+<div class="sm">
+
+<!-- HERO -->
+<section class="sm-hero">
+<div class="sm-hero-grid">
+<div>
+<div class="sm-label">STAFF MANAGEMENT SOFTWARE</div>
+<h1>Gym <span class="accent">Staff Management</span> Software for Smarter Team Management</h1>
+<p class="sm-desc">Managing a gym team involves more than keeping staff records. You need to manage staff roles, schedules, attendance, trainers, responsibilities, and performance while making sure everyone has access to the right information.</p>
+<div class="sm-hero-cta">
+<button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
+</div>
+</div>
+<div class="sm-hero-img">
+<div style="background:linear-gradient(135deg,#e8f0fe,#dbe8ff);border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:center;min-height:320px;">
+<div style="text-align:center;"><i class="fa fa-users" style="font-size:80px;color:var(--blue,#028ece);opacity:0.3;"></i><p style="font-size:14px;color:var(--gray-80,#6b7589);margin-top:16px;">Staff Management Dashboard</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- AFTER HERO: Demo Button + Heading + Content -->
+<section class="sm-section" style="padding-top:20px;background:#fff;">
+<div class="sm-wrap" style="text-align:center;max-width:800px;margin:0 auto;">
+<h2 style="font-size:clamp(24px,2.8vw,32px);font-weight:800;margin-bottom:16px;text-transform:uppercase;"><span class="accent">Gymex Staff Management Software</span></h2>
+<p style="color:var(--gray-80,#6b7589);font-size:15.5px;line-height:1.7;">Now Gymex brings these everyday tasks together in one connected platform, helping gym owners and managers organize their teams, reduce manual work, and keep daily operations running smoothly.</p>
+</div>
+</section>
+
+<!-- MANAGE YOUR TEAM -->
+<section class="sm-section">
+<div class="sm-feature-row">
+<div class="sm-feature-content">
+<div class="sm-label">MANAGE YOUR TEAM</div>
+<h2>Manage Your Entire Gym Team from <span class="accent">One Platform</span></h2>
+<p>Stop relying on spreadsheets, registers, and separate tools to keep track of your staff. Gymex gives you a centralized gym staff management system where you can organize staff information, assign responsibilities, manage access, track attendance, and monitor day-to-day activities.</p>
+<p>Whether you run a single gym, fitness studio, or multiple locations, Gymex helps you keep your team organized while giving management better visibility into daily operations.</p>
+</div>
+<div class="sm-feature-img">
+<div class="sm-staff-card" style="width:100%;">
+<div class="sm-card-header"><h3>Staff Members</h3><button class="sm-add-btn">+ Add Staff</button></div>
+<table class="sm-staff-table">
+<thead><tr><th>Name</th><th>Role</th><th>Department</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><span class="sm-avatar">JS</span> John Smith</td><td>Manager</td><td>Management</td><td><span class="sm-status active">Active</span></td></tr>
+<tr><td><span class="sm-avatar">PS</span> Priya Sharma</td><td>Trainer</td><td>Training</td><td><span class="sm-status active">Active</span></td></tr>
+<tr><td><span class="sm-avatar">RV</span> Rahul Verma</td><td>Fitness Instructor</td><td>Training</td><td><span class="sm-status active">Active</span></td></tr>
+<tr><td><span class="sm-avatar">AP</span> Anita Patel</td><td>Sales Executive</td><td>Sales</td><td><span class="sm-status active">Active</span></td></tr>
+<tr><td><span class="sm-avatar">DJ</span> David John</td><td>Front Desk</td><td>Admin</td><td><span class="sm-status active">Active</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ROLES & PERMISSIONS -->
+<section class="sm-section">
+<div class="sm-feature-row reverse">
+<div class="sm-feature-content">
+<div class="sm-label">ROLES &amp; PERMISSIONS</div>
+<h2>Give Every Staff Member the <span class="accent">Right Role</span> and Access</h2>
+<p>Not every staff needs access to the same information. With Gymex, you can organize staff based on their roles and responsibilities and provide appropriate access to different areas of the system.</p>
+<p>Create a more structured working environment for gym managers, front desk staff, personal trainers, fitness instructors, sales staff, administrative staff, and other gym staff.</p>
+<p>Role-based access helps reduce unnecessary access to sensitive information while allowing staff to work with the tools they need.</p>
+<h3 style="font-size:16px;font-weight:700;margin:20px 0 12px;">Role-Based Staff Permissions</h3>
+<p>Control what different team members can view or manage within your gym management software. This helps you maintain better control over member information, billing, reports, attendance, and other business data.</p>
+</div>
+<div class="sm-feature-img">
+<div class="sm-permissions-card" style="width:100%;">
+<h4><i class="fa fa-shield"></i> Role-Based Permissions</h4>
+<div class="sm-perm-item"><i class="fa fa-check-circle"></i> View Members</div>
+<div class="sm-perm-item"><i class="fa fa-check-circle"></i> Manage Attendance</div>
+<div class="sm-perm-item"><i class="fa fa-check-circle"></i> Create Invoices</div>
+<div class="sm-perm-item"><i class="fa fa-check-circle"></i> Access Reports</div>
+<div class="sm-perm-item"><i class="fa fa-check-circle"></i> Manage Trainers</div>
+<div class="sm-perm-item"><i class="fa fa-check-circle"></i> Payroll Access</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STAFF SCHEDULING -->
+<section class="sm-section">
+<div class="sm-feature-row">
+<div class="sm-feature-content">
+<div class="sm-label">STAFF SCHEDULING</div>
+<h2>Simplify Gym Staff <span class="accent">Scheduling</span></h2>
+<p>Managing staff schedules manually can quickly become difficult when you have multiple trainers, classes, shifts, and appointments. Gymex helps you organize staff schedules in one place so your team knows where they need to be and when.</p>
+<p>You can easily manage staff working schedules, trainer availability, shift information, staff responsibilities, and appointments and class sessions. A centralized schedule makes it easier for managers to coordinate staff and reduce scheduling confusion.</p>
+</div>
+<div class="sm-feature-img">
+<div class="sm-schedule-card" style="width:100%;">
+<div class="sm-card-header"><h3>Staff Schedule</h3><div class="sm-schedule-tabs"><span>Today</span><span class="active">Week</span></div></div>
+<div class="sm-schedule-days"><span>Mon 12</span><span>Tue 13</span><span>Wed 14</span><span>Thu 15</span><span>Fri 16</span><span>Sat 17</span><span>Sun 18</span></div>
+<div class="sm-schedule-row"><div class="sm-name"><span class="sm-avatar-sm">JS</span> John Smith</div><div class="sm-schedule-slots"><span class="sm-schedule-slot">09:00 AM - 05:00 PM</span></div></div>
+<div class="sm-schedule-row"><div class="sm-name"><span class="sm-avatar-sm">PS</span> Priya Sharma</div><div class="sm-schedule-slots"><span class="sm-schedule-slot green">06:00 AM - 10:00 PM</span></div></div>
+<div class="sm-schedule-row"><div class="sm-name"><span class="sm-avatar-sm">RV</span> Rahul Verma</div><div class="sm-schedule-slots"><span class="sm-schedule-slot orange">09:00 AM - 05:00 PM</span></div></div>
+<div class="sm-schedule-row"><div class="sm-name"><span class="sm-avatar-sm">AP</span> Anita Patel</div><div class="sm-schedule-slots"><span class="sm-schedule-slot">09:00 AM - 05:00 PM</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRAINER MANAGEMENT -->
+<section class="sm-section">
+<div class="sm-feature-row reverse">
+<div class="sm-feature-content">
+<div class="sm-label">TRAINER MANAGEMENT</div>
+<h2>Manage Trainers More <span class="accent">Efficiently</span></h2>
+<p>Trainers play an important role in member experience and gym revenue. Gymex helps you keep trainer information and activities organized alongside your other gym operations.</p>
+<p>With gym trainer management software, you can manage trainer profiles, schedules, assigned activities, and member-related responsibilities from a connected system. This gives managers better visibility into trainer availability and helps ensure members receive consistent support.</p>
+</div>
+<div class="sm-feature-img">
+<div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(16,40,100,.08);border:1px solid #e7eaf3;width:100%;">
+<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">Trainer Profiles</h3>
+<div style="display:flex;gap:16px;flex-wrap:wrap;">
+<div style="flex:1;min-width:140px;background:#f8f9fc;border-radius:12px;padding:16px;text-align:center;">
+<div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#dbe8ff,#b8d4f8);display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--blue,#028ece);margin-bottom:8px;">PS</div>
+<p style="font-size:13px;font-weight:600;">Priya Sharma</p>
+<p style="font-size:11px;color:#999;">Yoga &amp; Pilates</p>
+</div>
+<div style="flex:1;min-width:140px;background:#f8f9fc;border-radius:12px;padding:16px;text-align:center;">
+<div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#dbe8ff,#b8d4f8);display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--blue,#028ece);margin-bottom:8px;">RV</div>
+<p style="font-size:13px;font-weight:600;">Rahul Verma</p>
+<p style="font-size:11px;color:#999;">Strength Training</p>
+</div>
+<div style="flex:1;min-width:140px;background:#f8f9fc;border-radius:12px;padding:16px;text-align:center;">
+<div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#dbe8ff,#b8d4f8);display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--blue,#028ece);margin-bottom:8px;">AK</div>
+<p style="font-size:13px;font-weight:600;">Amit Kumar</p>
+<p style="font-size:11px;color:#999;">Cardio &amp; HIIT</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ATTENDANCE TRACKING -->
+<section class="sm-section">
+<div class="sm-feature-row">
+<div class="sm-feature-content">
+<div class="sm-label">ATTENDANCE TRACKING</div>
+<h2>Track Staff <span class="accent">Attendance</span> and Working Hours</h2>
+<p>Knowing when your staff are working helps you maintain accountability and manage your team more effectively. Gymex can help you maintain organized staff attendance records and monitor working patterns without depending on manual registers or spreadsheets.</p>
+<p>Use staff attendance information to monitor staff presence, maintain attendance records, review working hours, identify attendance patterns, support payroll and commission calculations, and improve workforce accountability.</p>
+<p>With gym staff attendance software, your staff records stay organized and accessible when you need them.</p>
+</div>
+<div class="sm-feature-img">
+<div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 8px 32px rgba(16,40,100,.08);border:1px solid #e7eaf3;width:100%;">
+<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">Attendance Overview</h3>
+<div class="sm-attendance-stats">
+<div class="sm-att-stat"><div class="sm-label-sm">Present</div><div class="sm-val green">32</div></div>
+<div class="sm-att-stat"><div class="sm-label-sm">Absent</div><div class="sm-val red">5</div></div>
+<div class="sm-att-stat"><div class="sm-label-sm">On Leave</div><div class="sm-val blue">3</div></div>
+<div class="sm-att-stat"><div class="sm-label-sm">Late</div><div class="sm-val orange">2</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PAYROLL & COMMISSIONS -->
+<section class="sm-section">
+<div class="sm-wrap">
+<div class="sm-heading">
+<div class="sm-label" style="justify-content:center;">PAYROLL &amp; COMMISSIONS</div>
+<h2>Connect Staff Management with <span class="accent">Payroll</span> and Commissions</h2>
+<p>Staff management and payroll often depend on the same information. Instead of maintaining separate records for staff and compensation, Gymex connects staff information with payroll and commission management.</p>
+<div class="sm-underline"></div>
+</div>
+<div class="sm-payroll-icons">
+<div class="sm-payroll-icon"><div class="sm-icon-box"><i class="fa fa-money"></i></div><p>Staff Compensation</p></div>
+<div class="sm-payroll-icon"><div class="sm-icon-box"><i class="fa fa-line-chart"></i></div><p>Trainer Commissions</p></div>
+<div class="sm-payroll-icon"><div class="sm-icon-box"><i class="fa fa-file-text-o"></i></div><p>Commission Structures</p></div>
+<div class="sm-payroll-icon"><div class="sm-icon-box"><i class="fa fa-bar-chart"></i></div><p>Payroll Records</p></div>
+</div>
+<div style="text-align:center;margin-top:30px;"><button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button></div>
+</div>
+</section>
+
+<!-- PERFORMANCE MANAGEMENT -->
+<section class="sm-section">
+<div class="sm-feature-row reverse">
+<div class="sm-feature-content">
+<div class="sm-label">PERFORMANCE MANAGEMENT</div>
+<h2>Monitor Staff <span class="accent">Performance</span></h2>
+<p>Managing a team is not only about knowing who is working. It is also about understanding how your team is performing. Gymex helps managers get better visibility into staff activities and performance-related information.</p>
+<p>Track relevant staff data to help you identify productive team members, understand staff activity, review trainer performance, identify areas that need improvement, and make better staffing decisions.</p>
+<p>Instead of relying only on assumptions, managers can use organized data to understand how their team is contributing to the business.</p>
+</div>
+<div class="sm-feature-img">
+<div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 8px 32px rgba(16,40,100,.08);border:1px solid #e7eaf3;width:100%;">
+<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">Performance Overview</h3>
+<div style="display:flex;gap:24px;align-items:center;">
+<div style="flex:1;">
+<div style="display:flex;align-items:flex-end;gap:8px;height:120px;">
+<div style="flex:1;background:linear-gradient(to top,#028ece,#4db8e8);border-radius:4px 4px 0 0;height:60%;"></div>
+<div style="flex:1;background:linear-gradient(to top,#028ece,#4db8e8);border-radius:4px 4px 0 0;height:75%;"></div>
+<div style="flex:1;background:linear-gradient(to top,#028ece,#4db8e8);border-radius:4px 4px 0 0;height:90%;"></div>
+<div style="flex:1;background:linear-gradient(to top,#028ece,#4db8e8);border-radius:4px 4px 0 0;height:85%;"></div>
+<div style="flex:1;background:linear-gradient(to top,#028ece,#4db8e8);border-radius:4px 4px 0 0;height:95%;"></div>
+</div>
+<div style="display:flex;gap:8px;margin-top:8px;"><span style="flex:1;text-align:center;font-size:11px;color:#999;">Jan</span><span style="flex:1;text-align:center;font-size:11px;color:#999;">Feb</span><span style="flex:1;text-align:center;font-size:11px;color:#999;">Mar</span><span style="flex:1;text-align:center;font-size:11px;color:#999;">Apr</span><span style="flex:1;text-align:center;font-size:11px;color:#999;">May</span></div>
+</div>
+<div style="text-align:center;">
+<div style="width:80px;height:80px;border-radius:50%;border:6px solid #e8f0fe;border-top-color:var(--blue,#028ece);display:flex;align-items:center;justify-content:center;margin:0 auto;"><span style="font-size:18px;font-weight:800;color:var(--blue,#028ece);">78%</span></div>
+<p style="font-size:12px;color:#999;margin-top:8px;">Average Score</p>
+</div>
+</div>
+<div style="margin-top:16px;border-top:1px solid #f0f2f7;padding-top:12px;">
+<p style="font-size:13px;font-weight:600;margin-bottom:8px;">Top Performers</p>
+<div style="display:flex;gap:16px;font-size:12px;color:var(--gray-80,#6b7589);"><span>Priya Sharma <strong style="color:var(--blue,#028ece);">92%</strong></span><span>Rahul Verma <strong style="color:var(--blue,#028ece);">88%</strong></span><span>John Smith <strong style="color:var(--blue,#028ece);">85%</strong></span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- RESPONSIBILITIES -->
+<section class="sm-section">
+<div class="sm-feature-row">
+<div class="sm-feature-content">
+<div class="sm-label">STAFF RESPONSIBILITIES</div>
+<h2>Keep Staff Responsibilities <span class="accent">Organized</span></h2>
+<p>When responsibilities are clearly defined, daily operations become easier to manage. Gymex helps you organize staff roles and responsibilities so your team has greater clarity about their work.</p>
+<p>From front-desk operations and member support to trainer activities and administrative tasks, your team can work within a structured system. This helps reduce confusion and gives managers greater visibility into who is responsible for different activities.</p>
+</div>
+<div class="sm-feature-img">
+<div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(16,40,100,.08);border:1px solid #e7eaf3;width:100%;">
+<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">Responsibility Matrix</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<div style="background:#f8f9fc;border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px;"><i class="fa fa-check" style="color:var(--blue,#028ece);"></i><span style="font-size:13px;">Front Desk Operations</span></div>
+<div style="background:#f8f9fc;border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px;"><i class="fa fa-check" style="color:var(--blue,#028ece);"></i><span style="font-size:13px;">Member Support</span></div>
+<div style="background:#f8f9fc;border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px;"><i class="fa fa-check" style="color:var(--blue,#028ece);"></i><span style="font-size:13px;">Trainer Activities</span></div>
+<div style="background:#f8f9fc;border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px;"><i class="fa fa-check" style="color:var(--blue,#028ece);"></i><span style="font-size:13px;">Administrative Tasks</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MEMBER OPERATIONS -->
+<section class="sm-section">
+<div class="sm-feature-row reverse">
+<div class="sm-feature-content">
+<div class="sm-label">MEMBER OPERATIONS</div>
+<h2>Keep Your Team Connected to <span class="accent">Member Operations</span></h2>
+<p>Your staff work directly with your members every day. That's why staff management shouldn't operate separately from member management.</p>
+<p>Gymex connects staff operations with important member information such as membership details, attendance, payments, renewals, classes, appointments, and member interactions. This connected approach allows your team to work with relevant information without switching between multiple systems.</p>
+</div>
+<div class="sm-feature-img">
+<div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(16,40,100,.08);border:1px solid #e7eaf3;width:100%;">
+<h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">Connected Operations</h3>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+<div style="text-align:center;padding:12px;"><i class="fa fa-users" style="font-size:24px;color:var(--blue,#028ece);margin-bottom:8px;display:block;"></i><span style="font-size:12px;font-weight:600;">Members</span></div>
+<div style="text-align:center;padding:12px;"><i class="fa fa-calendar" style="font-size:24px;color:var(--blue,#028ece);margin-bottom:8px;display:block;"></i><span style="font-size:12px;font-weight:600;">Classes</span></div>
+<div style="text-align:center;padding:12px;"><i class="fa fa-credit-card" style="font-size:24px;color:var(--blue,#028ece);margin-bottom:8px;display:block;"></i><span style="font-size:12px;font-weight:600;">Payments</span></div>
+<div style="text-align:center;padding:12px;"><i class="fa fa-refresh" style="font-size:24px;color:var(--blue,#028ece);margin-bottom:8px;display:block;"></i><span style="font-size:12px;font-weight:600;">Renewals</span></div>
+<div style="text-align:center;padding:12px;"><i class="fa fa-check-circle" style="font-size:24px;color:var(--blue,#028ece);margin-bottom:8px;display:block;"></i><span style="font-size:12px;font-weight:600;">Attendance</span></div>
+<div style="text-align:center;padding:12px;"><i class="fa fa-comments" style="font-size:24px;color:var(--blue,#028ece);margin-bottom:8px;display:block;"></i><span style="font-size:12px;font-weight:600;">Interactions</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MULTIPLE LOCATIONS -->
+<section class="sm-section">
+<div class="sm-wrap">
+<div class="sm-heading">
+<div class="sm-label" style="justify-content:center;">MULTIPLE LOCATIONS</div>
+<h2>Manage Staff Across <span class="accent">Multiple Gym Locations</span></h2>
+<p>If your fitness business has multiple branches, managing staff can become more complex. Gymex can help centralize staff information and organize teams across locations, giving management better visibility while supporting location-specific responsibilities and access. This makes it easier to maintain consistent staff management processes as your business grows.</p>
+<div class="sm-underline"></div>
+</div>
+</div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="sm-section">
+<div class="sm-wrap">
+<div class="sm-heading">
+<h2>Why Choose Gymex for <span class="accent">Staff Management?</span></h2>
+<p>Gymex is more than a basic staff database. It connects staff management with the wider gym management process, allowing you to manage your team alongside memberships, attendance, billing, trainers, payroll, and reporting.</p>
+<div class="sm-underline"></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto;">
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-database" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Centralize Staff Info</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-shield" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Roles &amp; Permissions</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-calendar" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Organize Schedules</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-user" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Manage Trainers</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-clock-o" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Track Attendance</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-money" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Payroll &amp; Commissions</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-bar-chart" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Monitor Performance</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-bolt" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Reduce Admin Work</p></div>
+<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-link" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Connected Operations</p></div>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sm-section">
+<div class="sm-wrap">
+<div class="sm-cta-banner">
+<h2>Build a More Organized Gym Team with <span class="accent">Gymex</span></h2>
+<p style="color:var(--gray-80,#6b7589);margin-bottom:24px;">From staff roles and schedules to attendance, trainers, performance, and payroll, Gymex helps bring your team's daily operations together. Manage your staff. Simplify your operations. Grow your gym.</p>
+<button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="sm-section">
+<div class="sm-wrap">
+<div class="sm-heading">
+<h2>Frequently Asked Questions About <span class="accent">Gym Staff Management Software</span></h2>
+<div class="sm-underline"></div>
+</div>
+<div class="sm-faq">
+<div><details class="sm-faq-item"><summary>What is gym staff management software?</summary><p>Gym staff management software helps gym owners and managers organize staff, trainers, roles, schedules, attendance, permissions, performance, and other staff-related activities from a centralized platform.</p></details></div>
+<div><details class="sm-faq-item"><summary>Why do gyms need staff management software?</summary><p>As a gym grows, managing staff through spreadsheets and manual records can become difficult. Staff management software helps centralize staff information, organize responsibilities, improve accountability, and reduce administrative work.</p></details></div>
+<div><details class="sm-faq-item"><summary>Can gym staff have different access levels?</summary><p>Yes. Role-based permissions can help gym owners provide different levels of system access depending on a staff member's responsibilities.</p></details></div>
+<div><details class="sm-faq-item"><summary>Can Gymex manage personal trainers?</summary><p>Gymex can help organize trainer information and connect trainer activities with schedules, members, attendance, and other gym operations.</p></details></div>
+<div><details class="sm-faq-item"><summary>Can Gymex track staff attendance?</summary><p>Gymex's staff management capabilities can be used to maintain organized staff attendance information and support better workforce visibility.</p></details></div>
+<div><details class="sm-faq-item"><summary>Can staff management connect with payroll?</summary><p>Yes. Gymex connects staff-related information with its Payroll &amp; Commission functionality, helping businesses manage compensation and commission-related processes more efficiently.</p></details></div>
+<div><details class="sm-faq-item"><summary>Is Gymex suitable for multiple gym locations?</summary><p>Gymex is designed to support gym and club management operations as businesses grow, including managing staff and other operational information across locations.</p></details></div>
+</div>
+</div>
+</section>
+
+</div><!-- .sm -->
+
+<!-- Footer -->
+<div style="background:#0b1a3d; padding:0;">
+  <!-- Top Links Row -->
+  <div style="max-width:1200px; margin:0 auto; padding:20px 24px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+    <div style="display:flex; gap:28px; flex-wrap:wrap; align-items:center;">
+      <a href="../index/index.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">HOME</a>
+      <a href="../about/about.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">ABOUT US</a>
+      <a href="../pricing/pricing.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">PRICING</a>
+      <a href="../blog/blog.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">BLOG</a>
+      <a href="../contact/contact.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">CONTACT US</a>
+      <a href="#" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">TERMS &amp; CONDITIONS</a>
+      <a href="../privacy-policy/privacy-policy.html" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">PRIVACY POLICY</a>
+      <a href="#" style="color:rgba(255,255,255,.85); font-size:13px; font-weight:600; text-decoration:none; letter-spacing:.5px;">REFUND POLICY</a>
+    </div>
+    <a class="open-modal-btn" href="#" style="background:#f26522; color:#fff; padding:10px 26px; border-radius:50px; font-size:13px; font-weight:700; text-decoration:none; white-space:nowrap; letter-spacing:.5px;">ASK FOR DEMO</a>
+  </div>
+
+  <!-- Content Row -->
+  <div style="max-width:1200px; margin:0 auto; padding:40px 24px 36px; display:flex; justify-content:space-between; gap:40px;">
+    <!-- About Us -->
+    <div style="flex:1;">
+      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">About Us</h3>
+      <p style="color:rgba(255,255,255,.7); font-size:14px; line-height:1.8;">Gymex is a powerful cloud based gym management software built to facilitate to effectively manage gym &amp; fitness related businesses.</p>
+    </div>
+    <!-- Contact Us -->
+    <div style="flex:1.4;">
+      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">Contact Us</h3>
+      <p style="color:rgba(255,255,255,.7); font-size:14px; line-height:1.8; margin-bottom:24px;">GreyBits Technologies, Office No. 2, An-Nazir Building, Momin Nagar, Patel&nbsp;Estate&nbsp;Road, Jogeshwari West, Mumbai - 400102</p>
+      <div style="display:flex; gap:40px;">
+        <div>
+          <h4 style="color:#fff; font-size:15px; font-weight:700; margin-bottom:12px;">For Sales</h4>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+917710862007" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">+91 7710862007</a>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:sales@gymex.online" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">sales@gymex.online</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="color:#fff; font-size:15px; font-weight:700; margin-bottom:12px;">For Support</h4>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+918291682083" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">+91 8291682083</a>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:support@gymex.online" style="color:rgba(255,255,255,.7); font-size:14px; text-decoration:none;">support@gymex.online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Follow Us On -->
+    <div style="flex:0.5;">
+      <h3 style="color:#fff; font-size:18px; font-weight:700; margin-bottom:14px;">Follow Us On</h3>
+      <div style="display:flex; gap:12px;">
+        <a href="https://www.facebook.com/gymexsoftware" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#1877F2;border-radius:50%;transition:transform .2s;text-decoration:none;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/gymexclubmanagement" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);transition:transform .2s;text-decoration:none;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/gymex-club-management-software/" target="_blank" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#0A66C2;border-radius:50%;transition:transform .2s;text-decoration:none;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="border-top:1px solid rgba(255,255,255,.1); padding:16px 0;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px; text-align:center;">
+      <p style="color:rgba(255,255,255,.5); font-size:13px;">&copy; 2024 Gymex Club Management Software. All Rights Reserved.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Mobile -->
+<style>
+@media(max-width:768px){
+  .footer-wrap,.footer-wrap>[style*="display:flex"]{flex-direction:column!important;gap:18px!important;align-items:flex-start!important}
+  .footer-wrap [style*="flex:1"],.footer-wrap [style*="flex:1.4"],.footer-wrap [style*="flex:0.5"]{flex:1 1 100%!important;max-width:100%!important}
+  .footer-wrap [style*="flex-wrap:nowrap"]{flex-wrap:wrap!important}
+  .footer-wrap [style*="gap:40px"]{gap:16px!important}
+}
+</style>
+
+<!-- Demo Modal -->
+
+
 <script>
-document.querySelectorAll('.open-modal-btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();document.getElementById('divemailpopup').classList.add('show');document.body.style.overflow='hidden';});});
-document.getElementById('close-contact-modal').addEventListener('click',function(){document.getElementById('divemailpopup').classList.remove('show');document.body.style.overflow='auto';document.getElementById('emailsuccessmsg').style.display='none';document.getElementById('form-body').style.display='block';});
-document.getElementById('divemailpopup').addEventListener('click',function(e){if(e.target===this){this.classList.remove('show');document.body.style.overflow='auto';}});
-document.querySelector('.send-again-btn').addEventListener('click',function(){document.getElementById('emailsuccessmsg').style.display='none';document.getElementById('form-body').style.display='block';});
-emailjs.init('AmP09sgXBaIgn9Juz');
-document.getElementById('contact-form').onsubmit=function(e){e.preventDefault();var u=document.getElementById('captcha-input').value.trim();if(u!==cc){document.getElementById('captcha-error').innerHTML='Incorrect CAPTCHA.';document.getElementById('captcha-error').style.display='block';generateCaptcha();return false;}document.getElementById('captcha-error').style.display='none';var l=document.getElementById('loader');l.style.display='block';document.getElementById('form-body').style.display='none';emailjs.send('service_1o6wljl','template_6dewzmp',{firstname:document.getElementById('first-name').value,lastname:document.getElementById('last-name').value,company:document.getElementById('company').value,email:document.getElementById('email').value,phonenumber:document.getElementById('number').value,message:document.getElementById('message').value}).then(function(){l.style.display='none';document.getElementById('emailsuccessmsg').style.display='block';},function(){l.style.display='none';alert('Thank you!');document.getElementById('divemailpopup').classList.remove('show');document.body.style.overflow='auto';});};
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('divemailpopup').classList.remove('show');document.body.style.overflow='auto';}});
+var currentCaptcha = '';
+function generateCaptcha() {
+  var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+  var captcha = '';
+  for (var i = 0; i < 6; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  currentCaptcha = captcha;
+  var box = document.getElementById('captcha-box');
+  if (box) box.innerText = captcha;
+  var val = document.getElementById('captcha-value');
+  if (val) val.value = captcha;
+  var inp = document.getElementById('captcha-input');
+  if (inp) inp.value = '';
+}
+function validateCaptcha() {
+  var userInput = document.getElementById('captcha-input').value.trim();
+  if (userInput === '') {
+    document.getElementById('captcha-error').innerHTML = 'Captcha is required.';
+    document.getElementById('captcha-error').style.display = 'block';
+    return false;
+  }
+  if (userInput !== currentCaptcha) {
+    document.getElementById('captcha-error').innerHTML = 'Incorrect CAPTCHA. Please try again.';
+    document.getElementById('captcha-error').style.display = 'block';
+    generateCaptcha();
+    return false;
+  }
+  document.getElementById('captcha-error').style.display = 'none';
+  return true;
+}
+window.addEventListener('load', function() { generateCaptcha(); });
 </script>
-<div id="menu-backdrop" class="backdrop-menu"></div>
-<script src="../javascript.js"></script>
-<script src="../assets/scripts/script.js"></script>
-</body></html>
+
+<script>
+
+<script>
+(function(){
+var T=document.getElementById('menu-backdrop'),b=document.getElementById('open-menu');
+if(b&&T){b.addEventListener('click',function(){T.classList.toggle('visible');b.classList.toggle('menu-animated');document.body.style.overflow=T.classList.contains('visible')?'hidden':'auto'});
+document.body.addEventListener('click',function(e){if(e.target===T){T.classList.remove('visible');b.classList.remove('menu-animated');document.body.style.overflow='auto'}});
+document.querySelectorAll('.menu__link').forEach(function(c){c.addEventListener('click',function(){T.classList.remove('visible');b.classList.remove('menu-animated');document.body.style.overflow='auto'})});
+}
+// Mobile dropdown toggle
+document.querySelectorAll('.dropdown > a').forEach(function(trigger){
+  trigger.addEventListener('click',function(e){
+    var menu=this.nextElementSibling;
+    if(menu&&menu.classList.contains('dropdown-menu')){
+      e.preventDefault();
+      menu.classList.toggle('show');
+      var icon=this.querySelector('.fa-chevron-down');
+      if(icon)icon.style.transform=menu.classList.contains('show')?'rotate(180deg)':'rotate(0)';
+    }
+  });
+});
+})();
+</script>
+
+<script>
+
+</script>
+
+    <!-- Backdrop Modal (Imran's version) -->
+    <div class="backdrop" id="divemailpopup">
+      <div class="contact-us">
+        <span class="loader" id="loader"></span>
+        <button class="close-btn" id="close-contact-modal" style="position:absolute;top:16px;right:16px;z-index:10;background:none;border:none;cursor:pointer;padding:8px;">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="35" height="2" rx="1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 27.7488 3)" fill="#525251"/><rect width="35" height="2" rx="1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 29.1631 27.7485)" fill="#525251"/></svg>
+        </button>
+        <div class="form-body" id="form-body">
+          <h2 class="title" style="text-align:center;font-size:22px;font-weight:800;margin-bottom:20px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Schedule a Free Demo!</h2>
+          <form id="contact-form">
+            <div class="form-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div>
+                <div class="field"><input type="text" class="contact-us__input" placeholder="Name" name="firstname" id="first-name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+                <div class="error" id="error-first-name" style="color:#ef4444;font-size:12px;display:none;"></div>
+              </div>
+              <div>
+                <div class="field"><input type="text" class="contact-us__input" placeholder="Last Name" name="lastname" id="last-name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+                <div class="error" id="error-last-name" style="color:#ef4444;font-size:12px;display:none;"></div>
+              </div>
+              <div class="field" style="grid-column:1/-1;"><input type="text" class="contact-us__input" placeholder="Company / Gym Name" name="company" id="company" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+              <div class="field" style="grid-column:1/-1;"><input type="email" class="contact-us__input" placeholder="Email" name="email" id="email" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+              <div class="field" style="grid-column:1/-1;"><input type="tel" id="number" name="phonenumber" placeholder="Phone Number" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+            </div>
+            <div style="margin-top:12px;">
+              <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
+            </div>
+            <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
+              <span>GET YOUR FREE DEMO</span>
+              <div style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M9.47576 24.5163L7.59014 22.6307L18.9039 11.317H8.53295V8.63941H23.467V23.5735H20.7895V13.2026L9.47576 24.5163Z" fill="white"/></svg></div>
+            </button>
+          </form>
+        </div>
+        <div class="form-submission-message" id="emailsuccessmsg" style="display:none;text-align:center;padding:40px 20px;">
+          <h2 class="title" style="font-size:20px;font-weight:800;margin-bottom:12px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Thank you for showing interest in <span style="color:#1565C0;">Gymex Club</span> Management Software!</h2>
+          <h3 class="text" style="font-size:15px;color:#666;font-weight:500;">We have received your inquiry. Our team will reach out to you soon!</h3>
+          <button class="send-again-btn" style="margin-top:20px;background:#1565C0;color:#fff;border:none;border-radius:50px;padding:10px 24px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;">Send Another</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <script>
+    // Modal open/close
+    document.querySelectorAll('.open-modal-btn').forEach(function(btn){
+      btn.addEventListener('click',function(e){
+        e.preventDefault();
+        document.getElementById('divemailpopup').classList.add('show');
+        document.body.style.overflow='hidden';
+      });
+    });
+    var db=document.getElementById('demobutton');
+    if(db){db.addEventListener('click',function(e){
+      e.preventDefault();
+      document.getElementById('divemailpopup').classList.add('show');
+      document.body.style.overflow='hidden';
+    });}
+    document.getElementById('close-contact-modal').addEventListener('click',function(){
+      document.getElementById('divemailpopup').classList.remove('show');
+      document.body.style.overflow='auto';
+      document.getElementById('emailsuccessmsg').style.display='none';
+      document.getElementById('form-body').style.display='block';
+    });
+    document.getElementById('divemailpopup').addEventListener('click',function(e){
+      if(e.target===this){
+        this.classList.remove('show');
+        document.body.style.overflow='auto';
+      }
+    });
+    document.querySelector('.send-again-btn').addEventListener('click',function(){
+      document.getElementById('emailsuccessmsg').style.display='none';
+      document.getElementById('form-body').style.display='block';
+    });
+
+    // EmailJS init
+    emailjs.init('AmP09sgXBaIgn9Juz');
+
+    // intl-tel-input
+    var phoneInput=document.getElementById('number');
+    if(phoneInput){
+      var iti=window.intlTelInput(phoneInput,{
+        utilsScript:'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+        separateDialCode:true,
+        initialCountry:'in'
+      });
+    }
+
+    // Form submit
+    document.getElementById('contact-form').onsubmit=function(e){
+      e.preventDefault();
+      var loader=document.getElementById('loader');
+      loader.classList.add('show');
+      document.getElementById('divemailpopup').classList.add('show');
+      
+      var fullNumber=iti ? iti.getNumber() : phoneInput.value;
+      
+      emailjs.send('service_1o6wljl','template_6dewzmp',{
+        firstname:document.getElementById('first-name').value,
+        lastname:document.getElementById('last-name').value,
+        company:document.getElementById('company').value,
+        email:document.getElementById('email').value,
+        phonenumber:fullNumber,
+        message:this.message.value
+      }).then(function(){
+        loader.classList.remove('show');
+        document.getElementById('form-body').style.display='none';
+        document.getElementById('emailsuccessmsg').style.display='block';
+      },function(err){
+        loader.classList.remove('show');
+        alert('Thank you! Your demo request has been submitted.');
+        document.getElementById('divemailpopup').classList.remove('show');
+        document.body.style.overflow='auto';
+      });
+    };
+
+    // ESC to close
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){
+        document.getElementById('divemailpopup').classList.remove('show');
+        document.body.style.overflow='auto';
+      }
+    });
+    </script>
+
+
+<script>
+// Reveal on scroll
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+
+<script>
+// Testimonial slider — smooth continuous scroll + arrow control
+(function() {
+  var track = document.querySelector('.testi-track');
+  if (!track) return;
+  
+  var scrollPos = 0;
+  var speed = 0.5; // pixels per frame (~30px/sec = slow smooth)
+  var isPaused = false;
+  var resumeTimer = null;
+  var cardWidth = 404; // 380px card + 24px gap
+  
+  function getMaxScroll() {
+    return track.scrollWidth - track.parentElement.offsetWidth;
+  }
+  
+  function animate() {
+    if (!isPaused) {
+      scrollPos += speed;
+      if (scrollPos >= getMaxScroll()) {
+        scrollPos = 0; // loop back
+      }
+      track.style.transform = 'translateX(-' + scrollPos + 'px)';
+    }
+    requestAnimationFrame(animate);
+  }
+  
+  // Arrow handlers
+  window.scrollTesti = function(dir) {
+    isPaused = true;
+    scrollPos += dir * cardWidth * 2;
+    if (scrollPos < 0) scrollPos = 0;
+    if (scrollPos > getMaxScroll()) scrollPos = 0;
+    track.style.transform = 'translateX(-' + scrollPos + 'px)';
+    
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() { isPaused = false; }, 3000);
+  };
+  
+  // Pause on hover
+  var carousel = document.querySelector('.testi-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', function() { isPaused = true; });
+    carousel.addEventListener('mouseleave', function() {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function() { isPaused = false; }, 1000);
+    });
+  }
+  
+  requestAnimationFrame(animate);
+})();
+</script>
+
+
+<script>
+// Counter animation on scroll
+(function() {
+  var stats = document.querySelectorAll('.mm-stat h3[data-count]');
+  if (!stats.length) return;
+  
+  var animated = false;
+  
+  function animateCounters() {
+    if (animated) return;
+    animated = true;
+    
+    stats.forEach(function(el) {
+      var target = parseInt(el.getAttribute('data-count'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = 2000; // 2 seconds
+      var start = 0;
+      var startTime = null;
+      
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        // Ease out cubic
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.floor(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      
+      requestAnimationFrame(step);
+    });
+  }
+  
+  // Use IntersectionObserver to trigger when stats come into view
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  var statsSection = document.querySelector('.mm-awards-stats');
+  if (statsSection) observer.observe(statsSection);
+})();
+</script>
+
+</body>
+</html>
+</body>
+</html>
+<script type="text/javascript">
+		var urlvalue = location.search
+		if (urlvalue.indexOf("email") != -1)
+		{
+			document.getElementById("form-body").classList.add("hide");
+			document.getElementById("emailsuccessmsg").classList.add("show");
+		}
+</script>
+<script>
+   const countries = [
+      { name: "Afghanistan", code: "AF", phone: 93 },
+      { name: "Aland Islands", code: "AX", phone: 358 },
+      { name: "Albania", code: "AL", phone: 355 },
+      { name: "Algeria", code: "DZ", phone: 213 },
+      { name: "American Samoa", code: "AS", phone: 1684 },
+      { name: "Andorra", code: "AD", phone: 376 },
+      { name: "Angola", code: "AO", phone: 244 },
+      { name: "Anguilla", code: "AI", phone: 1264 },
+      { name: "Antarctica", code: "AQ", phone: 672 },
+      { name: "Antigua and Barbuda", code: "AG", phone: 1268 },
+      { name: "Argentina", code: "AR", phone: 54 },
+      { name: "Armenia", code: "AM", phone: 374 },
+      { name: "Aruba", code: "AW", phone: 297 },
+      { name: "Australia", code: "AU", phone: 61 },
+      { name: "Austria", code: "AT", phone: 43 },
+      { name: "Azerbaijan", code: "AZ", phone: 994 },
+      { name: "Bahamas", code: "BS", phone: 1242 },
+      { name: "Bahrain", code: "BH", phone: 973 },
+      { name: "Bangladesh", code: "BD", phone: 880 },
+      { name: "Barbados", code: "BB", phone: 1246 },
+      { name: "Belarus", code: "BY", phone: 375 },
+      { name: "Belgium", code: "BE", phone: 32 },
+      { name: "Belize", code: "BZ", phone: 501 },
+      { name: "Benin", code: "BJ", phone: 229 },
+      { name: "Bermuda", code: "BM", phone: 1441 },
+      { name: "Bhutan", code: "BT", phone: 975 },
+      { name: "Bolivia", code: "BO", phone: 591 },
+      { name: "Bonaire, Sint Eustatius and Saba", code: "BQ", phone: 599 },
+      { name: "Bosnia and Herzegovina", code: "BA", phone: 387 },
+      { name: "Botswana", code: "BW", phone: 267 },
+      { name: "Bouvet Island", code: "BV", phone: 55 },
+      { name: "Brazil", code: "BR", phone: 55 },
+      { name: "British Indian Ocean Territory", code: "IO", phone: 246 },
+      { name: "Brunei Darussalam", code: "BN", phone: 673 },
+      { name: "Bulgaria", code: "BG", phone: 359 },
+      { name: "Burkina Faso", code: "BF", phone: 226 },
+      { name: "Burundi", code: "BI", phone: 257 },
+      { name: "Cambodia", code: "KH", phone: 855 },
+      { name: "Cameroon", code: "CM", phone: 237 },
+      { name: "Canada", code: "CA", phone: 1 },
+      { name: "Cape Verde", code: "CV", phone: 238 },
+      { name: "Cayman Islands", code: "KY", phone: 1345 },
+      { name: "Central African Republic", code: "CF", phone: 236 },
+      { name: "Chad", code: "TD", phone: 235 },
+      { name: "Chile", code: "CL", phone: 56 },
+      { name: "China", code: "CN", phone: 86 },
+      { name: "Christmas Island", code: "CX", phone: 61 },
+      { name: "Cocos (Keeling) Islands", code: "CC", phone: 672 },
+      { name: "Colombia", code: "CO", phone: 57 },
+      { name: "Comoros", code: "KM", phone: 269 },
+      { name: "Congo", code: "CG", phone: 242 },
+      { name: "Congo, Democratic Republic of the Congo", code: "CD", phone: 242 },
+      { name: "Cook Islands", code: "CK", phone: 682 },
+      { name: "Costa Rica", code: "CR", phone: 506 },
+      { name: "Cote D'Ivoire", code: "CI", phone: 225 },
+      { name: "Croatia", code: "HR", phone: 385 },
+      { name: "Cuba", code: "CU", phone: 53 },
+      { name: "Curacao", code: "CW", phone: 599 },
+      { name: "Cyprus", code: "CY", phone: 357 },
+      { name: "Czech Republic", code: "CZ", phone: 420 },
+      { name: "Denmark", code: "DK", phone: 45 },
+      { name: "Djibouti", code: "DJ", phone: 253 },
+      { name: "Dominica", code: "DM", phone: 1767 },
+      { name: "Dominican Republic", code: "DO", phone: 1809 },
+      { name: "Ecuador", code: "EC", phone: 593 },
+      { name: "Egypt", code: "EG", phone: 20 },
+      { name: "El Salvador", code: "SV", phone: 503 },
+      { name: "Equatorial Guinea", code: "GQ", phone: 240 },
+      { name: "Eritrea", code: "ER", phone: 291 },
+      { name: "Estonia", code: "EE", phone: 372 },
+      { name: "Ethiopia", code: "ET", phone: 251 },
+      { name: "Falkland Islands (Malvinas)", code: "FK", phone: 500 },
+      { name: "Faroe Islands", code: "FO", phone: 298 },
+      { name: "Fiji", code: "FJ", phone: 679 },
+      { name: "Finland", code: "FI", phone: 358 },
+      { name: "France", code: "FR", phone: 33 },
+      { name: "French Guiana", code: "GF", phone: 594 },
+      { name: "French Polynesia", code: "PF", phone: 689 },
+      { name: "French Southern Territories", code: "TF", phone: 262 },
+      { name: "Gabon", code: "GA", phone: 241 },
+      { name: "Gambia", code: "GM", phone: 220 },
+      { name: "Georgia", code: "GE", phone: 995 },
+      { name: "Germany", code: "DE", phone: 49 },
+      { name: "Ghana", code: "GH", phone: 233 },
+      { name: "Gibraltar", code: "GI", phone: 350 },
+      { name: "Greece", code: "GR", phone: 30 },
+      { name: "Greenland", code: "GL", phone: 299 },
+      { name: "Grenada", code: "GD", phone: 1473 },
+      { name: "Guadeloupe", code: "GP", phone: 590 },
+      { name: "Guam", code: "GU", phone: 1671 },
+      { name: "Guatemala", code: "GT", phone: 502 },
+      { name: "Guernsey", code: "GG", phone: 44 },
+      { name: "Guinea", code: "GN", phone: 224 },
+      { name: "Guinea-Bissau", code: "GW", phone: 245 },
+      { name: "Guyana", code: "GY", phone: 592 },
+      { name: "Haiti", code: "HT", phone: 509 },
+      { name: "Heard Island and McDonald Islands", code: "HM", phone: 0 },
+      { name: "Holy See (Vatican City State)", code: "VA", phone: 39 },
+      { name: "Honduras", code: "HN", phone: 504 },
+      { name: "Hong Kong", code: "HK", phone: 852 },
+      { name: "Hungary", code: "HU", phone: 36 },
+      { name: "Iceland", code: "IS", phone: 354 },
+      { name: "India", code: "IN", phone: 91 },
+      { name: "Indonesia", code: "ID", phone: 62 },
+      { name: "Iran, Islamic Republic of", code: "IR", phone: 98 },
+      { name: "Iraq", code: "IQ", phone: 964 },
+      { name: "Ireland", code: "IE", phone: 353 },
+      { name: "Isle of Man", code: "IM", phone: 44 },
+      { name: "Israel", code: "IL", phone: 972 },
+      { name: "Italy", code: "IT", phone: 39 },
+      { name: "Jamaica", code: "JM", phone: 1876 },
+      { name: "Japan", code: "JP", phone: 81 },
+      { name: "Jersey", code: "JE", phone: 44 },
+      { name: "Jordan", code: "JO", phone: 962 },
+      { name: "Kazakhstan", code: "KZ", phone: 7 },
+      { name: "Kenya", code: "KE", phone: 254 },
+      { name: "Kiribati", code: "KI", phone: 686 },
+      { name: "Korea, Democratic People's Republic of", code: "KP", phone: 850 },
+      { name: "Korea, Republic of", code: "KR", phone: 82 },
+      { name: "Kosovo", code: "XK", phone: 383 },
+      { name: "Kuwait", code: "KW", phone: 965 },
+      { name: "Kyrgyzstan", code: "KG", phone: 996 },
+      { name: "Lao People's Democratic Republic", code: "LA", phone: 856 },
+      { name: "Latvia", code: "LV", phone: 371 },
+      { name: "Lebanon", code: "LB", phone: 961 },
+      { name: "Lesotho", code: "LS", phone: 266 },
+      { name: "Liberia", code: "LR", phone: 231 },
+      { name: "Libyan Arab Jamahiriya", code: "LY", phone: 218 },
+      { name: "Liechtenstein", code: "LI", phone: 423 },
+      { name: "Lithuania", code: "LT", phone: 370 },
+      { name: "Luxembourg", code: "LU", phone: 352 },
+      { name: "Macao", code: "MO", phone: 853 },
+      { name: "Macedonia, the Former Yugoslav Republic of", code: "MK", phone: 389 },
+      { name: "Madagascar", code: "MG", phone: 261 },
+      { name: "Malawi", code: "MW", phone: 265 },
+      { name: "Malaysia", code: "MY", phone: 60 },
+      { name: "Maldives", code: "MV", phone: 960 },
+      { name: "Mali", code: "ML", phone: 223 },
+      { name: "Malta", code: "MT", phone: 356 },
+      { name: "Marshall Islands", code: "MH", phone: 692 },
+      { name: "Martinique", code: "MQ", phone: 596 },
+      { name: "Mauritania", code: "MR", phone: 222 },
+      { name: "Mauritius", code: "MU", phone: 230 },
+      { name: "Mayotte", code: "YT", phone: 262 },
+      { name: "Mexico", code: "MX", phone: 52 },
+      { name: "Micronesia, Federated States of", code: "FM", phone: 691 },
+      { name: "Moldova, Republic of", code: "MD", phone: 373 },
+      { name: "Monaco", code: "MC", phone: 377 },
+      { name: "Mongolia", code: "MN", phone: 976 },
+      { name: "Montenegro", code: "ME", phone: 382 },
+      { name: "Montserrat", code: "MS", phone: 1664 },
+      { name: "Morocco", code: "MA", phone: 212 },
+      { name: "Mozambique", code: "MZ", phone: 258 },
+      { name: "Myanmar", code: "MM", phone: 95 },
+      { name: "Namibia", code: "NA", phone: 264 },
+      { name: "Nauru", code: "NR", phone: 674 },
+      { name: "Nepal", code: "NP", phone: 977 },
+      { name: "Netherlands", code: "NL", phone: 31 },
+      { name: "Netherlands Antilles", code: "AN", phone: 599 },
+      { name: "New Caledonia", code: "NC", phone: 687 },
+      { name: "New Zealand", code: "NZ", phone: 64 },
+      { name: "Nicaragua", code: "NI", phone: 505 },
+      { name: "Niger", code: "NE", phone: 227 },
+      { name: "Nigeria", code: "NG", phone: 234 },
+      { name: "Niue", code: "NU", phone: 683 },
+      { name: "Norfolk Island", code: "NF", phone: 672 },
+      { name: "Northern Mariana Islands", code: "MP", phone: 1670 },
+      { name: "Norway", code: "NO", phone: 47 },
+      { name: "Oman", code: "OM", phone: 968 },
+      { name: "Pakistan", code: "PK", phone: 92 },
+      { name: "Palau", code: "PW", phone: 680 },
+      { name: "Palestinian Territory, Occupied", code: "PS", phone: 970 },
+      { name: "Panama", code: "PA", phone: 507 },
+      { name: "Papua New Guinea", code: "PG", phone: 675 },
+      { name: "Paraguay", code: "PY", phone: 595 },
+      { name: "Peru", code: "PE", phone: 51 },
+      { name: "Philippines", code: "PH", phone: 63 },
+      { name: "Pitcairn", code: "PN", phone: 64 },
+      { name: "Poland", code: "PL", phone: 48 },
+      { name: "Portugal", code: "PT", phone: 351 },
+      { name: "Puerto Rico", code: "PR", phone: 1787 },
+      { name: "Qatar", code: "QA", phone: 974 },
+      { name: "Reunion", code: "RE", phone: 262 },
+      { name: "Romania", code: "RO", phone: 40 },
+      { name: "Russian Federation", code: "RU", phone: 7 },
+      { name: "Rwanda", code: "RW", phone: 250 },
+      { name: "Saint Barthelemy", code: "BL", phone: 590 },
+      { name: "Saint Helena", code: "SH", phone: 290 },
+      { name: "Saint Kitts and Nevis", code: "KN", phone: 1869 },
+      { name: "Saint Lucia", code: "LC", phone: 1758 },
+      { name: "Saint Martin", code: "MF", phone: 590 },
+      { name: "Saint Pierre and Miquelon", code: "PM", phone: 508 },
+      { name: "Saint Vincent and the Grenadines", code: "VC", phone: 1784 },
+      { name: "Samoa", code: "WS", phone: 684 },
+      { name: "San Marino", code: "SM", phone: 378 },
+      { name: "Sao Tome and Principe", code: "ST", phone: 239 },
+      { name: "Saudi Arabia", code: "SA", phone: 966 },
+      { name: "Senegal", code: "SN", phone: 221 },
+      { name: "Serbia", code: "RS", phone: 381 },
+      { name: "Serbia and Montenegro", code: "CS", phone: 381 },
+      { name: "Seychelles", code: "SC", phone: 248 },
+      { name: "Sierra Leone", code: "SL", phone: 232 },
+      { name: "Singapore", code: "SG", phone: 65 },
+      { name: "St Martin", code: "SX", phone: 721 },
+      { name: "Slovakia", code: "SK", phone: 421 },
+      { name: "Slovenia", code: "SI", phone: 386 },
+      { name: "Solomon Islands", code: "SB", phone: 677 },
+      { name: "Somalia", code: "SO", phone: 252 },
+      { name: "South Africa", code: "ZA", phone: 27 },
+      { name: "South Georgia and the South Sandwich Islands", code: "GS", phone: 500 },
+      { name: "South Sudan", code: "SS", phone: 211 },
+      { name: "Spain", code: "ES", phone: 34 },
+      { name: "Sri Lanka", code: "LK", phone: 94 },
+      { name: "Sudan", code: "SD", phone: 249 },
+      { name: "Suriname", code: "SR", phone: 597 },
+      { name: "Svalbard and Jan Mayen", code: "SJ", phone: 47 },
+      { name: "Swaziland", code: "SZ", phone: 268 },
+      { name: "Sweden", code: "SE", phone: 46 },
+      { name: "Switzerland", code: "CH", phone: 41 },
+      { name: "Syrian Arab Republic", code: "SY", phone: 963 },
+      { name: "Taiwan, Province of China", code: "TW", phone: 886 },
+      { name: "Tajikistan", code: "TJ", phone: 992 },
+      { name: "Tanzania, United Republic of", code: "TZ", phone: 255 },
+      { name: "Thailand", code: "TH", phone: 66 },
+      { name: "Timor-Leste", code: "TL", phone: 670 },
+      { name: "Togo", code: "TG", phone: 228 },
+      { name: "Tokelau", code: "TK", phone: 690 },
+      { name: "Tonga", code: "TO", phone: 676 },
+      { name: "Trinidad and Tobago", code: "TT", phone: 1868 },
+      { name: "Tunisia", code: "TN", phone: 216 },
+      { name: "Turkey", code: "TR", phone: 90 },
+      { name: "Turkmenistan", code: "TM", phone: 7370 },
+      { name: "Turks and Caicos Islands", code: "TC", phone: 1649 },
+      { name: "Tuvalu", code: "TV", phone: 688 },
+      { name: "Uganda", code: "UG", phone: 256 },
+      { name: "Ukraine", code: "UA", phone: 380 },
+      { name: "United Arab Emirates", code: "AE", phone: 971 },
+      { name: "United Kingdom", code: "GB", phone: 44 },
+      { name: "United States", code: "US", phone: 1 },
+      { name: "United States Minor Outlying Islands", code: "UM", phone: 1 },
+      { name: "Uruguay", code: "UY", phone: 598 },
+      { name: "Uzbekistan", code: "UZ", phone: 998 },
+      { name: "Vanuatu", code: "VU", phone: 678 },
+      { name: "Venezuela", code: "VE", phone: 58 },
+      { name: "Viet Nam", code: "VN", phone: 84 },
+      { name: "Virgin Islands, British", code: "VG", phone: 1284 },
+      { name: "Virgin Islands, U.s.", code: "VI", phone: 1340 },
+      { name: "Wallis and Futuna", code: "WF", phone: 681 },
+      { name: "Western Sahara", code: "EH", phone: 212 },
+      { name: "Yemen", code: "YE", phone: 967 },
+      { name: "Zambia", code: "ZM", phone: 260 },
+      { name: "Zimbabwe", code: "ZW", phone: 263 }
+  ],
+
+      select_box = document.querySelector('.options'),
+      search_box = document.querySelector('.search-box'),
+      input_box = document.querySelector('input[type="tel"]'),
+      selected_option = document.querySelector('.selected-option div');
+
+  let options = null;
+
+  for (country of countries) {
+      const option = `
+<li class="option">
+    <div>
+        <span class="iconify" data-icon="flag:${country.code.toLowerCase()}-4x3"></span>
+        <span class="country-name">${country.name}</span>
+
+    </div>
+    <strong>+${country.phone}</strong>
+
+</li> `;
+
+      select_box.querySelector('ol').insertAdjacentHTML('beforeend', option);
+      options = document.querySelectorAll('.option');
+  }
+
+  function selectOption() {
+      const icon = this.querySelector('.iconify').cloneNode(true),
+          phone_code = this.querySelector('strong').cloneNode(true);
+
+      selected_option.innerHTML = '';
+      selected_option.append(icon, phone_code);
+
+      input_box.value = phone_code.innerText;
+
+      select_box.classList.remove('active');
+      selected_option.classList.remove('active');
+
+      search_box.value = '';
+      select_box.querySelectorAll('.hide').forEach(el => el.classList.remove('hide'));
+  }
+
+  function searchCountry() {
+      let search_query = search_box.value.toLowerCase();
+      for (option of options) {
+          let is_matched = option.querySelector('.country-name').innerText.toLowerCase().includes(search_query);
+          option.classList.toggle('hide', !is_matched)
+      }
+  }
+
+  selected_option.addEventListener('click', () => {
+      select_box.classList.toggle('active');
+      selected_option.classList.toggle('active');
+  })
+
+  options.forEach(option => option.addEventListener('click', selectOption));
+  search_box.addEventListener('input', searchCountry);
+
+
+
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</body>
+</html>
