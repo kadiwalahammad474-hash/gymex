@@ -1,1 +1,6 @@
 .vercel
+
+node_modules/
+package-lock.json
+tmp-*.txt
+generate-pages.js
