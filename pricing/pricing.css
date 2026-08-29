@@ -608,8 +608,9 @@ K.5px;
 .mm { max-width: 1250px; margin: 0 auto; padding: 0 24px; }
 .mm-btn {
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 15px 28px; border-radius: 50px; font-weight: 600; font-size: 15px;
-  cursor: pointer; border: none; transition: transform .15s ease, filter .15s ease;
+  padding: 12px 24px; border-radius: 50px; font-weight: 700; font-size: 14px;
+  cursor: pointer; border: none; text-transform: uppercase; letter-spacing: .03em;
+  transition: transform .15s ease, filter .15s ease;
 }
 .mm-btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .mm-btn-primary { background: var(--blue); color: #fff; }
