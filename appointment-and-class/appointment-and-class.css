@@ -1,0 +1,53 @@
+/* GYMEX — APPOINTMENT & CLASS BOOKING PAGE */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* { box-sizing: border-box; }
+
+.sm-faq-item {
+  background: #f8f9fc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+.sm-faq-item summary {
+  padding: 18px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+.sm-faq-item summary::-webkit-details-marker { display: none; }
+.sm-faq-item summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 700;
+  color: #028ece;
+  transition: transform 0.2s;
+}
+.sm-faq-item[open] summary::after { content: "−"; }
+.sm-faq-item summary:hover { background: #f0f7ff; }
+.sm-faq-item p {
+  padding: 0 24px 18px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav__list { display: none; }
+  .menu-btn { display: block; }
+  section > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  section > div[style*="grid-template-columns: repeat"] {
+    grid-template-columns: 1fr !important;
+  }
+}
