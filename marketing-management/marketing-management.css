@@ -12,9 +12,9 @@
 /* ── Hero ── */
 .sm-hero {
   position: relative;
-  padding: 60px 24px 60px;
+  padding: 60px 24px 0;
   background: url('../assets/Final%20(13).png') center top/100% auto no-repeat !important;
-  min-height: 400px;
+  min-height: 420px;
   overflow: visible;
 }
 .sm-hero-grid {
