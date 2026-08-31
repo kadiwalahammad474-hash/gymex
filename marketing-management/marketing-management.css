@@ -13,9 +13,10 @@
 .sm-hero {
   position: relative;
   padding: 60px 24px 40px;
-  background: url('../assets/Final%20(13).png') center top/cover no-repeat,
+  background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%),
+              radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
+              radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%),
               var(--BG, #f5f7fb);
-  min-height: 340px;
   overflow: visible;
 }
 .sm-hero-grid {
