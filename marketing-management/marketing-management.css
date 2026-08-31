@@ -13,7 +13,7 @@
 .sm-hero {
   position: relative;
   padding: 60px 24px 40px;
-  background: url('../assets/Final%20(13).png') center/contain no-repeat, #fff !important;
+  background: url('../assets/Final%20(13).png') center/100% auto no-repeat, #fff !important;
   overflow: visible;
 }
 .sm-hero-grid {
