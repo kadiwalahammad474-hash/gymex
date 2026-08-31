@@ -42,6 +42,7 @@
   border-radius: 50%;
   background: var(--orange-100, #ff4f0d);
 }
+.sm-hero .sm-underline { width: 46px; height: 4px; background: var(--orange-100, #ff4f0d); border-radius: 4px; margin: 6px 0 12px; }
 .sm-hero h1 {
   font-size: 42px;
   line-height: 1.15;
