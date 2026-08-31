@@ -13,8 +13,9 @@
 .sm-hero {
   position: relative;
   padding: 60px 24px 40px;
-  background: url('../assets/Final%20(13).png') center/100% 100% no-repeat,
+  background: url('../assets/Final%20(13).png') center top/cover no-repeat,
               var(--BG, #f5f7fb);
+  min-height: 340px;
   overflow: visible;
 }
 .sm-hero-grid {
