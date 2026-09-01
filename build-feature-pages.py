@@ -47,7 +47,7 @@ def build_page(title, meta_desc, meta_keywords, og_title, og_desc, label, hero_t
 <link rel="icon" type="image/x-icon" href="../assets/gymex-favicon-U7mChGv0.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="feature-page.css">
+<link rel="stylesheet" href="../feature-page.css">
 <script src="../javascript.js"></script>
 {ld_json}
 </head>
