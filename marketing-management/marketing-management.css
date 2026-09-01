@@ -12,7 +12,7 @@
 /* ── Hero ── */
 .sm-hero {
   position: relative;
-  padding: 60px 24px 40px;
+  padding: 80px 24px 50px;
   background: url('../assets/Final%20(13).png') center/100% auto no-repeat, #fff !important;
   overflow: visible;
 }
