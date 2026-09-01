@@ -4,6 +4,10 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Poppins',sans-serif;color:#333;}
 
+/* Nav dropdown icon sizing (match index.css) */
+.mega-menu .icon{width:24px;height:24px;min-width:24px;margin-right:4px;}
+.icon{width:32px;height:32px;}
+
 /* Layout helpers */
 .em-container{max-width:1140px;margin:0 auto;padding:0 24px;}
 .em-section{padding:64px 0;}
