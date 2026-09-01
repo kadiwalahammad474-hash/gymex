@@ -8,7 +8,7 @@
 /* ── Hero ── */
 .ia-hero {
   background: linear-gradient(135deg, #0b1a3d 0%, #0d2847 50%, #0f3460 100%);
-  padding: 80px 24px 70px;
+  padding: 80px 24px 70px !important;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -43,24 +43,24 @@
   letter-spacing: 2px;
   padding: 6px 20px;
   border-radius: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 .ia-hero-title {
   color: #fff;
-  font-size: 38px;
+  font-size: 38px !important;
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 16px;
+  line-height: 1.2 !important;
+  margin-bottom: 16px !important;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 .ia-hero-desc {
   color: rgba(255,255,255,0.75);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
   max-width: 650px;
-  margin: 0 auto 30px;
+  margin: 0 auto 30px !important;
 }
 .ia-cta-btn {
   display: inline-block;
@@ -83,20 +83,20 @@
 }
 
 /* ── Sections ── */
-.ia-section { padding: 70px 0; }
+.ia-section { padding: 70px 0 !important; }
 .ia-alt-bg { background: #f8f9fc; }
 .ia-h2 {
-  font-size: 28px;
+  font-size: 28px !important;
   font-weight: 800;
   color: #0b1a3d;
-  margin-bottom: 16px;
-  line-height: 1.3;
+  margin-bottom: 16px !important;
+  line-height: 1.3 !important;
 }
 .ia-desc {
-  font-size: 15px;
+  font-size: 15px !important;
   color: #555;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  line-height: 1.8 !important;
+  margin-bottom: 20px !important;
 }
 
 /* ── Row Layout ── */
@@ -156,15 +156,15 @@
   color: #f26522;
 }
 .ia-card-title {
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: 700;
   color: #0b1a3d;
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 }
 .ia-card-desc {
   font-size: 13px;
   color: #666;
-  line-height: 1.7;
+  line-height: 1.7 !important;
 }
 
 /* ── Mini Cards ── */
@@ -191,7 +191,7 @@
   font-size: 14px;
   font-weight: 700;
   color: #0b1a3d;
-  margin-bottom: 6px;
+  margin-bottom: 6px !important;
 }
 .ia-mini-card p {
   font-size: 12px;
@@ -214,7 +214,7 @@
   gap: 16px;
 }
 .ia-stat-num {
-  font-size: 28px;
+  font-size: 28px !important;
   font-weight: 800;
   color: #f26522;
   min-width: 70px;
@@ -279,7 +279,7 @@
   font-weight: 600;
   color: #0b1a3d;
 }
-.ia-why-item i { color: #f26522; font-size: 16px; }
+.ia-why-item i { color: #f26522; font-size: 16px !important; }
 
 /* ── FAQ ── */
 .ia-faq-grid {
@@ -321,26 +321,26 @@
   padding: 0 20px 16px;
   font-size: 13px;
   color: #666;
-  line-height: 1.7;
+  line-height: 1.7 !important;
 }
 
 /* ── CTA Section ── */
 .ia-cta-section {
   background: linear-gradient(135deg, #0b1a3d 0%, #0f3460 100%);
-  padding: 70px 24px;
+  padding: 70px 24px !important;
 }
 .ia-cta-title {
   color: #fff;
   font-size: 30px;
   font-weight: 800;
-  margin-bottom: 14px;
+  margin-bottom: 14px !important;
 }
 .ia-cta-desc {
   color: rgba(255,255,255,0.7);
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
   max-width: 600px;
-  margin: 0 auto 30px;
+  margin: 0 auto 30px !important;
 }
 
 /* ═══ Responsive ═══ */
@@ -349,12 +349,12 @@
   .ia-why-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .ia-hero-title { font-size: 28px; }
+  .ia-hero-title { font-size: 28px !important; }
   .ia-row, .ia-row-reverse { flex-direction: column; gap: 30px; }
   .ia-3col, .ia-2col { grid-template-columns: 1fr; }
   .ia-4col { grid-template-columns: 1fr; }
   .ia-why-grid { grid-template-columns: 1fr; }
   .ia-faq-grid { grid-template-columns: 1fr; }
-  .ia-section { padding: 50px 0; }
+  .ia-section { padding: 50px 0 !important; }
   .ia-h2 { font-size: 24px; }
 }
