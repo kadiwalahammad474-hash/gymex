@@ -258,6 +258,29 @@
   text-transform: none !important;
 }
 
+
+.sm-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(2,142,206,.08);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0b1a3d;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.sm-label::before {
+  content: "";
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--orange-100, #ff4f0d);
+}
+
 </style>
 
 <section style="position:relative!important;margin-left:calc(-50vw + 50%)!important;margin-right:calc(-50vw + 50%)!important;width:100vw!important;padding:40px calc(50vw - 50% + 40px) 60px!important;background:var(--BG,#f5f7fb)!important;border-radius:0!important;overflow:hidden!important;">
@@ -460,16 +483,6 @@
       <div style="background:#fff;border:1px solid #e8edf3;border-radius:12px;overflow:hidden;"><div style="padding:18px 24px;cursor:pointer;font-weight:600;font-size:15px;color:#0b1a3d;background:#f8fafc;display:flex;justify-content:space-between;align-items:center;font-family:Poppins,sans-serif;" onclick="var p=this.parentElement;p.classList.toggle('open');var a=this.nextElementSibling;a.style.display=a.style.display==='block'?'none':'block';" >Can Gymex send membership renewal reminders? <i class="fa fa-chevron-down"></i></div><div style="padding:0 24px 18px;font-size:14px;color:#666;line-height:1.75;display:none;font-family:Poppins,sans-serif;">Yes. Gymex supports balance and renewal payment alerts to help keep members informed about relevant membership payments.</div></div>
       <div style="background:#fff;border:1px solid #e8edf3;border-radius:12px;overflow:hidden;"><div style="padding:18px 24px;cursor:pointer;font-weight:600;font-size:15px;color:#0b1a3d;background:#f8fafc;display:flex;justify-content:space-between;align-items:center;font-family:Poppins,sans-serif;" onclick="var p=this.parentElement;p.classList.toggle('open');var a=this.nextElementSibling;a.style.display=a.style.display==='block'?'none':'block';" >Which channels can Gymex use for alerts? <i class="fa fa-chevron-down"></i></div><div style="padding:0 24px 18px;font-size:14px;color:#666;line-height:1.75;display:none;font-family:Poppins,sans-serif;">Gymex supports alerts through SMS, email, and app notifications, depending on the type of communication.</div></div>
       <div style="background:#fff;border:1px solid #e8edf3;border-radius:12px;overflow:hidden;"><div style="padding:18px 24px;cursor:pointer;font-weight:600;font-size:15px;color:#0b1a3d;background:#f8fafc;display:flex;justify-content:space-between;align-items:center;font-family:Poppins,sans-serif;" onclick="var p=this.parentElement;p.classList.toggle('open');var a=this.nextElementSibling;a.style.display=a.style.display==='block'?'none':'block';" >Can Gymex send alerts to trainers? <i class="fa fa-chevron-down"></i></div><div style="padding:0 24px 18px;font-size:14px;color:#666;line-height:1.75;display:none;font-family:Poppins,sans-serif;">Yes. Gymex supports appointment confirmation alerts for trainers, helping them stay informed about confirmed appointments.</div></div>
-    </div>
-  </div>
-</section>
-a-faq" onclick="this.classList.toggle('open')">
-      <div style="padding:18px 24px;cursor:pointer;font-weight:600;font-size:15px;color:#0b1a3d;background:#f8fafc;display:flex;justify-content:space-between;align-items:center;font-family:Poppins,sans-serif;">Does it send staff notifications too? <i class="fa fa-chevron-down"></i></div>
-      <div style="padding:0 24px 18px;font-size:14px;color:#666;line-height:1.75;display:none;font-family:Poppins,sans-serif;">Yes. You can send shift reminders, schedule changes, and important announcements to staff and trainers.</div>
-    </div>
-    <div class="ia-faq" onclick="this.classList.toggle('open')">
-      <div style="padding:18px 24px;cursor:pointer;font-weight:600;font-size:15px;color:#0b1a3d;background:#f8fafc;display:flex;justify-content:space-between;align-items:center;font-family:Poppins,sans-serif;">Is there a limit on how many alerts I can send? <i class="fa fa-chevron-down"></i></div>
-      <div style="padding:0 24px 18px;font-size:14px;color:#666;line-height:1.75;display:none;font-family:Poppins,sans-serif;">Gymex offers generous alert limits based on your plan. Contact our team for details on high-volume messaging.</div>
     </div>
   </div>
 </section>
