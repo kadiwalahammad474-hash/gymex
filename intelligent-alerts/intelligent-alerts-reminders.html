@@ -239,116 +239,216 @@
 .icon { width: 32px; height: 32px; }
 .nav__cta { display: inline-flex; align-items: center; }
 
+
+.ia-faq-item { border: 1px solid #e8edf3; border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+.ia-faq-q { padding: 18px 24px; cursor: pointer; font-weight: 600; font-size: 15px; color: #0b1a3d; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; font-family: 'Poppins', sans-serif; }
+.ia-faq-q i { transition: transform .3s; }
+.ia-faq-a { padding: 0 24px 18px; font-size: 14px; color: #666; line-height: 1.75; display: none; font-family: 'Poppins', sans-serif; }
+.ia-faq-item.open .ia-faq-a { display: block; }
+.ia-faq-item.open .ia-faq-q i { transform: rotate(180deg); }
+
 </style>
 
 <section style="background:linear-gradient(135deg,#0b1a3d 0%,#1a3a5c 50%,#0d2847 100%)!important;padding:90px 24px 70px!important;position:relative!important;overflow:hidden!important;">
   <div style="position:absolute!important;top:-40%!important;right:-15%!important;width:500px!important;height:500px!important;border-radius:50%!important;background:radial-gradient(circle,rgba(242,101,34,.12) 0%,transparent 70%)!important;"></div>
   <div style="position:absolute!important;bottom:-30%!important;left:-10%!important;width:400px!important;height:400px!important;border-radius:50%!important;background:radial-gradient(circle,rgba(49,170,225,.1) 0%,transparent 70%)!important;"></div>
   <div class="ia-wrap" style="position:relative!important;z-index:1!important;">
-    <span style="display:inline-block!important;background:rgba(242,101,34,.15)!important;color:#f26522!important;font-size:12px!important;font-weight:700!important;letter-spacing:2px!important;padding:6px 20px!important;border-radius:30px!important;margin-bottom:20px!important;font-family:'Poppins',sans-serif!important;">INTELLIGENT ALERTS & REMINDERS</span>
-    <h1 class="ia-h1">Smart Alerts &<br>Automated Reminders<br>for Your Gym</h1>
-    <p class="ia-p" style="max-width:600px!important;">Keep members informed and staff updated with automated reminders, renewal alerts, payment notifications, and class schedules — all managed from one connected platform.</p>
-    <button class="ia-btn open-modal-btn" style="cursor:pointer;border:none;">Get Your Free Demo <i class="fa fa-arrow-up" style="margin-left:8px;"></i></button>
-  </div>
-</section>
-
-<section class="ia-sec" style="background:#f8fafc!important;">
+    <span style="display:inline-block!important;background:rgba(242,101,34,.15)!important;color:#f26522!important;font-size:12px!important;font-weight:700!important;letter-spacing:2px!important;padding:6px 20px!important;border-ra
+<!-- Create Customized Alerts for Members -->
+<section class="ia-sec" style="background:#fff!important;">
   <div class="ia-wrap">
-    <h2 class="ia-h2" style="text-align:center!important;">Keep Members Informed Before They Even Ask</h2>
-    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 24px!important;">Gymex Intelligent Alerts & Reminder Software sends timely notifications to members and staff so nothing falls through the cracks.</p>
-    <div class="ia-chips" style="justify-content:center!important;">
-      <span class="ia-chip"><i class="fa fa-bell"></i> Membership Renewals</span>
-      <span class="ia-chip"><i class="fa fa-credit-card"></i> Payment Due Alerts</span>
-      <span class="ia-chip"><i class="fa fa-calendar"></i> Class Schedules</span>
-      <span class="ia-chip"><i class="fa fa-user-plus"></i> Appointment Reminders</span>
-      <span class="ia-chip"><i class="fa fa-star"></i> Birthday Wishes</span>
-      <span class="ia-chip"><i class="fa fa-clock-o"></i> Trial Expiry</span>
+    <h2 class="ia-h2" style="text-align:center!important;">Create Customized Alerts for Members</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 24px!important;">Different members may need different updates at the right time. Gymex lets you create customized alerts for members, helping your fitness business keep important communication organized and timely.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 24px!important;">From membership-related updates to payments, renewals, classes, and other important notifications, <strong>Gymex Gym Reminder Software</strong> helps reduce repetitive manual communication while keeping members informed.</p>
+    <div class="ia-flow" style="margin:32px auto!important;">
+      <div class="ia-flow-step">Create Alert</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Select Members</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Send Notification</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Keep Members Updated</div>
     </div>
   </div>
 </section>
 
-<section class="ia-sec" style="background:#fff!important;">
+<!-- Send Alerts Across Multiple Channels -->
+<section class="ia-sec" style="background:#f0f4f8!important;">
   <div class="ia-wrap">
-    <h2 class="ia-h2" style="text-align:center!important;">Multi-Channel Notifications That Reach Members Everywhere</h2>
-    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 32px!important;">Gymex supports SMS, email, and in-app notifications so you can reach members on the channel that works best for them.</p>
+    <h2 class="ia-h2" style="text-align:center!important;">Send Alerts Across Multiple Channels</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 32px!important;">Reach members through convenient communication channels. Gymex supports alerts through SMS, email, and app notifications, giving your business multiple ways to communicate important information.</p>
     <div class="ia-grid" style="grid-template-columns:repeat(3,1fr)!important;">
-      <div class="ia-card">
-        <div class="ia-card-icon" style="background:linear-gradient(135deg,#25D366,#128C7E)!important;"><i class="fa fa-whatsapp"></i></div>
-        <h3>SMS & WhatsApp</h3>
-        <p>Send renewal reminders, payment confirmations, and class updates via SMS or WhatsApp directly to members.</p>
+      <div class="ia-card" style="text-align:center!important;">
+        <div class="ia-card-icon" style="background:linear-gradient(135deg,#028ECE,#0a5d8f)!important;margin:0 auto 18px!important;"><i class="fa fa-commenting" style="color:#fff!important;font-size:22px!important;"></i></div>
+        <h3>SMS Alerts</h3>
+        <p>Send important updates directly through SMS.</p>
       </div>
-      <div class="ia-card">
-        <div class="ia-card-icon" style="background:linear-gradient(135deg,#4285F4,#34A853)!important;"><i class="fa fa-envelope"></i></div>
-        <h3>Email Notifications</h3>
-        <p>Automated email campaigns for promotional offers, membership updates, and important gym announcements.</p>
+      <div class="ia-card" style="text-align:center!important;">
+        <div class="ia-card-icon" style="background:linear-gradient(135deg,#34A853,#1e7e34)!important;margin:0 auto 18px!important;"><i class="fa fa-envelope" style="color:#fff!important;font-size:22px!important;"></i></div>
+        <h3>Email Alerts</h3>
+        <p>Keep members informed through email communication.</p>
       </div>
-      <div class="ia-card">
-        <div class="ia-card-icon" style="background:linear-gradient(135deg,#f26522,#e05a1a)!important;"><i class="fa fa-mobile"></i></div>
-        <h3>In-App Alerts</h3>
-        <p>Push notifications through the gym app for real-time alerts on bookings, class changes, and account updates.</p>
+      <div class="ia-card" style="text-align:center!important;">
+        <div class="ia-card-icon" style="background:linear-gradient(135deg,#f26522,#c44d17)!important;margin:0 auto 18px!important;"><i class="fa fa-mobile" style="color:#fff!important;font-size:22px!important;"></i></div>
+        <h3>App Notifications</h3>
+        <p>Send notifications through the app for timely updates.</p>
       </div>
     </div>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:24px auto 0!important;">Using multiple channels helps make your gym alerts and notifications process more flexible and organized.</p>
   </div>
 </section>
 
-<section class="ia-sec" style="background:#f8fafc!important;">
-  <div class="ia-wrap">
-    <h2 class="ia-h2" style="text-align:center!important;">Automated Reminder Workflow</h2>
-    <p class="ia-sub" style="text-align:center!important;max-width:600px;margin:0 auto!important;">Set it once, and Gymex handles the rest.</p>
-    <div class="ia-flow">
-      <span class="ia-flow-step"><i class="fa fa-cog"></i> Set Reminder Rule</span>
-      <span class="ia-flow-arrow"><i class="fa fa-arrow-right"></i></span>
-      <span class="ia-flow-step"><i class="fa fa-database"></i> Member Data Match</span>
-      <span class="ia-flow-arrow"><i class="fa fa-arrow-right"></i></span>
-      <span class="ia-flow-step"><i class="fa fa-paper-plane"></i> Auto Send Alert</span>
-      <span class="ia-flow-arrow"><i class="fa fa-arrow-right"></i></span>
-      <span class="ia-flow-step"><i class="fa fa-check-circle"></i> Member Notified</span>
-    </div>
-  </div>
-</section>
-
+<!-- Stay Ahead of Balance & Renewal Payments -->
 <section class="ia-sec" style="background:#fff!important;">
   <div class="ia-wrap">
-    <h2 class="ia-h2" style="text-align:center!important;">Types of Alerts & Reminders You Can Send</h2>
-    <div class="ia-grid">
-      <div class="ia-card"><div class="ia-card-icon" style="background:#f26522!important;"><i class="fa fa-bell"></i></div><h3>Membership Renewal Alerts</h3><p>Automatically notify members before their membership expires so they can renew on time without disruption.</p></div>
-      <div class="ia-card"><div class="ia-card-icon" style="background:#028ECE!important;"><i class="fa fa-rupee"></i></div><h3>Payment Due & Overdue Alerts</h3><p>Send payment reminders for pending dues, EMIs, and outstanding balances to improve collection rates.</p></div>
-      <div class="ia-card"><div class="ia-card-icon" style="background:#34A853!important;"><i class="fa fa-calendar-check-o"></i></div><h3>Class & Appointment Reminders</h3><p>Remind members about upcoming classes, personal training sessions, and booked appointments.</p></div>
-      <div class="ia-card"><div class="ia-card-icon" style="background:#9C27B0!important;"><i class="fa fa-gift"></i></div><h3>Birthday & Anniversary Wishes</h3><p>Send personalized birthday and anniversary messages to make members feel valued and connected.</p></div>
-      <div class="ia-card"><div class="ia-card-icon" style="background:#FF5722!important;"><i class="fa fa-hourglass-half"></i></div><h3>Trial Expiry Reminders</h3><p>Alert trial members before their free trial ends and encourage them to convert to a paid membership.</p></div>
-      <div class="ia-card"><div class="ia-card-icon" style="background:#607D8B!important;"><i class="fa fa-users"></i></div><h3>Staff Notifications</h3><p>Send shift reminders, schedule changes, and important updates to your gym staff and trainers.</p></div>
+    <h2 class="ia-h2" style="text-align:center!important;">Stay Ahead of Balance & Renewal Payments</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Membership renewals and outstanding balances are important to your gym’s day-to-day revenue.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Gymex allows you to send balance and renewal payment alerts, helping members stay informed about upcoming or pending payments while reducing the need for repeated manual reminders from your team.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 24px!important;">With <strong>Gym Membership Renewal Reminders</strong>, your team can maintain more consistent payment communication and keep important renewal information from being overlooked.</p>
+    <div class="ia-flow" style="margin:32px auto!important;">
+      <div class="ia-flow-step">Payment/Renewal Due</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Alert</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Member Informed</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Follow-Up</div>
     </div>
   </div>
 </section>
 
-<section class="ia-cta">
+<!-- Keep Members Engaged with Class & Service Notifications -->
+<section class="ia-sec" style="background:#f0f4f8!important;">
   <div class="ia-wrap">
-    <h2>Never Miss a Renewal or Payment Again</h2>
-    <p>Automate your gym communication with intelligent alerts and reminders that keep members engaged and payments on track.</p>
-    <button class="ia-btn open-modal-btn" style="cursor:pointer;border:none;">Get Your Free Demo</button>
+    <h2 class="ia-h2" style="text-align:center!important;">Keep Members Engaged with Class & Service Notifications</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Communication shouldn’t stop after a member joins.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Gymex lets you send push notifications about classes and services, helping you keep members informed about relevant activities and offerings available at your fitness business.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto!important;">These <strong>gym member notifications</strong> provide a simple way to maintain regular engagement and keep members connected with your gym.</p>
   </div>
 </section>
 
+<!-- Automate Bill Creation Notifications -->
 <section class="ia-sec" style="background:#fff!important;">
   <div class="ia-wrap">
+    <h2 class="ia-h2" style="text-align:center!important;">Automate Bill Creation Notifications</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Keep members informed when their bills are generated.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Gymex supports <strong>Bill Creation Notification</strong>, allowing relevant billing information to reach members without your staff having to communicate every update manually.</p>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto!important;">Combined with balance and renewal alerts, this creates a more organized communication process around membership payments.</p>
+  </div>
+</section>
+
+<!-- Keep Your Team Informed with Operational Alerts -->
+<section class="ia-sec" style="background:#f0f4f8!important;">
+  <div class="ia-wrap">
+    <h2 class="ia-h2" style="text-align:center!important;">Keep Your Team Informed with Operational Alerts</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 32px!important;">Gymex Intelligent Alerts aren’t limited to member communication. Important operational activities can also trigger relevant updates for your team.</p>
+    <div class="ia-grid" style="grid-template-columns:1fr 1fr!important;max-width:800px;margin:0 auto!important;">
+      <div class="ia-card">
+        <div class="ia-card-icon" style="background:linear-gradient(135deg,#028ECE,#0a5d8f)!important;"><i class="fa fa-download" style="color:#fff!important;"></i></div>
+        <h3>Data Export Alerts</h3>
+        <p>Receive an alert related to data export activity, helping staff stay informed when important data-related actions take place.</p>
+      </div>
+      <div class="ia-card">
+        <div class="ia-card-icon" style="background:linear-gradient(135deg,#34A853,#1e7e34)!important;"><i class="fa fa-calendar-check-o" style="color:#fff!important;"></i></div>
+        <h3>Appointment Confirmation Alerts for Trainers</h3>
+        <p>Keep trainers updated with appointment confirmation alerts, making it easier for them to stay aware of confirmed appointments and prepare accordingly.</p>
+      </div>
+    </div>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:24px auto 0!important;">This helps connect everyday communication with your gym’s wider operational workflow.</p>
+  </div>
+</section>
+
+<!-- Automate Follow-Ups & Reduce Manual Work -->
+<section class="ia-sec" style="background:#fff!important;">
+  <div class="ia-wrap">
+    <h2 class="ia-h2" style="text-align:center!important;">Automate Follow-Ups & Reduce Manual Work</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 16px!important;">Following up manually with every member or prospect can take up valuable staff time. Gymex helps simplify this process with automated follow-ups, allowing your team to maintain timely communication without depending on repeated manual reminders.</p>
+    <p class="ia-sub" style="text-align:left!important;max-width:700px;margin:0 auto 16px!important;">Automated follow-ups can help your team:</p>
+    <div style="max-width:700px;margin:0 auto 24px!important;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f0f4f8;border-radius:10px;"><span style="width:8px;height:8px;border-radius:50%;background:#f26522;flex-shrink:0;"></span><span style="font-size:14px;color:#333;font-family:'Poppins',sans-serif;">Reduce repetitive follow-up work</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f0f4f8;border-radius:10px;"><span style="width:8px;height:8px;border-radius:50%;background:#f26522;flex-shrink:0;"></span><span style="font-size:14px;color:#333;font-family:'Poppins',sans-serif;">Maintain timely communication</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f0f4f8;border-radius:10px;"><span style="width:8px;height:8px;border-radius:50%;background:#f26522;flex-shrink:0;"></span><span style="font-size:14px;color:#333;font-family:'Poppins',sans-serif;">Keep important follow-ups from being missed</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f0f4f8;border-radius:10px;"><span style="width:8px;height:8px;border-radius:50%;background:#f26522;flex-shrink:0;"></span><span style="font-size:14px;color:#333;font-family:'Poppins',sans-serif;">Improve consistency across member communication</span></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f0f4f8;border-radius:10px;grid-column:1/-1;max-width:calc(50% - 6px);"><span style="width:8px;height:8px;border-radius:50%;background:#f26522;flex-shrink:0;"></span><span style="font-size:14px;color:#333;font-family:'Poppins',sans-serif;">Give staff more time to focus on important activities</span></div>
+    </div>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 24px!important;">By combining automated gym reminders, intelligent alerts, and follow-ups in one connected platform, Gymex helps your team maintain more consistent communication with members and prospects.</p>
+    <div class="ia-flow" style="margin:32px auto!important;">
+      <div class="ia-flow-step">Alert</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Reminder</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Automated Follow-Up</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Timely Action</div>
+    </div>
+  </div>
+</section>
+
+<!-- One Alert System for Everyday Member Communication -->
+<section class="ia-sec" style="background:#f0f4f8!important;">
+  <div class="ia-wrap">
+    <h2 class="ia-h2" style="text-align:center!important;">One Alert System for Everyday Member Communication</h2>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto 24px!important;">Instead of relying on separate reminders and repeated manual communication, Gymex brings important member alerts and reminders together within your gym management system.</p>
+    <div class="ia-flow" style="margin:32px auto!important;">
+      <div class="ia-flow-step">Membership</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Payments</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Billing</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Renewals</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Classes</div>
+      <div class="ia-flow-arrow">→</div>
+      <div class="ia-flow-step">Appointments</div>
+    </div>
+    <p class="ia-sub" style="text-align:center!important;max-width:700px;margin:0 auto!important;">With <strong>Gym Alerts and Notifications Software</strong>, important updates can reach the right members while your team spends less time managing routine communication manually.</p>
+  </div>
+</section>
+
+<!-- Why Choose Gymex for Intelligent Alerts? -->
+<section class="ia-sec" style="background:#fff!important;">
+  <div class="ia-wrap">
+    <h2 class="ia-h2" style="text-align:center!important;">Why Choose Gymex for Intelligent Alerts?</h2>
+    <div class="ia-grid" style="grid-template-columns:repeat(3,1fr)!important;max-width:1000px;margin:0 auto!important;">
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#028ECE,#0a5d8f)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-cog" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Customized Alerts</h3><p style="font-size:13px!important;">Create relevant alerts for members and staff.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#34A853,#1e7e34)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-commenting" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">SMS Notifications</h3><p style="font-size:13px!important;">Send important updates directly through SMS.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#f26522,#c44d17)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-envelope" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Email Alerts</h3><p style="font-size:13px!important;">Communicate relevant information through email.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-mobile" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">App Notifications</h3><p style="font-size:13px!important;">Keep users updated through app-based notifications.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#028ECE,#0a5d8f)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-credit-card" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Balance & Renewal Alerts</h3><p style="font-size:13px!important;">Remind members about balances and renewal payments.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#34A853,#1e7e34)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-file-text-o" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Bill Creation Notifications</h3><p style="font-size:13px!important;">Send SMS notifications when bills are created.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#f26522,#c44d17)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-calendar" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Class & Service Updates</h3><p style="font-size:13px!important;">Use push notifications to keep members engaged with classes and services.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-download" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Data Export Alerts</h3><p style="font-size:13px!important;">Keep relevant staff informed about data export activity.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#028ECE,#0a5d8f)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-user" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Trainer Appointment Alerts</h3><p style="font-size:13px!important;">Send appointment confirmation alerts to trainers.</p></div>
+      <div class="ia-card" style="text-align:center!important;padding:24px!important;grid-column:1/-1;max-width:calc(33.33% - 16px);margin:0 auto!important;"><div class="ia-card-icon" style="background:linear-gradient(135deg,#34A853,#1e7e34)!important;margin:0 auto 14px!important;width:44px!important;height:44px!important;"><i class="fa fa-repeat" style="color:#fff!important;font-size:18px!important;"></i></div><h3 style="font-size:15px!important;">Automated Follow-Ups</h3><p style="font-size:13px!important;">Automate routine follow-up communication and reduce repetitive manual work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="ia-sec" style="background:linear-gradient(135deg,#0b1a3d 0%,#1a3a5c 100%)!important;text-align:center!important;padding:60px 24px!important;">
+  <div class="ia-wrap">
+    <h2 style="color:#fff!important;font-size:30px!important;font-weight:700!important;margin:0 0 14px!important;font-family:'Poppins',sans-serif;">Make Every Important Update Count</h2>
+    <p style="color:rgba(255,255,255,.8)!important;font-size:16px!important;margin:0 0 12px!important;line-height:1.7!important;font-family:'Poppins',sans-serif;">Keep members engaged and your team informed with intelligent alerts from Gymex.</p>
+    <p style="color:rgba(255,255,255,.6)!important;font-size:14px!important;margin:0 0 28px!important;font-family:'Poppins',sans-serif;font-style:italic;">Customize. Notify. Remind. Engage.</p>
+    <button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="ia-sec" style="background:#fff!important;">
+  <div class="ia-wrap" style="max-width:800px;">
     <h2 class="ia-h2" style="text-align:center!important;">Frequently Asked Questions</h2>
-    <div class="ia-faq" onclick="this.classList.toggle('open')">
-      <div class="ia-faq-q">What types of alerts can I send with Gymex? <i class="fa fa-chevron-down"></i></div>
-      <div class="ia-faq-a">Gymex supports membership renewal alerts, payment due reminders, class schedule notifications, appointment reminders, birthday wishes, trial expiry alerts, and custom promotional messages.</div>
+    <div class="ia-faq">
+      <div class="ia-faq-item"><div class="ia-faq-q" onclick="this.parentElement.classList.toggle('open')">What is gym reminder software? <i class="fa fa-chevron-down"></i></div><div class="ia-faq-a">Gym Reminder Software helps fitness businesses manage important alerts and reminders for members and staff. It can reduce repetitive manual communication and help ensure important updates are shared on time.</div></div>
+      <div class="ia-faq-item"><div class="ia-faq-q" onclick="this.parentElement.classList.toggle('open')">What alerts are available in Gymex? <i class="fa fa-chevron-down"></i></div><div class="ia-faq-a">Gymex supports customized member and staff alerts, balance and renewal payment alerts, bill creation notification SMS, data export alerts, class and service push notifications, and appointment confirmation alerts for trainers.</div></div>
+      <div class="ia-faq-item"><div class="ia-faq-q" onclick="this.parentElement.classList.toggle('open')">Can Gymex send membership renewal reminders? <i class="fa fa-chevron-down"></i></div><div class="ia-faq-a">Yes. Gymex supports balance and renewal payment alerts to help keep members informed about relevant membership payments.</div></div>
+      <div class="ia-faq-item"><div class="ia-faq-q" onclick="this.parentElement.classList.toggle('open')">Which channels can Gymex use for alerts? <i class="fa fa-chevron-down"></i></div><div class="ia-faq-a">Gymex supports alerts through SMS, email, and app notifications, depending on the type of communication.</div></div>
+      <div class="ia-faq-item"><div class="ia-faq-q" onclick="this.parentElement.classList.toggle('open')">Can Gymex send alerts to trainers? <i class="fa fa-chevron-down"></i></div><div class="ia-faq-a">Yes. Gymex supports appointment confirmation alerts for trainers, helping them stay informed about confirmed appointments.</div></div>
     </div>
-    <div class="ia-faq" onclick="this.classList.toggle('open')">
-      <div class="ia-faq-q">Can I send alerts via SMS and WhatsApp? <i class="fa fa-chevron-down"></i></div>
-      <div class="ia-faq-a">Yes. Gymex supports SMS and WhatsApp integration for sending automated alerts to members and staff.</div>
-    </div>
-    <div class="ia-faq" onclick="this.classList.toggle('open')">
-      <div class="ia-faq-q">Are reminders sent automatically? <i class="fa fa-chevron-down"></i></div>
-      <div class="ia-faq-a">Yes. Once you set up reminder rules, Gymex automatically sends alerts at the scheduled time without manual intervention.</div>
-    </div>
-    <div class="ia-faq" onclick="this.classList.toggle('open')">
-      <div class="ia-faq-q">Can I customize the alert messages? <i class="fa fa-chevron-down"></i></div>
-      <div class="ia-faq-a">Yes. You can fully customize alert templates with member names, membership details, and personalized content.</div>
-    </div>
-    <div class="ia-faq" onclick="this.classList.toggle('open')">
+  </div>
+</section>
+a-faq" onclick="this.classList.toggle('open')">
       <div class="ia-faq-q">Does it send staff notifications too? <i class="fa fa-chevron-down"></i></div>
       <div class="ia-faq-a">Yes. You can send shift reminders, schedule changes, and important announcements to staff and trainers.</div>
     </div>
