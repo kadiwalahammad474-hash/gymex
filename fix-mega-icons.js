@@ -24,7 +24,7 @@ const ICONS = {
   'Task Management':                 '<i class="fa-solid fa-clipboard-check"></i>',
   'Data Analysis &amp; Dashboard':   '<i class="fa-solid fa-chart-pie"></i>',
   'Payroll &amp; Commission':        '<i class="fa-solid fa-wallet"></i>',
-  'Workout &amp; Diet Planner':      '<span class="fa-stack"><i class="fa-solid fa-clipboard fa-stack-2x"></i><i class="fa-solid fa-dumbbell fa-stack-1x" style="color:#eef4fd"></i></span>',
+  'Workout &amp; Diet Planner':      '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="18" rx="2"/><rect x="9" y="2" width="6" height="3.5" rx="1.2"/><g fill="#eef4fd"><rect x="7.5" y="12.4" width="9" height="1.2" rx="0.6"/><rect x="6.2" y="10.2" width="1.8" height="5.6" rx="0.9"/><rect x="16" y="10.2" width="1.8" height="5.6" rx="0.9"/></g></svg>',
   'Intelligent Alerts &amp; Reminder': '<span class="bell-wrap"><i class="fa-solid fa-bell"></i><span class="bell-dot"></span></span>',
   'Appointment &amp; Class Booking': '<i class="fa-solid fa-calendar-days"></i>',
   'Biometric &amp; Access Control':  '<i class="fa-solid fa-fingerprint"></i>',
@@ -37,7 +37,7 @@ const ICONS = {
   /* features.html / business.html ke long mega menu ke extra items */
   'Biometric Attendance':            '<i class="fa-solid fa-fingerprint"></i>',
   'Class Scheduling':                '<i class="fa-solid fa-calendar-days"></i>',
-  'Diet &amp; Workout Plans':        '<span class="fa-stack"><i class="fa-solid fa-clipboard fa-stack-2x"></i><i class="fa-solid fa-dumbbell fa-stack-1x" style="color:#eef4fd"></i></span>',
+  'Diet &amp; Workout Plans':        '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="18" rx="2"/><rect x="9" y="2" width="6" height="3.5" rx="1.2"/><g fill="#eef4fd"><rect x="7.5" y="12.4" width="9" height="1.2" rx="0.6"/><rect x="6.2" y="10.2" width="1.8" height="5.6" rx="0.9"/><rect x="16" y="10.2" width="1.8" height="5.6" rx="0.9"/></g></svg>',
   'Member App &amp; Portal':         '<i class="fa-solid fa-mobile-screen-button"></i>',
   'Member Self-Serve':               '<i class="fa-solid fa-user-check"></i>',
   'Payment Gateway':                 '<i class="fa-solid fa-credit-card"></i>',
