@@ -567,5 +567,26 @@ h1,h2,h3,h4,h5,h6 { font-size: inherit; font-weight: inherit; margin: 0; }
 .mm-btn-orange:hover {
   transform: translateY(-1px);
 }
+
+/* Hero photo: focus on the people (right side of frame) on narrow screens,
+   where center-crop shows the empty middle of the image. A light veil plus
+   a solid text card keeps the copy readable over the busy photo. */
+@media (max-width: 768px) {
+  .sm-hero {
+    background-image:
+      linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.15) 60%, rgba(255,255,255,0)),
+      url("../assets/member-management-hero.png") !important;
+    background-position: center top, 86% top !important;
+    background-size: cover, cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .sm-hero-grid > div:first-child {
+    background: rgba(255,255,255,.9);
+    border-radius: 18px;
+    padding: 22px 20px;
+    box-shadow: 0 8px 28px rgba(15,40,80,.10);
+  }
+  .sm-hero-grid > div:first-child .sm-desc { color: #3d4756; }
+}
 body::before { content: none !important; display: none !important; }
 body::after { content: none !important; display: none !important; }
