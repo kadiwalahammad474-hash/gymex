@@ -1,13 +1,15 @@
 /* GYMEX — CAREER PAGE (page-specific styles only)
    Shared base (nav, footer, buttons, dropdown, mobile menu) from style.css */
 
-/* ── HERO ── */
+/* ── HERO ── (same treatment as home: full-bleed dashboard bg image) */
 .mm-hero {
-  position: relative; margin-top: 72px; padding: 30px 24px 30px;
-  background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.12), transparent 65%),
-              radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.08), transparent 65%),
-              var(--BG);
-  border-radius: 0; overflow: visible;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+  padding: 40px calc(50vw - 50% + 40px) 60px;
+  background: url("../assets/img.png") center top/cover no-repeat var(--BG);
+  border-radius: 0;
 }
 .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 {
@@ -19,6 +21,48 @@
   color: var(--gray-80); font-size: 15.5px; line-height: 1.75;
   margin-bottom: 24px;
 }
+
+/* Home-style CTA + checkmark tags */
+.mm-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 30px; border-radius: 100px;
+  font-weight: 600; font-size: 15px; cursor: pointer; border: none;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.mm-btn:hover { transform: translateY(-2px); filter: brightness(1.03); }
+.mm-btn-orange {
+  background: linear-gradient(135deg, var(--orange-100), #e0450b);
+  color: #fff;
+  padding: 6px 6px 6px 28px;
+  gap: 12px;
+}
+.mm-btn-orange i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: var(--orange-100) !important;
+  font-size: 16px !important;
+  transition: transform .2s ease !important;
+  transform: rotate(45deg) !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+.mm-btn:hover i { transform: translateX(3px); }
+.mm-hero-cta { margin: 14px 0 28px; }
+.mm-hero-tags { display: flex; gap: 38px; flex-wrap: wrap; }
+.mm-hero-tags span { font-size: 13.5px; font-weight: 500; color: var(--gray-80); display: inline-flex; align-items: center; }
+.mm-hero-tags i { color: var(--blue); margin-right: 6px; }
+.mm-hero-eyebrow {
+  color: var(--blue);
+  font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+  margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px;
+}
+.mm-hero-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange-100); box-shadow: 0 0 12px var(--orange-100); }
 
 /* Hero image card */
 .career-hero-card {
@@ -140,13 +184,19 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .mm-hero { padding: 40px 16px 40px; }
+  .mm-hero { padding: 24px 16px 20px; border-radius: 0 0 20px 20px; margin-bottom: 16px; }
   .mm-hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .career-hero-card { max-width: 100%; margin: 0 auto; }
   .mm-section { padding: 36px 16px; }
   .gx-career-header { flex-direction: column; align-items: flex-start; }
   .gx-career-meta { flex-shrink: 0; display: flex; gap: 16px; }
   .gx-apply-btn { flex-shrink: 0; align-self: flex-start; }
+  .mm-hero-tags { gap: 16px; flex-wrap: wrap; }
+  .mm-hero-tags span { font-size: 12px; }
+  .mm-btn { padding: 12px 20px; font-size: 13px; }
+  .mm-btn-orange { padding: 4px 4px 4px 18px; gap: 8px; }
+  .mm-btn-orange i { width: 34px; height: 34px; min-width: 34px; font-size: 13px; }
+  .mm-hero-cta { margin: 12px 0 24px; }
 }
 @media (max-width: 600px) {
   .mm-hero { padding: 24px 12px 32px; }
