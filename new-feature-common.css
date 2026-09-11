@@ -1,0 +1,71 @@
+/* GYMEX — NEW FEATURE PAGES SHARED STYLES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* FAQ accordion */
+.sm-faq-item {
+  background: #f8f9fc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+.sm-faq-item summary {
+  padding: 18px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+.sm-faq-item summary::-webkit-details-marker { display: none; }
+.sm-faq-item summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 700;
+  color: #028ece;
+  transition: transform 0.2s;
+}
+.sm-faq-item[open] summary::after { content: "−"; }
+.sm-faq-item summary:hover { background: #f0f7ff; }
+.sm-faq-item p {
+  padding: 0 24px 18px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA buttons (match appointment page) */
+.mm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: .5px;
+}
+.mm-btn-orange { background: #f26522; color: #fff; }
+.mm-btn-orange:hover { background: #e05510; }
+
+/* Responsive grids */
+@media (max-width: 991px) {
+  .nf-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .nf-three { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 767px) {
+  .nf-split { grid-template-columns: 1fr !important; }
+  .nf-hero-grid { grid-template-columns: 1fr !important; }
+  .nf-two { grid-template-columns: 1fr !important; }
+  .nf-grid { grid-template-columns: 1fr !important; }
+  .nf-table { font-size: 12px; }
+  .nf-table th, .nf-table td { padding: 8px 10px !important; }
+}

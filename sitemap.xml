@@ -21,4 +21,35 @@
   <url><loc>https://gymexglobalwebsite.vercel.app/aerobics</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gymexglobalwebsite.vercel.app/health-and-fitness-centers</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gymexglobalwebsite.vercel.app/marketing-management</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url>
+    <loc>https://gymexglobalwebsite.vercel.app/workout-diet/workout-diet-planner.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymexglobalwebsite.vercel.app/pos-locker/pos-locker-management.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymexglobalwebsite.vercel.app/mobile-apps/mobile-apps.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymexglobalwebsite.vercel.app/integrations/integrations.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymexglobalwebsite.vercel.app/equipment-inventory/equipment-inventory.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymexglobalwebsite.vercel.app/whatsapp-automation/whatsapp-automation.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
