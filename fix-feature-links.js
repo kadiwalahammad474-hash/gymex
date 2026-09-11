@@ -30,13 +30,21 @@ function fix(html) {
     const variants = [name, name.replace(/&/g, '&amp;')];
     for (const v of variants) {
       const re = new RegExp('href="(?:\\.\\./)?features/features\\.html"((?:(?!<\\/a>)[\\s\\S])*?class="inside"(?:(?!<\\/a>)[\\s\\S])*?<span class="text1"[^>]*>' + esc(v) + '</span>)', 'g');
-      out = out.replace(re, () => 'href="' + url + '"$1');
+      out = out.replace(re, (m, g1) => 'href="' + url + '"' + g1);
     }
   }
   // Mobile menu labels
   for (const [label, url] of Object.entries(LABELS)) {
     const re = new RegExp('href="(?:\\.\\./)?features/features\\.html">(' + esc(label) + ')</a>', 'g');
-    out = out.replace(re, () => 'href="' + url + '">$1</a>');
+    out = out.replace(re, (m, g1) => 'href="' + url + '">' + g1 + '</a>');
+  }
+  // Alternative structure: <a href="...features.html" class="text1">NAME<
+  for (const [name, url] of Object.entries(LINKS)) {
+    const variants = [name, name.replace(/&/g, '&amp;')];
+    for (const v of variants) {
+      const re = new RegExp('href="(?:\\.\\./)?features/features\\.html"( class="text1">' + esc(v) + ' ?<)', 'g');
+      out = out.replace(re, (m, g1) => 'href="' + url + '"' + g1);
+    }
   }
   return out;
 }

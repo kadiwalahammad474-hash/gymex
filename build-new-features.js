@@ -568,14 +568,12 @@ function fixFeatureLinks(html) {
   let out = html;
   for (const [name, url] of Object.entries(NAV_LINKS)) {
     // mega menu anchors: <a href="...(../)?features/features.html" ...class="inside"...> ... <span class="text1"...>NAME</span>
-    const re = new RegExp('href="(?:\\.\\./)?features/features\\.html"((?:(?!<\\/a>)[\\s\\S])*?class="inside"(?:(?!<\\/a>)[\\s\\S])*?<span class="text1"[^>]*>' + esc(name) + '</span>)', 'g');
-    out = out.replace(re, () => 'href="' + url + '"$1');
+    const re = new RegExp('href="(?:\\.\\./)?features/features\\.html"((?:(?!<\\/a>)[\\s\\S])*?class="inside"(?:(?!<\\/a>)[\\s\\S])*?<span class="text1"[^>]*>' + esc(name) + '</span>)', 'g');      out = out.replace(re, (m, g1) => 'href="' + url + '"' + g1);
   }
   // mobile menu labels
   const labels = { 'MOBILE APP': '../mobile-apps/mobile-apps.html', 'POS MODULE': '../pos-locker/pos-locker-management.html', 'ALERTS &amp; NOTIFICATIONS': '../intelligent-alerts/intelligent-alerts-reminders.html', 'CLASS SCHEDULING': '../appointment-and-class/appointment-and-class.html', 'WHATSAPP AUTOMATION': '../whatsapp-automation/whatsapp-automation.html' };
   for (const [label, url] of Object.entries(labels)) {
-    const re = new RegExp('href="(?:\\.\\./)?features/features\\.html">(' + esc(label) + ')</a>', 'g');
-    out = out.replace(re, () => 'href="' + url + '">$1</a>');
+    const re = new RegExp('href="(?:\\.\\./)?features/features\\.html">(' + esc(label) + ')</a>', 'g');      out = out.replace(re, (m, g1) => 'href="' + url + '">' + g1 + '</a>');
   }
   return out;
 }
