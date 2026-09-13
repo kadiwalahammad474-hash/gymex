@@ -18,6 +18,16 @@
 .sm-faq-item summary::after { content: '\f078'; font-family: FontAwesome; font-size: 12px; color: #999; transition: transform .2s; }
 .sm-faq-item[open] summary::after { transform: rotate(180deg); }
 .sm-faq-item p { padding: 16px 20px; font-size: 14px; color: #555; line-height: 1.8; margin: 0; background: #fff; border: 1px solid #e5e7eb; border-top: 0; border-radius: 0 0 10px 10px; }
+/* Connect grid — 5 cards in one row on desktop */
+@media (min-width: 992px) {
+  .bio-five { grid-template-columns: repeat(5, 1fr) !important; }
+}
+@media (max-width: 991px) {
+  .bio-five { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 575px) {
+  .bio-five { grid-template-columns: 1fr !important; }
+}
 </style>
 
 </head>
@@ -266,7 +276,7 @@
 <div style="max-width:1200px; margin:0 auto;">
 <h2 style="font-size:32px; font-weight:800; color:#111; text-align:center; margin-bottom:24px;">Connect Membership, Access & Attendance</h2>
 <p style="font-size:16px; color:#555; line-height:1.8; max-width:800px; margin:0 auto 36px; text-align:center;">One of the biggest advantages of using an integrated Gym Biometric Attendance System is that attendance doesn't have to operate separately from member information. Gymex connects the process so your team maintains better control over who enters your facilities.</p>
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:24px; max-width:1000px; margin:0 auto;"><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Member Profile</h3><p style="font-size:12px; color:#888; margin:0;">Complete member information in one place</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Membership Type</h3><p style="font-size:12px; color:#888; margin:0;">Plan and access level verification</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Access Rules</h3><p style="font-size:12px; color:#888; margin:0;">Age, time, and membership-based restrictions</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Check-In</h3><p style="font-size:12px; color:#888; margin:0;">Biometric, RFID, QR, or manual</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Attendance</h3><p style="font-size:12px; color:#888; margin:0;">Connected attendance records</p></div></div>
+<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px; max-width:1250px; margin:0 auto;" class="bio-five"><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Member Profile</h3><p style="font-size:12px; color:#888; margin:0;">Complete member information in one place</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Membership Type</h3><p style="font-size:12px; color:#888; margin:0;">Plan and access level verification</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Access Rules</h3><p style="font-size:12px; color:#888; margin:0;">Age, time, and membership-based restrictions</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Check-In</h3><p style="font-size:12px; color:#888; margin:0;">Biometric, RFID, QR, or manual</p></div><div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; text-align:center;"><h3 style="font-size:14px; font-weight:700; color:#111; margin-bottom:4px;">Attendance</h3><p style="font-size:12px; color:#888; margin:0;">Connected attendance records</p></div></div>
 </div>
 </section>
 <section style="padding:60px 24px; background:#fff;">
