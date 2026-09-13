@@ -39,6 +39,39 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+// ════════════════════════════════════════════════════════════
+    // Mobile burger menu — canonical handler (backdrop toggle).
+    // Ye sirf tab active hota hai jab page pe #open-menu + #menu-backdrop hain.
+    // ════════════════════════════════════════════════════════════
+    var menuBackdrop = document.getElementById('menu-backdrop');
+    var menuBurger = document.getElementById('open-menu');
+
+    if (menuBackdrop && menuBurger) {
+        menuBurger.addEventListener('click', function () {
+            var open = menuBackdrop.classList.toggle('visible');
+            menuBurger.classList.toggle('menu-animated', open);
+            document.body.style.overflow = open ? 'hidden' : 'auto';
+        });
+
+        // Backdrop khud pe click = menu band
+        menuBackdrop.addEventListener('click', function (e) {
+            if (e.target === menuBackdrop) {
+                menuBackdrop.classList.remove('visible');
+                menuBurger.classList.remove('menu-animated');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Menu ke andar kisi bhi link pe click = menu band
+        menuBackdrop.querySelectorAll('.menu__link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menuBackdrop.classList.remove('visible');
+                menuBurger.classList.remove('menu-animated');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    }
+
     // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.dropdown')) {

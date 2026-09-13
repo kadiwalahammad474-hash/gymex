@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="yoga-studio.css">
-  <script src="../javascript.js"></script>
+  <script src="../javascript.js?v=2"></script>
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
 
@@ -442,29 +442,7 @@ function validateCaptcha() {
 window.addEventListener('load', function() { generateCaptcha(); });
 </script>
 
-<script>
 
-<script>
-(function(){
-var T=document.getElementById('menu-backdrop'),b=document.getElementById('open-menu');
-if(b&&T){b.addEventListener('click',function(){T.classList.toggle('visible');b.classList.toggle('menu-animated');document.body.style.overflow=T.classList.contains('visible')?'hidden':'auto'});
-document.body.addEventListener('click',function(e){if(e.target===T){T.classList.remove('visible');b.classList.remove('menu-animated');document.body.style.overflow='auto'}});
-document.querySelectorAll('.menu__link').forEach(function(c){c.addEventListener('click',function(){T.classList.remove('visible');b.classList.remove('menu-animated');document.body.style.overflow='auto'})});
-}
-// Mobile dropdown toggle
-document.querySelectorAll('.dropdown > a').forEach(function(trigger){
-  trigger.addEventListener('click',function(e){
-    var menu=this.nextElementSibling;
-    if(menu&&menu.classList.contains('dropdown-menu')){
-      e.preventDefault();
-      menu.classList.toggle('show');
-      var icon=this.querySelector('.fa-chevron-down');
-      if(icon)icon.style.transform=menu.classList.contains('show')?'rotate(180deg)':'rotate(0)';
-    }
-  });
-});
-})();
-</script>
 
 <script>
 
