@@ -37,6 +37,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 
 /* Role Grid */
 .tm-role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:20px;}
+.tm-role-card:last-child:nth-child(odd){grid-column:1 / -1;max-width:calc(50% - 8px);margin:0 auto;width:100%;}
 .tm-role-card{background:#fff;border:1px solid #e8ecf1;border-radius:12px;padding:20px 16px;text-align:center;transition:box-shadow .2s;}
 .tm-role-card:hover{box-shadow:0 4px 14px rgba(0,0,0,.06);}
 .tm-role-icon{width:42px;height:42px;margin:0 auto 10px;background:linear-gradient(135deg,#e8f4fd,#d6eaf8);border-radius:50%;display:flex;align-items:center;justify-content:center;}
