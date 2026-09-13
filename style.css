@@ -476,6 +476,13 @@ body {
 /* Fix: ensure <a> inside mega-menu works as flex container */
 a.mega-menu .inside,
 .mega-menu a.inside { display: flex !important; align-items: flex-start; text-decoration: none !important; width: 100%; }
-// deploy trigger Fri Aug 28 10:35:39 SLST 2026
+/*  deploy trigger Fri Aug 28 10:35:39 SLST 2026 */
 
 
+
+/* ── MOBILE BURGER — global fallback ──
+   Home ka index.css burger ko <=1201px pe dikhata hai; ye rule un pages ke
+   liye hai jo apna responsive CSS load nahi karte (career, business, contact...). */
+@media (max-width: 1201px) {
+  .nav__menu { display: flex !important; }
+}
