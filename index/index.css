@@ -305,6 +305,8 @@ body { position: relative; z-index: 1; }
 .mm-awards { text-align: center; }
 .mm-awards-badges { display: flex; flex-wrap: wrap; gap: 44px; align-items: center; justify-content: center; padding: 24px 10px 14px; margin: 0 0 44px; }
 .mm-awards-badges img { height: 130px; width: auto; object-fit: contain; transition: transform .25s ease; }
+/* SoftwareSuggest badge landscape hai + transparent padding — baaki badges ke barabar dikhne ke liye bada render karo */
+.mm-awards-badges img[src*="software-suggest"] { height: 185px; }
 .mm-awards-badges img:hover { transform: translateY(-4px); }
 .mm-chip {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
@@ -1232,6 +1234,9 @@ body { position: relative; z-index: 1; }
   }
   .mm-awards-badges img {
     height: 70px;
+  }
+  .mm-awards-badges img[src*="software-suggest"] {
+    height: 100px;
   }
   .mm-chip {
     min-width: 100px;
