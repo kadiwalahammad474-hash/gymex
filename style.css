@@ -582,3 +582,103 @@ a.mega-menu .inside,
   .nf-hero h1 { font-size: clamp(24px, 7.2vw, 32px) !important; overflow-wrap: break-word; }
   .nf-hero-grid, .nf-hero-grid > * { min-width: 0 !important; max-width: 100% !important; }
 }
+
+/* ── GLOBAL MOBILE RESCUE — inline-styled content ko responsive banana ──
+   Module pages grids/flex inline styles me hain jo media queries se
+   override nahi hote. Attribute selectors se unhe mobile pe stack karte hain. */
+@media (max-width: 760px) {
+  /* Inline GRIDs — sab single column */
+  div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns:1fr 1fr;"],
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns:repeat(2,1fr)"],
+  div[style*="grid-template-columns: repeat(2, 1fr)"],
+  div[style*="grid-template-columns:repeat(3,1fr)"],
+  div[style*="grid-template-columns: repeat(3, 1fr)"],
+  div[style*="grid-template-columns:1.15fr .85fr"],
+  div[style*="grid-template-columns:.85fr 1.15fr"],
+  div[style*="grid-template-columns:0.85fr 1.15fr"],
+  div[style*="grid-template-columns:1.15fr 0.85fr"],
+  div[style*="grid-template-columns:repeat(auto-fit, minmax(280px,1fr))"],
+  div[style*="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"],
+  div[style*="grid-template-columns:repeat(auto-fit, minmax(240px,1fr))"],
+  div[style*="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))"],
+  div[style*="grid-template-columns:repeat(auto-fit, minmax(220px,1fr))"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* 4-5 col grids — mobile pe 2 col (keeps cards readable) */
+  div[style*="grid-template-columns:repeat(4,1fr)"],
+  div[style*="grid-template-columns: repeat(4, 1fr)"],
+  div[style*="grid-template-columns:repeat(5,1fr)"],
+  div[style*="grid-template-columns:repeat(3,1fr)"],
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* Inline flex rows — wrap karo */
+  div[style*="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:nowrap"],
+  div[style*="flex-wrap:nowrap"] {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    row-gap: 10px !important;
+  }
+  /* Bade inline gaps kam karo */
+  div[style*="gap:40px"] { gap: 22px !important; }
+  div[style*="gap:32px"] { gap: 20px !important; }
+  div[style*="gap:28px"] { gap: 18px !important; }
+  div[style*="gap:24px"] { gap: 16px !important; }
+  /* Inline fixed paddings kam karo */
+  div[style*="padding:60px 24px"],
+  div[style*="padding: 60px 24px"],
+  div[style*="padding:70px 24px"],
+  div[style*="padding:80px 40px"] {
+    padding: 40px 16px !important;
+  }
+  /* Inline fixed widths / min-widths — container se bahar na jayein */
+  div[style*="min-width:110px"],
+  div[style*="min-width:140px"],
+  div[style*="min-width:160px"],
+  div[style*="width:232px"],
+  div[style*="width: 232px"],
+  div[style*="width:265px"],
+  div[style*="width: 265px"],
+  div[style*="max-width:1200px"],
+  div[style*="max-width: 1200px"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  /* Split layouts (text + image side-by-side) stack karo */
+  div[style*="display:grid"] > div,
+  div[style*="display:grid"] > img {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  /* Inline-styled flex:1.x splits stack karo */
+  div[style*="flex:1.2"], div[style*="flex: 1.2"],
+  div[style*="flex:1.4"], div[style*="flex: 1.4"],
+  div[style*="flex:0.5"], div[style*="flex: 0.5"],
+  div[style*="flex:0.6"], div[style*="flex: 0.6"] {
+    flex: 1 1 100% !important;
+  }
+  /* Tables / wide pre blocks scrollable, page nahi */
+  table, pre { max-width: 100%; overflow-x: auto; display: block; }
+}
+/* responsive table: display:block tables ko scrollable wrapper chahiye */
+.nf-table { display: block !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+.nf-tablewrap { overflow-x: auto !important; }
+/* feature pages: .nf-grid etc. inline grid-templates bhi override karo (attribute match na ho to) */
+@media (max-width: 760px) {
+  .nf-grid, .nf-two, .pm-metrics-grid, .pm-salary-grid,
+  div.nf-grid[style*="grid-template-columns"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100% !important;
+  }
+  .nf-grid > div, .nf-two > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+/* nf-grid/nf-two cards ke andar flex rows: text column shrink ho sake */
+@media (max-width: 760px) {
+  .nf-grid > div > div, .nf-two > div > div { min-width: 0 !important; max-width: 100% !important; flex: 1 1 0 !important; }
+  .nf-grid h3, .nf-grid p, .nf-two h3, .nf-two p { overflow-wrap: anywhere; }
+}
