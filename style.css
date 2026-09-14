@@ -473,7 +473,6 @@ body {
     font-size: 10.5px !important;
   }
 }
-}
 
 /* Fix: ensure <a> inside mega-menu works as flex container */
 a.mega-menu .inside,
@@ -487,4 +486,99 @@ a.mega-menu .inside,
    liye hai jo apna responsive CSS load nahi karte (career, business, contact...). */
 @media (max-width: 1201px) {
   .nav__menu { display: flex !important; }
+}
+
+/* ── MOBILE NAV — desktop list ko chhupao, burger hi rahe ──
+   .nav__list (desktop links + mega menus) <=1201px pe overflow karta tha.
+   Mobile menu panel (.menu-backdrop) har page pe pehle se hai. */
+@media (max-width: 1201px) {
+  .nav__list { display: none !important; }
+  .nav__logo-links-container { padding: 10px 14px; }
+}
+@media (max-width: 480px) {
+  .logo { width: 128px; height: 30px; }
+  .nav .button { height: 40px; padding: 0 5px 0 14px; }
+  .nav .button .button__text { font-size: 10.5px; }
+  .nav .button .button__arrow { width: 30px; height: 30px; padding: 6px; }
+}
+
+/* ── MOBILE FOOTER — inline-styled rows ko stack karo ──
+   Har page ka footer inline flex rows use karta hai (max-width:1200px),
+   mobile pe overflow karta tha. Ye unhe wrap/stack karta hai. */
+@media (max-width: 900px) {
+  div[style*="20px 24px 16px"],
+  div[style*="40px 24px 36px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+    padding: 24px 18px !important;
+  }
+  div[style*="20px 24px 16px"] > div:first-child {
+    flex-wrap: wrap !important;
+    gap: 14px 20px !important;
+  }
+  div[style*="40px 24px 36px"] > div {
+    width: 100% !important;
+    flex: none !important;
+  }
+  div[style*="40px 24px 36px"] div[style*="display:flex; gap:40px"],
+  div[style*="40px 24px 36px"] div[style*="display:flex;gap:40px"] {
+    flex-wrap: wrap !important;
+    gap: 18px !important;
+  }
+}
+
+/* ── MOBILE MM HERO/SECTIONS — grid items ka min-content overflow roko ── */
+@media (max-width: 900px) {
+  /* full-bleed 100vw trick mobile pe 14px overflow deti hai — normal width */
+  /* inline-styled heroes (sm-hero, lm-hero, mm-hero-custom...) bhi cover */
+  section[style*="calc(-50vw"], header[style*="calc(-50vw"] {
+    margin-left: 0 !important; margin-right: 0 !important; width: 100% !important;
+    padding-left: 16px !important; padding-right: 16px !important;
+  }
+  .mm-hero { margin-left: 0 !important; margin-right: 0 !important; width: 100% !important; }
+  /* inline 2-col splits (fx-split etc.) mobile pe stack */
+  .fx-split { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .fx-split > * { min-width: 0 !important; max-width: 100% !important; }
+  /* inline-styled split grids (style*="grid-template-columns:1fr 1fr") stack + min-width fix */
+  div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; gap: 28px !important; }
+  div[style*="grid-template-columns:1fr 1fr"] > * { min-width: 0 !important; max-width: 100% !important; }
+  /* inline repeat(3,1fr)/repeat(4,1fr)/repeat(2,1fr) mini-grids → 1 col mobile */
+  div[style*="repeat(3,1fr)"], div[style*="repeat(4,1fr)"], div[style*="repeat(2,1fr)"] { grid-template-columns: 1fr !important; }
+  div[style*="repeat(3,1fr)"] > *, div[style*="repeat(4,1fr)"] > *, div[style*="repeat(2,1fr)"] > * { min-width: 0 !important; max-width: 100% !important; }
+  /* inline nowrap flex rows (step pills etc.) → wrap */
+  div[style*="flex-wrap:nowrap"] { flex-wrap: wrap !important; }
+  div[style*="flex-wrap: nowrap"] { flex-wrap: wrap !important; }
+  /* metric/feature cards: bada number chhoti track ko force na kare */
+  .pm-metric, .mm-stat { min-width: 0 !important; overflow-wrap: break-word; }
+  .pm-metric-num { font-size: 32px !important; }
+  .pm-metrics-grid, .pm-salary-grid, .nf-grid, .nf-two { min-width: 0 !important; }
+  .pm-metrics-grid > *, .pm-salary-grid > *, .nf-grid > *, .nf-two > * { min-width: 0 !important; }
+  /* bade hero headings (42px) me lamba word (MANAGEMENT) overflow karta tha */
+  .sm-hero h1, .nf-hero h1, .mm-hero .mm-h1 { overflow-wrap: break-word; min-width: 0 !important; max-width: 100% !important; }
+  .sm-hero h1 { font-size: clamp(26px, 7.5vw, 42px) !important; }
+  .sm-hero-grid, .em-split { min-width: 0 !important; }
+  .sm-hero-grid > *, .em-split > * { min-width: 0 !important; max-width: 100% !important; }
+  .mm-hero-grid > * { min-width: 0; }
+  .mm-hero-img, .mm-hero-grid img { max-width: 100%; height: auto; }
+  .mm-feature-grid { grid-template-columns: 1fr !important; }
+  .mm-type-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .mm-awards-stats { grid-template-columns: repeat(2, 1fr) !important; row-gap: 28px; }
+  .mm-benefits, .mm-benefits.reverse { grid-template-columns: 1fr !important; }
+  .mm-section { padding-left: 16px !important; padding-right: 16px !important; }
+  .mm-section.grey { margin-left: 0 !important; margin-right: 0 !important; width: 100% !important; }
+  .mm-heading h2 { font-size: 24px !important; }
+  .mm-hero { padding: 20px 16px !important; }
+  .mm-hero .mm-h1 { font-size: 26px !important; }
+  .testi-card { max-width: 88vw; }
+  .testi-track-wrapper { overflow-x: hidden; }
+}
+@media (max-width: 480px) {
+  .mm-type-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .mm-awards-stats { padding: 24px 12px !important; }
+  .mm-stat h3 { font-size: 22px !important; }
+  .clients-track img { height: 52px !important; }
+  /* new-feature pages: hero heading ka longest word (COMMUNICATION) chhoti screen pe overflow karta tha */
+  .nf-hero h1 { font-size: clamp(24px, 7.2vw, 32px) !important; overflow-wrap: break-word; }
+  .nf-hero-grid, .nf-hero-grid > * { min-width: 0 !important; max-width: 100% !important; }
 }
