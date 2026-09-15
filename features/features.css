@@ -648,7 +648,7 @@ h1,h2,h3,h4,h5,h6 {
   transition: background .2s ease;
 }
 .features-mega .inside:hover { background: #f2f7ff; }
-.features-mega .inside > div { flex: 1; min-width: 0; }
+.features-mega .inside > div:last-child { flex: 1; min-width: 0; }
 
 .features-mega .mega-icon {
   width: 40px;
