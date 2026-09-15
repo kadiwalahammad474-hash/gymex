@@ -68,6 +68,22 @@
 }
 
 /* Responsive */
+/* Small laptop (1024-1280px): grids tighten, side padding kam — images auto-fit rahengi */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  section > div[style*="grid-template-columns: 1fr 1fr"],
+  section > div[style*="grid-template-columns:1fr 1fr"] {
+    gap: 28px !important;
+  }
+  section > div[style*="max-width:1200px"] {
+    max-width: 1080px !important;
+  }
+}
+/* Large desktop (1500px+): content center me comfortable, images crisp scale */
+@media (min-width: 1500px) {
+  section > div[style*="max-width:1200px"] {
+    max-width: 1320px !important;
+  }
+}
 @media (max-width: 768px) {
   .nav__list { display: none; }
   .menu-btn { display: block; }
