@@ -754,19 +754,19 @@ body::after { content: none !important; display: none !important; }
 .mk-banner-note { color: rgba(255,255,255,.85); font-size: 14.5px; line-height: 1.8; max-width: 700px; margin: 0 auto; }
 
 /* ── CTA ── */
-.mk-cta { background: #0b3b5c; position: relative; overflow: hidden; }
-.mk-cta::before {
-  content: ""; position: absolute; right: -100px; top: -100px;
-  width: 320px; height: 320px; border-radius: 50%;
-  background: rgba(2,142,206,.15);
+.mk-cta { background: #fff; position: relative; overflow: hidden; }
+.mk-cta-wrap {
+  text-align: center; position: relative; z-index: 1;
+  background: #f8fafd; border: 1px solid #e8edf5; border-radius: 20px;
+  padding: 50px 30px; max-width: 900px; margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(16,40,100,.08);
 }
-.mk-cta-wrap { text-align: center; position: relative; z-index: 1; }
 .mk-cta-wrap h2 {
-  font-size: clamp(24px, 2.8vw, 32px); font-weight: 800; color: #fff;
+  font-size: clamp(24px, 2.8vw, 32px); font-weight: 800; color: #111;
   margin-bottom: 14px; text-transform: none;
 }
-.mk-cta-accent { color: #5ec7f5; }
-.mk-cta-wrap > p { color: rgba(255,255,255,.85); font-size: 15.5px; margin-bottom: 30px; }
+.mk-cta-accent { color: #028ece; }
+.mk-cta-wrap > p { color: #555; font-size: 15.5px; margin-bottom: 30px; }
 .mk-cta-btn { font-size: 16px; }
 
 /* ── FAQ ── */
