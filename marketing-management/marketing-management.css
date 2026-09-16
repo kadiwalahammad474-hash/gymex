@@ -803,3 +803,8 @@ body::after { content: none !important; display: none !important; }
   .mk-flow-step { min-width: 100%; }
   .mk-check { padding: 12px 14px; }
 }
+
+.mk-checks-3 { grid-template-columns: 1fr 1fr; }
+@media (max-width: 600px) {
+  .mk-checks-3 { grid-template-columns: 1fr; }
+}
