@@ -19,14 +19,11 @@
 <link rel="stylesheet" href="../style.css?v=19">
 <link rel="stylesheet" href="../new-feature-common.css?v=4">
 <style>
-/* 5th (odd) card full-width banner — icon + text center me, compact */
+/* 5 cards ek hi row me — global odd-centering rule ko neutralize karo */
 .nf-grid > div:last-child:nth-child(odd) {
-  grid-column: 1 / -1 !important;
-  max-width: 100% !important;
-  width: 100% !important;
-}
-@media (max-width: 991px) {
-  .nf-grid > div:last-child:nth-child(odd) { grid-column: auto !important; }
+  grid-column: auto;
+  max-width: none;
+  margin: 0;
 }
 </style>
 <script src="../javascript.js?v=2"></script>
@@ -346,7 +343,7 @@
 <div style="max-width:1200px; margin:0 auto;">
 <h2 style="font-size:clamp(28px,3.2vw,38px); font-weight:800; color:#111; text-align:center; margin-bottom:10px; text-transform:uppercase;">Explore <span style="color:#028ece;">Gymex Integrations</span></h2>
 <p style="font-size:16px; color:#555; line-height:1.8; max-width:800px; margin:0 auto 36px; text-align:center;">A quick overview of everything Gymex can connect with.</p>
-<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; max-width:1150px; margin:0 auto;" class="nf-grid">
+<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px; max-width:1150px; margin:0 auto;" class="nf-grid">
 <div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; display:flex; align-items:flex-start; gap:14px;">
 <div style="width:40px; height:40px; background:#e8f0fe; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fa fa-credit-card" style="color:#1565C0; font-size:16px;"></i></div>
 <div><h3 style="font-size:15px; font-weight:700; color:#111; margin-bottom:6px;">Payment</h3><p style="font-size:13px; color:#666; margin:0; line-height:1.6;">PayPal, Stripe, MyFatoorah, HyperPay, PayTabs, Checkout.com, Telr & more</p></div></div>
@@ -359,7 +356,7 @@
 <div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; display:flex; align-items:flex-start; gap:14px;">
 <div style="width:40px; height:40px; background:#e8f0fe; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fa fa-calendar-days" style="color:#1565C0; font-size:16px;"></i></div>
 <div><h3 style="font-size:15px; font-weight:700; color:#111; margin-bottom:6px;">Calendar & Virtual</h3><p style="font-size:13px; color:#666; margin:0; line-height:1.6;">Google Calendar and Zoom integrations</p></div></div>
-<div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:18px 24px; display:flex; align-items:center; justify-content:center; gap:14px;">
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; display:flex; align-items:flex-start; gap:14px;">
 <div style="width:40px; height:40px; background:#e8f0fe; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fa fa-phone-volume" style="color:#1565C0; font-size:16px;"></i></div>
 <div><h3 style="font-size:15px; font-weight:700; color:#111; margin-bottom:6px;">Communication</h3><p style="font-size:13px; color:#666; margin:0; line-height:1.6;">CallerDesk calling integration</p></div></div>
 </div>
