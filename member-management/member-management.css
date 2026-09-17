@@ -572,7 +572,9 @@ h1,h2,h3,h4,h5,h6 { font-size: inherit; font-weight: inherit; margin: 0; }
    where center-crop shows the empty middle of the image. A light veil plus
    a solid text card keeps the copy readable over the busy photo. */
 @media (max-width: 768px) {
-  .sm-hero {
+  /* Sirf member-management page pe (attribute selector) — warna ye
+     override doosre sm-hero pages ke apne hero images ko maar deta tha */
+  .sm-hero[style*="member-management-hero"] {
     background-image:
       linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.15) 60%, rgba(255,255,255,0)),
       url("../assets/member-management-hero.png") !important;
