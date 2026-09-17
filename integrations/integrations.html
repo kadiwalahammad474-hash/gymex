@@ -19,12 +19,14 @@
 <link rel="stylesheet" href="../style.css?v=19">
 <link rel="stylesheet" href="../new-feature-common.css?v=4">
 <style>
-/* 5th (odd) card ko columns 2-3 pe center karo — upar wale 4 cards ke edges se align */
-@media (min-width: 992px) {
-  .nf-grid > div:last-child:nth-child(odd) {
-    grid-column: 2 / 4;
-    max-width: none;
-  }
+/* 5th (odd) card full-width banner — icon + text center me, compact */
+.nf-grid > div:last-child:nth-child(odd) {
+  grid-column: 1 / -1 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+@media (max-width: 991px) {
+  .nf-grid > div:last-child:nth-child(odd) { grid-column: auto !important; }
 }
 </style>
 <script src="../javascript.js?v=2"></script>
@@ -357,7 +359,7 @@
 <div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; display:flex; align-items:flex-start; gap:14px;">
 <div style="width:40px; height:40px; background:#e8f0fe; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fa fa-calendar-days" style="color:#1565C0; font-size:16px;"></i></div>
 <div><h3 style="font-size:15px; font-weight:700; color:#111; margin-bottom:6px;">Calendar & Virtual</h3><p style="font-size:13px; color:#666; margin:0; line-height:1.6;">Google Calendar and Zoom integrations</p></div></div>
-<div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:22px; display:flex; align-items:flex-start; gap:14px;">
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:18px 24px; display:flex; align-items:center; justify-content:center; gap:14px;">
 <div style="width:40px; height:40px; background:#e8f0fe; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fa fa-phone-volume" style="color:#1565C0; font-size:16px;"></i></div>
 <div><h3 style="font-size:15px; font-weight:700; color:#111; margin-bottom:6px;">Communication</h3><p style="font-size:13px; color:#666; margin:0; line-height:1.6;">CallerDesk calling integration</p></div></div>
 </div>
