@@ -19,6 +19,17 @@
 <link rel="stylesheet" href="../style.css?v=19">
 <link rel="stylesheet" href="staff-management.css">
 <script src="../javascript.js?v=2"></script>
+<style>
+/* Why Choose Gymex card grid (task-management style) */
+.wcx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.wcx-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:26px 22px;text-align:center;box-shadow:0 4px 14px rgba(21,101,192,.05);}
+.wcx-icon{width:38px;height:38px;background:linear-gradient(135deg,#028ece,#1565C0);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 6px 14px rgba(2,142,206,.25);}
+.wcx-icon i{color:#fff;font-size:15px;}
+.wcx-card h5{font-size:15px;font-weight:700;color:#111;margin:0 0 8px;}
+.wcx-card p{font-size:13px;color:#666;line-height:1.7;margin:0;}
+@media (max-width:1000px){.wcx-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.wcx-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPCRHTFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -465,22 +476,19 @@
 </section>
 
 <!-- WHY CHOOSE -->
-<section class="sm-section">
-<div class="sm-wrap">
-<div class="sm-heading">
-<h2>Why Choose Gymex for <span class="accent">Staff Management?</span></h2>
-<p>Gymex is more than a basic staff database. It connects staff management with the wider gym management process, allowing you to manage your team alongside memberships, attendance, billing, trainers, payroll, and reporting.</p>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto;">
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-database" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Centralize Staff Info</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-shield" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Roles &amp; Permissions</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-calendar" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Organize Schedules</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-user" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Manage Trainers</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-clock" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Track Attendance</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-money-bill" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Payroll &amp; Commissions</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-bar-chart" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Monitor Performance</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-bolt" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Reduce Admin Work</p></div>
-<div style="background:#f8f9fc;border-radius:12px;padding:20px;text-align:center;"><i class="fa fa-link" style="font-size:28px;color:var(--blue,#028ece);margin-bottom:12px;display:block;"></i><p style="font-size:14px;font-weight:600;">Connected Operations</p></div>
+<section class="wcx-section" style="padding:70px 24px; background:#f8f9fc;">
+<div style="max-width:1240px; margin:0 auto;">
+<h2 style="font-size:32px;font-weight:800;color:#111;text-align:center;margin-bottom:14px;">Why Choose Gymex for <span class="accent">Staff Management?</span></h2>
+<p style="font-size:15.5px;color:#555;line-height:1.8;max-width:820px;margin:0 auto 36px;text-align:center;">Gymex is more than a basic staff database. It connects staff management with the wider gym management process, allowing you to manage your team alongside memberships, attendance, billing, trainers, payroll, and reporting.</p><div class="wcx-grid">
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Centralize Staff Info</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Roles &amp; Permissions</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Organize Schedules</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Manage Trainers</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Track Attendance</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Payroll &amp; Commissions</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Monitor Performance</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Reduce Admin Work</h5></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Connected Operations</h5></div>
 </div>
 </div>
 </section>

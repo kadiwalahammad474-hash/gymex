@@ -51,6 +51,17 @@
   ]
 }
 </script>
+<style>
+/* Why Choose Gymex card grid (task-management style) */
+.wcx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.wcx-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:26px 22px;text-align:center;box-shadow:0 4px 14px rgba(21,101,192,.05);}
+.wcx-icon{width:38px;height:38px;background:linear-gradient(135deg,#028ece,#1565C0);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 6px 14px rgba(2,142,206,.25);}
+.wcx-icon i{color:#fff;font-size:15px;}
+.wcx-card h5{font-size:15px;font-weight:700;color:#111;margin:0 0 8px;}
+.wcx-card p{font-size:13px;color:#666;line-height:1.7;margin:0;}
+@media (max-width:1000px){.wcx-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.wcx-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
 
@@ -472,53 +483,20 @@
 </section>
 
 <!-- WHY GYMEX SECTION -->
-<section class="em-section em-bg-white">
-  <div class="em-container">
-    <h2 class="em-h2 em-text-center">Why Choose Gymex for <span style="color:#028ece;">Expense Management?</span></h2>
-    <p class="em-text em-text-center em-mb-32">Expense tracking shouldn't exist separately from the rest of your gym operations. Gymex brings gym expense management into the same connected platform you use to manage other areas of your fitness business.</p>
-    <div class="em-benefit-grid">
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Track Everyday Expenses</h5>
-        <p>Maintain day-to-day operational expense records.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Organize Business Costs</h5>
-        <p>Keep different types of expenses structured and accessible.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Categorize Spending</h5>
-        <p>Understand where your business money is being used.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Maintain Expense History</h5>
-        <p>Keep previous expense information easier to find and review.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Monitor Operational Costs</h5>
-        <p>Get clearer visibility into the costs involved in running your gym.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Manage Branch Expenses</h5>
-        <p>Keep location-related expense information organized.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Review Expense Information</h5>
-        <p>Use your records to better understand business spending.</p>
-      </div>
-      <div class="em-benefit-card">
-        <div class="em-benefit-icon"><i class="fa fa-check-circle"></i></div>
-        <h5>Reduce Spreadsheet Dependency</h5>
-        <p>Keep expense management connected with your wider gym operations.</p>
-      </div>
-    </div>
-  </div>
+<section class="wcx-section" style="padding:70px 24px; background:#f8f9fc;">
+<div style="max-width:1240px; margin:0 auto;">
+<h2 style="font-size:32px;font-weight:800;color:#111;text-align:center;margin-bottom:14px;">Why Choose Gymex for <span style="color:#028ece;">Expense Management?</span></h2>
+<p style="font-size:15.5px;color:#555;line-height:1.8;max-width:820px;margin:0 auto 36px;text-align:center;">Expense tracking shouldn't exist separately from the rest of your gym operations. Gymex brings gym expense management into the same connected platform you use to manage other areas of your fitness business.</p><div class="wcx-grid">
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Track Everyday Expenses</h5><p>Maintain day-to-day operational expense records.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Organize Business Costs</h5><p>Keep different types of expenses structured and accessible.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Categorize Spending</h5><p>Understand where your business money is being used.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Maintain Expense History</h5><p>Keep previous expense information easier to find and review.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Monitor Operational Costs</h5><p>Get clearer visibility into the costs involved in running your gym.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Manage Branch Expenses</h5><p>Keep location-related expense information organized.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Review Expense Information</h5><p>Use your records to better understand business spending.</p></div>
+<div class="wcx-card"><span class="wcx-icon"><i class="fa fa-check"></i></span><h5>Reduce Spreadsheet Dependency</h5><p>Keep expense management connected with your wider gym operations.</p></div>
+</div>
+</div>
 </section>
 
 <!-- CTA SECTION -->
