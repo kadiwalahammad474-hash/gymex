@@ -44,6 +44,12 @@
   }
 }
 </style>
+<style>
+/* WhatsApp benefit cards grid */
+.wax-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+@media (max-width:1000px){.wax-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.wax-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
 
@@ -275,33 +281,29 @@
 </div>
 </section>
 
-<section style="padding:60px 24px; background:#fff;">
-<div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;" class="nf-split">
-
-<div>
-<h2 style="font-size:clamp(28px,3.2vw,38px); font-weight:800; color:#111;  margin-bottom:10px; text-transform:uppercase;">Keep Members Updated About <span style="color:#028ece;">Classes & Facility Bookings</span></h2>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:20px;">Member communication goes beyond memberships and payments. Gymex can automatically send relevant WhatsApp notifications for class updates and facility bookings, helping members stay informed about activities they have booked or use regularly.</p>
-
-<div style="display:grid; grid-template-columns:1fr; gap:14px;" class="nf-two"><div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f0fdf4; border-radius:10px;"><i class="fa fa-check-circle" style="color:#22c55e; font-size:16px;"></i><span style="font-size:14px; color:#333;">Class update notifications</span></div>
-<div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f0fdf4; border-radius:10px;"><i class="fa fa-check-circle" style="color:#22c55e; font-size:16px;"></i><span style="font-size:14px; color:#333;">Facility booking updates</span></div>
-<div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f0fdf4; border-radius:10px;"><i class="fa fa-check-circle" style="color:#22c55e; font-size:16px;"></i><span style="font-size:14px; color:#333;">Reduced manual communication</span></div>
-<div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f0fdf4; border-radius:10px;"><i class="fa fa-check-circle" style="color:#22c55e; font-size:16px;"></i><span style="font-size:14px; color:#333;">Smoother member experience</span></div></div>
+<section style="padding:70px 24px; background:#fff;">
+<div style="max-width:1240px; margin:0 auto;">
+<h2 style="font-size:32px; font-weight:800; color:#111; text-align:center; margin-bottom:14px;">Keep Members Updated About <span style="color:#028ece;">Classes & Facility Bookings</span></h2>
+<p style="font-size:15.5px; color:#555; line-height:1.8; max-width:820px; margin:0 auto 36px; text-align:center;">Member communication goes beyond memberships and payments. Gymex can automatically send relevant WhatsApp notifications for class updates and facility bookings, helping members stay informed about activities they have booked or use regularly.</p>
+<div class="wax-grid">
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Class update notifications</p></div>
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Facility booking updates</p></div>
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Reduced manual communication</p></div>
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Smoother member experience</p></div>
 </div>
 </div>
 </section>
 
-<section style="padding:60px 24px; background:#f8f9fc;">
-<div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;" class="nf-split">
-<div>
-<h2 style="font-size:clamp(28px,3.2vw,38px); font-weight:800; color:#111;  margin-bottom:10px; text-transform:uppercase;">Send Updates for <span style="color:#028ece;">Gift Vouchers & Wallet Transactions</span></h2>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:20px;">Gymex WhatsApp automation also extends to other member transactions. Relevant notifications can be sent for gift vouchers and wallet transactions, keeping members informed when these activities take place.</p>
-
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;" class="nf-two"><div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f8f9fc; border-radius:10px;"><i class="fa fa-check-circle" style="color:#1565C0; font-size:16px;"></i><span style="font-size:14px; color:#333;">Gift voucher notifications</span></div>
-<div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f8f9fc; border-radius:10px;"><i class="fa fa-check-circle" style="color:#1565C0; font-size:16px;"></i><span style="font-size:14px; color:#333;">Wallet transaction updates</span></div>
-<div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f8f9fc; border-radius:10px;"><i class="fa fa-check-circle" style="color:#1565C0; font-size:16px;"></i><span style="font-size:14px; color:#333;">Transactional activity connected</span></div>
-<div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#f8f9fc; border-radius:10px;"><i class="fa fa-check-circle" style="color:#1565C0; font-size:16px;"></i><span style="font-size:14px; color:#333;">Clearer member communication</span></div></div>
+<section style="padding:70px 24px; background:#f8f9fc;">
+<div style="max-width:1240px; margin:0 auto;">
+<h2 style="font-size:32px; font-weight:800; color:#111; text-align:center; margin-bottom:14px;">Send Updates for <span style="color:#028ece;">Gift Vouchers & Wallet Transactions</span></h2>
+<p style="font-size:15.5px; color:#555; line-height:1.8; max-width:820px; margin:0 auto 36px; text-align:center;">Gymex WhatsApp automation also extends to other member transactions. Relevant notifications can be sent for gift vouchers and wallet transactions, keeping members informed when these activities take place.</p>
+<div class="wax-grid">
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Gift voucher notifications</p></div>
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Wallet transaction updates</p></div>
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Transactional activity connected</p></div>
+<div style="background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:26px 20px; text-align:center; box-shadow:0 4px 14px rgba(21,101,192,.06);"><i class="fa fa-check-circle" style="font-size:26px; color:#028ece; margin-bottom:12px; display:block;"></i><p style="font-size:14px; font-weight:700; color:#111; line-height:1.6; margin:0;">Clearer member communication</p></div>
 </div>
-
 </div>
 </section>
 
