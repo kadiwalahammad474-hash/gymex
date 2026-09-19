@@ -14,6 +14,20 @@
 <link rel="stylesheet" href="../style.css?v=19">
 <link rel="stylesheet" href="payroll-commission.css?v=2">
 <script src="../javascript.js?v=2"></script>
+<style>
+/* Hero photo pe text readable — mobile pe stronger white veil */
+@media (max-width: 767px) {
+  .sm-hero {
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.94) 55%, rgba(255,255,255,.82) 78%, rgba(255,255,255,.55) 100%),
+      linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,255,255,.92) 96%, #ffffff 100%),
+      url('../assets/payroll-hero.webp') !important;
+    background-size: auto, auto, cover !important;
+    background-position: center, center, center right !important;
+    background-repeat: no-repeat !important;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -187,7 +201,7 @@
       </nav>
 
 <!-- HERO (home style) -->
-<section class="sm-hero" style="position:relative;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw;padding:40px calc(50vw - 50% + 40px) 60px;background:url(../assets/gymex-fitness-hub-hero-2273x743.png) center top/100% auto no-repeat var(--BG,#f5f7fb);border-radius:0;">
+<section class="sm-hero" style="position:relative;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw;min-height:min(46vw,540px);display:flex;align-items:center;padding:48px calc(50vw - 50% + 40px) 56px;background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.78) 32%,rgba(255,255,255,.12) 60%,rgba(255,255,255,0) 76%),linear-gradient(180deg,rgba(255,255,255,0) 80%,rgba(255,255,255,.9) 96%,#ffffff 100%),url('../assets/payroll-hero.webp') center right/cover no-repeat #ffffff;border-radius:0;">
 <div class="sm-hero-grid" style="position:relative;z-index:1;">
 <div>
 <div class="sm-label">GYM PAYROLL SOFTWARE</div>

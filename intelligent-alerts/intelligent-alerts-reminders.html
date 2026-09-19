@@ -20,6 +20,20 @@
 .sm-faq-item p { padding: 16px 20px; font-size: 14px; color: #555; line-height: 1.8; margin: 0; background: #fff; border: 1px solid #e5e7eb; border-top: 0; border-radius: 0 0 10px 10px; }
 </style>
 
+<style>
+/* Hero photo pe text readable — mobile pe stronger white veil */
+@media (max-width: 767px) {
+  .nf-hero {
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.94) 55%, rgba(255,255,255,.82) 78%, rgba(255,255,255,.55) 100%),
+      linear-gradient(180deg, rgba(255,255,255,0) 78%, rgba(255,255,255,.92) 96%, #ffffff 100%),
+      url('../assets/alerts-hero.webp') !important;
+    background-size: auto, auto, cover !important;
+    background-position: center, center, center right !important;
+    background-repeat: no-repeat !important;
+  }
+}
+</style>
 </head>
 <body>
 <nav class="nav" id="nav">
@@ -194,7 +208,7 @@
 <div class="sm">
 
 <!-- HERO -->
-<section style="position:relative;padding:60px 24px 40px;background:radial-gradient(700px 460px at 88% -10%,rgba(2,142,206,.16),transparent 65%),radial-gradient(560px 420px at -8% 30%,rgba(254,79,13,.10),transparent 65%),radial-gradient(500px 380px at 55% 90%,rgba(2,142,206,.08),transparent 70%),#f5f7fb;overflow:visible;">
+<section style="position:relative;padding:48px 24px 56px;min-height:min(46vw,540px);display:flex;align-items:center;background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.78) 32%,rgba(255,255,255,.12) 60%,rgba(255,255,255,0) 76%),linear-gradient(180deg,rgba(255,255,255,0) 80%,rgba(255,255,255,.9) 96%,#ffffff 100%),url('../assets/alerts-hero.webp') center right/cover no-repeat #ffffff;" class="nf-hero">
 <div style="width:100%;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
 <div>
 <div style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#028ece;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;"><span style="width:10px;height:10px;border-radius:50%;background:#ff4f0d;"></span>GYM ALERTS & REMINDER SOFTWARE</div>
@@ -202,11 +216,6 @@
 <p style="color:#6b7589;font-size:15.5px;line-height:1.7;max-width:480px;margin:0 0 26px;">Send timely personalized alerts, reminders, and automated follow-ups with Gymex. Keep members informed about renewals, payments, appointments, classes, and other important updates from one connected platform.</p>
 <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px;">
 <button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
-</div>
-</div>
-<div>
-<div style="background:linear-gradient(135deg,#e8f0fe,#dbe8ff);border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:center;min-height:320px;">
-<div style="text-align:center;"><i class="fa fa-shield" style="font-size:80px;color:#028ece;opacity:0.3;"></i></div>
 </div>
 </div>
 </div>
