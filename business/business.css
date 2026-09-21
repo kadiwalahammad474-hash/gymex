@@ -22,7 +22,7 @@
 }
 .mm-h1 .accent { color: var(--blue); }
 .mm-desc {
-  color: var(--gray-100); font-size: 15.5px; line-height: 1.7;
+  color: var(--gray-100); font-size: 14px; line-height: 1.7;
   max-width: 480px; margin-bottom: 20px;
 }
 .mm-hero-img {
@@ -43,7 +43,7 @@
   content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
   margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
 }
-.mm-heading p { color: var(--gray-100); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: var(--gray-100); font-size: 14px; line-height: 1.7; }
 
 /* ---------------------------------------------------------
    BUSINESS TYPE GRID
@@ -99,7 +99,7 @@
 }
 .mm-cta-banner h2 {
   position: relative; z-index: 1; color: #fff;
-  font-size: clamp(20px, 2.4vw, 26px); font-weight: 800;
+  font-size: clamp(28px, 3.2vw, 38px); font-weight: 800;
   margin-bottom: 26px; line-height: 1.4;
 }
 .mm-cta-banner .mm-btn { position: relative; z-index: 1; }

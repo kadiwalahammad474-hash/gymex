@@ -55,7 +55,7 @@
 .feature-hero h1 .accent { color: var(--blue, #028ece); }
 .feature-hero p.sm-desc {
   color: var(--gray-80, #6b7589);
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.7;
   max-width: 480px;
   margin-bottom: 26px;
@@ -96,7 +96,7 @@
   text-transform: uppercase;
 }
 .feature-heading h2 .accent { color: var(--blue, #028ece); }
-.feature-heading p { color: var(--gray-80, #6b7589); font-size: 15px; line-height: 1.7; }
+.feature-heading p { color: var(--gray-80, #6b7589); font-size: 14px; line-height: 1.7; }
 .feature-heading .sm-underline { width: 46px; height: 4px; background: var(--blue, #028ece); border-radius: 4px; margin: 8px auto 0; }
 
 /* ── Feature Rows (alternating text + image) ── */
@@ -130,7 +130,7 @@
 .feature-content h2 .accent { color: var(--blue, #028ece); }
 .feature-content p {
   color: var(--gray-80, #6b7589);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 12px;
 }
@@ -218,7 +218,7 @@
 }
 .feature-cta p {
   color: rgba(255,255,255,.8);
-  font-size: 16px;
+  font-size: 14px;
   margin: 0 0 28px;
   line-height: 1.7;
 }

@@ -18,7 +18,7 @@
   margin-bottom: 14px; color: var(--gray-100);
 }
 .mm-desc {
-  color: var(--gray-80); font-size: 15.5px; line-height: 1.75;
+  color: var(--gray-80); font-size: 14px; line-height: 1.75;
   margin-bottom: 24px;
 }
 
@@ -104,7 +104,7 @@
   font-size: clamp(28px, 3.2vw, 38px); font-weight: 800;
   letter-spacing: -0.01em; margin-bottom: 10px;
 }
-.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: var(--gray-80); font-size: 14px; line-height: 1.7; }
 
 /* ── JOB CARDS ── */
 .career-jobs { max-width: 1000px; margin: 0 auto; }
@@ -137,7 +137,7 @@
   color: var(--blue); margin: 0 0 4px;
 }
 .gx-job-desc {
-  font-size: 13.5px; color: #666;
+  font-size: 14px; color: #666;
   line-height: 1.6; margin: 0;
 }
 .gx-career-meta { flex-shrink: 0;
@@ -177,7 +177,7 @@
   max-width: 1000px; margin: 0 auto 50px;
 }
 .mm-cta-banner h2 {
-  color: #fff; font-size: 22px; font-weight: 700;
+  color: #fff; font-size: clamp(28px, 3.2vw, 38px); font-weight: 700;
   margin-bottom: 22px; text-transform: uppercase;
 }
 .mm-cta-banner .accent { color: #7fb0ff; }

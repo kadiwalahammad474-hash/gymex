@@ -201,7 +201,7 @@ body { position: relative; z-index: 1; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; }
-.mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
+.mm-desc { color: var(--gray-80); font-size: 14px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
 .mm-hero-cta { margin: 14px 0 28px; }
 .mm-hero-tags { display: flex; gap: 38px; flex-wrap: wrap; }
 .mm-hero-tags span { font-size: 13.5px; font-weight: 500; color: var(--gray-80); display: inline-flex; align-items: center; }
@@ -220,7 +220,7 @@ body { position: relative; z-index: 1; }
 .mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0; padding: 70px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 44px; }
 .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
-.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: var(--gray-80); font-size: 14px; line-height: 1.7; }
 .mm-eyebrow { color: var(--blue); font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
 
 /* ---------- BUSINESS TYPE GRID ---------- */
@@ -330,7 +330,7 @@ body { position: relative; z-index: 1; }
 .mm-stat + .mm-stat::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: #dbe4f7; }
 .mm-stat i { font-size: 20px; color: var(--blue); margin-bottom: 10px; display: block; }
 .mm-stat h3 { font-size: 30px; font-weight: 800; color: var(--gray-100); margin-bottom: 6px; }
-.mm-stat p { font-size: 13px; color: var(--gray-80); font-weight: 500; }
+.mm-stat p { font-size: 14px; color: var(--gray-80); font-weight: 500; }
 .mm-awards-clients-label { font-size: 14px; color: var(--gray-80); margin-bottom: 22px; font-weight: 500; text-align: center; }
 .mm-awards-clients { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; }
 .mm-awards-clients img { height: 92px; width: auto; object-fit: contain; filter: grayscale(25%); opacity: .85; transition: all .25s ease; }
@@ -870,7 +870,7 @@ body { position: relative; z-index: 1; }
 }
 .mm-features-item p {
   color: rgba(255,255,255,.55);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.55;
   margin: 0;
 }
@@ -1049,7 +1049,7 @@ body { position: relative; z-index: 1; }
     line-height: 1.25;
   }
   .mm-desc {
-    font-size: 13px;
+    font-size: 14px;
   }
   .mm-hero-tags {
     gap: 12px;
@@ -1063,7 +1063,7 @@ body { position: relative; z-index: 1; }
 @media (max-width: 900px) {
   .mm-section { padding: 30px 16px; }
   .mm-heading h2 {
-    font-size: 24px;
+    font-size: clamp(28px, 3.2vw, 38px);
     margin-bottom: 8px;
   }
   .mm-heading p {
@@ -1112,7 +1112,7 @@ body { position: relative; z-index: 1; }
     margin-bottom: 6px;
   }
   .mm-feature-card p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.55;
   }
   .mm-feature-icon {
@@ -1141,7 +1141,7 @@ body { position: relative; z-index: 1; }
     padding: 24px 12px;
   }
   .mm-heading h2 {
-    font-size: 22px;
+    font-size: clamp(28px, 3.2vw, 38px);
   }
 }
 
@@ -1201,7 +1201,7 @@ body { position: relative; z-index: 1; }
     margin-bottom: 4px;
   }
   .mm-spotlight-item p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.55;
   }
 }
@@ -1250,7 +1250,7 @@ body { position: relative; z-index: 1; }
   }
   .mm-stat { padding: 8px; }
   .mm-stat h3 { font-size: 22px; }
-  .mm-stat p { font-size: 11px; }
+  .mm-stat p { font-size: 14px; }
   .mm-stat + .mm-stat::before { display: none; }
   .mm-awards-clients {
     gap: 20px;
@@ -1381,7 +1381,7 @@ body { position: relative; z-index: 1; }
     font-size: 22px;
   }
   .mm-heading h2 {
-    font-size: 20px;
+    font-size: clamp(28px, 3.2vw, 38px);
   }
   .section-title {
     font-size: 24px;
@@ -1438,7 +1438,7 @@ body { position: relative; z-index: 1; }
 }
 .testi-heading p {
   color: var(--gray-80);
-  font-size: 15px;
+  font-size: 14px;
 }
 .testi-track-wrapper {
   overflow: hidden;

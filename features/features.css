@@ -601,7 +601,7 @@ h1,h2,h3,h4,h5,h6 {
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
 .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
-.mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
+.mm-desc { color: var(--gray-80); font-size: 14px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ---------- SECTIONS ---------- */
@@ -609,14 +609,14 @@ h1,h2,h3,h4,h5,h6 {
 .mm-section.grey { max-width: none; background: var(--gray-7); border-radius: 0; margin: 0; padding: 70px 40px; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 40px; }
 .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase; }
-.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: var(--gray-80); font-size: 14px; line-height: 1.7; }
 
 /* ---------- FEATURE GRID ---------- */
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .mm-feature-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
 .mm-feature-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; }
 .mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
-.mm-feature-card p { font-size: 13.5px; color: #1c2436; line-height: 1.65; }
+.mm-feature-card p { font-size: 14px; color: #1c2436; line-height: 1.65; }
 
 /* ---------- FEATURES MEGA MENU (light theme, matches reference screenshot) ---------- */
 .features-mega {
@@ -683,7 +683,7 @@ h1,h2,h3,h4,h5,h6 {
 .features-mega .inside .text1:hover { color: #028ECE; }
 
 .features-mega .mega-desc {
-  font-size: 12.5px;
+  font-size: 14px;
   color: #6b7690;
   line-height: 1.5;
   margin: 0;
@@ -709,11 +709,11 @@ h1,h2,h3,h4,h5,h6 {
 .mm-faq-item summary::-webkit-details-marker { display: none; }
 .mm-faq-item summary::after { content: "+"; font-size: 20px; color: #1c2436; margin-left: 12px; }
 .mm-faq-item[open] summary::after { content: "\2212"; }
-.mm-faq-item p { margin-top: 70px; font-size: 13.5px; color: #1c2436; line-height: 1.6; }
+.mm-faq-item p { margin-top: 70px; font-size: 14px; color: #1c2436; line-height: 1.6; }
 
 /* ---------- CTA BANNER ---------- */
 .mm-cta-banner { text-align: center; background: linear-gradient(160deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 52px 40px; max-width: 1250px; margin: 0 auto 50px; }
-.mm-cta-banner h2 { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 22px; text-transform: uppercase; }
+.mm-cta-banner h2 { color: #fff; font-size: clamp(28px, 3.2vw, 38px); font-weight: 700; margin-bottom: 22px; text-transform: uppercase; }
 .mm-cta-banner .accent { color: #7fb0ff; }
 
 /* ---------- RESPONSIVE ---------- */
@@ -781,7 +781,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .mm-features-item p {
   color: rgba(255,255,255,.55);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.55;
   margin: 0;
 }
@@ -920,7 +920,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 @media (max-width: 600px) {
   .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
-  .mm-desc { font-size: 13px; }
+  .mm-desc { font-size: 14px; }
 }
 
 /* ---------- MOBILE FEATURE GRID ---------- */
@@ -931,7 +931,7 @@ h1,h2,h3,h4,h5,h6 {
   .mm-feature-grid { grid-template-columns: 1fr; gap: 14px; }
   .mm-feature-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
   .mm-feature-card h3 { font-size: 15px; margin-bottom: 6px; }
-  .mm-feature-card p { font-size: 13px; line-height: 1.55; }
+  .mm-feature-card p { font-size: 14px; line-height: 1.55; }
   .mm-section.grey { margin: 0; padding: 32px 16px; border-radius: 0; }
 }
 @media (max-width: 600px) {
@@ -953,7 +953,7 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 12px 24px;
     border-radius: 0;
   }
-  .mm-cta-banner h2 { font-size: 18px; margin-bottom: 16px; }
+  .mm-cta-banner h2 { font-size: clamp(28px, 3.2vw, 38px); margin-bottom: 16px; }
   .mm-cta-banner .mm-btn { font-size: 13px; padding: 12px 20px; }
 }
 
@@ -963,7 +963,7 @@ h1,h2,h3,h4,h5,h6 {
   
   .mm-features-item { padding: 12px 10px; }
   .mm-features-item h4 { font-size: 14px; }
-  .mm-features-item p { font-size: 12px; }
+  .mm-features-item p { font-size: 14px; }
   .mm-features-icon {
     width: 36px;
     height: 36px;

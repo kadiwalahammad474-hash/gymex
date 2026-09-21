@@ -17,7 +17,7 @@
 .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px; color: var(--gray-100); }
 .mm-h1 .accent { color: var(--blue); }
-.mm-desc { color: var(--gray-80); font-size: 15.5px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
+.mm-desc { color: var(--gray-80); font-size: 14px; line-height: 1.65; max-width: 480px; margin-bottom: 12px; }
 .mm-hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ── SECTION ── */
@@ -28,7 +28,7 @@
   content: ""; display: block; width: 46px; height: 3px; border-radius: 3px;
   margin: 14px auto 0; background: linear-gradient(90deg, var(--blue), var(--orange-100));
 }
-.mm-heading p { color: var(--gray-80); font-size: 15.5px; line-height: 1.7; }
+.mm-heading p { color: var(--gray-80); font-size: 14px; line-height: 1.7; }
 
 /* ── CONTACT FEATURE CARDS ── */
 .mm-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -44,7 +44,7 @@
   box-shadow: 0 10px 22px rgba(16, 40, 100, .14), inset 0 1px 0 rgba(255, 255, 255, .6);
 }
 .mm-feature-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
-.mm-feature-card p { font-size: 13.5px; color: #1c2436; line-height: 1.65; }
+.mm-feature-card p { font-size: 14px; color: #1c2436; line-height: 1.65; }
 .mm-feature-card p a { font-weight: 600; }
 
 /* Map embed */
@@ -64,7 +64,7 @@
   content: ""; position: absolute; bottom: -100px; right: 10%; width: 340px; height: 340px;
   border-radius: 50%; filter: blur(60px); background: rgba(254, 79, 13, .28); pointer-events: none;
 }
-.mm-cta-banner h2 { position: relative; z-index: 1; color: var(--gray-100); font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; margin-bottom: 26px; line-height: 1.4; }
+.mm-cta-banner h2 { position: relative; z-index: 1; color: var(--gray-100); font-size: clamp(28px, 3.2vw, 38px); font-weight: 800; margin-bottom: 26px; line-height: 1.4; }
 .mm-cta-banner .mm-btn { position: relative; z-index: 1; }
 
 /* ── CONTACT FORM (demo / lead) ── */

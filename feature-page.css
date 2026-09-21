@@ -162,7 +162,7 @@
   margin-bottom: 8px !important;
 }
 .ia-card-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
   line-height: 1.7 !important;
 }
@@ -194,7 +194,7 @@
   margin-bottom: 6px !important;
 }
 .ia-mini-card p {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
   line-height: 1.6;
 }
@@ -319,7 +319,7 @@
 .ia-faq-item details[open] summary::after { content: '-'; }
 .ia-faq-item p {
   padding: 0 20px 16px;
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
   line-height: 1.7 !important;
 }

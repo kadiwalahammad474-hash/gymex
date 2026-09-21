@@ -55,7 +55,7 @@
 .sm-hero h1 .accent { color: var(--blue, #028ece); }
 .sm-hero p.sm-desc {
   color: var(--gray-80, #6b7589);
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.7;
   max-width: 480px;
   margin-bottom: 26px;
@@ -96,7 +96,7 @@
   text-transform: uppercase;
 }
 .sm-heading h2 .accent { color: var(--blue, #028ece); }
-.sm-heading p { color: var(--gray-80, #6b7589); font-size: 15px; line-height: 1.7; }
+.sm-heading p { color: var(--gray-80, #6b7589); font-size: 14px; line-height: 1.7; }
 .sm-heading .sm-underline { width: 46px; height: 4px; background: var(--blue, #028ece); border-radius: 4px; margin: 8px auto 0; }
 
 /* ── Feature Rows (alternating text + image) ── */
@@ -130,7 +130,7 @@
 .sm-feature-content h2 .accent { color: var(--blue, #028ece); }
 .sm-feature-content p {
   color: var(--gray-80, #6b7589);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.7;
   margin-bottom: 12px;
 }
@@ -385,7 +385,7 @@
   color: var(--blue, #028ece);
 }
 .sm-payroll-icon p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--gray-80, #6b7589);
 }
@@ -402,7 +402,7 @@
   margin: 0 auto;
 }
 .sm-cta-banner h2 {
-  font-size: 22px;
+  font-size: clamp(28px, 3.2vw, 38px);
   font-weight: 700;
   max-width: 640px;
   margin: 0 auto 24px;
@@ -432,7 +432,7 @@
 .sm-faq-item[open] summary::after { content: "\2212"; }
 .sm-faq-item p {
   margin-top: 12px;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--gray-80, #6b7589);
   line-height: 1.6;
 }
