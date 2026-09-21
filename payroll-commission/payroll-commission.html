@@ -28,6 +28,9 @@
     background-position: center, center, center right !important;
     background-repeat: no-repeat !important;
   }
+  /* Split sections mobile pe stack ho jayein (inline grid override) */
+  .fx-split{display:block !important;}
+  .fx-split > div + div{margin-top:24px;}
 }
 </style>
 </head>
@@ -351,23 +354,27 @@
 <!-- CONNECT ATTENDANCE WITH PAYROLL -->
 <section class="pm-salary">
 <div class="pm-wrap">
-<h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:800;color:#111;text-align:center;margin-bottom:14px;text-transform:uppercase;">Connect Attendance <span style="color:#028ece;">with Payroll</span></h2>
-<p style="font-size:15px;color:#555;text-align:center;max-width:760px;margin:0 auto 30px;line-height:1.8;">Attendance and payroll work closely together when staff compensation is based on working days, shifts, hours, or other attendance records. Gymex allows you to track single-shift as well as multiple-shift attendance for staff and use those attendance records when calculating payroll. This helps maintain accurate working records while reducing manual data entry and payroll calculations.</p>
-<p style="font-size:14px;color:#666;text-align:center;margin:0 auto 18px;">A connected workflow keeps the process simple:</p>
-<div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;max-width:820px;margin:0 auto 30px;">
+<div class="fx-split" style="display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;">
+<div>
+<h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:800;color:#111;margin-bottom:14px;text-transform:uppercase;">Connect Attendance <span style="color:#028ece;">with Payroll</span></h2>
+<p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:16px;">Attendance and payroll work closely together when staff compensation is based on working days, shifts, hours, or other attendance records. Gymex allows you to track single-shift as well as multiple-shift attendance for staff and use those attendance records when calculating payroll. This helps maintain accurate working records while reducing manual data entry and payroll calculations.</p>
+<p style="font-size:14px;color:#666;margin:0 0 14px;">A connected workflow keeps the process simple:</p>
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:20px;">
 <div style="background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;color:#333;box-shadow:0 3px 10px rgba(0,0,0,.05);">Staff Attendance</div>
-<i class="fa fa-arrow-right" style="color:#028ece;"></i>
+<i class="fa fa-arrow-down" style="color:#028ece;margin-left:36px;"></i>
 <div style="background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;color:#333;box-shadow:0 3px 10px rgba(0,0,0,.05);">Single/Multiple Shifts</div>
-<i class="fa fa-arrow-right" style="color:#028ece;"></i>
+<i class="fa fa-arrow-down" style="color:#028ece;margin-left:36px;"></i>
 <div style="background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;color:#333;box-shadow:0 3px 10px rgba(0,0,0,.05);">Payroll Calculation</div>
-<i class="fa fa-arrow-right" style="color:#028ece;"></i>
+<i class="fa fa-arrow-down" style="color:#028ece;margin-left:36px;"></i>
 <div style="background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:12px 22px;font-size:13px;font-weight:700;color:#333;box-shadow:0 3px 10px rgba(0,0,0,.05);">Review</div>
 </div>
-<p style="font-size:15px;color:#555;text-align:center;max-width:640px;margin:0 auto 26px;line-height:1.8;">By connecting staff attendance directly with payroll, Gymex helps you manage salary calculations more efficiently and maintain a clear, organized payroll process.</p>
-<div style="max-width:760px;margin:0 auto 30px;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(15,40,80,.14);background:#fff;">
+<p style="font-size:15px;color:#555;line-height:1.8;margin:0 0 22px;">By connecting staff attendance directly with payroll, Gymex helps you manage salary calculations more efficiently and maintain a clear, organized payroll process.</p>
+<div><a href="../biometric-access-control/biometric-access-control.html" class="mm-btn mm-btn-orange">Explore Attendance Management <i class="fa fa-arrow-right"></i></a></div>
+</div>
+<div style="border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(15,40,80,.14);background:#fff;">
 <img src="../assets/payroll-attendance-connect.webp?v=1" alt="Gymex payroll software connecting staff attendance with payroll calculations" loading="lazy" style="width:100%;height:auto;display:block;">
 </div>
-<div style="text-align:center;"><a href="../biometric-access-control/biometric-access-control.html" class="mm-btn mm-btn-orange">Explore Attendance Management <i class="fa fa-arrow-right"></i></a></div>
+</div>
 </div>
 </section>
 
