@@ -41,7 +41,11 @@
 .mm-section.grey { background: #f8f9fc !important; margin: 0 !important; border-radius: 0 !important; padding: 60px 24px !important; }
 .mm-heading { max-width: 760px; margin-bottom: 36px; }
 .mm-heading h2 { color: #111; }
-.mm-sec-p { color: #555; font-size: 15.5px; max-width: 820px; }
+.mm-sec-p { max-width: 860px; margin: 0 auto 14px; text-align: center; color: #555; line-height: 1.85; font-size: 15.5px; }
+.mm-link-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+.mm-link-pill { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px; background: #e9f0ff; color: #028ece; font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid #cfe3f7; transition: .2s; }
+.mm-link-pill:hover { background: #028ece; color: #fff; border-color: #028ece; }
+.mm-link-pill i { font-size: 12px; }
 
 /* ---------- FEATURE CARDS: member/lead style ---------- */
 .mm-feature-grid { gap: 22px; max-width: 1100px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); }
