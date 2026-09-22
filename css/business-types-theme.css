@@ -1,0 +1,105 @@
+/* ==========================================================================
+   BUSINESS TYPES pages — theme parity with member-management / lead-management
+   (sm-* look). Linked only on the 10 business-types pages, AFTER index.css.
+   - Hero: dashboard screenshot removed -> text-only hero like sm-hero
+   - Cards: white + light border + uniform blue icon box (no multicolor)
+   - FAQ: soft grey sm-faq cards (also fixes the 120px answer-gap bug)
+   - Sections: member/lead alternating white / #f8f9fc, no side margins
+   ========================================================================== */
+
+/* ---------- HERO: single-column text hero (image removed) ---------- */
+.mm-hero-grid { grid-template-columns: 1fr !important; max-width: 900px; margin: 0 auto; text-align: center; }
+/* kill the laptop-screenshot bg (assets/img.png from index.css) the user never provided —
+   same soft radial-gradient bg as member/lead sm-hero */
+.mm-hero {
+  padding: 60px 24px 30px !important;
+  text-align: center;
+  background:
+    radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%),
+    radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
+    radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%),
+    var(--BG, #f5f7fb) !important;
+}
+.mm-h1 { text-transform: uppercase; max-width: 820px !important; margin-left: auto; margin-right: auto; }
+.mm-desc { max-width: 640px; margin-left: auto; margin-right: auto; }
+.mm-hero-tags { justify-content: center; margin-top: 26px; }
+.mm-hero + .mm-section { margin-top: 0 !important; }
+
+/* label chip like sm-label (uppercase blue + orange dot) */
+.mm-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; color: #028ece;
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+}
+.mm-hero-eyebrow::before {
+  content: ""; width: 10px; height: 10px; border-radius: 50%;
+  background: #ff4f0d; box-shadow: none;
+}
+
+/* ---------- SECTIONS: member/lead rhythm (white / #f8f9fc, full width) ---------- */
+.mm-section { max-width: none !important; padding: 60px 24px !important; margin: 0 !important; }
+.mm-section.grey { background: #f8f9fc !important; margin: 0 !important; border-radius: 0 !important; padding: 60px 24px !important; }
+.mm-heading { max-width: 760px; margin-bottom: 36px; }
+.mm-heading h2 { color: #111; }
+.mm-sec-p { color: #555; font-size: 15.5px; max-width: 820px; }
+
+/* ---------- FEATURE CARDS: member/lead style ---------- */
+.mm-feature-grid { gap: 22px; max-width: 1100px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); }
+.mm-feature-card {
+  background: #fff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 24px !important;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.mm-feature-card::after { display: none !important; }
+.mm-feature-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(11,26,61,.08) !important; border-color: #cfe3f7 !important; }
+.mm-feature-card h3 { font-size: 15px !important; font-weight: 700; text-transform: none !important; color: #111; margin-bottom: 6px !important; letter-spacing: 0 !important; }
+.mm-feature-card h3 .accent, .mm-feature-card h3 span { color: #028ece !important; }
+.mm-feature-card p { font-size: 13.5px !important; color: #666 !important; line-height: 1.7 !important; margin: 0 !important; }
+
+/* uniform blue icon box (kills all inline multicolor backgrounds) */
+.mm-feature-icon {
+  width: 40px !important; height: 40px !important;
+  border-radius: 10px !important;
+  background: #e8f0fe !important;
+  color: #1565C0 !important;
+  box-shadow: none !important;
+  margin-bottom: 16px !important;
+  font-size: 16px !important;
+  transition: none !important;
+}
+.mm-feature-card:hover .mm-feature-icon { transform: none !important; box-shadow: none !important; }
+.mm-feature-icon i { color: #1565C0 !important; font-size: 16px !important; }
+.mm-feature-icon svg { stroke: #1565C0 !important; fill: none !important; width: 18px !important; height: 18px !important; }
+
+/* ---------- FAQ: sm-faq soft grey cards, fixes 120px answer gap ---------- */
+.mm-faq { gap: 16px; max-width: 1000px; }
+.mm-faq-item {
+  background: #f5f7fb !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  padding: 16px 20px !important;
+}
+.mm-faq-item summary { font-size: 14.5px; font-weight: 600; color: #111; }
+.mm-faq-item summary::after { color: #6b7589; }
+.mm-faq-item p { margin-top: 12px !important; font-size: 14px !important; color: #6b7589 !important; line-height: 1.6 !important; }
+
+/* ---------- CTA banner: keep, just tidy ---------- */
+.mm-cta-banner { border-radius: 16px; }
+
+/* ---------- Stats strip stays home-style but calmer ---------- */
+.mm-awards-stats { max-width: 1100px; margin: 0 auto; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .mm-feature-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px; }
+  .mm-h1 { font-size: 28px !important; }
+}
+@media (max-width: 600px) {
+  .mm-feature-grid { grid-template-columns: 1fr !important; }
+  .mm-section, .mm-section.grey { padding: 44px 18px !important; }
+  .mm-hero { padding: 40px 18px 20px !important; }
+}
