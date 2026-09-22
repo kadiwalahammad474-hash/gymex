@@ -770,6 +770,10 @@ body::after { content: none !important; display: none !important; }
 }
 .mk-cta-accent { color: #028ece; }
 .mk-cta-wrap > p { color: #555; font-size: 14px; margin-bottom: 30px; }
+.mk-split-close-note {
+  text-align: center; max-width: 760px; margin: 28px auto 0;
+  color: #555; font-size: 14px; line-height: 1.8;
+}
 .mk-cta-btn { font-size: 16px; margin-bottom: 18px; }
 .mk-cta-wrap > p + p { margin-top: -6px; }
 
