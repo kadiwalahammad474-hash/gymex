@@ -770,7 +770,8 @@ body::after { content: none !important; display: none !important; }
 }
 .mk-cta-accent { color: #028ece; }
 .mk-cta-wrap > p { color: #555; font-size: 14px; margin-bottom: 30px; }
-.mk-cta-btn { font-size: 16px; }
+.mk-cta-btn { font-size: 16px; margin-bottom: 18px; }
+.mk-cta-wrap > p + p { margin-top: -6px; }
 
 /* ── FAQ ── */
 .mk-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
