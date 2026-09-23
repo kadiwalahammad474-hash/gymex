@@ -68,6 +68,27 @@
 }
 </script>
 
+<style>
+/* Club Facilities - sm-style background hero + image-left content splits */
+.cf-hero{position:relative;width:100%;padding:60px 24px 70px;min-height:calc(100vw * 717 / 2194);background:url('../assets/Club Facilities - Hero Image.png') center top/100% auto no-repeat #fff;}
+.cf-hero-grid{position:relative;z-index:1;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.cf-hero .cf-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#028ece;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
+.cf-hero .cf-label::before{content:"";width:10px;height:10px;border-radius:50%;background:#ff4f0d;}
+.cf-hero h1{font-size:clamp(30px,4vw,42px);font-weight:800;line-height:1.15;margin:0 0 16px;text-transform:uppercase;}
+.cf-hero p{color:#6b7589;font-size:15px;line-height:1.7;max-width:480px;margin:0 0 26px;}
+.cf-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1180px;margin:0 auto;}
+.cf-split .cf-img{border-radius:16px;overflow:hidden;box-shadow:0 14px 36px rgba(15,40,80,.15);background:#fff;line-height:0;}
+.cf-split .cf-img img{width:100%;height:auto;display:block;}
+.cf-split .cf-content h2{font-size:clamp(24px,2.8vw,34px);font-weight:800;line-height:1.2;margin:0 0 16px;text-transform:uppercase;color:#111;}
+.cf-split .cf-content h2 span{color:#028ece;}
+.cf-split .cf-content p{font-size:15px;color:#555;line-height:1.8;margin:0 0 14px;}
+@media (max-width:860px){
+.cf-hero{min-height:auto;padding:44px 20px 48px;background-image:linear-gradient(rgba(255,255,255,.86),rgba(255,255,255,.86)),url('../assets/Club Facilities - Hero Image.png');background-size:cover;background-position:center top;}
+.cf-hero-grid{grid-template-columns:1fr;gap:20px;}
+.cf-split{grid-template-columns:1fr;gap:28px;}
+.cf-split .cf-content h2{font-size:24px;}
+}
+</style>
 </head>
 <body>
 
@@ -241,14 +262,15 @@
       </div>
       </nav>
 
-<section style="padding:64px 24px 68px; background:linear-gradient(180deg,#f7fbff 0%,#ffffff 100%);">
-<div style="max-width:900px; margin:0 auto; text-align:center;">
-<div style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:#028ece; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;"><span style="width:10px; height:10px; border-radius:50%; background:#ff4f0d;"></span>Club Facility Booking Software</div>
-<h1 style="font-size:clamp(32px,4vw,44px); font-weight:800; line-height:1.15; margin:0 0 16px; text-transform:uppercase;">Make Club Facility Booking <span style="color:#028ece;">Simple &amp; Organized</span></h1>
-<p style="color:#6b7589; font-size:16px; line-height:1.7; max-width:660px; margin:0 auto 26px;">Manage facility availability, bookings, charges, and billing from one connected platform. Gymex helps clubs organize courts, activity spaces, halls, and other facilities without relying on separate booking records.</p>
-<button class="mm-btn mm-btn-orange open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
+<section class="cf-hero">
+<div class="cf-hero-grid">
+<div>
+<div class="cf-label">Club Facility Booking Software</div>
+<h1>Make Club Facility Booking <span style="color:#028ece;">Simple &amp; Organized</span></h1>
+<p>Manage facility availability, bookings, charges, and billing from one connected platform. Gymex helps clubs organize courts, activity spaces, halls, and other facilities without relying on separate booking records.</p>
+<div><button class="mm-btn mm-btn-orange open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button></div>
 </div>
-<div style="max-width:1100px; margin:38px auto 0; border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(15,40,80,.16); background:#fff;"><img src="../assets/Club Facilities - Hero Image.png" alt="Gymex club facility booking software dashboard" loading="lazy" style="width:100%; height:auto; display:block;"></div>
+</div>
 </section>
 <section style="padding:60px 24px; background:#fff;">
 <div style="max-width:1100px; margin:0 auto;">
@@ -269,12 +291,16 @@
 </div>
 </section>
 <section style="padding:60px 24px; background:#f8f9fc;">
-<div style="max-width:1100px; margin:0 auto;">
-<h2 style="font-size:clamp(28px,3.2vw,38px); font-weight:800; color:#111; margin-bottom:10px; text-transform:uppercase; text-align:center;">See Facility Availability <span style="color:#028ece;">Before Making a Booking</span></h2>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">When several facilities are booked throughout the day, your team needs a simple way to understand which time slots are available.</p>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">Gymex provides a calendar-based facility booking view where staff can select a facility and review its bookings for a particular month.</p>
-<div style="max-width:960px; margin:24px auto; border-radius:18px; overflow:hidden; box-shadow:0 14px 36px rgba(15,40,80,.15); background:#fff;"><img src="../assets/Club Facility Pg - See Facility Availability Before Making a Booking.png" alt="Gymex facility availability calendar view" loading="lazy" style="width:100%; height:auto; display:block;"></div>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">This helps your team:</p>
+<div class="cf-split">
+<div class="cf-img"><img src="../assets/Club Facility Pg - See Facility Availability Before Making a Booking.png" alt="Gymex facility availability calendar view" loading="lazy"></div>
+<div class="cf-content">
+<h2>See Facility Availability <span style="color:#028ece;">Before Making a Booking</span></h2>
+<p>When several facilities are booked throughout the day, your team needs a simple way to understand which time slots are available.</p>
+<p>Gymex provides a calendar-based facility booking view where staff can select a facility and review its bookings for a particular month.</p>
+</div>
+</div>
+<div style="max-width:1100px; margin:34px auto 0;">
+<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center;">This helps your team:</p>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;" class="nf-two">
 <div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#fff; border:1px solid #e5e7eb; border-radius:10px;"><i class="fa fa-check-circle" style="color:#1565C0; font-size:16px;"></i><span style="font-size:14px; color:#333;">View available and booked slots</span></div>
 <div style="display:flex; align-items:center; gap:12px; padding:14px 18px; background:#fff; border:1px solid #e5e7eb; border-radius:10px;"><i class="fa fa-check-circle" style="color:#1565C0; font-size:16px;"></i><span style="font-size:14px; color:#333;">Check bookings for a selected facility</span></div>
@@ -301,11 +327,15 @@
 </div>
 </section>
 <section style="padding:60px 24px; background:#f8f9fc;">
-<div style="max-width:1100px; margin:0 auto;">
-<h2 style="font-size:clamp(28px,3.2vw,38px); font-weight:800; color:#111; margin-bottom:10px; text-transform:uppercase; text-align:center;">Keep Facility Booking <span style="color:#028ece;">&amp; Billing Connected</span></h2>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">Gymex brings facility booking information and billing details together, making it easier to review the financial side of each booking.</p>
-<div style="max-width:960px; margin:24px auto; border-radius:18px; overflow:hidden; box-shadow:0 14px 36px rgba(15,40,80,.15); background:#fff;"><img src="../assets/Club Facility Pg - Keep Facility Booking and Billing Connected.png" alt="Gymex facility booking and billing details" loading="lazy" style="width:100%; height:auto; display:block;"></div>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">Your team can view details such as:</p>
+<div class="cf-split">
+<div class="cf-img"><img src="../assets/Club Facility Pg - Keep Facility Booking and Billing Connected.png" alt="Gymex facility booking and billing details" loading="lazy"></div>
+<div class="cf-content">
+<h2>Keep Facility Booking <span style="color:#028ece;">&amp; Billing Connected</span></h2>
+<p>Gymex brings facility booking information and billing details together, making it easier to review the financial side of each booking.</p>
+</div>
+</div>
+<div style="max-width:1100px; margin:34px auto 0;">
+<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center;">Your team can view details such as:</p>
 <div style="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; margin-top:14px; margin-bottom:24px;">
 <div style="padding:12px 18px; background:#e8f0fe; border-radius:10px; font-size:13.5px; font-weight:600; color:#1565C0; white-space:nowrap;">Facility</div>
 <div style="display:flex; align-items:center; color:#028ece;"><i class="fa fa-arrow-right"></i></div>
@@ -327,8 +357,8 @@
 <div style="display:flex; align-items:center; color:#028ece;"><i class="fa fa-arrow-right"></i></div>
 <div style="padding:12px 18px; background:#e8f0fe; border-radius:10px; font-size:13.5px; font-weight:600; color:#1565C0; white-space:nowrap;">Balance</div>
 </div>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">This creates a clearer record of each facility booking and its associated charges without maintaining separate billing records.</p>
-<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:0px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto;">Gymex also provides facility-wise Billing Bifurcation, giving management visibility into amounts generated across different facilities.</p>
+<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center;">This creates a clearer record of each facility booking and its associated charges without maintaining separate billing records.</p>
+<p style="font-size:15px; color:#555; line-height:1.8; margin-bottom:14px; text-align:center;">Gymex also provides facility-wise Billing Bifurcation, giving management visibility into amounts generated across different facilities.</p>
 </div>
 </section>
 <section style="padding:60px 24px; background:#fff;">
