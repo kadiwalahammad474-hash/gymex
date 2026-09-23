@@ -11,7 +11,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .tm-mb-32{margin-bottom:32px;}
 .tm-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
 @media(max-width:768px){.tm-split{grid-template-columns:1fr;gap:24px;}}
-.tm-h2{font-size:30px;font-weight:800;color:#111;line-height:1.25;margin-bottom:18px;}
+.tm-h2{font-size:36px;font-weight:800;color:#111;line-height:1.25;margin-bottom:18px;}
 .tm-text{font-size: 14px;line-height:1.8;color:#555;margin-bottom:12px;}
 .tm-sub{font-size: 14px;font-weight:700;color:#333;margin:20px 0 14px;}
 .tm-img-placeholder{width:100%;aspect-ratio:16/10;background:#e9eef5;border:2px dashed #c5d1de;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#8a9bb5;font-size:13px;}
@@ -23,7 +23,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 @media(max-width:768px){.tm-hero-grid{grid-template-columns:1fr;gap:28px;}}
 .tm-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#028ece;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
 .tm-label::before{content:'';width:10px;height:10px;border-radius:50%;background:#ff4f0d;}
-.tm-hero h1{font-size:42px;line-height:1.15;font-weight:800;margin:0 0 16px;text-transform:uppercase;}
+.tm-hero h1{font-size:44px;line-height:1.15;font-weight:800;margin:0 0 16px;text-transform:uppercase;}
 .tm-dark{color:#111;}
 .tm-accent{color:#028ece;}
 .tm-desc{color:#6b7589;font-size: 14px;line-height:1.7;max-width:480px;margin-bottom:26px;}
@@ -42,7 +42,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .tm-role-card:hover{box-shadow:0 4px 14px rgba(0,0,0,.06);}
 .tm-role-icon{width:42px;height:42px;margin:0 auto 10px;background:linear-gradient(135deg,#e8f4fd,#d6eaf8);border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .tm-role-icon i{font-size:18px;color:#028ece;}
-.tm-role-card h4{font-size:14px;font-weight:700;color:#222;margin-bottom:4px;}
+.tm-role-card h4{font-size:15px;font-weight:700;color:#222;margin-bottom:4px;}
 .tm-role-card p{font-size: 14px;color:#666;line-height:1.5;}
 
 /* Flow Strip */
@@ -89,7 +89,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 
 /* CTA */
 .tm-cta{background:linear-gradient(135deg,#0b1a3d 0%,#162d5a 100%);padding:64px 24px;}
-.tm-cta-title{font-size:32px;font-weight:800;color:#fff;margin-bottom:14px;}
+.tm-cta-title{font-size:36px;font-weight:800;color:#fff;margin-bottom:14px;}
 .tm-cta-desc{font-size: 14px;color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 10px;line-height:1.8;}
 .tm-cta-sub{font-size: 14px;color:rgba(255,255,255,.6);margin-bottom:28px;}
 

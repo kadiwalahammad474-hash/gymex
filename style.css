@@ -27,7 +27,12 @@
 ul, li { list-style: none; }
 a { text-decoration: none; color: inherit; }
 img { display: block; width: 100%; height: 100%; }
-h1,h2,h3,h4,h5,h6 { font-size: inherit; font-weight: inherit; margin: 0; }
+h1,h2,h3,h4,h5,h6 {font-weight: inherit; margin: 0;}
+h1 { font-size: 44px; }
+h2 { font-size: 36px; }
+h3 { font-size: 17px; }
+h4 { font-size: 15px; }
+h5, h6 { font-size: 14px; }
 
 body {
   font-family: "Poppins", sans-serif;
@@ -556,7 +561,7 @@ a.mega-menu .inside,
   .pm-metrics-grid > *, .pm-salary-grid > *, .nf-grid > *, .nf-two > * { min-width: 0 !important; }
   /* bade hero headings (42px) me lamba word (MANAGEMENT) overflow karta tha */
   .sm-hero h1, .nf-hero h1, .mm-hero .mm-h1 { overflow-wrap: break-word; min-width: 0 !important; max-width: 100% !important; }
-  .sm-hero h1 { font-size: clamp(26px, 7.5vw, 42px) !important; }
+  .sm-hero h1 { font-size: 30px !important; }
   .sm-hero-grid, .em-split { min-width: 0 !important; }
   .sm-hero-grid > *, .em-split > * { min-width: 0 !important; max-width: 100% !important; }
   .mm-hero-grid > * { min-width: 0; }
@@ -567,7 +572,7 @@ a.mega-menu .inside,
   .mm-benefits, .mm-benefits.reverse { grid-template-columns: 1fr !important; }
   .mm-section { padding-left: 16px !important; padding-right: 16px !important; }
   .mm-section.grey { margin-left: 0 !important; margin-right: 0 !important; width: 100% !important; }
-  .mm-heading h2 { font-size: clamp(28px, 3.2vw, 38px); }
+  .mm-heading h2 { font-size: 26px; }
   .mm-hero { padding: 20px 16px !important; }
   .mm-hero .mm-h1 { font-size: 26px !important; }
   .testi-card { max-width: 88vw; }
@@ -576,10 +581,10 @@ a.mega-menu .inside,
 @media (max-width: 480px) {
   .mm-type-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
   .mm-awards-stats { padding: 24px 12px !important; }
-  .mm-stat h3 { font-size: 22px !important; }
+  .mm-stat h3 { font-size: 16px !important; }
   .clients-track img { height: 52px !important; }
   /* new-feature pages: hero heading ka longest word (COMMUNICATION) chhoti screen pe overflow karta tha */
-  .nf-hero h1 { font-size: clamp(24px, 7.2vw, 32px) !important; overflow-wrap: break-word; }
+  .nf-hero h1 { font-size: 30px !important; overflow-wrap: break-word; }
   .nf-hero-grid, .nf-hero-grid > * { min-width: 0 !important; max-width: 100% !important; }
 }
 

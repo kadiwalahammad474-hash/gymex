@@ -16,7 +16,7 @@
 }
 .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 {
-  font-size: clamp(30px, 3.4vw, 46px); font-weight: 800;
+  font-size: clamp(30px, 3.4vw, 44px); font-weight: 800;
   line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 14px;
   color: var(--gray-100);
 }
@@ -35,7 +35,7 @@
 .mm-section { width: 100%; max-width: 100%; padding: 60px 40px; margin: 0 auto; }
 .mm-heading { text-align: center; max-width: 700px; margin: 0 auto 44px; }
 .mm-heading h2 {
-  font-size: clamp(28px, 3.2vw, 38px); font-weight: 800;
+  font-size: 36px; font-weight: 800;
   letter-spacing: -0.01em; margin-bottom: 10px; text-transform: uppercase;
   color: var(--gray-100);
 }
@@ -98,7 +98,7 @@
 }
 .mm-cta-banner h2 {
   position: relative; z-index: 1; color: #fff;
-  font-size: clamp(28px, 3.2vw, 38px); font-weight: 800;
+  font-size: 36px; font-weight: 800;
   margin-bottom: 26px; line-height: 1.4;
 }
 .mm-cta-banner .mm-btn { position: relative; z-index: 1; }

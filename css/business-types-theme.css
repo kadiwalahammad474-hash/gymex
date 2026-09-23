@@ -59,7 +59,7 @@
 }
 .mm-feature-card::after { display: none !important; }
 .mm-feature-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(11,26,61,.08) !important; border-color: #cfe3f7 !important; }
-.mm-feature-card h3 { font-size: 15px !important; font-weight: 700; text-transform: none !important; color: #111; margin-bottom: 6px !important; letter-spacing: 0 !important; }
+.mm-feature-card h3 { font-size: 17px !important; font-weight: 700; text-transform: none !important; color: #111; margin-bottom: 6px !important; letter-spacing: 0 !important; }
 .mm-feature-card h3 .accent, .mm-feature-card h3 span { color: #028ece !important; }
 .mm-feature-card p { font-size: 13.5px !important; color: #666 !important; line-height: 1.7 !important; margin: 0 !important; }
 
