@@ -438,13 +438,9 @@ body { position: relative; z-index: 1; }
 /* Section top accent rule — a small distinctive signature used once per major section heading */
 .mm-heading h2::after,
 .mm-spotlight-sticky h2::after {
-  content: "";
-  display: block;
-  width: 46px; height: 3px; border-radius: 3px;
-  margin: 14px auto 0;
-  background: linear-gradient(90deg, var(--blue), var(--orange-100));
+  content: none;
+  display: none;
 }
-.mm-spotlight-sticky h2::after { margin: 14px 0 0; }
 
 /* ===========================================================
    ENTERPRISE PREMIUM LAYER — dark glass sections, neon glow,
@@ -1543,11 +1539,7 @@ body { position: relative; z-index: 1; }
   .testi-section { padding: 40px 0 30px; }
 }
 .testi-heading .testi-line {
-  width: 50px;
-  height: 4px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--blue), var(--orange-100));
-  margin: 0 auto 16px;
+  display: none;
 }
 .testi-avatar img, img.testi-avatar {
   width: 44px;
