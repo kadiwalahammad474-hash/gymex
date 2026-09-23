@@ -50,6 +50,38 @@
 /* ==========================================================
    BT 2x2 EXPLORE GRID — image-design (icon block + content)
    ========================================================== */
+/* DANCE VARIANT: top-accent white card, icon-top layout (scoped to #dance) */
+body[data-page="dance"] .bt-grid { gap: 22px; }
+body[data-page="dance"] .bt-block {
+  display: flex; flex-direction: column; align-items: stretch; gap: 0;
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 30px 28px 26px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(13, 44, 94, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+body[data-page="dance"] .bt-block::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, #028ece, #1657d6);
+}
+body[data-page="dance"] .bt-block:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(13, 44, 94, 0.14); }
+body[data-page="dance"] .bt-ico {
+  flex: 0 0 auto; width: 58px; height: 58px; border-radius: 50%;
+  background: linear-gradient(135deg, #028ece, #1657d6); color: #fff;
+  font-size: 23px; margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(2, 110, 190, 0.28);
+}
+body[data-page="dance"] .bt-txt h3 { font-size: 17px; color: #0d2c5e; margin-bottom: 12px; }
+body[data-page="dance"] .bt-txt .mm-sec-p { color: #5a6b85; }
+body[data-page="dance"] .bt-txt .mm-link-row { margin-top: 16px; gap: 10px; }
+body[data-page="dance"] .bt-txt .mm-link-pill {
+  background: #f2f7ff; border: 1px solid #d7e6fb; color: #0f6bc4;
+  font-weight: 700; font-size: 13px; padding: 9px 16px;
+}
+body[data-page="dance"] .bt-txt .mm-link-pill:hover { background: #028ece; border-color: #028ece; color: #fff; }
 .bt-grid-sec { background: #fff; }
 .bt-grid {
   display: grid;
