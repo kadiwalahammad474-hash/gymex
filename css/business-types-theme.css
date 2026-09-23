@@ -358,7 +358,7 @@ body[data-page="yoga-studio"] .bt-ico,
 body[data-page="pilates"] .bt-ico,
 body[data-page="pt-studio"] .bt-ico {
   width: 64px; height: 64px; border-radius: 50%;
-  background: linear-gradient(135deg, #e2f5ec, #d2ecdf); color: #028ece;
+  background: linear-gradient(135deg, #e9f0ff, #dce9ff); color: #028ece;
   font-size: 24px; margin-bottom: 18px; box-shadow: none;
 }
 body[data-page="yoga-studio"] .bt-txt h3,
@@ -376,12 +376,12 @@ body[data-page="pt-studio"] .bt-txt .mm-link-row { justify-content: center; }
 body[data-page="yoga-studio"] .bt-txt .mm-link-pill,
 body[data-page="pilates"] .bt-txt .mm-link-pill,
 body[data-page="pt-studio"] .bt-txt .mm-link-pill {
-  background: #ecf7f1; border-color: #cfe8db; color: #028ece;
+  background: #e9f0ff; border-color: #cfe3f7; color: #028ece;
 }
 body[data-page="yoga-studio"] .bt-txt .mm-link-pill:hover,
 body[data-page="pilates"] .bt-txt .mm-link-pill:hover,
 body[data-page="pt-studio"] .bt-txt .mm-link-pill:hover {
-  background: #17926a; border-color: #028ece; color: #fff;
+  background: #028ece; border-color: #028ece; color: #fff;
 }
 
 /* ==========================================================
