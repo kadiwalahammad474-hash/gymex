@@ -146,12 +146,52 @@
 .blog-dash-days { display: flex; justify-content: space-between; margin-top: 7px; padding: 0 2px; }
 .blog-dash-days span { font-size: 9px; color: #bbb; }
 
+/* Hero & featured images */
+.blog-hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.blog-feat-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+/* Article card thumbnails */
+.blog-art-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* MOST POPULAR */
+.blog-popular { padding: 0 40px 52px; max-width: 1300px; margin: 0 auto; }
+.blog-popular-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.blog-popular-header h2 { font-size: 36px; font-weight: 900; text-transform: uppercase; color: #111; letter-spacing: .5px; }
+.blog-popular-header h2 span { color: #E85D04; }
+.blog-popular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.blog-pop-card { border: 1.8px solid #e0e6f0; border-radius: 12px; overflow: hidden; background: #fff; transition: box-shadow .25s, transform .25s, border-color .25s; position: relative; cursor: pointer; }
+.blog-pop-card:hover { box-shadow: 0 6px 28px rgba(21,101,192,.13); border-color: #E85D04; transform: translateY(-3px); }
+.blog-pop-rank { position: absolute; top: 10px; left: 10px; z-index: 2; background: #E85D04; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900; }
+.blog-pop-rank.gold { background: #f59f00; }
+.blog-pop-rank.silver { background: #868e96; }
+.blog-pop-rank.bronze { background: #cd7f32; }
+.blog-pop-img { height: 200px; overflow: hidden; }
+.blog-pop-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s; }
+.blog-pop-card:hover .blog-pop-img img { transform: scale(1.04); }
+.blog-pop-body { padding: 16px 18px 18px; }
+.blog-pop-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 7px; color: #E85D04; }
+.blog-pop-body h3 { font-size: 17px; font-weight: 800; line-height: 1.38; color: #111; margin-bottom: 10px; }
+.blog-pop-clicks { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #666; font-weight: 500; }
+.blog-pop-clicks svg { width: 13px; height: 13px; stroke: #E85D04; fill: none; stroke-width: 2; }
+
+/* PAGINATION */
+.blog-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 40px 52px; max-width: 1300px; margin: 0 auto; }
+.blog-pg-btn { min-width: 40px; height: 40px; padding: 0 12px; border-radius: 8px; border: 1.8px solid #e0e6f0; background: #fff; color: #333; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; font-family: 'Inter', sans-serif; }
+.blog-pg-btn:hover { border-color: #1565C0; color: #1565C0; background: #e8f0fe; }
+.blog-pg-btn.active { background: #1565C0; color: #fff; border-color: #1565C0; }
+.blog-pg-btn:disabled { opacity: .35; cursor: not-allowed; }
+.blog-pg-dots { color: #aaa; font-size: 16px; padding: 0 4px; }
+
 /* Mobile responsive */
 @media(max-width:768px) {
   .blog-hero-inner { flex-direction: column; padding: 28px 16px; gap: 20px; }
   .blog-hero-left h1 { font-size: 30px; }
   .blog-search, .search-results { width: 100%; }
   .blog-hero-right { display: none; }
+  .blog-popular { padding: 0 16px 28px; }
+  .blog-popular-header h2 { font-size: 26px; }
+  .blog-popular-grid { grid-template-columns: 1fr; }
+  .blog-pagination { flex-wrap: wrap; padding: 0 16px 28px; }
   .blog-cats { padding: 28px 16px; }
   .blog-cats-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-featured { padding: 28px 16px; }
@@ -360,12 +400,7 @@
       <div id="searchResults" class="search-results hidden"></div>
     </div>
     <div class="blog-hero-right">
-      <svg viewBox="0 0 120 120" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="35" r="18" fill="none" stroke="#1565C0" stroke-width="3" opacity="0.4"/>
-        <rect x="20" y="65" width="80" height="8" rx="4" fill="#1565C0" opacity="0.25"/>
-        <rect x="10" y="72" width="15" height="30" rx="4" fill="#1565C0" opacity="0.2"/>
-        <rect x="95" y="72" width="15" height="30" rx="4" fill="#1565C0" opacity="0.2"/>
-      </svg>
+      <img src="assets/gymhero.png" alt="Gym">
     </div>
   </div>
 </section>
@@ -407,6 +442,14 @@
   </div>
 </section>
 
+<!-- MOST POPULAR -->
+<section class="blog-popular">
+  <div class="blog-popular-header">
+    <h2>MOST <span>POPULAR</span></h2>
+  </div>
+  <div class="blog-popular-grid" id="popularGrid"></div>
+</section>
+
 <!-- FEATURED -->
 <section class="blog-featured">
   <div class="blog-feat-card">
@@ -424,13 +467,7 @@
       </a>
     </div>
     <div class="blog-feat-image">
-      <svg viewBox="0 0 200 160" width="140" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="50" width="160" height="60" rx="8" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
-        <rect x="30" y="60" width="60" height="40" rx="4" fill="rgba(255,255,255,0.12)"/>
-        <rect x="100" y="62" width="70" height="8" rx="2" fill="rgba(255,255,255,0.18)"/>
-        <rect x="100" y="76" width="50" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
-        <rect x="100" y="88" width="60" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
-      </svg>
+      <img src="assets/featuredgym.png" alt="Featured Article">
     </div>
   </div>
 </section>
@@ -448,79 +485,15 @@
   </div>
 
   <div class="blog-articles-grid" id="articlesGrid">
-    <!-- Card 1 -->
-    <div class="blog-article-card" data-category="member-retention" data-title="10 Proven Ways To Improve Gym Member Retention">
-      <div class="blog-art-img"><div class="blog-art-placeholder bg1"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="11" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><circle cx="52" cy="22" r="11" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M6 52 C6 39 16 33 28 33 C36 33 43 37 40 42 C37 37 44 33 52 33 C64 33 74 39 74 52" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/></svg></div></div>
-      <div class="blog-art-body">
-        <div class="blog-art-cat">Member Retention</div>
-        <h3>10 Proven Ways To Improve<br>Gym Member Retention</h3>
-        <p>Learn practical strategies to reduce cancellations and keep members engaged longer.</p>
-        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 10, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 Min read</span></div>
-        <a href="article.html" class="blog-read-more">Read More →</a>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="blog-article-card" data-category="billing-payments" data-title="How Automated Billing Saves Gym Owners Time">
-      <div class="blog-art-img"><div class="blog-art-placeholder bg2"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="10" width="50" height="40" rx="5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><line x1="15" y1="22" x2="65" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><rect x="22" y="28" width="12" height="6" rx="2" fill="rgba(255,255,255,0.2)"/><rect x="22" y="36" width="36" height="4" rx="2" fill="rgba(255,255,255,0.2)"/></svg></div></div>
-      <div class="blog-art-body">
-        <div class="blog-art-cat">Billing &amp; Payments</div>
-        <h3>How Automated Billing<br>Saves Gym Owners Time</h3>
-        <p>Eliminate manual payment collection and reduce missed renewals.</p>
-        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 8, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 Min read</span></div>
-        <a href="article.html" class="blog-read-more">Read More →</a>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="blog-article-card" data-category="crm" data-title="Why Every Gym Needs A CRM System In 2026">
-      <div class="blog-art-img"><div class="blog-art-placeholder bg3"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="20" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M18 52 C18 38 28 32 40 32 C52 32 62 38 62 52" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/></svg></div></div>
-      <div class="blog-art-body">
-        <div class="blog-art-cat">Fitness CRM</div>
-        <h3>Why Every Gym Needs<br>A CRM System In 2026</h3>
-        <p>Manage leads, follow-ups and member communication efficiently.</p>
-        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 5, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 Min read</span></div>
-        <a href="article.html" class="blog-read-more">Read More →</a>
-      </div>
-    </div>
-    <!-- Card 4 -->
-    <div class="blog-article-card" data-category="gym-management" data-title="Top 5 Features Every Gym Management Software Must Have">
-      <div class="blog-art-img"><div class="blog-art-placeholder bg4"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="15" width="60" height="35" rx="4" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/><line x1="10" y1="25" x2="70" y2="25" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><rect x="16" y="30" width="15" height="12" rx="2" fill="rgba(255,255,255,0.18)"/><rect x="36" y="30" width="15" height="12" rx="2" fill="rgba(255,255,255,0.18)"/></svg></div></div>
-      <div class="blog-art-body">
-        <div class="blog-art-cat">Gym Management</div>
-        <h3>Top 5 Features Every Gym<br>Management Software Must Have</h3>
-        <p>From attendance tracking to billing automation — here's what matters most.</p>
-        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 3, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 Min read</span></div>
-        <a href="article.html" class="blog-read-more">Read More →</a>
-      </div>
-    </div>
-    <!-- Card 5 -->
-    <div class="blog-article-card" data-category="marketing" data-title="How To Get More Gym Members With Digital Marketing">
-      <div class="blog-art-img"><div class="blog-art-placeholder bg5"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><path d="M8 46 L25 26 L40 36 L56 16 L72 20" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.5" stroke-linecap="round"/><circle cx="25" cy="26" r="3" fill="rgba(255,255,255,0.5)"/><circle cx="40" cy="36" r="3" fill="rgba(255,255,255,0.5)"/><circle cx="56" cy="16" r="3" fill="rgba(255,255,255,0.5)"/></svg></div></div>
-      <div class="blog-art-body">
-        <div class="blog-art-cat">Marketing</div>
-        <h3>How To Get More Gym Members<br>With Digital Marketing</h3>
-        <p>Practical tips on social media, Google Ads, and local SEO to grow your gym.</p>
-        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 1, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 Min read</span></div>
-        <a href="article.html" class="blog-read-more">Read More →</a>
-      </div>
-    </div>
-    <!-- Card 6 -->
-    <div class="blog-article-card" data-category="member-retention" data-title="5 Email Strategies To Re-Engage Inactive Gym Members">
-      <div class="blog-art-img"><div class="blog-art-placeholder bg6"><svg viewBox="0 0 80 60" width="56" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="15" width="60" height="35" rx="4" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/><polyline points="10,15 40,38 70,15" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/></svg></div></div>
-      <div class="blog-art-body">
-        <div class="blog-art-cat">Member Retention</div>
-        <h3>5 Email Strategies To<br>Re-Engage Inactive Members</h3>
-        <p>Win back lost members with targeted email campaigns and special offers.</p>
-        <div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 28, 2025</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 4 Min read</span></div>
-        <a href="article.html" class="blog-read-more">Read More →</a>
-      </div>
-    </div>
-
     <div id="noResults" class="blog-no-results hidden">
       <p>No articles found.</p>
       <button onclick="clearFilter()">Show All Articles</button>
     </div>
   </div>
 </section>
+
+<!-- PAGINATION -->
+<div class="blog-pagination" id="paginationWrapper"></div>
 
 <!-- CTA -->
 <section class="blog-cta">
@@ -616,72 +589,163 @@
 
 <script>
 const ALL_ARTICLES = [
-  { title: "10 Proven Ways To Improve Gym Member Retention", category: "member-retention", catLabel: "Member Retention" },
-  { title: "How Automated Billing Saves Gym Owners Time", category: "billing-payments", catLabel: "Billing & Payments" },
-  { title: "Why Every Gym Needs A CRM System In 2026", category: "crm", catLabel: "Fitness CRM" },
-  { title: "Top 5 Features Every Gym Management Software Must Have", category: "gym-management", catLabel: "Gym Management" },
-  { title: "How To Get More Gym Members With Digital Marketing", category: "marketing", catLabel: "Marketing" },
-  { title: "5 Email Strategies To Re-Engage Inactive Gym Members", category: "member-retention", catLabel: "Member Retention" },
-  { title: "Best Gym Management Software For Modern Fitness Centers", category: "gym-management", catLabel: "Gym Management" },
-  { title: "How To Set Up Automated Payments For Your Gym", category: "billing-payments", catLabel: "Billing & Payments" },
-  { title: "Using WhatsApp Marketing To Grow Your Gym", category: "marketing", catLabel: "Marketing" },
-  { title: "CRM Best Practices For Gym Owners", category: "crm", catLabel: "Fitness CRM" },
-  { title: "Gym Attendance Tracking: Why It Matters", category: "gym-management", catLabel: "Gym Management" },
-  { title: "Reduce Gym Membership Cancellations With These Tips", category: "member-retention", catLabel: "Member Retention" },
+  { id:1, title:"10 Proven Ways To Improve Gym Member Retention", category:"member-retention", catLabel:"Member Retention", bg:"bg1", date:"Jun 10, 2025", read:"5 Min read", desc:"Learn practical strategies to reduce cancellations and keep members engaged longer." },
+  { id:2, title:"How Automated Billing Saves Gym Owners Time", category:"billing-payments", catLabel:"Billing & Payments", bg:"bg2", date:"Jun 8, 2025", read:"6 Min read", desc:"Eliminate manual payment collection and reduce missed renewals." },
+  { id:3, title:"Why Every Gym Needs A CRM System In 2026", category:"crm", catLabel:"Fitness CRM", bg:"bg3", date:"Jun 5, 2025", read:"7 Min read", desc:"Manage leads, follow-ups and member communication efficiently." },
+  { id:4, title:"Top 5 Features Every Gym Management Software Must Have", category:"gym-management", catLabel:"Gym Management", bg:"bg4", date:"Jun 3, 2025", read:"6 Min read", desc:"From attendance tracking to billing automation — here's what matters most." },
+  { id:5, title:"How To Get More Gym Members With Digital Marketing", category:"marketing", catLabel:"Marketing", bg:"bg5", date:"Jun 1, 2025", read:"5 Min read", desc:"Practical tips on social media, Google Ads, and local SEO to grow your gym." },
+  { id:6, title:"5 Email Strategies To Re-Engage Inactive Gym Members", category:"member-retention", catLabel:"Member Retention", bg:"bg6", date:"May 28, 2025", read:"4 Min read", desc:"Win back lost members with targeted email campaigns and special offers." },
+  { id:7, title:"Best Gym Management Software For Modern Fitness Centers", category:"gym-management", catLabel:"Gym Management", bg:"bg1", date:"May 25, 2025", read:"8 Min read", desc:"A deep dive into the top gym software options available today." },
+  { id:8, title:"How To Set Up Automated Payments For Your Gym", category:"billing-payments", catLabel:"Billing & Payments", bg:"bg2", date:"May 22, 2025", read:"5 Min read", desc:"Step-by-step guide to automating membership fee collection." },
+  { id:9, title:"Using WhatsApp Marketing To Grow Your Gym", category:"marketing", catLabel:"Marketing", bg:"bg3", date:"May 19, 2025", read:"4 Min read", desc:"Leverage WhatsApp to communicate, convert and retain gym members." },
+  { id:10, title:"CRM Best Practices For Gym Owners", category:"crm", catLabel:"Fitness CRM", bg:"bg4", date:"May 16, 2025", read:"6 Min read", desc:"Learn how to build better member relationships using a CRM." },
+  { id:11, title:"Gym Attendance Tracking: Why It Matters", category:"gym-management", catLabel:"Gym Management", bg:"bg5", date:"May 13, 2025", read:"5 Min read", desc:"Track who shows up and use that data to reduce dropout rates." },
+  { id:12, title:"Reduce Gym Membership Cancellations With These Tips", category:"member-retention", catLabel:"Member Retention", bg:"bg6", date:"May 10, 2025", read:"6 Min read", desc:"Proven tactics to keep your members subscribed month after month." }
 ];
 
+const CARDS_PER_PAGE = 6;
 const CATEGORY_NAMES = { "gym-management":"Gym Management","billing-payments":"Billing & Payments","marketing":"Marketing","crm":"CRM","member-retention":"Member Retention","all":"All Articles" };
 let activeCategory = null;
+let currentPage = 1;
 
-function filterCategory(el) {
-  const cat = el.dataset.category;
-  if (activeCategory === cat) { clearFilter(); return; }
-  activeCategory = cat;
-  document.querySelectorAll('.blog-cat-card').forEach(c => c.classList.toggle('active', c.dataset.category === cat));
-  let vis = 0;
-  document.querySelectorAll('.blog-article-card').forEach(c => { const m = cat === 'all' || c.dataset.category === cat; c.style.display = m ? 'block' : 'none'; if (m) vis++; });
-  document.getElementById('noResults').classList.toggle('hidden', vis > 0);
-  const lbl = document.getElementById('activeFilterLabel');
-  document.getElementById('filterLabelText').textContent = 'Showing: ' + CATEGORY_NAMES[cat];
-  lbl.classList.remove('hidden');
-  document.querySelector('.blog-latest').scrollIntoView({ behavior: 'smooth', block: 'start' });
+/* click tracking */
+function getClicks(){ try { return JSON.parse(localStorage.getItem('gymex_clicks')||'{}'); } catch(e){ return {}; } }
+function trackClick(title, url){
+  const c = getClicks(); c[title] = (c[title]||0)+1;
+  localStorage.setItem('gymex_clicks', JSON.stringify(c));
+  if (url) setTimeout(function(){ window.location.href = url; }, 50);
 }
-function clearFilter() {
-  activeCategory = null;
-  document.querySelectorAll('.blog-cat-card').forEach(c => c.classList.remove('active'));
-  document.querySelectorAll('.blog-article-card').forEach(c => c.style.display = 'block');
+
+/* most popular */
+function renderPopular(){
+  const clicks = getClicks();
+  const sorted = ALL_ARTICLES.map(function(a){ return Object.assign({}, a, { clicks: clicks[a.title]||0 }); })
+    .sort(function(a,b){ return b.clicks - a.clicks; }).slice(0,3);
+  const rank = ['gold','silver','bronze'];
+  document.getElementById('popularGrid').innerHTML = sorted.map(function(a,i){
+    const t = a.title.replace(/'/g,"\\'");
+    return '<div class="blog-pop-card" onclick="trackClick(\''+t+'\', \'article.html\')">'
+      + '<div class="blog-pop-rank '+rank[i]+'">'+(i+1)+'</div>'
+      + '<div class="blog-pop-img"><img src="assets/most-popular.png" alt="'+esc(a.title)+'"></div>'
+      + '<div class="blog-pop-body"><div class="blog-pop-cat">'+a.catLabel+'</div>'
+      + '<h3>'+esc(a.title)+'</h3>'
+      + '<div class="blog-pop-clicks"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'+a.clicks+' clicks</div></div></div>';
+  }).join('');
+}
+
+/* articles grid + pagination */
+function getFiltered(){
+  if (!activeCategory || activeCategory === 'all') return ALL_ARTICLES;
+  return ALL_ARTICLES.filter(function(a){ return a.category === activeCategory; });
+}
+function renderArticles(){
+  const filtered = getFiltered();
+  const totalPages = Math.ceil(filtered.length / CARDS_PER_PAGE);
+  if (currentPage > totalPages) currentPage = 1;
+  const pageItems = filtered.slice((currentPage-1)*CARDS_PER_PAGE, currentPage*CARDS_PER_PAGE);
+  const grid = document.getElementById('articlesGrid');
+  const noResults = document.getElementById('noResults');
+  if (pageItems.length === 0){
+    grid.innerHTML = ''; grid.appendChild(noResults); noResults.classList.remove('hidden');
+    document.getElementById('paginationWrapper').innerHTML = ''; return;
+  }
+  noResults.classList.add('hidden');
+  grid.innerHTML = pageItems.map(function(a){
+    const t = a.title.replace(/'/g,"\\'");
+    return '<div class="blog-article-card" onclick="trackClick(\''+t+'\', \'article.html\')">'
+      + '<div class="blog-art-img"><div class="blog-art-placeholder '+a.bg+'"><img src="assets/latest-article.png" alt="'+esc(a.title)+'"></div></div>'
+      + '<div class="blog-art-body"><div class="blog-art-cat">'+a.catLabel+'</div>'
+      + '<h3>'+esc(a.title)+'</h3><p>'+esc(a.desc)+'</p>'
+      + '<div class="blog-art-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> '+a.date+'</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> '+a.read+'</span></div>'
+      + '<span class="blog-read-more">Read More →</span></div></div>';
+  }).join('');
+  grid.appendChild(noResults);
+  renderPagination(totalPages);
+}
+function renderPagination(totalPages){
+  const w = document.getElementById('paginationWrapper');
+  if (totalPages <= 1){ w.innerHTML = ''; return; }
+  let html = '<button class="blog-pg-btn" onclick="goToPage('+(currentPage-1)+')"'+(currentPage===1?' disabled':'')+'>‹</button>';
+  getPageNums(currentPage, totalPages).forEach(function(p){
+    if (p === '...') html += '<span class="blog-pg-dots">…</span>';
+    else html += '<button class="blog-pg-btn'+(p===currentPage?' active':'')+'" onclick="goToPage('+p+')">'+p+'</button>';
+  });
+  html += '<button class="blog-pg-btn" onclick="goToPage('+(currentPage+1)+')"'+(currentPage===totalPages?' disabled':'')+'>›</button>';
+  w.innerHTML = html;
+}
+function getPageNums(cur, total){
+  if (total <= 7) return Array.from({length: total}, function(_,i){ return i+1; });
+  const pages = [];
+  if (cur <= 4){ for (let i=1;i<=5;i++) pages.push(i); pages.push('...'); pages.push(total); }
+  else if (cur >= total-3){ pages.push(1); pages.push('...'); for (let i=total-4;i<=total;i++) pages.push(i); }
+  else { pages.push(1); pages.push('...'); for (let i=cur-1;i<=cur+1;i++) pages.push(i); pages.push('...'); pages.push(total); }
+  return pages;
+}
+function goToPage(p){
+  const totalPages = Math.ceil(getFiltered().length / CARDS_PER_PAGE);
+  if (p < 1 || p > totalPages) return;
+  currentPage = p; renderArticles();
+  document.querySelector('.blog-latest').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+/* category filter */
+function filterCategory(el){
+  const cat = el.dataset.category;
+  if (activeCategory === cat){ clearFilter(); return; }
+  activeCategory = cat; currentPage = 1;
+  document.querySelectorAll('.blog-cat-card').forEach(function(c){ c.classList.toggle('active', c.dataset.category === cat); });
+  document.getElementById('filterLabelText').textContent = 'Showing: ' + CATEGORY_NAMES[cat];
+  document.getElementById('activeFilterLabel').classList.remove('hidden');
+  renderArticles();
+  document.querySelector('.blog-latest').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+function clearFilter(){
+  activeCategory = null; currentPage = 1;
+  document.querySelectorAll('.blog-cat-card').forEach(function(c){ c.classList.remove('active'); });
   document.getElementById('noResults').classList.add('hidden');
   document.getElementById('activeFilterLabel').classList.add('hidden');
+  renderArticles();
 }
+
+/* search */
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
-searchInput.addEventListener('keyup', function(e) {
-  if (e.key === 'Enter') { doSearch(); return; }
+searchInput.addEventListener('keyup', function(e){
+  if (e.key === 'Enter'){ doSearch(); return; }
   const q = this.value.trim();
   if (q.length >= 2) showSearchDropdown(q); else hideSearchDropdown();
 });
-document.addEventListener('click', function(e) { if (!e.target.closest('.blog-search') && !e.target.closest('.search-results')) hideSearchDropdown(); });
-function showSearchDropdown(q) {
-  const matches = ALL_ARTICLES.filter(a => a.title.toLowerCase().includes(q.toLowerCase()) || a.catLabel.toLowerCase().includes(q.toLowerCase()));
-  searchResults.innerHTML = matches.length === 0 ? `<div class="search-no-results">No articles found for "<strong>${esc(q)}</strong>"</div>` : '';
-  if (matches.length > 0) matches.slice(0,6).forEach(a => {
+document.addEventListener('click', function(e){ if (!e.target.closest('.blog-search') && !e.target.closest('.search-results')) hideSearchDropdown(); });
+function showSearchDropdown(q){
+  const matches = ALL_ARTICLES.filter(function(a){ return a.title.toLowerCase().includes(q.toLowerCase()) || a.catLabel.toLowerCase().includes(q.toLowerCase()); });
+  searchResults.innerHTML = matches.length === 0 ? '<div class="search-no-results">No articles found for "<strong>'+esc(q)+'</strong>"</div>' : '';
+  if (matches.length > 0) matches.slice(0,6).forEach(function(a){
     const d = document.createElement('div'); d.className = 'search-result-item';
-    d.innerHTML = `<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#1565C0;fill:none;stroke-width:2;flex-shrink:0;"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke-linecap="round"/></svg><span><strong>${hl(a.title,q)}</strong> &nbsp;<small style="color:#aaa;font-weight:400;">${a.catLabel}</small></span>`;
-    d.onclick = () => { searchInput.value = a.title; hideSearchDropdown(); const cc = document.querySelector(`.blog-cat-card[data-category="${a.category}"]`); if (cc) filterCategory(cc); };
+    d.innerHTML = '<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#1565C0;fill:none;stroke-width:2;flex-shrink:0;"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke-linecap="round"/></svg><span><strong>'+hl(a.title,q)+'</strong> &nbsp;<small style="color:#aaa;font-weight:400;">'+a.catLabel+'</small></span>';
+    d.onclick = function(){
+      searchInput.value = a.title; hideSearchDropdown();
+      activeCategory = a.category; currentPage = 1;
+      document.querySelectorAll('.blog-cat-card').forEach(function(c){ c.classList.toggle('active', c.dataset.category === a.category); });
+      document.getElementById('filterLabelText').textContent = 'Showing: ' + CATEGORY_NAMES[a.category];
+      document.getElementById('activeFilterLabel').classList.remove('hidden');
+      renderArticles(); trackClick(a.title);
+    };
     searchResults.appendChild(d);
   });
   searchResults.classList.remove('hidden');
 }
-function hideSearchDropdown() { searchResults.classList.add('hidden'); searchResults.innerHTML = ''; }
-function doSearch() { const q = searchInput.value.trim(); if (!q) { clearFilter(); return; } showSearchDropdown(q); }
-function hl(t,q) { if (!q) return esc(t); return esc(t).replace(new RegExp(`(${esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,'gi'),'<mark style="background:#fff3e0;color:#E85D04;border-radius:2px;padding:0 2px;">$1</mark>'); }
-function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function hideSearchDropdown(){ searchResults.classList.add('hidden'); searchResults.innerHTML = ''; }
+function doSearch(){ const q = searchInput.value.trim(); if (!q){ clearFilter(); return; } showSearchDropdown(q); }
+function hl(t,q){ if (!q) return esc(t); return esc(t).replace(new RegExp('(' + esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi'),'<mark style="background:#fff3e0;color:#E85D04;border-radius:2px;padding:0 2px;">$1</mark>'); }
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+renderArticles();
+renderPopular();
 </script>
 
 <!-- Footer Mobile -->
 <style>
-
-
+</style>
 <!-- Backdrop Modal (Imran's version) -->
     <div class="backdrop" id="divemailpopup">
       <div class="contact-us">
