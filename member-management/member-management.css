@@ -574,10 +574,10 @@ h1,h2,h3,h4,h5,h6 { font-size: inherit; font-weight: inherit; margin: 0; }
 @media (max-width: 768px) {
   /* Sirf member-management page pe (attribute selector) — warna ye
      override doosre sm-hero pages ke apne hero images ko maar deta tha */
-  .sm-hero[style*="member-management-hero"] {
+  .sm-hero[style*="Member Management"] {
     background-image:
       linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.15) 60%, rgba(255,255,255,0)),
-      url("../assets/member-management-hero.png") !important;
+      url("../assets/Member Management - Hero Image.png") !important;
     background-position: center top, 86% top !important;
     background-size: cover, cover !important;
     background-repeat: no-repeat !important;
