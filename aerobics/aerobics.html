@@ -56,6 +56,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .mm-hero { padding: 40px 0 20px !important; }
       .mm-hero-grid { padding: 0 24px; }
     }
+
+    /* coloured underline removed from section headings */
+    .mm-heading h2::after { display: none !important; }
+
+    /* section content boxed into a clean card with icon badge */
+    .mm-sec-card {
+      max-width: 900px; margin: 0 auto;
+      background: #fff;
+      border: 1px solid #e6e9f0;
+      border-radius: 22px;
+      padding: 44px 46px 40px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(16, 32, 72, .08);
+    }
+    .mm-section:not(.grey) .mm-sec-card { background: #f7f9fe; border-color: #e3e9f5; }
+    .mm-sec-card-icon {
+      width: 66px; height: 66px; border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #e9f0ff, #d9e8ff);
+      color: #028ece; font-size: 25px;
+      box-shadow: 0 12px 26px rgba(2, 142, 206, .20);
+    }
+    .mm-sec-card .mm-heading { margin-bottom: 16px; }
+    .mm-sec-card .mm-sec-p { max-width: 100%; margin-bottom: 13px; }
+    .mm-sec-card .mm-link-row { margin-top: 28px; }
+    @media (max-width: 600px) {
+      .mm-sec-card { padding: 30px 18px 26px; border-radius: 16px; }
+      .mm-sec-card-icon { width: 56px; height: 56px; font-size: 21px; }
+    }
   </style>
   <script src="../javascript.js?v=2"></script>
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
@@ -277,15 +307,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 <section class="mm-section grey">
+      <div class="mm-sec-card">
+        <div class="mm-sec-card-icon"><i class="fa fa-calendar-check"></i></div>
       <div class="mm-heading"><h2>Keep Every Class <span class="accent">Ready to Go</span></h2></div>
       <p class="mm-sec-p">Different class timings, instructors and member bookings can become difficult to coordinate manually.</p>
       <p class="mm-sec-p">Gymex helps organize aerobics class schedules, bookings and availability from one place. Automatic waitlists can also help manage demand when a class reaches capacity.</p>
       <div class="mm-link-row">
         <a class="mm-link-pill" href="../appointment-and-class/appointment-and-class.html">Explore Appointment &amp; Class Booking <i class="fa fa-arrow-up"></i></a>
       </div>
+      </div>
     </section>
 
 <section class="mm-section">
+      <div class="mm-sec-card">
+        <div class="mm-sec-card-icon"><i class="fa fa-id-card"></i></div>
       <div class="mm-heading"><h2>Make Memberships <span class="accent">Easier to Handle</span></h2></div>
       <p class="mm-sec-p">As more members join your studio, keeping profiles, memberships, payments and attendance organized becomes increasingly important.</p>
       <p class="mm-sec-p">Gymex brings important member information together while also helping your team manage new enquiries and follow-ups before prospects join.</p>
@@ -293,9 +328,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a class="mm-link-pill" href="../member-management/member-management.html">Explore Member Management <i class="fa fa-arrow-up"></i></a>
         <a class="mm-link-pill" href="../lead-management/lead-management.html">Explore Lead Management <i class="fa fa-arrow-up"></i></a>
       </div>
+      </div>
     </section>
 
 <section class="mm-section grey">
+      <div class="mm-sec-card">
+        <div class="mm-sec-card-icon"><i class="fa fa-graduation-cap"></i></div>
       <div class="mm-heading"><h2>Give Your Instructors <span class="accent">a More Organized Workday</span></h2></div>
       <p class="mm-sec-p">Your instructors should be able to focus on delivering engaging classes rather than dealing with unnecessary administrative work.</p>
       <p class="mm-sec-p">Gymex helps keep staff information, attendance, tasks, payroll and applicable commissions organized through one connected system.</p>
@@ -304,9 +342,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a class="mm-link-pill" href="../task-management/task-management.html">Task Management <i class="fa fa-arrow-up"></i></a>
         <a class="mm-link-pill" href="../payroll-commission/payroll-commission.html">Payroll &amp; Commission <i class="fa fa-arrow-up"></i></a>
       </div>
+      </div>
     </section>
 
 <section class="mm-section">
+      <div class="mm-sec-card">
+        <div class="mm-sec-card-icon"><i class="fa fa-comment-dots"></i></div>
       <div class="mm-heading"><h2>Keep Members Engaged <span class="accent">Between Classes</span></h2></div>
       <p class="mm-sec-p">Staying connected with members can help them remain informed about important studio activities.</p>
       <p class="mm-sec-p">Gymex helps automate member alerts and reminders through supported channels such as WhatsApp, SMS, email and app notifications.</p>
@@ -316,15 +357,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a class="mm-link-pill" href="../whatsapp-automation/whatsapp-automation.html">Explore WhatsApp Automation <i class="fa fa-arrow-up"></i></a>
         <a class="mm-link-pill" href="../mobile-apps/mobile-apps.html">Explore Mobile Apps <i class="fa fa-arrow-up"></i></a>
       </div>
+      </div>
     </section>
 
 <section class="mm-section grey">
+      <div class="mm-sec-card">
+        <div class="mm-sec-card-icon"><i class="fa fa-chart-line"></i></div>
       <div class="mm-heading"><h2>See How Your Studio <span class="accent">Is Performing</span></h2></div>
       <p class="mm-sec-p">Keep important business information accessible as your aerobics studio grows.</p>
       <p class="mm-sec-p">Gymex dashboards and reports help you review memberships, collections, attendance, leads and other key studio activities from one place.</p>
       <p class="mm-sec-p">For businesses operating multiple locations, Gymex also helps keep branch operations connected.</p>
       <div class="mm-link-row">
         <a class="mm-link-pill" href="../data-analysis-dashboard/data-analysis-dashboard.html">Explore Data Analysis &amp; Dashboard <i class="fa fa-arrow-up"></i></a>
+      </div>
       </div>
     </section>
 
