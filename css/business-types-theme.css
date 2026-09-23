@@ -514,15 +514,99 @@ body[data-page="swim"] .mm-feature-icon {
   border: 1px solid #dbe7f7; border-radius: 14px !important; box-shadow: none;
 }
 
-/* ---------- DANCE FAMILY: overview cards with left accent bar ---------- */
+/* ---------- DANCE FAMILY: grey section ---------- */
 body[data-page="dance"] .mm-section.grey { background: #f8f9fc !important; }
-body[data-page="dance"] .mm-feature-card {
-  background: #fff; border: none; box-shadow: 0 6px 22px rgba(13,44,94,.06);
-  border-left: 4px solid #028ece; border-radius: 14px;
-}
-body[data-page="dance"] .mm-feature-icon {
-  background: #e9f0ff !important; color: #028ece !important; border-radius: 12px !important;
-}
 body[data-page="dance"] .mm-faq-item { background: #fff; box-shadow: 0 6px 22px rgba(13,44,94,.06); border-radius: 14px; }
 body[data-page="dance"] .mm-faq-item summary { color: #0d2c5e; }
 body[data-page="dance"] .mm-faq-item p { margin-top: 14px; color: #5a6b85; }
+
+/* ==========================================================
+   NON-BOX PRESENTATIONS — har family overview ko alag tareeke se
+   ========================================================== */
+
+/* DARK FAMILY: card-box ki jagah ICON + TEXT ROWS (2-col, hairline divider) */
+body[data-page="crossfit"] .mm-feature-grid,
+body[data-page="martial-arts-studio"] .mm-feature-grid,
+body[data-page="sport-academies"] .mm-feature-grid {
+  grid-template-columns: 1fr 1fr; gap: 0 56px; max-width: 1100px;
+}
+body[data-page="crossfit"] .mm-feature-card,
+body[data-page="martial-arts-studio"] .mm-feature-card,
+body[data-page="sport-academies"] .mm-feature-card {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: none !important; border: none; box-shadow: none;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  padding: 20px 4px; margin: 0;
+}
+body[data-page="crossfit"] .mm-feature-icon,
+body[data-page="martial-arts-studio"] .mm-feature-icon,
+body[data-page="sport-academies"] .mm-feature-icon {
+  flex: 0 0 46px; width: 46px; height: 46px; border-radius: 12px !important;
+  font-size: 19px; margin-bottom: 0;
+}
+body[data-page="crossfit"] .mm-feature-card h3,
+body[data-page="martial-arts-studio"] .mm-feature-card h3,
+body[data-page="sport-academies"] .mm-feature-card h3 { margin-bottom: 6px; }
+body[data-page="crossfit"] .mm-feature-card p,
+body[data-page="martial-arts-studio"] .mm-feature-card p,
+body[data-page="sport-academies"] .mm-feature-card p { margin-bottom: 0; }
+body[data-page="crossfit"] .mm-faq-item,
+body[data-page="martial-arts-studio"] .mm-faq-item,
+body[data-page="sport-academies"] .mm-faq-item {
+  background: none !important; border: none !important;
+  border-bottom: 1px solid rgba(255,255,255,.14); border-radius: 0;
+}
+
+/* MINT FAMILY: bilkul minimal — no border, no shadow, airy centered */
+body[data-page="yoga-studio"] .mm-feature-grid,
+body[data-page="pilates"] .mm-feature-grid,
+body[data-page="pt-studio"] .mm-feature-grid {
+  grid-template-columns: repeat(3, 1fr); gap: 34px 26px; max-width: 1100px;
+}
+body[data-page="yoga-studio"] .mm-feature-card,
+body[data-page="pilates"] .mm-feature-card,
+body[data-page="pt-studio"] .mm-feature-card {
+  background: none !important; border: none !important; box-shadow: none !important;
+  text-align: center; padding: 8px 4px; border-radius: 0;
+}
+body[data-page="yoga-studio"] .mm-faq-item,
+body[data-page="pilates"] .mm-faq-item,
+body[data-page="pt-studio"] .mm-faq-item {
+  background: none !important; border: none !important; box-shadow: none !important;
+  border-bottom: 1px solid #dbe7f7; border-radius: 0;
+  padding: 16px 6px;
+}
+
+/* DANCE FAMILY: card-box ki jagah INLINE ICON LIST (icon left, dashed divider) */
+body[data-page="dance"] .mm-feature-grid {
+  grid-template-columns: 1fr 1fr; gap: 0 52px; max-width: 1100px;
+}
+body[data-page="dance"] .mm-feature-card {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: none !important; border: none !important; box-shadow: none !important;
+  border-bottom: 1px dashed #cfdcef;
+  padding: 16px 4px; border-left: none; border-radius: 0;
+}
+body[data-page="dance"] .mm-feature-icon {
+  flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50% !important;
+  font-size: 18px; margin-bottom: 0;
+}
+body[data-page="dance"] .mm-feature-card h3 { margin-bottom: 4px; }
+body[data-page="dance"] .mm-feature-card p { margin-bottom: 0; }
+
+/* GYM FAMILY: bhi rows me — soft blue bg chips ki jagah clean rows */
+body[data-page="gym"] .mm-feature-grid {
+  grid-template-columns: 1fr 1fr; gap: 0 56px; max-width: 1100px;
+}
+body[data-page="gym"] .mm-feature-card {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: none !important; border: none; box-shadow: none;
+  border-bottom: 1px solid #e3eaf5;
+  padding: 20px 4px;
+}
+body[data-page="gym"] .mm-feature-icon {
+  flex: 0 0 46px; width: 46px; height: 46px; border-radius: 12px !important;
+  font-size: 19px; margin-bottom: 0;
+}
+body[data-page="gym"] .mm-feature-card h3 { margin-bottom: 6px; }
+body[data-page="gym"] .mm-feature-card p { margin-bottom: 0; }
