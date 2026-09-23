@@ -25,6 +25,39 @@
 .mm-hero-tags { justify-content: flex-start; margin-top: 26px; }
 .mm-hero + .mm-section { margin-top: 0 !important; }
 
+/* ---------- PER-PAGE HERO BACKGROUND (Industry images, text left / scene right) ---------- */
+.mm-hero { background-size: cover !important; background-position: center top !important; background-repeat: no-repeat !important; }
+body[data-page="gym"] .mm-hero {
+  background: url("../assets/Industry - Gym Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
+}
+body[data-page="dance"] .mm-hero {
+  background: url("../assets/Industry - Dance Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
+}
+body[data-page="aerobics"] .mm-hero {
+  background: url("../assets/Industry - Aerobics Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
+}
+body[data-page="swim"] .mm-hero {
+  background: url("../assets/Industry - Swim School Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
+}
+/* soft white fade at bottom + readability scrim on left half */
+body[data-page="gym"] .mm-hero::after,
+body[data-page="dance"] .mm-hero::after,
+body[data-page="aerobics"] .mm-hero::after,
+body[data-page="swim"] .mm-hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(245,248,255,.92) 0%, rgba(245,248,255,.72) 34%, rgba(245,248,255,0) 60%),
+              linear-gradient(180deg, rgba(245,248,255,0) 55%, rgba(245,248,255,1) 100%);
+}
+.mm-hero-grid { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  body[data-page="gym"] .mm-hero::after,
+  body[data-page="dance"] .mm-hero::after,
+  body[data-page="aerobics"] .mm-hero::after,
+  body[data-page="swim"] .mm-hero::after {
+    background: linear-gradient(90deg, rgba(245,248,255,.95) 0%, rgba(245,248,255,.9) 100%);
+  }
+}
+
 /* label chip like sm-label (uppercase blue + orange dot) */
 .mm-hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
