@@ -278,56 +278,46 @@ body[data-page="swim"] .bt-txt .mm-link-row { justify-content: flex-start; }
 }
 
 /* ---------- VARIANT B: dark bold — crossfit, martial arts, sports academy ---------- */
-body[data-page="crossfit"] .bt-grid-sec,
-body[data-page="martial-arts-studio"] .bt-grid-sec,
-body[data-page="sport-academies"] .bt-grid-sec {
-  background: linear-gradient(160deg, #101828 0%, #17233c 100%);
-}
 body[data-page="crossfit"] .bt-grid,
 body[data-page="martial-arts-studio"] .bt-grid,
 body[data-page="sport-academies"] .bt-grid { gap: 20px; }
 body[data-page="crossfit"] .bt-block,
 body[data-page="martial-arts-studio"] .bt-block,
 body[data-page="sport-academies"] .bt-block {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.10);
+  background: linear-gradient(180deg, #f6f9ff 0%, #fbfcfe 100%);
+  border: none;
   border-radius: 18px;
   padding: 28px 26px;
-  box-shadow: none;
-  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  box-shadow: 0 10px 26px rgba(22, 87, 214, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 body[data-page="crossfit"] .bt-block:hover,
 body[data-page="martial-arts-studio"] .bt-block:hover,
-body[data-page="sport-academies"] .bt-block:hover {
-  transform: translateY(-4px);
-  background: rgba(255,255,255,.08);
-  border-color: rgba(254,79,13,.45);
-  box-shadow: none;
-}
+body[data-page="sport-academies"] .bt-block:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(22, 87, 214, 0.12); }
 body[data-page="crossfit"] .bt-ico,
 body[data-page="martial-arts-studio"] .bt-ico,
 body[data-page="sport-academies"] .bt-ico {
-  background: rgba(254,79,13,.16); color: #ff8a55;
-  border-radius: 14px; box-shadow: none;
+  background: linear-gradient(135deg, #e9f0ff, #dce9ff); color: #1657d6;
+  border-radius: 16px; box-shadow: inset 0 0 0 1px rgba(22, 87, 214, 0.08);
 }
 body[data-page="crossfit"] .bt-txt h3,
 body[data-page="martial-arts-studio"] .bt-txt h3,
-body[data-page="sport-academies"] .bt-txt h3 { color: #fff; }
+body[data-page="sport-academies"] .bt-txt h3 { color: #0d2c5e; }
 body[data-page="crossfit"] .bt-txt h3 .accent,
 body[data-page="martial-arts-studio"] .bt-txt h3 .accent,
-body[data-page="sport-academies"] .bt-txt h3 .accent { color: #ff8a55; }
+body[data-page="sport-academies"] .bt-txt h3 .accent { color: #028ece; }
 body[data-page="crossfit"] .bt-txt .mm-sec-p,
 body[data-page="martial-arts-studio"] .bt-txt .mm-sec-p,
-body[data-page="sport-academies"] .bt-txt .mm-sec-p { color: #b9c4d8; }
+body[data-page="sport-academies"] .bt-txt .mm-sec-p { color: #555; }
 body[data-page="crossfit"] .bt-txt .mm-link-pill,
 body[data-page="martial-arts-studio"] .bt-txt .mm-link-pill,
 body[data-page="sport-academies"] .bt-txt .mm-link-pill {
-  background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.16); color: #cfe0ff;
+  background: #e9f0ff; border-color: #cfe3f7; color: #028ece;
 }
 body[data-page="crossfit"] .bt-txt .mm-link-pill:hover,
 body[data-page="martial-arts-studio"] .bt-txt .mm-link-pill:hover,
 body[data-page="sport-academies"] .bt-txt .mm-link-pill:hover {
-  background: #fe4f0d; border-color: #fe4f0d; color: #fff;
+  background: #028ece; border-color: #028ece; color: #fff;
 }
 
 /* ---------- VARIANT C: calm mint — yoga, pilates, pt-studio ---------- */
@@ -389,53 +379,35 @@ body[data-page="pt-studio"] .bt-txt .mm-link-pill:hover {
    ========================================================== */
 
 /* ---------- DARK FAMILY (crossfit, martial, sports): pura section dark ---------- */
-body[data-page="crossfit"] .mm-section.grey,
-body[data-page="martial-arts-studio"] .mm-section.grey,
-body[data-page="sport-academies"] .mm-section.grey {
-  background: linear-gradient(160deg, #101828 0%, #17233c 100%) !important;
-}
 body[data-page="crossfit"] .mm-heading h2,
 body[data-page="martial-arts-studio"] .mm-heading h2,
-body[data-page="sport-academies"] .mm-heading h2 { color: #fff; }
+body[data-page="sport-academies"] .mm-heading h2 { color: #111; }
 body[data-page="crossfit"] .mm-heading h2 .accent,
 body[data-page="martial-arts-studio"] .mm-heading h2 .accent,
-body[data-page="sport-academies"] .mm-heading h2 .accent { color: #ff8a55; }
+body[data-page="sport-academies"] .mm-heading h2 .accent { color: #028ece; }
 body[data-page="crossfit"] .mm-sec-p,
 body[data-page="martial-arts-studio"] .mm-sec-p,
-body[data-page="sport-academies"] .mm-sec-p { color: #b9c4d8; }
-body[data-page="crossfit"] .mm-feature-card,
-body[data-page="martial-arts-studio"] .mm-feature-card,
-body[data-page="sport-academies"] .mm-feature-card {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: none;
-}
+body[data-page="sport-academies"] .mm-sec-p { color: #555; }
 body[data-page="crossfit"] .mm-feature-card h3,
 body[data-page="martial-arts-studio"] .mm-feature-card h3,
-body[data-page="sport-academies"] .mm-feature-card h3 { color: #fff; }
+body[data-page="sport-academies"] .mm-feature-card h3 { color: #111; }
 body[data-page="crossfit"] .mm-feature-card p,
 body[data-page="martial-arts-studio"] .mm-feature-card p,
-body[data-page="sport-academies"] .mm-feature-card p { color: #b9c4d8; }
+body[data-page="sport-academies"] .mm-feature-card p { color: #555; }
 body[data-page="crossfit"] .mm-feature-icon,
 body[data-page="martial-arts-studio"] .mm-feature-icon,
 body[data-page="sport-academies"] .mm-feature-icon {
-  background: rgba(254,79,13,.16) !important; color: #ff8a55 !important;
-}
-body[data-page="crossfit"] .mm-faq-item,
-body[data-page="martial-arts-studio"] .mm-faq-item,
-body[data-page="sport-academies"] .mm-faq-item {
-  background: rgba(255,255,255,.05); box-shadow: none;
-  border: 1px solid rgba(255,255,255,.10);
+  background: #e9f0ff !important; color: #1657d6 !important;
 }
 body[data-page="crossfit"] .mm-faq-item summary,
 body[data-page="martial-arts-studio"] .mm-faq-item summary,
-body[data-page="sport-academies"] .mm-faq-item summary { color: #fff; }
+body[data-page="sport-academies"] .mm-faq-item summary { color: #111; }
 body[data-page="crossfit"] .mm-faq-item summary::after,
 body[data-page="martial-arts-studio"] .mm-faq-item summary::after,
-body[data-page="sport-academies"] .mm-faq-item summary::after { color: #ff8a55; }
+body[data-page="sport-academies"] .mm-faq-item summary::after { color: #028ece; }
 body[data-page="crossfit"] .mm-faq-item p,
 body[data-page="martial-arts-studio"] .mm-faq-item p,
-body[data-page="sport-academies"] .mm-faq-item p { color: #b9c4d8; margin-top: 14px; }
+body[data-page="sport-academies"] .mm-faq-item p { color: #555; margin-top: 14px; }
 
 /* ---------- MINT FAMILY (yoga, pilates, pt): green-tinted sections, round icons ---------- */
 body[data-page="yoga-studio"] .mm-section.grey,
@@ -533,9 +505,9 @@ body[data-page="sport-academies"] .mm-feature-grid {
 body[data-page="crossfit"] .mm-feature-card,
 body[data-page="martial-arts-studio"] .mm-feature-card,
 body[data-page="sport-academies"] .mm-feature-card {
-  display: flex; gap: 18px; align-items: flex-start;
-  background: none !important; border: none; box-shadow: none;
-  border-bottom: 1px solid rgba(255,255,255,.14) !important;
+  display: flex !important; gap: 18px; align-items: flex-start;
+  background: none !important; border: none !important; box-shadow: none !important;
+  border-bottom: 1px solid #e3eaf5 !important;
   padding: 20px 4px !important; margin: 0 !important;
 }
 body[data-page="crossfit"] .mm-feature-icon,
@@ -554,7 +526,7 @@ body[data-page="crossfit"] .mm-faq-item,
 body[data-page="martial-arts-studio"] .mm-faq-item,
 body[data-page="sport-academies"] .mm-faq-item {
   background: none !important; border: none !important;
-  border-bottom: 1px solid rgba(255,255,255,.14); border-radius: 0;
+  border-bottom: 1px solid #e3eaf5 !important; border-radius: 0;
 }
 
 /* MINT FAMILY: bilkul minimal — no border, no shadow, airy centered */
