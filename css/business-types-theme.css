@@ -535,8 +535,8 @@ body[data-page="martial-arts-studio"] .mm-feature-card,
 body[data-page="sport-academies"] .mm-feature-card {
   display: flex; gap: 18px; align-items: flex-start;
   background: none !important; border: none; box-shadow: none;
-  border-bottom: 1px solid rgba(255,255,255,.14);
-  padding: 20px 4px; margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,.14) !important;
+  padding: 20px 4px !important; margin: 0 !important;
 }
 body[data-page="crossfit"] .mm-feature-icon,
 body[data-page="martial-arts-studio"] .mm-feature-icon,
@@ -567,14 +567,14 @@ body[data-page="yoga-studio"] .mm-feature-card,
 body[data-page="pilates"] .mm-feature-card,
 body[data-page="pt-studio"] .mm-feature-card {
   background: none !important; border: none !important; box-shadow: none !important;
-  text-align: center; padding: 8px 4px; border-radius: 0;
+  text-align: center; padding: 8px 4px !important; border-radius: 0 !important;
 }
 body[data-page="yoga-studio"] .mm-faq-item,
 body[data-page="pilates"] .mm-faq-item,
 body[data-page="pt-studio"] .mm-faq-item {
   background: none !important; border: none !important; box-shadow: none !important;
-  border-bottom: 1px solid #dbe7f7; border-radius: 0;
-  padding: 16px 6px;
+  border-bottom: 1px solid #dbe7f7 !important; border-radius: 0 !important;
+  padding: 16px 6px !important;
 }
 
 /* DANCE FAMILY: card-box ki jagah INLINE ICON LIST (icon left, dashed divider) */
@@ -582,10 +582,10 @@ body[data-page="dance"] .mm-feature-grid {
   grid-template-columns: 1fr 1fr; gap: 0 52px; max-width: 1100px;
 }
 body[data-page="dance"] .mm-feature-card {
-  display: flex; gap: 16px; align-items: flex-start;
+  display: flex !important; gap: 16px; align-items: flex-start;
   background: none !important; border: none !important; box-shadow: none !important;
-  border-bottom: 1px dashed #cfdcef;
-  padding: 16px 4px; border-left: none; border-radius: 0;
+  border-bottom: 1px dashed #cfdcef !important;
+  padding: 16px 4px !important; border-left: none !important; border-radius: 0 !important;
 }
 body[data-page="dance"] .mm-feature-icon {
   flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50% !important;
@@ -600,9 +600,9 @@ body[data-page="gym"] .mm-feature-grid {
 }
 body[data-page="gym"] .mm-feature-card {
   display: flex; gap: 18px; align-items: flex-start;
-  background: none !important; border: none; box-shadow: none;
-  border-bottom: 1px solid #e3eaf5;
-  padding: 20px 4px;
+  background: none !important; border: none !important; box-shadow: none !important;
+  border-bottom: 1px solid #e3eaf5 !important;
+  padding: 20px 4px !important;
 }
 body[data-page="gym"] .mm-feature-icon {
   flex: 0 0 46px; width: 46px; height: 46px; border-radius: 12px !important;
