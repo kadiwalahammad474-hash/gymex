@@ -125,6 +125,10 @@ body[data-page="sport-academies"] .mm-hero::after {
   background: linear-gradient(90deg, #028ece, #1657d6);
 }
 .bt-block:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(13, 44, 94, 0.14); }
+.bt-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 22px; max-width: 1200px; margin: 0 auto;
+}
 .bt-grid .bt-block:nth-child(5) { grid-column: 1 / -1; }
 .bt-ico {
   flex: 0 0 auto; width: 58px; height: 58px; border-radius: 50%;
@@ -216,12 +220,7 @@ body[data-page="sport-academies"] .mm-hero::after {
 /* ---------- VARIANT A: editorial numbered rows — aerobics, swim ---------- */
 body[data-page="aerobics"] .bt-grid-sec,
 body[data-page="swim"] .bt-grid-sec { background: #fff; }
-body[data-page="aerobics"] .bt-grid,
-body[data-page="swim"] .bt-grid {
-  display: flex; flex-direction: column; gap: 0;
-  max-width: 1100px; margin: 20px auto 0;
-  counter-reset: btnum;
-}
+
 
 /* ---------- DARK FAMILY (crossfit, martial, sports): pura section dark ---------- */
 body[data-page="crossfit"] .mm-heading h2,
