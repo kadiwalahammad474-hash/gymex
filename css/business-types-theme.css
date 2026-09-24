@@ -643,3 +643,14 @@ body[data-page] .mm-feature-card p { text-align: center; }
 @media (max-width: 640px) {
   body[data-page] .mm-feature-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ---------- FINAL CTA BAND (docx "Final CTA", sab business pages) ---------- */
+body[data-page] .mm-cta {
+  text-align: center;
+  padding: 64px 24px;
+  background: linear-gradient(135deg, #f5f8ff, #eef4ff);
+  border-top: 1px solid #e6ecf7;
+}
+body[data-page] .mm-cta h2 { font-size: 36px; font-weight: 800; color: #1c2436; margin-bottom: 14px; text-transform: uppercase; }
+body[data-page] .mm-cta p { font-size: 15px; color: #6b7589; max-width: 640px; margin: 0 auto 26px; line-height: 1.7; }
+@media (max-width: 700px) { body[data-page] .mm-cta h2 { font-size: 26px; } }
