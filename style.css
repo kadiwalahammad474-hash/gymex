@@ -104,7 +104,7 @@ body {
 /* ── DROPDOWN MEGA MENU ── */
 .dropdown { position: relative; }
 .dropdown-content {
-  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-12px) scale(0.97); max-height: calc(100vh - 80px); overflow-y: auto;
+  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-12px) scale(0.97); max-height: calc(100vh - 80px); width: max-content; max-width: min(92vw, 760px); overflow: hidden;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 24px 60px rgba(11, 26, 61, .16);
@@ -128,7 +128,10 @@ body {
   pointer-events: auto;
 }
 
-.mega-menu .column { display: flex; flex-direction: column; gap: 2px; width: 220px; flex: none; }
+.mega-menu .column { display: flex; flex-direction: column; gap: 2px; width: 220px; flex: 0 0 auto; min-width: 0; }
+.dropdown-content .mega-menu { min-width: 0; }
+/* Nav HTML me kuch rows pe inline width (232/265/332px) hai — wo 220px column se bahar nikal ke horizontal scrollbar deta tha. Auto karo (mega-menu class dropdown-content pe bhi ho sakti hai): */
+.dropdown-content .inside, .dropdown-content.mega-menu .inside, .dropdown-content .mega-menu .inside { width: auto !important; min-width: 0; }
 .mega-menu .inside { display: flex; gap: 6px; padding: 4px 6px; border-radius: 6px; transition: background .2s ease; align-items: flex-start; margin-bottom: 1px; }
 .mega-menu .inside:hover { background: var(--gray-7); }
 .mega-col-title { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(28,36,54,.45); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(28,36,54,.08); }
