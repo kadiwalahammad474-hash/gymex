@@ -109,9 +109,7 @@ body[data-page="sport-academies"] .mm-hero::after {
 /* ==========================================================
    BT 2x2 EXPLORE GRID — image-design (icon block + content)
    ========================================================== */
-/* DANCE VARIANT: top-accent white card, icon-top layout (scoped to #dance) */
-body[data-page="dance"] .bt-grid { gap: 22px; }
-body[data-page="dance"] .bt-block {
+.bt-block {
   display: flex; flex-direction: column; align-items: stretch; gap: 0;
   background: #fff;
   border: none;
@@ -122,61 +120,24 @@ body[data-page="dance"] .bt-block {
   box-shadow: 0 6px 24px rgba(13, 44, 94, 0.07);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-body[data-page="dance"] .bt-block::before {
+.bt-block::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
   background: linear-gradient(90deg, #028ece, #1657d6);
 }
-body[data-page="dance"] .bt-block:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(13, 44, 94, 0.14); }
-body[data-page="dance"] .bt-ico {
+.bt-block:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(13, 44, 94, 0.14); }
+.bt-grid .bt-block:nth-child(5) { grid-column: 1 / -1; }
+.bt-ico {
   flex: 0 0 auto; width: 58px; height: 58px; border-radius: 50%;
   background: linear-gradient(135deg, #028ece, #1657d6); color: #fff;
+  display: flex; align-items: center; justify-content: center;
   font-size: 23px; margin-bottom: 18px;
   box-shadow: 0 8px 20px rgba(2, 110, 190, 0.28);
 }
-body[data-page="dance"] .bt-txt h3 { font-size: 17px; color: #0d2c5e; margin-bottom: 12px; }
-body[data-page="dance"] .bt-txt .mm-sec-p { color: #5a6b85; }
-body[data-page="dance"] .bt-txt .mm-link-row { margin-top: 16px; gap: 10px; }
-body[data-page="dance"] .bt-txt .mm-link-pill {
-  background: #f2f7ff; border: 1px solid #d7e6fb; color: #0f6bc4;
-  font-weight: 700; font-size: 13px; padding: 9px 16px;
-}
-body[data-page="dance"] .bt-txt .mm-link-pill:hover { background: #028ece; border-color: #028ece; color: #fff; }
-.bt-grid-sec { background: #fff; }
-.bt-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  max-width: 1180px;
-  margin: 34px auto 0;
-}
-.bt-block {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  background: linear-gradient(180deg, #f6f9ff 0%, #fbfcfe 100%);
-  border: none;
-  border-radius: 18px;
-  padding: 28px 26px;
-  box-shadow: 0 10px 26px rgba(22, 87, 214, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.bt-block:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(22, 87, 214, 0.12); }
-.bt-grid .bt-block:nth-child(5) { grid-column: 1 / -1; }
-.bt-ico {
-  flex: 0 0 54px;
-  width: 54px; height: 54px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #e9f0ff, #dce9ff);
-  color: #1657d6;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
-  box-shadow: inset 0 0 0 1px rgba(22, 87, 214, 0.08);
-}
-.bt-txt { flex: 1; min-width: 0; }
-.bt-txt h3 { font-size: 17px; font-weight: 700; color: #0d2c5e; margin-bottom: 10px; line-height: 1.4; }
-.bt-txt .mm-sec-p { max-width: 100%; margin: 0 0 12px; text-align: left; font-size: 14.5px; line-height: 1.75; color: #555; }
-.bt-txt .mm-link-row { justify-content: flex-start; margin-top: 14px; gap: 10px; }
-.bt-txt .mm-link-pill { padding: 9px 16px; font-size: 13.5px; }
+.bt-txt h3 { font-size: 17px; font-weight: 700; color: #0d2c5e; margin-bottom: 12px; line-height: 1.4; }
+.bt-txt .mm-sec-p { max-width: 100%; margin: 0 0 12px; text-align: left; font-size: 14.5px; line-height: 1.75; color: #5a6b85; }
+.bt-txt .mm-link-row { justify-content: flex-start; margin-top: 16px; gap: 10px; }
+.bt-txt .mm-link-pill { padding: 9px 16px; font-size: 13.5px; background: #f2f7ff; border: 1px solid #d7e6fb; color: #0f6bc4; }
+.bt-txt .mm-link-pill:hover { background: #028ece; border-color: #028ece; color: #fff; }
 
 @media (max-width: 900px) {
   .bt-grid { grid-template-columns: 1fr; }
@@ -261,143 +222,6 @@ body[data-page="swim"] .bt-grid {
   max-width: 1100px; margin: 20px auto 0;
   counter-reset: btnum;
 }
-body[data-page="aerobics"] .bt-block,
-body[data-page="swim"] .bt-block {
-  display: grid; grid-template-columns: 96px 56px 1fr; gap: 26px;
-  align-items: start;
-  background: none; border: none; border-radius: 0;
-  padding: 36px 8px; box-shadow: none;
-  border-bottom: 1px solid #e8edf5;
-  transition: background .2s ease;
-}
-body[data-page="aerobics"] .bt-block:hover,
-body[data-page="swim"] .bt-block:hover { background: #f7faff; transform: none; box-shadow: none; }
-body[data-page="aerobics"] .bt-block::before,
-body[data-page="swim"] .bt-block::before {
-  counter-increment: btnum;
-  content: "0" counter(btnum);
-  font-size: 46px; font-weight: 800; line-height: 1;
-  color: #dfe9fb; letter-spacing: -0.02em;
-}
-body[data-page="aerobics"] .bt-ico,
-body[data-page="swim"] .bt-ico {
-  flex: none; width: 56px; height: 56px; border-radius: 14px;
-  background: #fff; color: #028ece; font-size: 22px;
-  border: 1px solid #dbe7f7; box-shadow: none;
-}
-body[data-page="aerobics"] .bt-txt h3,
-body[data-page="swim"] .bt-txt h3 { color: #14243d; }
-body[data-page="aerobics"] .bt-txt .mm-sec-p,
-body[data-page="swim"] .bt-txt .mm-sec-p { color: #5b6a82; max-width: 720px; }
-body[data-page="aerobics"] .bt-txt .mm-link-row,
-body[data-page="swim"] .bt-txt .mm-link-row { justify-content: flex-start; }
-@media (max-width: 720px) {
-  body[data-page="aerobics"] .bt-block,
-  body[data-page="swim"] .bt-block { grid-template-columns: 1fr; gap: 12px; padding: 26px 4px; }
-  body[data-page="aerobics"] .bt-block::before,
-  body[data-page="swim"] .bt-block::before { font-size: 34px; }
-}
-
-/* ---------- VARIANT B: dark bold — crossfit, martial arts, sports academy ---------- */
-body[data-page="crossfit"] .bt-grid,
-body[data-page="martial-arts-studio"] .bt-grid,
-body[data-page="sport-academies"] .bt-grid { gap: 20px; }
-body[data-page="crossfit"] .bt-block,
-body[data-page="martial-arts-studio"] .bt-block,
-body[data-page="sport-academies"] .bt-block {
-  background: linear-gradient(180deg, #f6f9ff 0%, #fbfcfe 100%);
-  border: none;
-  border-radius: 18px;
-  padding: 28px 26px;
-  box-shadow: 0 10px 26px rgba(22, 87, 214, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-body[data-page="crossfit"] .bt-block:hover,
-body[data-page="martial-arts-studio"] .bt-block:hover,
-body[data-page="sport-academies"] .bt-block:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(22, 87, 214, 0.12); }
-body[data-page="crossfit"] .bt-ico,
-body[data-page="martial-arts-studio"] .bt-ico,
-body[data-page="sport-academies"] .bt-ico {
-  background: linear-gradient(135deg, #e9f0ff, #dce9ff); color: #1657d6;
-  border-radius: 16px; box-shadow: inset 0 0 0 1px rgba(22, 87, 214, 0.08);
-}
-body[data-page="crossfit"] .bt-txt h3,
-body[data-page="martial-arts-studio"] .bt-txt h3,
-body[data-page="sport-academies"] .bt-txt h3 { color: #0d2c5e; }
-body[data-page="crossfit"] .bt-txt h3 .accent,
-body[data-page="martial-arts-studio"] .bt-txt h3 .accent,
-body[data-page="sport-academies"] .bt-txt h3 .accent { color: #028ece; }
-body[data-page="crossfit"] .bt-txt .mm-sec-p,
-body[data-page="martial-arts-studio"] .bt-txt .mm-sec-p,
-body[data-page="sport-academies"] .bt-txt .mm-sec-p { color: #555; }
-body[data-page="crossfit"] .bt-txt .mm-link-pill,
-body[data-page="martial-arts-studio"] .bt-txt .mm-link-pill,
-body[data-page="sport-academies"] .bt-txt .mm-link-pill {
-  background: #e9f0ff; border-color: #cfe3f7; color: #028ece;
-}
-body[data-page="crossfit"] .bt-txt .mm-link-pill:hover,
-body[data-page="martial-arts-studio"] .bt-txt .mm-link-pill:hover,
-body[data-page="sport-academies"] .bt-txt .mm-link-pill:hover {
-  background: #028ece; border-color: #028ece; color: #fff;
-}
-
-/* ---------- VARIANT C: calm mint — yoga, pilates, pt-studio ---------- */
-body[data-page="yoga-studio"] .bt-grid-sec,
-body[data-page="pilates"] .bt-grid-sec,
-body[data-page="pt-studio"] .bt-grid-sec { background: #f4f8fd; }
-body[data-page="yoga-studio"] .bt-grid,
-body[data-page="pilates"] .bt-grid,
-body[data-page="pt-studio"] .bt-grid { gap: 22px; }
-body[data-page="yoga-studio"] .bt-block,
-body[data-page="pilates"] .bt-block,
-body[data-page="pt-studio"] .bt-block {
-  flex-direction: column; align-items: center; text-align: center;
-  background: #fff;
-  border: 1px solid #e2efe8;
-  border-radius: 22px;
-  padding: 34px 28px 28px;
-  box-shadow: 0 10px 28px rgba(23, 146, 106, 0.07);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-body[data-page="yoga-studio"] .bt-block:hover,
-body[data-page="pilates"] .bt-block:hover,
-body[data-page="pt-studio"] .bt-block:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 38px rgba(13, 44, 94, 0.13);
-}
-body[data-page="yoga-studio"] .bt-ico,
-body[data-page="pilates"] .bt-ico,
-body[data-page="pt-studio"] .bt-ico {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: linear-gradient(135deg, #e9f0ff, #dce9ff); color: #028ece;
-  font-size: 24px; margin-bottom: 18px; box-shadow: none;
-}
-body[data-page="yoga-studio"] .bt-txt h3,
-body[data-page="pilates"] .bt-txt h3,
-body[data-page="pt-studio"] .bt-txt h3 { color: #0d2c5e; }
-body[data-page="yoga-studio"] .bt-txt h3 .accent,
-body[data-page="pilates"] .bt-txt h3 .accent,
-body[data-page="pt-studio"] .bt-txt h3 .accent { color: #028ece; }
-body[data-page="yoga-studio"] .bt-txt .mm-sec-p,
-body[data-page="pilates"] .bt-txt .mm-sec-p,
-body[data-page="pt-studio"] .bt-txt .mm-sec-p { color: #5a6b85; }
-body[data-page="yoga-studio"] .bt-txt .mm-link-row,
-body[data-page="pilates"] .bt-txt .mm-link-row,
-body[data-page="pt-studio"] .bt-txt .mm-link-row { justify-content: center; }
-body[data-page="yoga-studio"] .bt-txt .mm-link-pill,
-body[data-page="pilates"] .bt-txt .mm-link-pill,
-body[data-page="pt-studio"] .bt-txt .mm-link-pill {
-  background: #e9f0ff; border-color: #cfe3f7; color: #028ece;
-}
-body[data-page="yoga-studio"] .bt-txt .mm-link-pill:hover,
-body[data-page="pilates"] .bt-txt .mm-link-pill:hover,
-body[data-page="pt-studio"] .bt-txt .mm-link-pill:hover {
-  background: #028ece; border-color: #028ece; color: #fff;
-}
-
-/* ==========================================================
-   FULL-PAGE VARIANTS — overview section + cards + FAQ bhi alag
-   ========================================================== */
 
 /* ---------- DARK FAMILY (crossfit, martial, sports): pura section dark ---------- */
 body[data-page="crossfit"] .mm-heading h2,
