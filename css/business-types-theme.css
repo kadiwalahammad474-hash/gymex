@@ -605,9 +605,9 @@ body[data-page="gym"] .mm-feature-card p { margin-bottom: 0; }
 
 /* ---------- OVERVIEW SECTION: unified boxed cards (sab business pages, content same) ---------- */
 body[data-page] .mm-feature-grid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 22px !important;
-  max-width: 1100px;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 14px !important;
+  max-width: 1400px;
 }
 body[data-page] .mm-feature-card {
   display: block !important;
