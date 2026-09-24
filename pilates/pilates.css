@@ -615,14 +615,33 @@ K.5px;
 
 
 .mm { max-width: 1250px; margin: 0 auto; padding: 0 24px; }
+/* -- mm-btn-orange (home page pill style, member-management reference) -- */
 .mm-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 15px 28px; border-radius: 0; font-weight: 600; font-size: 15px;
-  cursor: pointer; border: none; transition: transform .15s ease, filter .15s ease;
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 6px 6px 6px 28px; border-radius: 50px;
+  font-weight: 700; font-size: 15px; letter-spacing: .5px; text-transform: uppercase;
+  cursor: pointer; border: none;
+  transition: transform .15s ease, filter .15s ease;
 }
 .mm-btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .mm-btn-primary { background: var(--blue); color: #fff; }
-.mm-btn-orange { background: var(--orange-100); color: #fff; }
+.mm-btn-orange {
+  background: linear-gradient(135deg, var(--orange-100), #e0450b);
+  color: #fff;
+}
+.mm-btn-orange i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  color: var(--orange-100);
+}
+
 
 /* ---------- HERO ---------- */
 .mm-hero { position: relative; margin-top: 0; padding: 20px 24px 24px; background: radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%), radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%), radial-gradient(500px 380px at 55% 90%, rgba(2,142,206,.08), transparent 70%), var(--BG); border-radius: 0; overflow: visible; }
