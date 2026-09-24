@@ -654,3 +654,7 @@ body[data-page] .mm-cta {
 body[data-page] .mm-cta h2 { font-size: 36px; font-weight: 800; color: #1c2436; margin-bottom: 14px; text-transform: uppercase; }
 body[data-page] .mm-cta p { font-size: 15px; color: #6b7589; max-width: 640px; margin: 0 auto 26px; line-height: 1.7; }
 @media (max-width: 700px) { body[data-page] .mm-cta h2 { font-size: 26px; } }
+
+/* ---------- sm-section / sm-wrap (blue CTA band spacing, lead-management jaisa) ---------- */
+.sm-section { padding: 70px 24px; }
+.sm-wrap { max-width: 1250px; margin: 0 auto; }
