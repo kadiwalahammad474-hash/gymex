@@ -26,6 +26,10 @@
     <script src="../javascript.js?v=2"></script>
 
 <style>
+/* Demo buttons — ASK FOR DEMO wala orange (site-wide #fe4f0d override, sirf blog pages) */
+.nav .button, .mm-btn-orange { background: linear-gradient(135deg, #f26522, #d5541b) !important; }
+.mm-btn-orange i { color: #f26522 !important; }
+
 
 
 
@@ -46,8 +50,8 @@
 .blog-search:focus-within { border-color: #1565C0; }
 .blog-search input { flex: 1; border: none; outline: none; padding: 13px 18px; font-size: 14px; color: #333; font-family: 'Poppins', sans-serif; background: transparent; }
 .blog-search input::placeholder { color: #aaa; }
-.blog-search button { background: #fe4f0d; border: none; padding: 13px 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
-.blog-search button:hover { background: #e0450b; }
+.blog-search button { background: #f26522; border: none; padding: 13px 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+.blog-search button:hover { background: #d5541b; }
 .blog-search button svg { width: 18px; height: 18px; }
 .search-results { position: relative; margin-top: 8px; background: #fff; border: 1.5px solid #e0e6f0; border-radius: 9px; box-shadow: 0 6px 28px rgba(21,101,192,.13); width: 400px; overflow: hidden; z-index: 100; }
 .search-result-item { padding: 12px 18px; font-size: 13.5px; color: #333; cursor: pointer; border-bottom: 1px solid #e0e6f0; transition: background .15s; display: flex; align-items: center; gap: 10px; }
@@ -80,8 +84,8 @@
 .blog-feat-meta { display: flex; align-items: center; gap: 22px; margin-bottom: 30px; font-size: 12.5px; color: #888; }
 .blog-feat-meta span { display: flex; align-items: center; gap: 7px; }
 .blog-feat-meta svg { width: 14px; height: 14px; }
-.blog-btn-orange { display: inline-flex; align-items: center; gap: 8px; background: #fe4f0d; color: #fff; font-size: 13px; font-weight: 700; padding: 13px 28px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: .4px; text-transform: uppercase; width: fit-content; transition: background .2s, transform .15s; }
-.blog-btn-orange:hover { background: #e0450b; transform: translateY(-1px); }
+.blog-btn-orange { display: inline-flex; align-items: center; gap: 8px; background: #f26522; color: #fff; font-size: 13px; font-weight: 700; padding: 13px 28px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: .4px; text-transform: uppercase; width: fit-content; transition: background .2s, transform .15s; }
+.blog-btn-orange:hover { background: #d5541b; transform: translateY(-1px); }
 .blog-btn-orange svg { width: 16px; height: 16px; }
 .blog-feat-image { flex: 0 0 500px; background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7a 55%, #1565C0 100%); display: flex; align-items: center; justify-content: center; min-height: 320px; }
 
@@ -109,7 +113,7 @@
 .bg5 { background: linear-gradient(135deg, #2a1a4e, #6b3fa0); }
 .bg6 { background: linear-gradient(135deg, #1a3a2e, #1d7a55); }
 .blog-art-body { padding: 20px 20px 22px; }
-.blog-art-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 9px; color: #fe4f0d; }
+.blog-art-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 9px; color: #f26522; }
 .blog-art-body h3 { font-size: 17px; font-weight: 800; line-height: 1.38; color: #111; margin-bottom: 10px; }
 .blog-art-body p { font-size: 14px; color: #666; line-height: 1.68; margin-bottom: 14px; }
 .blog-art-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: #aaa; margin-bottom: 14px; }
@@ -157,11 +161,11 @@
 .blog-popular { padding: 0 40px 52px; max-width: 1300px; margin: 0 auto; }
 .blog-popular-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
 .blog-popular-header h2 { font-size: 36px; font-weight: 900; text-transform: uppercase; color: #111; letter-spacing: .5px; }
-.blog-popular-header h2 span { color: #fe4f0d; }
+.blog-popular-header h2 span { color: #f26522; }
 .blog-popular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .blog-pop-card { border: 1.8px solid #e0e6f0; border-radius: 12px; overflow: hidden; background: #fff; transition: box-shadow .25s, transform .25s, border-color .25s; position: relative; cursor: pointer; }
-.blog-pop-card:hover { box-shadow: 0 6px 28px rgba(21,101,192,.13); border-color: #fe4f0d; transform: translateY(-3px); }
-.blog-pop-rank { position: absolute; top: 10px; left: 10px; z-index: 2; background: #fe4f0d; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900; }
+.blog-pop-card:hover { box-shadow: 0 6px 28px rgba(21,101,192,.13); border-color: #f26522; transform: translateY(-3px); }
+.blog-pop-rank { position: absolute; top: 10px; left: 10px; z-index: 2; background: #f26522; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900; }
 .blog-pop-rank.gold { background: #f59f00; }
 .blog-pop-rank.silver { background: #868e96; }
 .blog-pop-rank.bronze { background: #cd7f32; }
@@ -169,10 +173,10 @@
 .blog-pop-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s; }
 .blog-pop-card:hover .blog-pop-img img { transform: scale(1.04); }
 .blog-pop-body { padding: 16px 18px 18px; }
-.blog-pop-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 7px; color: #fe4f0d; }
+.blog-pop-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 7px; color: #f26522; }
 .blog-pop-body h3 { font-size: 17px; font-weight: 800; line-height: 1.38; color: #111; margin-bottom: 10px; }
 .blog-pop-clicks { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #666; font-weight: 500; }
-.blog-pop-clicks svg { width: 13px; height: 13px; stroke: #fe4f0d; fill: none; stroke-width: 2; }
+.blog-pop-clicks svg { width: 13px; height: 13px; stroke: #f26522; fill: none; stroke-width: 2; }
 
 /* PAGINATION */
 .blog-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 40px 52px; max-width: 1300px; margin: 0 auto; }
@@ -317,7 +321,7 @@
               <a class="nav__link" href="../contact/contact.html">Contact</a>
 
               <button class="nav__link button open-modal-btn" Id="demobutton">
-                <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+                <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23F26522'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
               </button>
             </div>
             <button class="nav__menu" id="open-menu">
@@ -374,7 +378,7 @@
                       <a href="../contact/contact.html">Contact Us</a>
                   </li>
                   <li class="menu__link">
-                          <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+                          <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23F26522'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
                       </button>
                   </li>
               </ul>
@@ -736,7 +740,7 @@ function showSearchDropdown(q){
 }
 function hideSearchDropdown(){ searchResults.classList.add('hidden'); searchResults.innerHTML = ''; }
 function doSearch(){ const q = searchInput.value.trim(); if (!q){ clearFilter(); return; } showSearchDropdown(q); }
-function hl(t,q){ if (!q) return esc(t); return esc(t).replace(new RegExp('(' + esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi'),'<mark style="background:#fff3e0;color:#fe4f0d;border-radius:2px;padding:0 2px;">$1</mark>'); }
+function hl(t,q){ if (!q) return esc(t); return esc(t).replace(new RegExp('(' + esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi'),'<mark style="background:#fff3e0;color:#f26522;border-radius:2px;padding:0 2px;">$1</mark>'); }
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 renderArticles();
@@ -772,7 +776,7 @@ renderPopular();
             <div style="margin-top:12px;">
               <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
             </div>
-            <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
+            <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#f26522,#d5541b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
               <span>GET YOUR FREE DEMO</span>
               <div style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M9.47576 24.5163L7.59014 22.6307L18.9039 11.317H8.53295V8.63941H23.467V23.5735H20.7895V13.2026L9.47576 24.5163Z" fill="white"/></svg></div>
             </button>

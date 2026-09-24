@@ -21,6 +21,10 @@
     <script src="../javascript.js?v=2"></script>
 
 <style>
+/* Demo buttons — ASK FOR DEMO wala orange (site-wide #fe4f0d override, sirf blog pages) */
+.nav .button, .mm-btn-orange { background: linear-gradient(135deg, #f26522, #d5541b) !important; }
+.mm-btn-orange i { color: #f26522 !important; }
+
 /* Article page styles */
 .art-wrap { font-family: 'Poppins', sans-serif; background: #fff; color: #333; font-size: 15px; line-height: 1.7; }
 .art-wrap *, .art-wrap *::before, .art-wrap *::after { box-sizing: border-box; }
@@ -69,10 +73,10 @@
 .art-bcta-left h3 { font-size: 17px; font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 16px; }
 .art-bcta-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
 .art-bcta-list li { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: rgba(255,255,255,.85); }
-.art-bcta-list li::before { content: ''; width: 16px; height: 16px; border-radius: 50%; background: #fe4f0d; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: 10px; background-repeat: no-repeat; background-position: center; }
+.art-bcta-list li::before { content: ''; width: 16px; height: 16px; border-radius: 50%; background: #f26522; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: 10px; background-repeat: no-repeat; background-position: center; }
 .art-bcta-right { flex: 0 0 200px; background: linear-gradient(135deg,#1e3a6a,#2d5a9a); display: flex; align-items: center; justify-content: center; }
-.art-btn-orange { display: inline-flex; align-items: center; gap: 7px; background: #fe4f0d; color: #fff; font-size: 13px; font-weight: 700; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: .3px; text-transform: uppercase; transition: background .2s; }
-.art-btn-orange:hover { background: #e0450b; }
+.art-btn-orange { display: inline-flex; align-items: center; gap: 7px; background: #f26522; color: #fff; font-size: 13px; font-weight: 700; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: .3px; text-transform: uppercase; transition: background .2s; }
+.art-btn-orange:hover { background: #d5541b; }
 .art-btn-orange svg { width: 15px; height: 15px; }
 .art-btn-outline { display: inline-flex; align-items: center; gap: 6px; border: 1.8px solid #1565C0; color: #1565C0; font-size: 13px; font-weight: 700; padding: 9px 20px; border-radius: 8px; cursor: pointer; transition: all .2s; }
 .art-btn-outline:hover { background: #1565C0; color: #fff; }
@@ -135,7 +139,7 @@
 .art-bullet-list li { font-size: 14px; color: #333; padding-left: 2px; }
 .art-bullet-list li strong { color: #111; }
 .art-callout { background: #f8f9fc; border: 1.5px solid #e0e6f0; border-radius: 10px; padding: 22px 26px; margin: 4px 0 24px; }
-.art-callout.pro-tip { border-left: 4px solid #fe4f0d; background: #fff8f2; }
+.art-callout.pro-tip { border-left: 4px solid #f26522; background: #fff8f2; }
 .art-callout-title { font-size: 12.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #111; margin-bottom: 14px; }
 .art-callout .art-check-list, .art-callout .art-bullet-list { margin-bottom: 0; }
 .art-callout p.art-note { font-size: 13.5px; color: #666; margin-top: 14px; line-height: 1.7; }
@@ -313,7 +317,7 @@
               <a class="nav__link" href="../contact/contact.html">Contact</a>
 
               <button class="nav__link button open-modal-btn" Id="demobutton">
-                <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+                <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23F26522'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
               </button>
             </div>
             <button class="nav__menu" id="open-menu">
@@ -370,7 +374,7 @@
                       <a href="../contact/contact.html">Contact Us</a>
                   </li>
                   <li class="menu__link">
-                          <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
+                          <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23F26522'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
                       </button>
                   </li>
               </ul>
@@ -1029,7 +1033,7 @@ document.querySelectorAll('.art-share-btn').forEach(btn => {
             <div style="margin-top:12px;">
               <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
             </div>
-            <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
+            <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#f26522,#d5541b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
               <span>GET YOUR FREE DEMO</span>
               <div style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M9.47576 24.5163L7.59014 22.6307L18.9039 11.317H8.53295V8.63941H23.467V23.5735H20.7895V13.2026L9.47576 24.5163Z" fill="white"/></svg></div>
             </button>
