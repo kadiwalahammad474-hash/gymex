@@ -410,52 +410,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<script>
-var currentCaptcha='';
-function generateCaptcha(){var c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789',r='';for(var i=0;i<6;i++)r+=c.charAt(Math.floor(Math.random()*c.length));currentCaptcha=r;var b=document.getElementById('captcha-box');if(b)b.innerText=r;var v=document.getElementById('captcha-value');if(v)v.value=r;var inp=document.getElementById('captcha-input');if(inp)inp.value='';}
-window.addEventListener('load',function(){generateCaptcha();});
-function validateCaptcha(){
-  var u=document.getElementById('captcha-input');
-  if(!u||u.value.trim()===''){
-    var e=document.getElementById('captcha-error');
-    if(e){e.innerHTML='CAPTCHA is required.';e.style.display='block';}
-    return false;
-  }
-  if(u.value.trim()!==currentCaptcha){
-    var e=document.getElementById('captcha-error');
-    if(e){e.innerHTML='Incorrect CAPTCHA. Please try again.';e.style.display='block';}
-    generateCaptcha();
-    return false;
-  }
-  var e=document.getElementById('captcha-error');
-  if(e)e.style.display='none';
-  return true;
-}
-function handleDemoSubmit(ev){
-  ev.preventDefault();
-  if(!validateCaptcha()) return false;
-  var form=document.getElementById('demoForm');
-  var btn=form.querySelector('button[type=submit]');
-  var origText=btn.innerHTML;
-  btn.innerHTML='Sending...';
-  btn.disabled=true;
-  var fd=new FormData(form);
-  fetch('https://www.gymex.online/contactus.php',{method:'POST',body:fd,mode:'no-cors'})
-    .then(function(){
-      window.location.href='https://www.gymex.online/thankyou.html';
-    })
-    .catch(function(){
-      btn.innerHTML=origText;
-      btn.disabled=false;
-      alert('Sorry, submission failed. Please try again or call us at +91 7710862007.');
-      document.getElementById('demoModal').classList.remove('active');
-      form.reset();
-      generateCaptcha();
-    });
-  return false;
-}
-
-</script>
     <!-- Backdrop Modal (Imran's version) -->
     <div class="backdrop" id="divemailpopup">
       <div class="contact-us">
