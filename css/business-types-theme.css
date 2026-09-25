@@ -504,4 +504,31 @@ body[data-page] .mm-cta p { font-size: 15px; color: #6b7589; max-width: 640px; m
   body[data-page] .sm-section[style*="1565C0"] { padding: 48px 18px !important; }
   body[data-page] .sm-section[style*="1565C0"] h2 { font-size: 24px !important; }
   body[data-page] .sm-section[style*="1565C0"] p { font-size: 14px !important; }
+  /* ── HERO IMAGE mobile fix ──
+     3:1 wide image ko cover-crop karke zoom karna band: text plain gradient pe,
+     image text ke NICHE full-width band me — poori image dikhti hai, no crop */
+  body[data-page] .mm-hero {
+    background:
+      radial-gradient(700px 460px at 88% -10%, rgba(2,142,206,.16), transparent 65%),
+      radial-gradient(560px 420px at -8% 30%, rgba(254,79,13,.10), transparent 65%),
+      var(--BG, #f5f7fb) !important;
+    padding-bottom: 0 !important;
+  }
+  body[data-page] .mm-hero::after {
+    position: static; inset: auto; z-index: auto;
+    display: block; width: 100%; aspect-ratio: 3 / 1;
+    margin-top: 16px; border-radius: 14px;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+  body[data-page="gym"] .mm-hero::after { background-image: url("../assets/Industry - Gym Pg.png") !important; }
+  body[data-page="dance"] .mm-hero::after { background-image: url("../assets/Industry - Dance Pg.png") !important; }
+  body[data-page="aerobics"] .mm-hero::after { background-image: url("../assets/Industry - Aerobics Pg.png") !important; }
+  body[data-page="swim"] .mm-hero::after { background-image: url("../assets/Industry - Swim School Pg.png") !important; }
+  body[data-page="crossfit"] .mm-hero::after { background-image: url("../assets/Industry - CrossFit Pg.png") !important; }
+  body[data-page="martial-arts-studio"] .mm-hero::after { background-image: url("../assets/Industry - Martial Arts Studio Pg.png") !important; }
+  body[data-page="pilates"] .mm-hero::after { background-image: url("../assets/Industry - Pilates Studio Pg.png") !important; }
+  body[data-page="pt-studio"] .mm-hero::after { background-image: url("../assets/Industry - PT Studio Pg.png") !important; }
+  body[data-page="sport-academies"] .mm-hero::after { background-image: url("../assets/Industry - Sports Academy Pg.png") !important; }
 }
