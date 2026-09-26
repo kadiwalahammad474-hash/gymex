@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	  <title>About Us</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../style.css?v=21">
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="about.css?v=2">
   <script src="../javascript.js?v=2"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
@@ -62,7 +62,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Live Chat-->
 </head>
 
-  <body>
+  <body class="about-page">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPCRHTFH"
@@ -235,19 +235,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <a href="../contact/contact.html">Contact Us</a>
                   </li>
                   <li class="menu__link">
-                          <p class="button__text">GET YOUR FREE DEMO</p><img class="button__arrow" src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='mdi:arrow-up'%3e%3cpath%20id='Vector'%20d='M9.47576%2024.5163L7.59014%2022.6307L18.9039%2011.317L8.53295%2011.317V8.63941H23.467V23.5735H20.7895L20.7895%2013.2026L9.47576%2024.5163Z'%20fill='%23FE4F0D'/%3e%3c/g%3e%3c/svg%3e" alt="arrow-up">
-                      </button>
+                      <a class="open-modal-btn" href="#" style="background:#fe4f0d; color:#fff; padding:10px 26px; border-radius:50px; font-size:13px; font-weight:700; letter-spacing:.5px;">GET YOUR FREE DEMO</a>
                   </li>
               </ul>
           </div>
       </div>
-      </nav>
-
-          <header class="mm-hero">
+      </nav>      <header class="mm-hero">
       <div class="mm-hero-grid">
-        <div>
+        <div class="mm-hero-copy">
+          <div class="mm-eyebrow"><i class="fa fa-star"></i> About Gymex</div>
           <h1 class="mm-h1">Making Club Management Easy <span class="accent">For Business Owners</span></h1>
           <p class="mm-desc">Imagine a world where running a gym is as easy as swiping across your phone's screen. A world where you don't have to combine several different applications just to complete daily tasks. A world where you actually enjoy the profits of running a gym.</p>
+          <ul class="mm-hero-points">
+            <li><i class="fa fa-check"></i> Built by gym owners who lived the daily struggles first-hand</li>
+            <li><i class="fa fa-check"></i> One connected platform — members, billing, staff, leads &amp; marketing</li>
+            <li><i class="fa fa-check"></i> Trusted by 500+ fitness businesses across India</li>
+          </ul>
           <button class="mm-btn mm-btn-orange open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
         </div>
         <img class="mm-hero-img" src="../assets/gymex-software-making-club-management.jpeg" alt="Gymex club management">
@@ -256,29 +259,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="mm-section">
       <div class="mm-heading">
-        <h2>Welcome to the World of <span class="accent">Gymex</span></h2>
+        <div class="mm-eyebrow"><i class="fa fa-bolt"></i> Gymex in Numbers</div>
+        <h2>Welcome to the World of <span class="mm-grad">Gymex</span></h2>
         <p>It all started in 2016 when a team of experienced fitness professionals and enthusiasts came together to optimize the way gyms operate. The solution? A seamless club management platform that would merge tech with gym services.</p>
       </div>
-      <div class="mm-feature-grid" style="grid-template-columns: repeat(3, 1fr); text-align:center;">
-        <div class="mm-feature-card"><h3 style="font-size:17px;color:var(--blue);">2016</h3><p>Founded</p></div>
-        <div class="mm-feature-card"><h3 style="font-size:17px;color:var(--blue);">100%</h3><p>Client Satisfaction</p></div>
-        <div class="mm-feature-card"><h3 style="font-size:17px;color:var(--blue);">500+</h3><p>Happy Clients</p></div>
+      <div class="mm-feature-grid mm-grid-3">
+        <div class="mm-feature-card mm-stat-card"><div class="mm-feature-icon" style="background:#e9f0ff;color:#1657d6;"><i class="fa fa-flag"></i></div><div class="num">2016</div><div class="lbl">Founded</div></div>
+        <div class="mm-feature-card mm-stat-card"><div class="mm-feature-icon" style="background:#e6f7ee;color:#1aa971;"><i class="fa fa-heart"></i></div><div class="num">100%</div><div class="lbl">Client Satisfaction</div></div>
+        <div class="mm-feature-card mm-stat-card"><div class="mm-feature-icon" style="background:#f1ecfd;color:#8a5cf6;"><i class="fa fa-users"></i></div><div class="num">500+</div><div class="lbl">Happy Clients</div></div>
       </div>
     </section>
 
     <section class="mm-section grey">
-      <div class="mm-hero-grid" style="align-items:center;">
-        <img class="mm-hero-img" src="../assets/Untitled design (3).png" alt="Gymex founders">
-        <div>
-          <h2 style="font-size:36px;font-weight:800;margin-bottom:16px;">Developed by Fitness Experts, <span class="accent">For Gym Owners</span></h2>
-          <p class="mm-desc">We're not just another software company. We're gym owners, just like you. We've sweated through early mornings, battled with settling disputes between gym members, and struggled hard to keep our gyms up and running.</p>
-          <p class="mm-desc">Our story is one of struggle, grit, and triumph. We took our time and experiences to craft a hands-on software solution that would transform club management and take your business to the next level.</p>
+      <div class="mm-story">
+        <div class="mm-story-img">
+          <img src="../assets/Untitled design (3).png" alt="Gymex founders">
+        </div>
+        <div class="mm-story-txt">
+          <div class="mm-eyebrow"><i class="fa fa-dumbbell"></i> Our Story</div>
+          <h2>Developed by Fitness Experts, <span class="mm-grad">For Gym Owners</span></h2>
+          <p>We're not just another software company. We're gym owners, just like you. We've sweated through early mornings, battled with settling disputes between gym members, and struggled hard to keep our gyms up and running.</p>
+          <p>Our story is one of struggle, grit, and triumph. We took our time and experiences to craft a hands-on software solution that would transform club management and take your business to the next level.</p>
+          <div class="mm-story-sign">
+            <div class="sig-ico"><i class="fa fa-quote-left"></i></div>
+            <div>
+              <b>Built by the floor, for the floor.</b>
+              <span>Every feature comes from real gym operations experience.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="mm-section">
-      <div class="mm-heading"><h2>Why Gym Owners <span class="accent">Choose Us</span></h2></div>
+      <div class="mm-heading"><div class="mm-eyebrow"><i class="fa fa-handshake"></i> The Gymex Advantage</div><h2>Why Gym Owners <span class="mm-grad">Choose Us</span></h2></div>
       <div class="mm-feature-grid">
         <div class="mm-feature-card">
           <div class="mm-feature-icon" style="background:#e9f0ff;color:#1657d6;"><i class="fa fa-clock"></i></div>
@@ -301,9 +315,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
 
     <section class="mm-section">
-      <div class="mm-heading"><h2>Talk to <span class="accent">Us</span></h2></div>
-      <div class="mm-feature-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="mm-feature-card">
+      <div class="mm-heading"><div class="mm-eyebrow"><i class="fa fa-headset"></i> We're Here to Help</div><h2>Talk to <span class="mm-grad">Us</span></h2></div>
+      <div class="mm-feature-grid mm-grid-3">
+        <div class="mm-feature-card mm-contact-card">
           <div class="mm-feature-icon" style="background:#e6f7ee;color:#1aa971;"><i class="fa fa-phone"></i></div>
           <h3>Call / WhatsApp Us</h3>
           <p><a href="https://wa.me/+917738963664" class="accent">+91 77389 63664</a></p>
@@ -321,8 +335,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-    <div class="mm-cta-banner">
-      <h2>Stay informed with what's important to you &mdash; <span class="accent">get in touch for special offers</span> today.</h2>
+    <div class="mm-cta-band">
+      <h2>Ready to see what Gymex can do for your gym? <span class="accent">Book your free demo</span> today.</h2>
+      <button class="mm-btn mm-btn-orange open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
     </div>
 
 
