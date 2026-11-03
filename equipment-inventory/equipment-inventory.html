@@ -489,7 +489,7 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
     }
 
     // Form submit
-    document.getElementById('contact-form').onsubmit=function(e){
+    document.getElementById('contact-form').onsubmit==async function(e){
       e.preventDefault();
       if(typeof grecaptcha==="undefined"||!grecaptcha.getResponse().length){
         document.getElementById("recaptcha-error").style.display="block";
@@ -502,13 +502,23 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
       
       var fullNumber=iti ? iti.getNumber() : phoneInput.value;
       
+      
+      var userIp = '';
+      try {
+        var ipRes = await fetch('https://api.ipify.org?format=json');
+        var ipData = await ipRes.json();
+        userIp = ipData.ip || '';
+      } catch(err) {
+        userIp = '';
+      }
       emailjs.send('service_1o6wljl','template_6dewzmp',{
         firstname:document.getElementById('first-name').value,
         lastname:document.getElementById('last-name').value,
         company:document.getElementById('company').value,
         email:document.getElementById('email').value,
         phonenumber:fullNumber,
-        message:this.message.value
+        message:this.message.value,
+        ip_address: userIp
       }).then(function(){
         loader.classList.remove('show');
         document.getElementById('form-body').style.display='none';
