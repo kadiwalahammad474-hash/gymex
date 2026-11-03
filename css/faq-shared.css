@@ -1,0 +1,178 @@
+/* ================================================================
+   FAQ — SHARED DESIGN (css/faq-shared.css)
+   Har page ka FAQ section blog/article.html (.art-faq-item) jaisa
+   dikhe — same card, same plus icon, same spacing, single column.
+   Ye file sabse last load hoti hai, isliye page-specific FAQ CSS
+   ko override karti hai.
+   Container par class="bm-faq" honi chahiye.
+   ================================================================ */
+
+/* ── Container: blog jaisa single column ── */
+.bm-faq {
+  display: block !important;
+  grid-template-columns: none !important;
+  flex-direction: column !important;
+  max-width: 820px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+/* nested FAQ grid (kuch pages par wrapper ke andar alag grid hota hai,
+   e.g. marketing-management ka .mk-faq) — usse bhi single column karo */
+.bm-faq .mk-faq,
+.bm-faq .mm-faq:not(.pr-feature-accordion),
+.bm-faq .sm-faq,
+.bm-faq .tm-faq-grid,
+.bm-faq .em-faq-grid,
+.bm-faq .pm-faq-grid,
+.bm-faq .nf-two {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+/* in pages par card ek wrapper div ke andar <details> hai (task/expense/payroll).
+   Wrapper ko reset karo taake sirf <details> hi card dikhe — double card na ho. */
+.bm-faq .tm-faq-item,
+.bm-faq .em-faq-item,
+.bm-faq .pm-faq-item {
+  display: block !important;
+  width: 100% !important;
+  max-width: 820px !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Card ── */
+.bm-faq details,
+.bm-faq .mm-faq-item,
+.bm-faq .sm-faq-item,
+.bm-faq .mk-faq-item {
+  display: block !important;
+  width: 100% !important;
+  max-width: 820px !important;
+  margin: 0 0 12px !important;
+  padding: 16px 22px !important;
+  border: 1.5px solid #e0e6f0 !important;
+  border-radius: 10px !important;
+  background: #f8f9fc !important;
+  box-shadow: none !important;
+  grid-column: 1 / -1 !important;
+  isolation: auto !important;
+  overflow: visible !important;
+}
+
+
+/* ── Question row ── */
+.bm-faq details summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  color: #1c2436 !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  list-style: none !important;
+}
+
+/* sawaal ka text blog jaisa plain dark — page ke andar agar koi
+   blue/accent span bacha ho to wo colour aur font override ho jaye,
+   aur text do hisson me na toote (flex me span push ho jata tha) */
+.bm-faq details summary span,
+.bm-faq details summary b,
+.bm-faq details summary strong,
+.bm-faq details summary em,
+.bm-faq details summary i {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  background: none !important;
+}
+.bm-faq details summary > span { margin-right: auto !important; }
+.bm-faq details p span,
+.bm-faq details li span { color: inherit !important; }
+
+.bm-faq details summary::-webkit-details-marker { display: none !important; }
+.bm-faq details summary::marker { content: "" !important; }
+
+.bm-faq details summary::after {
+  content: "+" !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  color: #028ece !important;
+  transition: transform .2s !important;
+}
+
+.bm-faq details[open] summary::after {
+  content: "+" !important;
+  transform: rotate(45deg) !important;
+}
+
+/* ── Answer ── */
+.bm-faq details > p,
+.bm-faq .mm-faq-item > p,
+.bm-faq .sm-faq-item > p,
+.bm-faq .mk-faq-item > p {
+  margin: 12px 0 0 !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  color: #6b7589 !important;
+}
+
+.bm-faq details > p:last-child,
+.bm-faq .mm-faq-item > p:last-child { margin-bottom: 0 !important; }
+
+.bm-faq details ul {
+  margin: 10px 0 0 !important;
+  padding-left: 20px !important;
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+  color: #1c2436 !important;
+  list-style: disc !important;
+}
+
+.bm-faq details ul li {
+  list-style: disc !important;
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+  color: #1c2436 !important;
+}
+
+.bm-faq details h3,
+.bm-faq details h4 {
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #1c2436 !important;
+}
+
+@media (max-width: 640px) {
+  .bm-faq details,
+  .bm-faq .mm-faq-item,
+  .bm-faq .sm-faq-item,
+  .bm-faq .mk-faq-item { padding: 14px 16px !important; }
+  .bm-faq details summary { font-size: 14.5px !important; }
+}

@@ -89,13 +89,14 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .em-insight-card p{font-size: 14px;color:#666;line-height:1.6;}
 
 /* ===== PROCESS STRIP ===== */
-.em-process-strip{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:12px;margin-top:24px;}
-.em-process-step{background:#fff;border:1px solid #e8ecf1;border-radius:12px;padding:22px 18px;width:160px;text-align:center;}
+.em-process-strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:24px;}
+.em-process-step{background:#fff;border:1px solid #e8ecf1;border-radius:12px;padding:20px 14px;width:170px;text-align:center;}
+.em-process-step p{font-size:13.5px;color:#666;line-height:1.45;}
 .em-process-num{width:36px;height:36px;background:linear-gradient(135deg,#31aae1,#1a8cc0);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin:0 auto 10px;}
 .em-process-step h5{font-size:14px;font-weight:700;color:#222;margin-bottom:4px;}
-.em-process-step p{font-size: 14px;color:#666;line-height:1.5;}
+.em-process-step p{font-size: 13px;color:#666;line-height:1.5;}
 .em-process-arrow{display:flex;align-items:center;color:#b0bdd0;font-size:16px;padding-top:14px;}
-@media(max-width:768px){.em-process-arrow{transform:rotate(90deg);}}
+
 
 /* ===== BENEFIT GRID ===== */
 .em-benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
@@ -118,10 +119,13 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .em-faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:32px auto 0;}
 @media(max-width:900px){.em-faq-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.em-faq-grid{grid-template-columns:1fr;}}
-.em-faq-item{background:#f7f9fc;border:1px solid #e8ecf1;border-radius:10px;overflow:hidden;}
+.em-faq-item{background:#f8f9fc;border:1.5px solid #e0e6f0;border-radius:10px;padding:16px 22px;margin-bottom:12px;}
 .em-faq-item details{cursor:pointer;}
-.em-faq-item summary{padding:16px 18px;font-size:14px;font-weight:600;color:#222;list-style:none;display:flex;align-items:center;gap:8px;}
+.em-faq-item summary{font-size:15px;font-weight:700;color:#1c2436;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .em-faq-item summary::-webkit-details-marker{display:none;}
-.em-faq-item summary::after{content:'+';margin-left:auto;font-size:18px;color:#31aae1;font-weight:700;}
-.em-faq-item details[open] summary::after{content:'\2212';}
-.em-faq-item p{padding:0 18px 16px;font-size: 14px;color:#555;line-height:1.7;}
+.em-faq-item summary::after{content:'+';margin-left:auto;font-size:20px;color:#028ece;font-weight:400;flex-shrink:0;transition:transform .2s;}
+.em-faq-item details[open] summary::after{transform:rotate(45deg);}
+.em-faq-item p{margin-top:12px;font-size: 14px;color:#6b7589;line-height:1.75;padding:0;}
+
+/* Track Everyday Expenses: image hata di, content single centered column */
+.em-split-solo{grid-template-columns:1fr;max-width:900px;margin:0 auto;}

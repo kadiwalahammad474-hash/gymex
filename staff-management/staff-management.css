@@ -413,28 +413,30 @@
 
 /* ── FAQ ── */
 .sm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.sm-faq-item { isolation: isolate; position: relative; z-index: 1; 
-  background: var(--gray-7, #f5f7fb);
+.sm-faq-item { isolation: isolate; position: relative; z-index: 1;
+  background: #f8f9fc;
+  border: 1.5px solid #e0e6f0;
   border-radius: 10px;
-  padding: 16px 20px;
+  padding: 16px 22px;
   cursor: pointer;
 }
 .sm-faq-item summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14.5px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1c2436;
   list-style: none;
 }
 .sm-faq-item summary::-webkit-details-marker { display: none; }
-.sm-faq-item summary::after { content: "+"; font-size: 20px; color: var(--gray-80, #6b7589); }
-.sm-faq-item[open] summary::after { content: "\2212"; }
+.sm-faq-item summary::after { content: "+"; font-size: 20px; font-weight: 400; color: #028ece; transition: transform .2s; }
+.sm-faq-item[open] summary::after { transform: rotate(45deg); }
 .sm-faq-item p {
   margin-top: 12px;
   font-size: 14px;
-  color: var(--gray-80, #6b7589);
-  line-height: 1.6;
+  color: #6b7589;
+  line-height: 1.75;
 }
 
 /* ── Responsive ── */
@@ -579,3 +581,12 @@ body::after { content: none !important; display: none !important; }
 .sm-role-chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px;}
 .sm-role-chip{display:inline-flex;align-items:center;gap:8px;background:#f0f6ff;border:1px solid #dbe8ff;border-radius:50px;padding:8px 16px;font-size:13.5px;font-weight:600;color:#1c2436;}
 .sm-role-chip i{color:#028ece;font-size:12px;}
+
+/* payroll icons: 5 in one row */
+.sm-payroll-icons-5 { grid-template-columns: repeat(5, 1fr) !important; }
+@media (max-width: 900px) {
+  .sm-payroll-icons-5 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .sm-payroll-icons-5 { grid-template-columns: repeat(2, 1fr) !important; }
+}

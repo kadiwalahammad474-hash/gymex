@@ -1,0 +1,104 @@
+/* =============================================================
+   GET YOUR FREE DEMO — home page ki styling, poore website par.
+
+   Source of truth: index/index.css + style.css (home page).
+   Ye file har page par SABSE LAST me load hoti hai, isliye ye
+   page-specific .mm-btn / .mm-btn-orange rules ko override karti
+   har jagah text colour, box size, font aur icon home jaisa ho jaye.
+   ============================================================= */
+
+/* ---------- Body CTA pill (base) ---------- */
+.mm-btn,
+body[data-page] .mm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px !important;
+  padding: 16px 30px !important;
+  border-radius: 100px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  letter-spacing: .03em !important;
+  text-transform: uppercase !important;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.mm-btn:hover,
+body[data-page] .mm-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+/* Orange variant — home ka exact box (chhota pill + bada left padding) */
+.mm-btn-orange,
+body[data-page] .mm-btn-orange {
+  background: linear-gradient(135deg, var(--orange-100), #e0450b) !important;
+  color: #fff !important;
+  padding: 6px 6px 6px 28px !important;
+  gap: 12px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+/* Arrow ka white circle — home par hamesha 44px rehta hai */
+.mm-btn-orange i,
+body[data-page] .mm-btn-orange i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: var(--orange-100) !important;
+  font-size: 16px !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  transform: rotate(45deg) !important;
+  transition: transform .2s ease !important;
+}
+/* hover par icon sirf rotate hi rehta hai (home behaviour) */
+.mm-btn-orange:hover i,
+.mm-btn:hover i,
+body[data-page] .mm-btn-orange:hover i,
+body[data-page] .mm-btn:hover i {
+  transform: rotate(45deg) !important;
+}
+
+/* ---------- Home ke responsive rules ---------- */
+@media (max-width: 900px) {
+  .mm-btn,
+  body[data-page] .mm-btn {
+    padding: 12px 20px !important;
+    font-size: 13px !important;
+  }
+  .mm-btn-orange,
+  body[data-page] .mm-btn-orange {
+    padding: 4px 4px 4px 18px !important;
+    gap: 8px !important;
+  }
+  .mm-btn-orange i,
+  body[data-page] .mm-btn-orange i {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 600px) {
+  .mm-btn,
+  body[data-page] .mm-btn {
+    padding: 12px 20px !important;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+  }
+  .mm-btn-orange,
+  body[data-page] .mm-btn-orange {
+    padding: 4px 4px 4px 18px !important;
+    gap: 8px !important;
+    border-radius: 10px !important;
+  }
+}

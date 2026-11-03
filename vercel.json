@@ -45,16 +45,16 @@
       "destination": "/yoga-studio/yoga-studio.html"
     },
     {
+      "source": "/crossfit",
+      "destination": "/crossfit/crossfit.html"
+    },
+    {
       "source": "/dance-studio",
       "destination": "/dance-studio/dance-studio.html"
     },
     {
       "source": "/martial-arts-studio",
       "destination": "/martial-arts-studio/martial-arts-studio.html"
-    },
-    {
-      "source": "/health-and-fitness-centers",
-      "destination": "/health-and-fitness-centers/health-and-fitness-centers.html"
     },
     {
       "source": "/sport-academies",

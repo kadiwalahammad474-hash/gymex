@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>overlap check</title>
+<style>body{font:13px monospace;margin:0}iframe{width:1440px;height:900px;border:0;position:absolute;left:-9999px;top:0}#log{padding:12px;white-space:pre-wrap}</style>
+</head><body>
+<div id="log">RUNNING</div>
+<script>
+const pages = [
+ 'index/index.html','about/about.html','pricing/pricing.html','contact/contact.html','career/career.html','business/business.html',
+ 'features/features.html','features/club-facilities.html','blog/blog.html','blog/article.html',
+ 'gym-management-software/gym-management-software.html','member-management/member-management.html','lead-management/lead-management.html',
+ 'marketing-management/marketing-management.html','staff-management/staff-management.html','task-management/task-management.html',
+ 'expense-management/expense-management.html','payroll-commission/payroll-commission.html','pos-locker/pos-locker-management.html',
+ 'data-analysis-dashboard/data-analysis-dashboard.html','intelligent-alerts/intelligent-alerts-reminders.html','integrations/integrations.html',
+ 'mobile-apps/mobile-apps.html','whatsapp-automation/whatsapp-automation.html','appointment-and-class/appointment-and-class.html',
+ 'equipment-inventory/equipment-inventory.html','biometric-access-control/biometric-access-control.html','workout-diet/workout-diet-planner.html',
+ 'aerobics/aerobics.html','crossfit/crossfit.html','yoga-studio/yoga-studio.html','pilates/pilates.html','dance-studio/dance-studio.html',
+ 'swim-school/swim-school.html','pt-studio/pt-studio.html','martial-arts-studio/martial-arts-studio.html','sport-academies/sport-academies.html',
+ 'privacy-policy/privacy-policy.html','refund-policy/refund-policy.html'
+];
+const log = document.getElementById('log');
+const results = [];
+
+function checkIn(frameDoc, url){
+  const hits = [];
+  frameDoc.querySelectorAll('body *').forEach(el => {
+    const cs = frameDoc.defaultView.getComputedStyle(el);
+    if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0) return;
+    if (cs.position !== 'fixed' && cs.position !== 'sticky') return;
+    const r = el.getBoundingClientRect();
+    if (r.width < 30 || r.height < 15) return;
+    const z = parseInt(cs.zIndex, 10) || 0;
+    // nav area overlap, above nav (z 97)
+    if (r.top < 70 && r.bottom > 5 && z >= 90 && !el.closest('#nav') && el.id !== 'nav') {
+      hits.push({tag: el.tagName, id: el.id, cls: (el.className||'').toString().slice(0,60), z, top: Math.round(r.top), left: Math.round(r.left), w: Math.round(r.width), h: Math.round(r.height), txt: (el.textContent||'').trim().slice(0,40)});
+    }
+  });
+  return hits;
+}
+
+function next(i){
+  if (i >= pages.length) {
+    const bad = results.filter(r => r.hits.length);
+    log.textContent = 'DONE\ntotal=' + pages.length + '\nwithOverlap=' + bad.length + '\n\n' + bad.map(r => r.page + ' -> ' + JSON.stringify(r.hits)).join('\n');
+    document.title = 'DONE';
+    return;
+  }
+  const f = document.createElement('iframe');
+  f.src = '../' + pages[i];
+  f.onload = () => {
+    setTimeout(() => {
+      let hits = [];
+      try { hits = checkIn(f.contentDocument, pages[i]); } catch(e) { hits = [{error:String(e)}]; }
+      results.push({page: pages[i], hits});
+      log.textContent = 'progress ' + (i+1) + '/' + pages.length;
+      f.remove();
+      next(i+1);
+    }, 900);
+  };
+  document.body.appendChild(f);
+}
+next(0);
+</script>
+</body></html>

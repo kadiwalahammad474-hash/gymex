@@ -193,8 +193,8 @@ body { position: relative; z-index: 1; }
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   width: 100vw;
-  padding: 40px calc(50vw - 50% + 40px) 60px;
-  background: url("../assets/img.png") center top/cover no-repeat var(--BG);
+  padding: 16px calc(50vw - 50% + 40px) 44px;
+  background: var(--BG);
   border-radius: 0;
 }
 .mm-hero-grid {
@@ -305,10 +305,13 @@ body { position: relative; z-index: 1; }
 
 /* ---------- AWARDS & RECOGNITION ---------- */
 .mm-awards { text-align: center; }
-.mm-awards-badges { display: flex; flex-wrap: wrap; gap: 44px; align-items: center; justify-content: center; padding: 24px 10px 14px; margin: 0 0 44px; }
+.mm-awards-badges { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: center; padding: 24px 10px 14px; margin: 0 0 44px; }
 .mm-awards-badges img { height: 130px; width: auto; object-fit: contain; transition: transform .25s ease; }
 /* SoftwareSuggest badge landscape hai + transparent padding — baaki badges ke barabar dikhne ke liye bada render karo */
 .mm-awards-badges img[src*="software-suggest"] { height: 185px; }
+/* awards badges — uniform size, no white padding anywhere */
+.mm-awards-row img { padding: 0 !important; }
+.mm-awards-badges { padding: 24px 8px 14px !important; }
 .mm-awards-badges img:hover { transform: translateY(-4px); }
 .mm-chip {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
@@ -1556,15 +1559,16 @@ body { position: relative; z-index: 1; }
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
+.mm-awards-row:last-child { margin-bottom: 0; }
 .mm-awards-row img {
   width: 160px;
   height: 160px;
   object-fit: contain;
   border-radius: 12px;
-  padding: 4px;
+  padding: 0;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .mm-awards-row img:hover {
@@ -1601,3 +1605,20 @@ body { position: relative; z-index: 1; }
   .contact-us { padding: 20px; }
   .form-wrap { grid-template-columns: 1fr !important; }
 }
+
+/* COMPLETE GYM MANAGEMENT SOFTWARE — heading + feature tiles */
+.mm-complete-head { text-align: center; max-width: 780px; margin: 0 auto 40px; }
+.mm-complete-head h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.01em; text-transform: uppercase; color: var(--gray-100); line-height: 1.25; margin-bottom: 16px; }
+.mm-complete-head h2 .accent { color: var(--blue); }
+.mm-complete-head p { color: var(--gray-80); font-size: 14px; line-height: 1.75; }
+.mm-complete-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 920px; margin: 0 auto; }
+.mm-complete-tile { display: flex; align-items: center; gap: 14px; background: var(--gray-7); border: 1px solid #e3eaf7; border-radius: 12px; padding: 16px 18px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.mm-complete-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #cdd9f2; }
+.mm-tile-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+.mm-tile-label { font-weight: 700; font-size: 14px; color: var(--gray-100); line-height: 1.3; }
+@media (max-width: 800px) { .mm-complete-grid { grid-template-columns: 1fr; } .mm-complete-head h2 { font-size: 27px; } }
+/* Hero image as a real element — never crops, blends into bg */
+.mm-hero-img-wrap { display: flex; justify-content: flex-end; align-items: center; }
+.mm-hero { overflow: hidden; }
+.mm-hero-img-wrap img { width: 205%; max-width: none; height: auto; margin-right: -40px; margin-left: -230px; }
+@media (max-width: 991px) { .mm-hero-img-wrap img { max-width: 100%; } }

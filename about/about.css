@@ -36,13 +36,13 @@
 .mm-feature-card p { font-size: 14px; color: #1c2436; line-height: 1.65; }
 
 /* ── FAQ ── */
-.mm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 1000px; margin: 0 auto; }
-.mm-faq-item { background: #fff; border-radius: 0; padding: 18px 22px; cursor: pointer; box-shadow: var(--shadow); }
-.mm-faq-item summary { display: flex; justify-content: space-between; align-items: center; font-size: 14.5px; font-weight: 600; list-style: none; }
+.mm-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 1000px; margin: 0 auto; }
+.mm-faq-item { background: #f8f9fc; border: 1.5px solid #e0e6f0; border-radius: 10px; padding: 16px 22px; cursor: pointer; box-shadow: none; }
+.mm-faq-item summary { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 700; color: #1c2436; list-style: none; gap: 12px; }
 .mm-faq-item summary::-webkit-details-marker { display: none; }
-.mm-faq-item summary::after { content: "+"; font-size: 20px; color: #1c2436; margin-left: 12px; }
-.mm-faq-item[open] summary::after { content: "\2212"; }
-.mm-faq-item p { margin-top: 12px; font-size: 14px; color: #1c2436; line-height: 1.6; }
+.mm-faq-item summary::after { content: "+"; font-size: 20px; font-weight: 400; color: #028ece; flex-shrink: 0; transition: transform .2s; }
+.mm-faq-item[open] summary::after { transform: rotate(45deg); }
+.mm-faq-item p { margin-top: 12px; font-size: 14px; color: #6b7589; line-height: 1.75; }
 
 /* ── CTA BANNER ── */
 .mm-cta-banner { text-align: center; background: linear-gradient(120deg, var(--navy-100), #142a5c); border-radius: var(--radius); padding: 44px 30px; max-width: 1250px; margin: 0 auto 50px; }
