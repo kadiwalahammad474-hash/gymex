@@ -508,12 +508,12 @@ body[data-page] .mm-cta p { font-size: 15px; color: #6b7589; max-width: 640px; m
 
 /* Final CTA (blue) — auto-fit on mobile, same behaviour as feature pages */
 @media (max-width: 900px) {
-  section[style*="background:#1565C0"] { padding: 48px 20px !important; }
-  section[style*="background:#1565C0"] h2 { font-size: 30px !important; line-height: 1.3 !important; }
+  section[style*="background:#0b1a3d"] { padding: 48px 20px !important; }
+  section[style*="background:#0b1a3d"] h2 { font-size: 30px !important; line-height: 1.3 !important; }
 }
 @media (max-width: 640px) {
-  section[style*="background:#1565C0"] { padding: 44px 16px !important; }
-  section[style*="background:#1565C0"] h2 { font-size: 25px !important; line-height: 1.32 !important; }
-  section[style*="background:#1565C0"] p { font-size: 14px !important; line-height: 1.75 !important; }
-  section[style*="background:#1565C0"] .mm-btn { width: 100%; max-width: 320px; }
+  section[style*="background:#0b1a3d"] { padding: 44px 16px !important; }
+  section[style*="background:#0b1a3d"] h2 { font-size: 25px !important; line-height: 1.32 !important; }
+  section[style*="background:#0b1a3d"] p { font-size: 14px !important; line-height: 1.75 !important; }
+  section[style*="background:#0b1a3d"] .mm-btn { width: 100%; max-width: 320px; }
 }
