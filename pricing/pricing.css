@@ -281,6 +281,30 @@ h5, h6 { font-size: 14px; }
   text-transform: uppercase;
 }
 
+.pr-advantage-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.pr-advantage-row {
+  display: grid;
+  gap: 22px;
+}
+
+.pr-advantage-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pr-advantage-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .pr-advantage-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -806,11 +830,15 @@ body[data-page="pricing"] .pr-why-title {
 
 @media (max-width: 1024px) {
   .pr-why-card { max-width: 100%; margin-left: 0; grid-column: 1 / -1; }
+  .pr-advantage-row-4 { grid-template-columns: repeat(3, 1fr); }
+  .pr-advantage-row-3 { grid-template-columns: repeat(3, 1fr); }
   .pr-advantage-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 640px) {
   .mm-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pr-advantage-row-4 { grid-template-columns: repeat(2, 1fr); }
+  .pr-advantage-row-3 { grid-template-columns: 1fr; }
   .pr-advantage-grid { grid-template-columns: repeat(2, 1fr); }
   .pr-keyfeat-tiles { grid-template-columns: 1fr; }
   .pr-final-cta { padding: 60px 16px; }
