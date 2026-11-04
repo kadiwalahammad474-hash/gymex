@@ -819,58 +819,54 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
     }
 
     // Form submit
-    document.getElementById('contact-form').onsubmit==async function(e){
-      e.preventDefault();
-      if(typeof grecaptcha==="undefined"||!grecaptcha.getResponse().length){
-        document.getElementById('recaptcha-error').style.display='block';
-        return false;
-      }
-      document.getElementById('recaptcha-error').style.display='none';
-      var loader=document.getElementById('loader');
-      loader.classList.add('show');
-      document.getElementById('divemailpopup').classList.add('show');
-      
-      var fullNumber=iti ? iti.getNumber() : phoneInput.value;
-      
-      
+    var formEl = document.getElementById('contact-form');
+    if(formEl){
+      formEl.onsubmit = async function(e){
+        e.preventDefault();
+        if(typeof hcaptcha !== 'undefined'){
+          var hresp = hcaptcha.getResponse();
+          if(!hresp){
+            document.getElementById('recaptcha-error').style.display='block';
+            return false;
+          }
+        }
+        document.getElementById('recaptcha-error').style.display='none';
+        var loader=document.getElementById('loader');
+        if(loader) loader.classList.add('show');
+        document.getElementById('divemailpopup').classList.add('show');
+        
+        var fullNumber = phoneInput && typeof iti !== 'undefined' ? iti.getNumber() : (phoneInput ? phoneInput.value : '');
 
-      var userIp = '';
+        var userIp = '';
+        try {
+          var ipRes = await fetch('https://api.ipify.org?format=json');
+          var ipData = await ipRes.json();
+          userIp = ipData.ip || '';
+        } catch(err) {
+          userIp = '';
+        }
 
-      try {
-
-        var ipRes = await fetch('https://api.ipify.org?format=json');
-
-        var ipData = await ipRes.json();
-
-        userIp = ipData.ip || '';
-
-      } catch(err) {
-
-        userIp = '';
-
-      }
-
-      emailjs.send('service_1o6wljl','template_6dewzmp',{
-        firstname:document.getElementById('first-name').value,
-        lastname:document.getElementById('last-name').value,
-        company:document.getElementById('company').value,
-        email:document.getElementById('email').value,
-        phonenumber:fullNumber,
-        message:this.message.value,
-
-        ip_address: userIp
-
-      }).then(function(){
-        loader.classList.remove('show');
-        document.getElementById('form-body').style.display='none';
-        document.getElementById('emailsuccessmsg').style.display='block';
-      },function(err){
-        loader.classList.remove('show');
-        var eb=document.getElementById('emailerrormsg');
-        if(eb){eb.style.display='block';}
-        else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
+        emailjs.send('service_1o6wljl','template_6dewzmp',{
+          firstname:document.getElementById('first-name').value,
+          lastname:document.getElementById('last-name').value,
+          company:document.getElementById('company').value,
+          email:document.getElementById('email').value,
+          phonenumber:fullNumber,
+          message:document.getElementById('contact-form').message ? document.getElementById('contact-form').message.value : '',
+          ip_address: userIp
+        }).then(function(){
+          if(loader) loader.classList.remove('show');
+          document.getElementById('form-body').style.display='none';
+          document.getElementById('emailsuccessmsg').style.display='block';
+        },function(err){
+          if(loader) loader.classList.remove('show');
+          var eb=document.getElementById('emailerrormsg');
+          if(eb){eb.style.display='block';}
+          else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
         });
-    };
+        return false;
+      };
+    }
 
     // ESC to close
     document.addEventListener('keydown',function(e){
