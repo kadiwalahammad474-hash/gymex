@@ -721,7 +721,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
         <div class="form-body" id="form-body">
           <h2 class="title" style="text-align:center;font-size:36px;font-weight:800;margin-bottom:20px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Schedule a Free Demo!</h2>
-          <form id="contact-form">
+          <form id="contact-form" action="../contactus.php" method="POST">
+            <input type="hidden" name="backurl" id="backurl" value="">
             <div class="form-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
               <div>
                 <div class="field"><input type="text" class="contact-us__input" placeholder="Name" name="firstname" id="first-name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
@@ -734,15 +735,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="field" style="grid-column:1/-1;"><input type="text" class="contact-us__input" placeholder="Company / Gym Name" name="company" id="company" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
               <div class="field" style="grid-column:1/-1;"><input type="email" class="contact-us__input" placeholder="Email" name="email" id="email" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
               <div class="field" style="grid-column:1/-1;"><input type="tel" id="number" name="phonenumber" placeholder="Phone Number" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+              <input type="hidden" name="countrycode" id="countrycode" value="">
             </div>
             <div style="margin-top:12px;">
               <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
             </div>
-    <div style="margin-top:14px;display:flex;justify-content:center;">
-      <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-        data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
-    </div>
-    <p id="recaptcha-error" style="display:none;text-align:center;color:#ef4444;font-size:12.5px;font-family:Poppins,sans-serif;margin-top:8px;">Please verify that you are not a robot.</p>
+      <div class="captcha-section" style="margin:16px 0 8px;">
+        <label style="display:block;font-size:13px;font-weight:600;color:#333;margin-bottom:6px;">CAPTCHA *</label>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <div id="captcha-box" style="background:#f8f9fa;border:1.5px solid #e0e0e0;border-radius:10px;padding:8px 16px;font-size:18px;font-weight:bold;letter-spacing:6px;color:#333;font-family:'Courier New',monospace;user-select:none;min-width:120px;text-align:center;"></div>
+          <button type="button" onclick="generateCaptcha()" title="Refresh CAPTCHA" style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;color:#333;font-size:16px;padding:6px 12px;cursor:pointer;">&#8635;</button>
+          <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter CAPTCHA" maxlength="6" autocomplete="off" style="background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;color:#333;padding:10px 14px;font-size:13px;font-family:'Poppins',sans-serif;width:140px;outline:none;">
+          <input type="hidden" id="captcha-value" name="captcha_value">
+        </div>
+        <p id="captcha-error" style="color:#ef4444;font-size:12px;margin-top:6px;display:none;font-weight:600;">Incorrect CAPTCHA. Please try again.</p>
+      </div>
             <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
               <span>GET YOUR FREE DEMO</span>
               <div style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M9.47576 24.5163L7.59014 22.6307L18.9039 11.317H8.53295V8.63941H23.467V23.5735H20.7895V13.2026L9.47576 24.5163Z" fill="white"/></svg></div>
@@ -758,9 +765,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="send-again-btn" style="margin-top:20px;background:#0b1a3d;color:#fff;border:none;border-radius:50px;padding:10px 24px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;">Send Another</button>
         </div>
       </div>
-    </div>
+    </div><script>
+var currentCaptcha = "";
+function generateCaptcha() {
+  var chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+  var captcha = "";
+  for (var i = 0; i < 6; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  currentCaptcha = captcha;
+  var box = document.getElementById("captcha-box");
+  var val = document.getElementById("captcha-value");
+  var inp = document.getElementById("captcha-input");
+  if (box) box.innerText = captcha;
+  if (val) val.value = captcha;
+  if (inp) inp.value = "";
+  var err = document.getElementById("captcha-error");
+  if (err) err.style.display = "none";
+}
+function validateCaptcha() {
+  var userInput = document.getElementById("captcha-input");
+  if (!userInput) return true;
+  userInput = userInput.value.trim();
+  if (userInput === "") {
+    document.getElementById("captcha-error").innerHTML = "CAPTCHA is required.";
+    document.getElementById("captcha-error").style.display = "block";
+    generateCaptcha();
+    return false;
+  }
+  if (userInput !== currentCaptcha) {
+    document.getElementById("captcha-error").innerHTML = "Incorrect CAPTCHA. Please try again.";
+    document.getElementById("captcha-error").style.display = "block";
+    generateCaptcha();
+    return false;
+  }
+  document.getElementById("captcha-error").style.display = "none";
+  return true;
+}
+document.addEventListener("DOMContentLoaded", function() {
+  generateCaptcha();
+  var form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      if (!validateCaptcha()) e.preventDefault();
+    });
+  }
+  var backurl = document.getElementById("backurl");
+  if (backurl) backurl.value = window.location.href;
+});
+</script>
 
     <!-- EmailJS -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- intl-tel-input -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">

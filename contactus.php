@@ -11,36 +11,10 @@ function sanitize($val) {
     return htmlspecialchars(trim($val ?? ''), ENT_QUOTES, 'UTF-8');
 }
 
-// reCAPTCHA verification
-$recaptchaSecret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'; // test secret key
-$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
-if (empty($recaptchaResponse)) {
-    echo "<script>alert('Please verify that you are not a robot.'); window.history.back();</script>";
-    exit;
-}
-$verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
-$data = array(
-    'secret' => $recaptchaSecret,
-    'response' => $recaptchaResponse,
-    'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
-);
-$options = array(
-    'http' => array(
-        'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-        'method' => 'POST',
-        'content' => http_build_query($data)
-    )
-);
-$context = stream_context_create($options);
-$verify = @file_get_contents($verifyUrl, false, $context);
-$captchaSuccess = false;
-if ($verify !== false) {
-    $captchaData = json_decode($verify);
-    if ($captchaData && isset($captchaData->success) && $captchaData->success) {
-        $captchaSuccess = true;
-    }
-}
-if (!$captchaSuccess) {
+// CAPTCHA verification (custom)
+$captcha_input = isset($_POST['captcha_input']) ? trim($_POST['captcha_input']) : '';
+$captcha_value = isset($_POST['captcha_value']) ? trim($_POST['captcha_value']) : '';
+if (empty($captcha_input) || $captcha_input !== $captcha_value) {
     echo "<script>alert('CAPTCHA verification failed. Please try again.'); window.history.back();</script>";
     exit;
 }
