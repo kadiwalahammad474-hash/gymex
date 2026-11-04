@@ -7,7 +7,7 @@ const captchaHTML = `
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
           <div id="captcha-box" style="background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:8px 16px;font-size:18px;font-weight:bold;letter-spacing:6px;color:var(--gray-100);font-family:'Courier New',monospace;user-select:none;min-width:120px;text-align:center;"></div>
           <button type="button" onclick="generateCaptcha()" title="Refresh CAPTCHA" style="background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;color:var(--gray-100);font-size:16px;padding:6px 12px;cursor:pointer;transition:border-color .2s;">&#8635;</button>
-          <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter CAPTCHA" maxlength="6" autocomplete="off" style="background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;color:var(--gray-100);padding:10px 14px;font-size:14px;font-family:'Poppins',sans-serif;width:140px;outline:none;transition:border-color .2s,box-shadow .2s;" onfocus="this.style.borderColor='var(--blue)';this.style.boxShadow='0 0 0 3px rgba(2,142,206,.12)'" onblur="this.style.borderColor='#e2e8f0';this.style.boxShadow='none'">
+          <input type="text" id="captcha-input" name="captcha_input" placeholder="Enter CAPTCHA" maxlength="8" autocomplete="off" style="background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;color:var(--gray-100);padding:10px 14px;font-size:14px;font-family:'Poppins',sans-serif;width:160px;outline:none;transition:border-color .2s,box-shadow .2s;" onfocus="this.style.borderColor='var(--blue)';this.style.boxShadow='0 0 0 3px rgba(2,142,206,.12)'" onblur="this.style.borderColor='#e2e8f0';this.style.boxShadow='none'">
           <input type="hidden" id="captcha-value" name="captcha_value">
         </div>
         <p id="captcha-error" style="color:#ef4444;font-size:13px;margin-top:6px;display:none;font-weight:600;">Incorrect CAPTCHA. Please try again.</p>
@@ -18,9 +18,9 @@ const captchaJS = `
 <script>
 var currentCaptcha = "";
 function generateCaptcha() {
-  var chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+  var chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789!@#$%&";
   var captcha = "";
-  for (var i = 0; i < 6; i++) {
+  for (var i = 0; i < 8; i++) {
     captcha += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   currentCaptcha = captcha;
