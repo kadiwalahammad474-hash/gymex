@@ -704,7 +704,7 @@ body::after { content: none !important; display: none !important; }
   flex: 1; min-width: 100px;
   box-shadow: 0 4px 12px rgba(2,142,206,.25);
 }
-.mk-flow-final { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 4px 12px rgba(34,197,94,.3); }
+.mk-flow-final { background: linear-gradient(135deg, #028ece, #31aae1); box-shadow: 0 4px 12px rgba(2,142,206,.25); }
 .mk-flow-arrow { color: #028ece; font-size: 15px; min-width: 20px; text-align: center; }
 
 /* ── Mini info cards ── */
