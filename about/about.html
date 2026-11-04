@@ -440,7 +440,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
         <div class="form-body" id="form-body">
           <h2 class="title" style="text-align:center;font-size:36px;font-weight:800;margin-bottom:20px;font-family:'Poppins',sans-serif;color:#1a1a2e;">Schedule a Free Demo!</h2>
-          <form id="contact-form">
+          <form id="contact-form" action="../contactus.php" method="POST">
+            <input type="hidden" name="backurl" id="backurl" value="">
             <div class="form-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
               <div>
                 <div class="field"><input type="text" class="contact-us__input" placeholder="Name" name="firstname" id="first-name" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
@@ -453,14 +454,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="field" style="grid-column:1/-1;"><input type="text" class="contact-us__input" placeholder="Company / Gym Name" name="company" id="company" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
               <div class="field" style="grid-column:1/-1;"><input type="email" class="contact-us__input" placeholder="Email" name="email" id="email" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
               <div class="field" style="grid-column:1/-1;"><input type="tel" id="number" name="phonenumber" placeholder="Phone Number" required style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;box-sizing:border-box;background:#f8f9fa;"></div>
+              <input type="hidden" name="countrycode" id="countrycode" value="">
             </div>
             <div style="margin-top:12px;">
               <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
             </div>
-    <div style="margin-top:14px;display:flex;justify-content:center;">
-      <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-        data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
-    </div>
             <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
               <span>GET YOUR FREE DEMO</span>
               <div style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M9.47576 24.5163L7.59014 22.6307L18.9039 11.317H8.53295V8.63941H23.467V23.5735H20.7895V13.2026L9.47576 24.5163Z" fill="white"/></svg></div>
@@ -531,55 +529,32 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
 
     // intl-tel-input
     var phoneInput=document.getElementById('number');
+    var iti;
     if(phoneInput){
-      var iti=window.intlTelInput(phoneInput,{
+      iti=window.intlTelInput(phoneInput,{
         utilsScript:'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
         separateDialCode:true,
         initialCountry:'in'
       });
     }
 
+    // Set backurl
+    var backurlInput = document.getElementById('backurl');
+    if(backurlInput){
+      backurlInput.value = window.location.pathname;
+    }
+
     // Form submit
-    document.getElementById('contact-form').onsubmit=async function(e){
-      e.preventDefault();
-      if(typeof grecaptcha==="undefined"||!grecaptcha.getResponse().length){
-        document.getElementById("recaptcha-error").style.display="block";
-        return false;
-      }
-      document.getElementById("recaptcha-error").style.display="none";
+    document.getElementById('contact-form').onsubmit=function(e){
       var loader=document.getElementById('loader');
-      loader.classList.add('show');
-      document.getElementById('divemailpopup').classList.add('show');
-      
-      var fullNumber=iti ? iti.getNumber() : phoneInput.value;
-      
-      var userIp = '';
-      try {
-        var ipRes = await fetch('https://api.ipify.org?format=json');
-        var ipData = await ipRes.json();
-        userIp = ipData.ip || '';
-      } catch(err) {
-        userIp = '';
+      if(loader) loader.classList.add('show');
+      if(phoneInput && iti){
+        var countryCodeInput = document.getElementById('countrycode');
+        if(countryCodeInput){
+          countryCodeInput.value = '+' + iti.getSelectedCountryData().dialCode;
+        }
+        phoneInput.value = iti.getNumber().replace('+' + iti.getSelectedCountryData().dialCode, '').trim();
       }
-      
-      emailjs.send('service_1o6wljl','template_6dewzmp',{
-        firstname:document.getElementById('first-name').value,
-        lastname:document.getElementById('last-name').value,
-        company:document.getElementById('company').value,
-        email:document.getElementById('email').value,
-        phonenumber:fullNumber,
-        message:this.message.value,
-        ip_address: userIp
-      }).then(function(){
-        loader.classList.remove('show');
-        document.getElementById('form-body').style.display='none';
-        document.getElementById('emailsuccessmsg').style.display='block';
-      },function(err){
-        loader.classList.remove('show');
-        var eb=document.getElementById('emailerrormsg');
-        if(eb){eb.style.display='block';}
-        else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
-        });
     };
 
     // ESC to close

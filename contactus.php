@@ -19,6 +19,18 @@ $phone      = preg_replace('/[^0-9+\-\s()]/', '', $_POST['phonenumber'] ?? '');
 $countrycode = preg_replace('/[^0-9+]/', '', $_POST['countrycode'] ?? '');
 $message    = sanitize($_POST['message'] ?? '');
 
+// Get IP Address
+function getUserIP() {
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        return $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        return explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
+    } else {
+        return $_SERVER['REMOTE_ADDR'] ?? '';
+    }
+}
+$ipAddress = getUserIP();
+
 // Security: validate required fields
 if (!$email || !$firstname) {
     http_response_code(400);
@@ -42,7 +54,11 @@ $mail->IsSMTP();
 $mail->SMTPAuth = true;
 $mail->Username = "apikey";
 // SECURITY: Load API key from environment variable
-$mail->Password = getenv('SENDGRID_API_KEY') ?: 'YOUR_SENDGRID_API_KEY_HERE';
+$mail->Password = getenv('SENDGRID_API_KEY');
+if (!$mail->Password) {
+    http_response_code(500);
+    exit('Email service not configured');
+}
 $mail->SMTPSecure = "";
 $mail->Host = "smtp.sendgrid.net";
 $mail->Port = "587";
@@ -60,6 +76,7 @@ $mail->Body .= "<strong>Company : </strong>" . $company . "<br>";
 $mail->Body .= "<strong>Email : </strong>" . $email . "<br>";
 $mail->Body .= "<strong>Phone Number : </strong>" . $countrycode . " " . $phone . "<br>";
 $mail->Body .= "<strong>Message : </strong>" . $message . "<br>";
+$mail->Body .= "<strong>IP Address : </strong>" . $ipAddress . "<br>";
 
 $mail->Send();
 
