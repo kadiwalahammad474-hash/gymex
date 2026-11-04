@@ -821,11 +821,11 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
     // Form submit
     var formEl = document.getElementById('contact-form');
     if(formEl){
-      formEl.onsubmit = async function(e){
+      formEl.addEventListener('submit', async function(e){
         e.preventDefault();
         if(typeof hcaptcha !== 'undefined'){
           var hresp = hcaptcha.getResponse();
-          if(!hresp){
+          if(!hresp || hresp.length === 0){
             document.getElementById('recaptcha-error').style.display='block';
             return false;
           }
@@ -833,7 +833,6 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
         document.getElementById('recaptcha-error').style.display='none';
         var loader=document.getElementById('loader');
         if(loader) loader.classList.add('show');
-        document.getElementById('divemailpopup').classList.add('show');
         
         var fullNumber = phoneInput && typeof iti !== 'undefined' ? iti.getNumber() : (phoneInput ? phoneInput.value : '');
 
@@ -847,25 +846,27 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
         }
 
         emailjs.send('service_1o6wljl','template_6dewzmp',{
-          firstname:document.getElementById('first-name').value,
-          lastname:document.getElementById('last-name').value,
-          company:document.getElementById('company').value,
-          email:document.getElementById('email').value,
-          phonenumber:fullNumber,
-          message:document.getElementById('contact-form').message ? document.getElementById('contact-form').message.value : '',
+          firstname: document.getElementById('first-name').value,
+          lastname: document.getElementById('last-name').value,
+          company: document.getElementById('company').value,
+          email: document.getElementById('email').value,
+          phonenumber: fullNumber,
+          message: document.querySelector('#contact-form textarea[name="message"]') ? document.querySelector('#contact-form textarea[name="message"]').value : '',
           ip_address: userIp
         }).then(function(){
           if(loader) loader.classList.remove('show');
           document.getElementById('form-body').style.display='none';
           document.getElementById('emailsuccessmsg').style.display='block';
+          if(typeof hcaptcha !== 'undefined') hcaptcha.reset();
         },function(err){
           if(loader) loader.classList.remove('show');
           var eb=document.getElementById('emailerrormsg');
           if(eb){eb.style.display='block';}
           else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
+          if(typeof hcaptcha !== 'undefined') hcaptcha.reset();
         });
         return false;
-      };
+      });
     }
 
     // ESC to close
