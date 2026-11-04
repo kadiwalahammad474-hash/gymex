@@ -693,54 +693,6 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
 })();
 </script>
 
-<script>
-var currentCaptcha = "";
-function generateCaptcha() {
-  var chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
-  var captcha = "";
-  for (var i = 0; i < 6; i++) {
-    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  currentCaptcha = captcha;
-  var box = document.getElementById("captcha-box");
-  var val = document.getElementById("captcha-value");
-  var inp = document.getElementById("captcha-input");
-  if (box) box.innerText = captcha;
-  if (val) val.value = captcha;
-  if (inp) inp.value = "";
-  var err = document.getElementById("captcha-error");
-  if (err) err.style.display = "none";
-}
-function validateCaptcha() {
-  var userInput = document.getElementById("captcha-input");
-  if (!userInput) return true;
-  userInput = userInput.value.trim();
-  if (userInput === "") {
-    document.getElementById("captcha-error").innerHTML = "CAPTCHA is required.";
-    document.getElementById("captcha-error").style.display = "block";
-    generateCaptcha();
-    return false;
-  }
-  if (userInput !== currentCaptcha) {
-    document.getElementById("captcha-error").innerHTML = "Incorrect CAPTCHA. Please try again.";
-    document.getElementById("captcha-error").style.display = "block";
-    generateCaptcha();
-    return false;
-  }
-  document.getElementById("captcha-error").style.display = "none";
-  return true;
-}
-document.addEventListener("DOMContentLoaded", function() {
-  generateCaptcha();
-  var form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function(e) {
-      if (!validateCaptcha()) e.preventDefault();
-    });
-  }
-  var backurl = document.getElementById("backurl");
-  if (backurl) backurl.value = window.location.href;
-});
-</script>
+
 
 </body>
