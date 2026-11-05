@@ -49,7 +49,7 @@ body[data-page="pilates"] .mm-hero {
   background: url("../assets/Industry - Pilates Studio Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
 }
 body[data-page="pt-studio"] .mm-hero {
-  background: url("../assets/Industry - PT Studio Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
+  background: url("../assets/PT studio new png.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
 }
 body[data-page="sport-academies"] .mm-hero {
   background: url("../assets/Industry - Sports Academy Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
@@ -501,7 +501,7 @@ body[data-page] .mm-cta p { font-size: 15px; color: #6b7589; max-width: 640px; m
   body[data-page="crossfit"] .mm-hero::after { background-image: url("../assets/Industry - CrossFit Pg.png") !important; }
   body[data-page="martial-arts-studio"] .mm-hero::after { background-image: url("../assets/Industry - Martial Arts Studio Pg.png") !important; }
   body[data-page="pilates"] .mm-hero::after { background-image: url("../assets/Industry - Pilates Studio Pg.png") !important; }
-  body[data-page="pt-studio"] .mm-hero::after { background-image: url("../assets/Industry - PT Studio Pg.png") !important; }
+  body[data-page="pt-studio"] .mm-hero::after { background-image: url("../assets/PT studio new png.png") !important; }
   body[data-page="sport-academies"] .mm-hero::after { background-image: url("../assets/Industry - Sports Academy Pg.png") !important; }
   body[data-page="yoga-studio"] .mm-hero::after { background-image: url("../assets/Industry - Yoga Studio Pg.png") !important; }
 }
