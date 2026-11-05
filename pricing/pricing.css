@@ -509,7 +509,7 @@ body[data-page="pricing"] .pr-plan-price h4 {
   position: absolute;
   top: 0;
   right: 0;
-  background: linear-gradient(135deg, var(--orange-100), #e0450b);
+  background: linear-gradient(135deg, var(--blue, #028ece), #017ab5);
   color: #fff;
   font-size: 11px;
   font-weight: 700;
