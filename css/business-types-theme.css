@@ -28,7 +28,7 @@
 /* ---------- PER-PAGE HERO BACKGROUND (Industry images, text left / scene right) ---------- */
 .mm-hero { background-size: cover !important; background-position: center top !important; background-repeat: no-repeat !important; }
 body[data-page="gym"] .mm-hero {
-  background: url("../assets/Industry - Gym Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
+  background: url("../assets/Industry - Gym Pg new.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
 }
 body[data-page="dance"] .mm-hero {
   background: url("../assets/Industry - Dance Pg.png") center top/cover no-repeat, var(--BG, #f5f7fb) !important;
@@ -494,7 +494,7 @@ body[data-page] .mm-cta p { font-size: 15px; color: #6b7589; max-width: 640px; m
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
-  body[data-page="gym"] .mm-hero::after { background-image: url("../assets/Industry - Gym Pg.png") !important; }
+  body[data-page="gym"] .mm-hero::after { background-image: url("../assets/Industry - Gym Pg new.png") !important; }
   body[data-page="dance"] .mm-hero::after { background-image: url("../assets/Industry - Dance Pg.png") !important; }
   body[data-page="aerobics"] .mm-hero::after { background-image: url("../assets/Industry - Aerobics Pg.png") !important; }
   body[data-page="swim"] .mm-hero::after { background-image: url("../assets/Industry - Swim School Pg.png") !important; }
