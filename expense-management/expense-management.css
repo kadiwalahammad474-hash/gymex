@@ -110,7 +110,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .em-benefit-card p{font-size: 14px;color:#666;line-height:1.5;}
 
 /* ===== CTA ===== */
-.em-cta{background:linear-gradient(135deg,#0b1a3d 0%,#162d5a 100%);padding:64px 24px;}
+.em-cta{background:#0b1a3d;padding:60px 24px;}
 .em-cta-title{font-size:36px;font-weight:800;color:#fff;margin-bottom:14px;}
 .em-cta-desc{font-size: 14px;color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 10px;line-height:1.8;}
 .em-cta-sub{font-size: 14px;color:rgba(255,255,255,.6);margin-bottom:28px;}
