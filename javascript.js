@@ -81,3 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// ════════════════════════════════════════════════════════════
+// Demo form (server captcha + /api/demo-lead) — har page par.
+// ════════════════════════════════════════════════════════════
+(function () {
+    var current = document.currentScript ||
+        document.querySelector('script[src*="javascript.js"]');
+    if (!current || !current.src) return;
+
+    var base = current.src.replace(/javascript\.js[^/]*$/, '');
+    var script = document.createElement('script');
+    script.src = base + 'js/demo-form.js?v=1';
+    script.defer = true;
+    document.head.appendChild(script);
+})();
