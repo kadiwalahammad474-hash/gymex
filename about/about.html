@@ -35,6 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="../style.css?v=22">
     <link rel="stylesheet" href="about.css?v=4">
     <link rel="stylesheet" href="../css/demo-cta.css?v=1">
+    <link rel="stylesheet" href="../css/modal-shared.css?v=1">
     <script src="../javascript.js?v=2"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
@@ -347,6 +348,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
       emailjs.init('AmP09sgXBaIgn9Juz');
+
+      // Demo popup open / close
+      var demoPopup = document.getElementById('divemailpopup');
+      document.querySelectorAll('.open-modal-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          demoPopup.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      var demoBtn = document.getElementById('demobutton');
+      if (demoBtn) {
+        demoBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          demoPopup.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        });
+      }
+      function closeDemoPopup() {
+        demoPopup.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        document.getElementById('emailsuccessmsg').style.display = 'none';
+        document.getElementById('form-body').style.display = 'block';
+      }
+      document.getElementById('close-contact-modal').addEventListener('click', closeDemoPopup);
+      demoPopup.addEventListener('click', function (e) { if (e.target === this) closeDemoPopup(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDemoPopup(); });
+      var sendAgain = document.querySelector('.send-again-btn');
+      if (sendAgain) {
+        sendAgain.addEventListener('click', function () {
+          document.getElementById('emailsuccessmsg').style.display = 'none';
+          document.getElementById('form-body').style.display = 'block';
+        });
+      }
+
+      document.getElementById('contact-form').onsubmit = function (e) {
+        e.preventDefault();
+        var btn = this.querySelector('.send-btn');
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+        emailjs.send('service_1o6wljl', 'template_6dewzmp', {
+          firstname: document.getElementById('first-name').value,
+          lastname: document.getElementById('last-name').value,
+          company: document.getElementById('company').value,
+          email: document.getElementById('email').value,
+          phonenumber: document.getElementById('number').value,
+          message: document.getElementById('contact-form').message.value
+        }).then(function () {
+          if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+          document.getElementById('form-body').style.display = 'none';
+          document.getElementById('emailsuccessmsg').style.display = 'block';
+        }, function () {
+          if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+          alert('Sorry, submission failed. Please email sales@gymex.online.');
+          closeDemoPopup();
+        });
+      };
     </script>
 </body>
 </html>
