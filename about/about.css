@@ -265,7 +265,7 @@
 /* Awards */
 .awards-section {
   padding: 80px 0;
-  background: #f8f9fc;
+  background: #fff;
 }
 .awards-container {
   max-width: 1200px;
@@ -309,6 +309,48 @@
   font-size: 14px;
   font-weight: 600;
   color: #333;
+}
+
+/* Home-style awards badges (same as index page) */
+.mm-awards-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 24px;
+  background: linear-gradient(160deg, #f7f9ff, #eef2fb);
+  border-radius: 24px;
+  border: 1px solid rgba(11,26,61,.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 18px 40px rgba(11,26,61,.08);
+}
+.mm-awards-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.mm-awards-row:last-child { margin-bottom: 0; }
+.mm-awards-row img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 0;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.mm-awards-row img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(11,26,61,.12);
+}
+@media (max-width: 768px) {
+  .mm-awards-badges { padding: 20px 12px; gap: 16px; border-radius: 16px; }
+  .mm-awards-row { gap: 12px; }
+  .mm-awards-row img { width: 80px; height: 80px; }
+}
+@media (max-width: 480px) {
+  .mm-awards-row img { width: 64px; height: 64px; }
 }
 
 /* Bottom CTA */
