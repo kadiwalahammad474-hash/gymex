@@ -17,7 +17,8 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .em-mb-32{margin-bottom:32px;}
 
 /* ===== HERO — Staff Management style ===== */
-.sm-hero{position:relative;padding:60px 24px 40px;background:radial-gradient(700px 460px at 88% -10%,rgba(2,142,206,.16),transparent 65%),radial-gradient(560px 420px at -8% 30%,rgba(254,79,13,.10),transparent 65%),radial-gradient(500px 380px at 55% 90%,rgba(2,142,206,.08),transparent 70%),var(--BG,#f5f7fb);overflow:visible;}
+.sm-hero{position:relative;padding:60px 24px 40px;background:#fff;overflow:visible;}
+
 .sm-hero-grid{width:100%;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
 .sm-hero .sm-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--blue,#028ece);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
 .sm-hero .sm-label::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--orange-100,#ff4f0d);}
@@ -36,7 +37,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 
 /* keep the banner readable behind the text on small screens */
 @media(max-width:900px){
-  .sm-hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,.92) 40%,#fff 100%);}
+  .sm-hero::after{display:none !important;}
   .sm-hero-grid{position:relative;z-index:1;}
 }
 
