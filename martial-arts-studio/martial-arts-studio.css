@@ -766,3 +766,12 @@ K.5px;
 .features-mega .text1:hover { color: #028ece; }
 .mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
 .features-mega { width: 880px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(11,26,61,.16); border: 1px solid rgba(11,26,61,.05); }
+
+/* --- Martial Arts CTA: heading on a single line (desktop) --- */
+.mas-cta-inner { max-width: 1250px !important; }
+@media (min-width: 768px) {
+  .mas-cta h2.mas-cta-title {
+    white-space: nowrap !important;
+    font-size: min(36px, 2.85vw) !important;
+  }
+}
