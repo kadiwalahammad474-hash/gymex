@@ -9,6 +9,7 @@
   function qa(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
   function ensureCaptchaUI(form) {
+    if (q('.gx-captcha', form)) return q('.gx-captcha', form);
     var host = q('.gx-captcha-host', form) || q('.g-recaptcha', form) || q('.h-captcha', form) || q('#recaptcha-error', form);
     if (!host) return null;
     var wrap = document.createElement('div');
@@ -40,6 +41,7 @@
   }
 
   async function loadCaptcha(form, state) {
+    if (state.loading) return; state.loading = true;
     var img = q('.gx-captcha-image', form), loading = q('.gx-captcha-loading', form), tokenEl = q('.gx-captcha-token', form), input = q('.gx-captcha-input', form);
     if (!img || !tokenEl) return;
     if (loading) { loading.textContent = 'Loading…'; loading.style.display = 'flex'; }
@@ -134,7 +136,7 @@
           else showFail(document);
         }
       } catch (err2) { showFail(document); }
-      finally { if (loader) loader.classList.remove('show'); if (btn) btn.disabled = false; }
+      finally { state.loading = false; if (loader) loader.classList.remove('show'); if (btn) btn.disabled = false; }
     });
 
     qa('.open-modal-btn, #demobutton, [data-open-modal]').forEach(function (btn) {
