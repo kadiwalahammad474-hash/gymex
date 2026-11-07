@@ -32,7 +32,7 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .mm-btn-orange:hover{transform:translateY(-2px);filter:brightness(1.03);}
 .mm-btn-orange i{display:inline-flex !important;align-items:center !important;justify-content:center !important;width:44px !important;height:44px !important;min-width:44px !important;border-radius:50% !important;background:#fff !important;color:#ff4f0d !important;font-size:16px !important;padding:0 !important;line-height:1 !important;transform:rotate(45deg) !important;transition:transform .2s !important;}
 .mm-btn-orange:hover i{transform:rotate(45deg) translateX(3px) !important;}
-@media(max-width:768px){.sm-hero-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.sm-hero-grid{grid-template-columns:1fr;}.sm-hero-img{display:none;}.sm-hero{min-height:auto !important;background-size:0 0 !important;}}
 /* keep the banner readable behind the text on small screens */
 @media(max-width:900px){
   .sm-hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,.92) 40%,#fff 100%);}
