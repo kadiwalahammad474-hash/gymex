@@ -766,3 +766,12 @@ K.5px;
 .features-mega .text1:hover { color: #028ece; }
 .mega-menu .icon { width: 24px; height: 24px; min-width: 24px; margin-right: 4px; }
 .features-mega { width: 880px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 24px 60px rgba(11,26,61,.16); border: 1px solid rgba(11,26,61,.05); }
+
+/* --- CrossFit serve heading: one line on desktop, CROSSFIT in blue --- */
+.cf-serve-heading { max-width: 1200px !important; }
+@media (min-width: 768px) {
+  .cf-serve-heading h2.cf-serve-title {
+    white-space: nowrap !important;
+    font-size: min(36px, 2.6vw) !important;
+  }
+}
