@@ -33,6 +33,11 @@ body{font-family:'Poppins',sans-serif;color:#333;}
 .mm-btn-orange i{display:inline-flex !important;align-items:center !important;justify-content:center !important;width:44px !important;height:44px !important;min-width:44px !important;border-radius:50% !important;background:#fff !important;color:#ff4f0d !important;font-size:16px !important;padding:0 !important;line-height:1 !important;transform:rotate(45deg) !important;transition:transform .2s !important;}
 .mm-btn-orange:hover i{transform:rotate(45deg) translateX(3px) !important;}
 @media(max-width:768px){.sm-hero-grid{grid-template-columns:1fr;}.sm-hero-img{display:none;}}
+/* keep the banner readable behind the text on small screens */
+@media(max-width:900px){
+  .sm-hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,.92) 40%,#fff 100%);}
+  .sm-hero-grid{position:relative;z-index:1;}
+}
 
 /* ===== SPLIT LAYOUT ===== */
 .em-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
