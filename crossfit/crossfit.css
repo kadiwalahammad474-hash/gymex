@@ -775,3 +775,12 @@ K.5px;
     font-size: min(36px, 2.6vw) !important;
   }
 }
+
+/* --- CrossFit CTA: heading on a single line (desktop) --- */
+.cf-cta-inner { max-width: 1250px !important; }
+@media (min-width: 768px) {
+  .cf-cta h2.cf-cta-title {
+    white-space: nowrap !important;
+    font-size: min(36px, 2.85vw) !important;
+  }
+}
