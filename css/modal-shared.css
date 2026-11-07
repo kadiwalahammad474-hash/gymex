@@ -9,4 +9,16 @@
 .contact-us__input:focus { border-color: #1565C0 !important; }
 .form-submission-message.show { display: block !important; }
 .form-body.hide { display: none !important; }
-@media (max-width: 640px) { .contact-us { padding: 20px; } }
+/* Custom image captcha (server-verified via /api/captcha + /api/demo-lead) */
+.gx-captcha{margin-top:14px;}
+.gx-captcha-row{display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:10px;}
+.gx-captcha-image-wrap{position:relative;flex:0 0 auto;width:210px;max-width:100%;height:66px;border:1.5px solid #dbe4f0;border-radius:10px;overflow:hidden;background:#f4f7fb;box-shadow:inset 0 1px 0 rgba(255,255,255,.8);}
+.gx-captcha-image{display:block;width:100%;height:100%;object-fit:cover;}
+.gx-captcha-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:600 12px/1.2 'Poppins',sans-serif;color:#6b7589;background:rgba(244,247,251,.92);}
+.gx-captcha-refresh{flex:0 0 46px;width:46px;border:1.5px solid #dbe4f0;border-radius:10px;background:#fff;color:#1565C0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s,transform .1s;}
+.gx-captcha-refresh:hover{background:#f0f6ff;border-color:#b9d0f3;}
+.gx-captcha-refresh:active{transform:scale(.97);}
+.gx-captcha-input{text-align:center;letter-spacing:4px;font-weight:700 !important;text-transform:uppercase;}
+.gx-captcha-input::placeholder{letter-spacing:normal;font-weight:500;text-transform:none;}
+.gx-captcha-error{display:none;text-align:center;color:#ef4444;font-size:12.5px;font-family:'Poppins',sans-serif;margin:8px auto 0;line-height:1.5;}
+@media (max-width: 640px) { .contact-us { padding: 20px; } .gx-captcha-row{gap:8px;} .gx-captcha-image-wrap{width:180px;height:58px;} }

@@ -45,7 +45,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="../css/demo-cta.css?v=1">
     <script src="../javascript.js?v=2"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <!--Start of Tawk.to Live Chat-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -60,6 +59,7 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Live Chat-->
   <link rel="stylesheet" href="../css/typography.css?v=1">
+<script src="../js/demo-form.js" defer></script>
 </head>
   <style>
     #sentencecase{
@@ -738,7 +738,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <textarea class="contact-us__input" rows="3" placeholder="Your message.." name="message" style="width:100%;padding:10px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:#333;outline:none;resize:vertical;box-sizing:border-box;background:#f8f9fa;min-height:70px;"></textarea>
             </div>
     <div style="margin-top:14px;display:flex;justify-content:center;">
-      <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001"></div>
+      <div class="gx-captcha-host"></div>
     </div>
     <p id="recaptcha-error" style="display:none;text-align:center;color:#ef4444;font-size:12.5px;font-family:Poppins,sans-serif;margin-top:8px;">Please verify that you are not a robot.</p>
             <button type="submit" class="contact-us__submit" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#fe4f0d,#e0450b);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-size:13px;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;letter-spacing:.5px;white-space:nowrap;margin-top:12px;width:100%;">
@@ -758,9 +758,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <!-- EmailJS -->
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- intl-tel-input -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -806,7 +803,7 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
     });
 
     // EmailJS init
-    emailjs.init('AmP09sgXBaIgn9Juz');
+    /* emailjs disabled: using /api/demo-lead */
 
     // intl-tel-input
     var phoneInput=document.getElementById('number');
@@ -823,12 +820,6 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
     if(formEl){
       formEl.addEventListener('submit', async function(e){
         e.preventDefault();
-        if(typeof hcaptcha !== 'undefined'){
-          var hresp = hcaptcha.getResponse();
-          if(!hresp || hresp.length === 0){
-            document.getElementById('recaptcha-error').style.display='block';
-            return false;
-          }
         }
         document.getElementById('recaptcha-error').style.display='none';
         var loader=document.getElementById('loader');
@@ -845,7 +836,7 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
           userIp = '';
         }
 
-        emailjs.send('service_1o6wljl','template_6dewzmp',{
+        return; void('service_1o6wljl','template_6dewzmp',{
           firstname: document.getElementById('first-name').value,
           lastname: document.getElementById('last-name').value,
           company: document.getElementById('company').value,
@@ -857,14 +848,12 @@ function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
           if(loader) loader.classList.remove('show');
           document.getElementById('form-body').style.display='none';
           document.getElementById('emailsuccessmsg').style.display='block';
-          if(typeof hcaptcha !== 'undefined') hcaptcha.reset();
-        },function(err){
+          ,function(err){
           if(loader) loader.classList.remove('show');
           var eb=document.getElementById('emailerrormsg');
           if(eb){eb.style.display='block';}
           else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
-          if(typeof hcaptcha !== 'undefined') hcaptcha.reset();
-        });
+          );
         return false;
       });
     }
