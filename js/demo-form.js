@@ -68,7 +68,10 @@
   }
   function showFail(doc, msg) {
     var eb = q('#emailerrormsg', doc);
-    if (eb) { eb.style.display = 'block'; }
+    if (eb) {
+      eb.style.display = 'block';
+      eb.innerHTML = (msg || 'Sorry, submission failed. Please try again.') + ' Call <a href="tel:+917710862007" style="color:#b02a37;font-weight:600;">+91 7710862007</a> or email <a href="mailto:sales@gymex.online" style="color:#b02a37;font-weight:600;">sales@gymex.online</a>.';
+    }
     else alert(msg || 'Sorry, submission failed. Please call +91 7710862007 or email sales@gymex.online.');
   }
 
@@ -130,12 +133,15 @@
         var data = await res.json().catch(function () { return {}; });
         if (res.ok && data && data.ok) { form.reset(); showSuccess(document); loadCaptcha(form, state); }
         else {
-          var err = (data && data.error) || '';
+          var err = (data && data.error) || ('http_' + res.status);
           if (/captcha/.test(err)) { setError(form, err === 'captcha_expired' ? 'Security code expired — a new code is shown.' : 'Incorrect code. Please try the new code.'); await loadCaptcha(form, state); }
-          else if (err === 'too_many_requests') showFail(document, 'Too many attempts. Please try again in a few minutes or call +91 7710862007.');
-          else showFail(document);
+          else if (err === 'too_many_requests') showFail(document, 'Too many attempts. Please try again in a few minutes.');
+          else if (err === 'email_not_configured') showFail(document, 'Form is not configured on the server yet (missing SENDGRID_API_KEY).');
+          else if (err === 'method_not_allowed' || err === 'http_404' || err === 'http_405') showFail(document, 'Form service is unavailable on this deployment. Please redeploy or contact support.');
+          else if (err === 'invalid_fields') showFail(document, 'Please check required fields and try again.');
+          else showFail(document, 'Submission failed (' + err + '). Please try again.');
         }
-      } catch (err2) { showFail(document); }
+      } catch (err2) { showFail(document, 'Network/server error while submitting the form. Please try again.'); }
       finally { state.loading = false; if (loader) loader.classList.remove('show'); if (btn) btn.disabled = false; }
     });
 
