@@ -7,9 +7,29 @@
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   width: 100vw;
-  padding: 40px calc(50vw - 50% + 40px) 60px;
-  background: url("../assets/img.png") center top/cover no-repeat var(--BG);
+  padding: 16px calc(50vw - 50% + 40px) 44px;
+  background: url("../assets/home page banner image.png") 75% top/cover no-repeat var(--BG);
   border-radius: 0;
+  /* same home banner (2243x701) — keep the hero tall enough so it never crops */
+  min-height: calc(100vw * 701 / 2243);
+  display: flex;
+  align-items: center;
+}
+.mm-hero > .mm-hero-grid { flex: 1 1 auto; }
+/* readability scrim over the left half, same as home hero */
+.mm-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(245,248,255,.92) 0%, rgba(245,248,255,.7) 32%, rgba(245,248,255,0) 58%);
+}
+.mm-hero-grid { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .mm-hero::after {
+    background: linear-gradient(180deg, rgba(245,248,255,.94) 0%, rgba(245,248,255,.88) 100%);
+  }
 }
 .mm-hero-grid { width: 100%; max-width: 100%; margin: 0 auto; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .mm-h1 {
