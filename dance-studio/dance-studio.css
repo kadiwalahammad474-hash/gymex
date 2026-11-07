@@ -753,3 +753,12 @@ K.5px;
 .mm-link-pill { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px; background: #e9f0ff; color: #028ece; font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid #cfe3f7; transition: .2s; }
 .mm-link-pill:hover { background: #028ece; color: #fff; border-color: #028ece; }
 .mm-link-pill i { font-size: 12px; }
+
+/* --- Dance Studio CTA: heading on a single line (desktop) --- */
+.ds-cta-inner { max-width: 1250px !important; }
+@media (min-width: 768px) {
+  .ds-cta h2.ds-cta-title {
+    white-space: nowrap !important;
+    font-size: min(36px, 2.9vw) !important;
+  }
+}
