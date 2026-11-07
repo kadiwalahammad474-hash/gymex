@@ -770,9 +770,9 @@ K.5px;
 /* --- Yoga Studio CTA: heading on a single line (desktop) --- */
 .yg-cta-inner { max-width: 1150px !important; }
 @media (min-width: 768px) {
-  .yg-cta-title {
+  .yg-cta h2.yg-cta-title {
     white-space: nowrap !important;
-    font-size: clamp(16px, 2.4vw, 36px) !important;
+    font-size: min(36px, 3.1vw) !important;
     overflow-wrap: normal !important;
   }
 }
