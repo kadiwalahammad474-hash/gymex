@@ -696,3 +696,7 @@ a.mega-menu .inside,
   .nf-grid > div > div, .nf-two > div > div { min-width: 0 !important; max-width: 100% !important; flex: 1 1 0 !important; }
   .nf-grid h3, .nf-grid p, .nf-two h3, .nf-two p { overflow-wrap: anywhere; }
 }
+
+/* ═══ LOAD GLOBAL MOBILE FIXES LAST ═══ */
+/* This import ensures mobile-fix.css overrides all inline styles & page-specific CSS */
+@import url("css/mobile-fix.css");

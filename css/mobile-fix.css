@@ -1,0 +1,424 @@
+/* ═══════════════════════════════════════════════════════════════════
+   GLOBAL MOBILE FIXES — single source of truth for responsive issues
+   Loaded LAST in <head> to override inline styles & page-specific CSS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Prevent horizontal scroll globally ── */
+html, body { overflow-x: hidden !important; max-width: 100vw; }
+img, video, iframe, svg { max-width: 100%; height: auto; display: block; }
+
+/* ── Viewport-safe full-bleed sections (100vw trick causes 14-16px overflow) ── */
+section[style*="calc(-50vw"], header[style*="calc(-50vw"], div[style*="calc(-50vw"] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+}
+@media (min-width: 901px) {
+  section[style*="calc(-50vw"], header[style*="calc(-50vw"], div[style*="calc(-50vw"] {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+    padding-left: calc(50vw - 50% + 40px) !important;
+    padding-right: calc(50vw - 50% + 40px) !important;
+  }
+}
+
+/* ── Hero sections responsive ── */
+.mm-hero, .sm-hero, .nf-hero, .lm-hero, .tm-hero, .em-hero, .pm-hero, .mk-hero, .ia-hero, .bm-hero, .art-hero, .cf-hero {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+  min-height: auto !important;
+}
+@media (min-width: 901px) {
+  .mm-hero, .sm-hero, .nf-hero, .lm-hero, .tm-hero, .em-hero, .pm-hero, .mk-hero, .ia-hero, .bm-hero, .art-hero, .cf-hero {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+    padding-left: calc(50vw - 50% + 40px) !important;
+    padding-right: calc(50vw - 50% + 40px) !important;
+  }
+}
+
+/* Hero grids stack on mobile */
+.mm-hero-grid, .sm-hero-grid, .nf-hero-grid, .lm-hero-grid, .tm-hero-grid, .em-hero-grid,
+div[style*="grid-template-columns:1fr 1fr"],
+div[style*="grid-template-columns: 1fr 1fr"],
+div[style*="display:grid; grid-template-columns:1fr 1fr"],
+div[style*="display: grid; grid-template-columns:1fr 1fr"] {
+  grid-template-columns: 1fr !important;
+  gap: 24px !important;
+}
+@media (min-width: 901px) {
+  .mm-hero-grid, .sm-hero-grid, .nf-hero-grid, .lm-hero-grid, .tm-hero-grid, .em-hero-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 48px !important;
+  }
+}
+
+/* Hero images responsive */
+.mm-hero-img, .mm-hero-img-wrap, .sm-hero-img, .nf-hero-img,
+div[style*="mm-hero-img"], div[style*="sm-hero-img"] {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Hero text sizing */
+.mm-hero .mm-h1, .sm-hero h1, .nf-hero h1, .lm-hero h1, .tm-hero h1, .em-hero h1,
+.mm-hero h1, .mm-hero .mm-h1 {
+  font-size: clamp(24px, 5vw, 40px) !important;
+  line-height: 1.15 !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+.mm-hero .mm-desc, .sm-hero .sm-desc, .nf-hero .nf-desc {
+  font-size: clamp(13px, 3.5vw, 16px) !important;
+  line-height: 1.6 !important;
+}
+
+/* ── Section containers ── */
+.mm-section, .sm-section, .nf-section, .lm-section, .tm-section, .em-section,
+section[style*="max-width:1200px"], section[style*="max-width: 1200px"],
+div[style*="max-width:1200px"], div[style*="max-width: 1200px"] {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* ── Grid systems responsive ── */
+/* 2-col → 1-col */
+div[style*="grid-template-columns:1fr 1fr"],
+div[style*="grid-template-columns: 1fr 1fr"],
+div[style*="repeat(2,1fr)"],
+div[style*="repeat(2, 1fr)"] {
+  grid-template-columns: 1fr !important;
+}
+@media (min-width: 760px) {
+  div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="repeat(2,1fr)"],
+  div[style*="repeat(2, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* 3-col → 1-col mobile, 2-col tablet */
+div[style*="repeat(3,1fr)"],
+div[style*="repeat(3, 1fr)"] {
+  grid-template-columns: 1fr !important;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  div[style*="repeat(3,1fr)"],
+  div[style*="repeat(3, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 1025px) {
+  div[style*="repeat(3,1fr)"],
+  div[style*="repeat(3, 1fr)"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* 4-col → 1-col mobile, 2-col tablet */
+div[style*="repeat(4,1fr)"],
+div[style*="repeat(4, 1fr)"] {
+  grid-template-columns: 1fr !important;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  div[style*="repeat(4,1fr)"],
+  div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 1025px) {
+  div[style*="repeat(4,1fr)"],
+  div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* 5-col → 1-col mobile, 2-col tablet */
+div[style*="repeat(5,1fr)"],
+div[style*="repeat(5, 1fr)"] {
+  grid-template-columns: 1fr !important;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  div[style*="repeat(5,1fr)"],
+  div[style*="repeat(5, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 1025px) {
+  div[style*="repeat(5,1fr)"],
+  div[style*="repeat(5, 1fr)"] {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
+
+/* Auto-fit grids */
+div[style*="auto-fit"],
+div[style*="auto-fill"] {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+}
+
+/* Force grid children to not overflow */
+div[style*="grid-template-columns"] > *,
+div[style*="display:grid"] > *,
+div[style*="display: grid"] > * {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ── Flex rows wrap on mobile ── */
+div[style*="flex-wrap:nowrap"],
+div[style*="flex-wrap: nowrap"],
+div[style*="display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:nowrap"] {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  row-gap: 12px !important;
+}
+
+/* Reduce large inline gaps */
+div[style*="gap:40px"],
+div[style*="gap: 40px"],
+div[style*="gap:36px"],
+div[style*="gap: 36px"],
+div[style*="gap:32px"],
+div[style*="gap: 32px"] {
+  gap: 20px !important;
+}
+
+/* ── Form inputs mobile-friendly ── */
+input, select, textarea {
+  font-size: 16px !important; /* prevents iOS zoom on focus */
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-height: 48px !important; /* touch target */
+}
+input[type="checkbox"], input[type="radio"] {
+  min-height: 20px !important;
+  min-width: 20px !important;
+}
+
+/* Form grids stack */
+div[style*="grid-template-columns:1fr 1fr"] > div > input,
+div[style*="grid-template-columns:1fr 1fr"] > div > select,
+div[style*="grid-template-columns:1fr 1fr"] > div > textarea {
+  width: 100% !important;
+}
+
+/* Input modes for better mobile keyboards */
+input[name="email"], input[type="email"] { inputmode: "email" !important; autocomplete: "email" !important; }
+input[name="phonenumber"], input[type="tel"] { inputmode: "tel" !important; autocomplete: "tel" !important; }
+input[name="firstname"], input[name="lastname"] { inputmode: "text" !important; autocomplete: "given-name" !important; }
+input[name="lastname"] { autocomplete: "family-name" !important; }
+input[name="company"] { inputmode: "text" !important; autocomplete: "organization" !important; }
+textarea[name="message"] { inputmode: "text" !important; }
+
+/* ── Button touch targets ── */
+button, .mm-btn, .contact-us__submit, a[role="button"],
+button[class*="btn"], a[class*="btn"],
+.gx-captcha-refresh, .send-again-btn, .open-modal-btn {
+  min-height: 48px !important;
+  min-width: 48px !important;
+  touch-action: manipulation !important;
+}
+
+/* ── Modal responsive ── */
+.backdrop .contact-us {
+  max-width: 94vw !important;
+  width: 94vw !important;
+  margin: 16px !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  max-height: 85vh !important;
+}
+@media (min-width: 640px) {
+  .backdrop .contact-us {
+    max-width: 560px !important;
+    width: 560px !important;
+    margin: auto !important;
+    padding: 32px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Modal form layout */
+.backdrop .form-wrap {
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+/* ── Captcha mobile sizing ── */
+.gx-captcha-row {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.gx-captcha-image-wrap {
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 70px !important;
+}
+.gx-captcha-refresh {
+  width: 48px !important;
+  height: 48px !important;
+  flex: none !important;
+}
+.gx-captcha-input {
+  width: 100% !important;
+  max-width: 280px !important;
+  min-height: 48px !important;
+  font-size: 18px !important;
+  letter-spacing: 0.3em !important;
+}
+
+/* ── Footer responsive ── */
+footer div[style*="display:flex"],
+footer div[style*="display: flex"],
+div[style*="max-width:1200px"][style*="display:flex"],
+div[style*="max-width: 1200px"][style*="display: flex"] {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  padding: 24px 18px !important;
+}
+@media (min-width: 900px) {
+  footer div[style*="display:flex"],
+  footer div[style*="display: flex"],
+  div[style*="max-width:1200px"][style*="display:flex"],
+  div[style*="max-width: 1200px"][style*="display: flex"] {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 40px !important;
+    padding: 20px 24px 16px !important;
+  }
+}
+
+/* ── Navigation mobile ── */
+@media (max-width: 1200px) {
+  .nav__menu { display: flex !important; }
+  .nav__list { display: none !important; }
+  .nav__logo-links-container { padding: 10px 14px !important; }
+}
+
+/* ── Tables responsive ── */
+table { display: block !important; overflow-x: auto !important; white-space: nowrap !important; }
+table thead, table tbody, table tr { display: table !important; width: 100% !important; }
+table th, table td { min-width: 120px !important; }
+
+/* ── Card grids ── */
+.pm-metrics-grid, .pm-salary-grid, .nf-grid, .nf-two,
+.gx-career-card, .mm-feature-card, .pm-metric, .mm-stat,
+.metric-card, .feature-card, .job-card {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+}
+
+/* ── Stats/Awards grids ── */
+.mm-awards-stats, .mm-stat-grid, .nf-stats {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 16px !important;
+}
+@media (min-width: 760px) {
+  .mm-awards-stats, .mm-stat-grid, .nf-stats {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+/* ── Feature/benefit grids ── */
+.mm-benefits, .mm-benefits.reverse, .mm-feature-grid, .nf-benefits {
+  grid-template-columns: 1fr !important;
+  gap: 20px !important;
+}
+@media (min-width: 900px) {
+  .mm-benefits, .mm-benefits.reverse, .mm-feature-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 48px !important;
+  }
+  .nf-benefits { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── Type grids ── */
+.mm-type-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+@media (min-width: 640px) { .mm-type-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; } }
+@media (min-width: 1024px) { .mm-type-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 24px !important; } }
+
+/* ── Clients/logo carousels ── */
+.clients-track, .logo-track, .testi-track {
+  display: flex !important;
+  gap: 16px !important;
+}
+.clients-track img, .logo-track img, .testi-track img {
+  flex-shrink: 0 !important;
+  max-width: 100% !important;
+}
+
+/* ── Hero media ── */
+.mm-hero-video, .mm-hero-media video, .mm-hero-media iframe {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16/9 !important;
+  border-radius: 12px !important;
+}
+
+/* ── Text wrapping ── */
+h1, h2, h3, h4, h5, h6, p, span, a, li, td, th, button {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  hyphens: auto !important;
+}
+
+/* ── Prevent inline style max-width issues ── */
+[style*="max-width:"][style*="px"],
+[style*="max-width:"][style*="rem"],
+[style*="max-width:"][style*="em"] {
+  max-width: 100% !important;
+}
+
+/* ── Utility: hide horizontal scrollbars but keep scroll function ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ── High DPI images ── */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img[src*=".png"], img[src*=".jpg"], img[src*=".jpeg"], img[src*=".webp"] {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* ── Focus visible for accessibility ── */
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible { outline: 2px solid #1565C0; outline-offset: 2px; }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Print ── */
+@media print {
+  .backdrop, .nav__menu, .gx-captcha-refresh, .mm-btn { display: none !important; }
+  body { overflow-x: visible !important; }
+}

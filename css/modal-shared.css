@@ -1,24 +1,38 @@
 /* ═══ Shared demo modal CSS — used by every page's GET YOUR FREE DEMO popup ═══ */
-.backdrop { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; }
+.backdrop { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; padding: 16px; box-sizing: border-box; }
 .backdrop.show { display: flex; }
-.contact-us { background: #fff; border-radius: 16px; max-width: 560px; width: 92%; max-height: 90vh; overflow-y: auto; position: relative; padding: 32px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.contact-us { background: #fff; border-radius: 16px; max-width: 560px; width: 92%; max-height: 90vh; overflow-y: auto; position: relative; padding: 32px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); box-sizing: border-box; }
 .loader { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border: 4px solid #e3ebf5; border-top-color: #fe4f0d; border-radius: 50%; animation: spin 0.8s linear infinite; z-index: 20; }
 .loader.show { display: block; }
 @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
-.contact-us__submit { cursor: pointer; }
-.contact-us__input:focus { border-color: #1565C0 !important; }
+.contact-us__submit { cursor: pointer; touch-action: manipulation; }
+.contact-us__input:focus { border-color: #1565C0 !important; outline: none; }
 .form-submission-message.show { display: block !important; }
 .form-body.hide { display: none !important; }
+
 /* Custom image captcha (server-verified via /api/captcha + /api/demo-lead) */
 .gx-captcha{margin-top:14px;}
 .gx-captcha-row{display:flex;align-items:stretch;gap:10px;justify-content:center;margin-bottom:10px;}
 .gx-captcha-image-wrap{position:relative;flex:0 0 auto;width:210px;max-width:100%;height:66px;border:1.5px solid #dbe4f0;border-radius:10px;overflow:hidden;background:#f4f7fb;box-shadow:inset 0 1px 0 rgba(255,255,255,.8);}
 .gx-captcha-image{display:block;width:100%;height:100%;object-fit:cover;}
 .gx-captcha-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:600 12px/1.2 'Poppins',sans-serif;color:#6b7589;background:rgba(244,247,251,.92);}
-.gx-captcha-refresh{flex:0 0 46px;width:46px;border:1.5px solid #dbe4f0;border-radius:10px;background:#fff;color:#1565C0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s,transform .1s;}
+.gx-captcha-refresh{flex:0 0 46px;width:46px;border:1.5px solid #dbe4f0;border-radius:10px;background:#fff;color:#1565C0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s,transform .1s;touch-action:manipulation;}
 .gx-captcha-refresh:hover{background:#f0f6ff;border-color:#b9d0f3;}
 .gx-captcha-refresh:active{transform:scale(.97);}
 .gx-captcha-input{text-align:center;letter-spacing:4px;font-weight:700 !important;text-transform:uppercase;}
 .gx-captcha-input::placeholder{letter-spacing:normal;font-weight:500;text-transform:none;}
 .gx-captcha-error{display:none;text-align:center;color:#ef4444;font-size:12.5px;font-family:'Poppins',sans-serif;margin:8px auto 0;line-height:1.5;}
-@media (max-width: 640px) { .contact-us { padding: 20px; } .gx-captcha-row{gap:8px;} .gx-captcha-image-wrap{width:180px;height:58px;} }
+
+/* Mobile modal adjustments */
+@media (max-width: 640px) {
+  .backdrop { padding: 12px; align-items: flex-start; }
+  .contact-us { padding: 20px; max-height: 85vh; border-radius: 12px; width: 96%; }
+  .gx-captcha-row{gap:8px;flex-direction:column;align-items:center;}
+  .gx-captcha-image-wrap{width:100%;max-width:280px;height:70px;}
+  .gx-captcha-refresh{width:48px;height:48px;flex:none;}
+  .gx-captcha-input{width:100%;max-width:280px;min-height:48px;font-size:18px;letter-spacing:0.3em;}
+  .form-wrap { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .contact-us__input { min-height: 48px !important; font-size: 16px !important; }
+  .contact-us__submit { min-height: 48px !important; width: 100% !important; }
+  .send-again-btn { min-height: 48px !important; width: 100% !important; }
+}

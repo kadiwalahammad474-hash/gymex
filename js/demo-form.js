@@ -1,5 +1,5 @@
 /* Gymex demo/contact modal form: custom server-verified image captcha + /api/demo-lead submit.
-   Replaces brittle inline EmailJS/grecaptcha/hcaptcha handlers site-wide. */
+   Replaces brittle inline EmailJS/grecaptcha/hcaptcha handlers site-wide. Mobile-optimized. */
 (function () {
   'use strict';
   var CAPTCHA_API = '/api/captcha';
@@ -8,23 +8,27 @@
   function q(sel, root) { return (root || document).querySelector(sel); }
   function qa(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
+  function isMobile() { return window.innerWidth < 760; }
+
   function ensureCaptchaUI(form) {
     if (q('.gx-captcha', form)) return q('.gx-captcha', form);
     var host = q('.gx-captcha-host', form) || q('.g-recaptcha', form) || q('.h-captcha', form) || q('#recaptcha-error', form);
     if (!host) return null;
     var wrap = document.createElement('div');
     wrap.className = 'gx-captcha';
+    var imgWidth = isMobile() ? '100%' : '210px';
+    var imgHeight = isMobile() ? '70px' : '66px';
     wrap.innerHTML =
       '<div class="gx-captcha-row">' +
-        '<div class="gx-captcha-image-wrap">' +
-          '<img class="gx-captcha-image" alt="Security code" width="210" height="66">' +
+        '<div class="gx-captcha-image-wrap" style="width:' + imgWidth + ';max-width:280px;height:' + imgHeight + ';">' +
+          '<img class="gx-captcha-image" alt="Security code" style="width:100%;height:100%;object-fit:cover;">' +
           '<div class="gx-captcha-loading">Loading…</div>' +
         '</div>' +
-        '<button type="button" class="gx-captcha-refresh" aria-label="Refresh security code" title="New code">' +
-          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>' +
+        '<button type="button" class="gx-captcha-refresh" aria-label="Refresh security code" title="New code" style="min-height:48px;min-width:48px;">' +
+          '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>' +
         '</button>' +
       '</div>' +
-      '<input type="text" class="contact-us__input gx-captcha-input" name="captcha" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" maxlength="8" placeholder="Enter security code" required>' +
+      '<input type="text" class="contact-us__input gx-captcha-input" name="captcha" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" maxlength="8" placeholder="Enter security code" required style="min-height:48px;font-size:16px;">' +
       '<input type="hidden" name="captchaToken" class="gx-captcha-token">' +
       '<p id="recaptcha-error" class="gx-captcha-error" style="display:none;"></p>';
     host.parentNode.replaceChild(wrap, host);
@@ -58,7 +62,7 @@
     } catch (e) {
       if (loading) loading.textContent = 'Could not load';
       setError(form, 'Security code could not load. Click refresh or check your connection.');
-    }
+    } finally { state.loading = false; }
   }
 
   function showSuccess(doc) {
@@ -93,18 +97,16 @@
     if (!form || form.__gxDemoBound) return;
     if (form.getAttribute('action') && !/^(#|javascript:)/i.test(form.getAttribute('action'))) return;
     form.__gxDemoBound = true;
-    // Clone to remove old broken inline handlers (EmailJS/grecaptcha/hcaptcha)
     var clean = form.cloneNode(true);
     form.parentNode.replaceChild(clean, form);
     form = clean;
-    // Re-init intl-tel-input if present
     try {
       var phone = q('#number', form);
       if (phone && window.intlTelInput && !phone._iti) {
         window.iti = window.intlTelInput(phone, { utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', separateDialCode: true, initialCountry: 'in' });
       }
     } catch (e) {}
-    var state = { token: '' };
+    var state = { token: '', loading: false };
     var wrap = ensureCaptchaUI(form);
     if (!wrap) return;
     q('.gx-captcha-refresh', form).addEventListener('click', function () { loadCaptcha(form, state); });
@@ -156,4 +158,6 @@
   function init() { var f = q('#contact-form'); if (f) bindForm(f); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
   window.addEventListener('load', function () { setTimeout(init, 250); });
+  window.addEventListener('resize', function () { if (isMobile() !== window.__wasMobile) { window.__wasMobile = isMobile(); var f = q('#contact-form'); if (f) ensureCaptchaUI(f); } });
+  window.__wasMobile = isMobile();
 })();
