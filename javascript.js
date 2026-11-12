@@ -80,6 +80,36 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    // Demo modal open (global) - only if modal exists
+    var demoPopup = document.getElementById('divemailpopup');
+    if (demoPopup) {
+        document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.open-modal-btn, #demobutton');
+            if (btn) {
+                e.preventDefault();
+                demoPopup.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            if (e.target === demoPopup) {
+                demoPopup.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        var closeBtn = document.getElementById('close-contact-modal');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                demoPopup.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && demoPopup.classList.contains('show')) {
+                demoPopup.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
 });
 
 // ════════════════════════════════════════════════════════════
