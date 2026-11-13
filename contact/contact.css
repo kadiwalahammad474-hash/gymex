@@ -14,13 +14,14 @@
   margin-top: 72px;
   padding: 84px 40px 118px;
   background:
-    linear-gradient(95deg, rgba(6, 22, 52, .95) 0%, rgba(8, 30, 70, .88) 40%, rgba(10, 38, 86, .58) 72%, rgba(10, 38, 86, .38) 100%),
-    url("../assets/Gym-management-software-by-Gymex.jpeg") center / cover no-repeat;
+    radial-gradient(700px 460px at 88% -10%, rgba(2, 142, 206, .14), transparent 65%),
+    radial-gradient(560px 420px at -8% 30%, rgba(254, 79, 13, .08), transparent 65%),
+    var(--BG);
   overflow: hidden;
 }
 .ct-hero__inner { max-width: 1180px; margin: 0 auto; }
 .ct-hero__title {
-  color: #fff; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800;
+  color: #1c2436; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800;
   letter-spacing: -0.02em; line-height: 1.14; margin: 0 0 16px;
   text-transform: uppercase; max-width: 820px;
 }
@@ -29,10 +30,10 @@
   background: #3f8ef7; margin-top: 16px;
 }
 .ct-hero__desc {
-  color: rgba(255, 255, 255, .82); font-size: 14px; line-height: 1.7;
+  color: #555; font-size: 14px; line-height: 1.7;
   max-width: 640px; margin: 0 0 26px;
 }
-.ct-hero__actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.ct-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 
 .ct-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
@@ -48,10 +49,9 @@
 }
 .ct-btn--primary:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(13, 64, 140, .45); }
 .ct-btn--ghost {
-  background: rgba(9, 30, 64, .32); color: #fff;
-  border-color: rgba(255, 255, 255, .45);
+  background: #fff; color: #1d6fd6; border-color: #c7d9f2;
 }
-.ct-btn--ghost:hover { background: rgba(255, 255, 255, .12); }
+.ct-btn--ghost:hover { background: #f2f8ff; border-color: #9dc0f0; }
 
 /* ── GET IN TOUCH / OUR OFFICE CARDS ── */
 .ct-info {
