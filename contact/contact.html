@@ -261,7 +261,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="mm-desc">Feeling the weight of the world on your shoulders as a gym owner? Don't worry, we've got you covered. All you just need to do is talk to us today.</p>
           <button class="mm-btn mm-btn-orange magnetic-btn open-modal-btn">Get Your Free Demo <i class="fa fa-arrow-up"></i></button>
         </div>
-        <img class="mm-hero-img" src="../assets/contactus.png" alt="Talk to Gymex">
       </div>
     </header>
 
@@ -438,38 +437,39 @@ function onRecaptchaSuccess(){document.getElementById('recaptcha-error').style.d
 function onRecaptchaExpired(){document.getElementById('recaptcha-error').style.display='none';}
 function resetRecaptcha(){try{grecaptcha.reset();}catch(e){}}
 
-// Modal close pe captcha reset
-// Modal open/close
-document.querySelectorAll('.open-modal-btn').forEach(function(btn){
-  btn.addEventListener('click',function(e){
+// Modal open/close - wrap in DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.open-modal-btn').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.preventDefault();
+      document.getElementById('divemailpopup').classList.add('show');
+      document.body.style.overflow='hidden';
+    });
+  });
+  var db=document.getElementById('demobutton');
+  if(db){db.addEventListener('click',function(e){
     e.preventDefault();
     document.getElementById('divemailpopup').classList.add('show');
     document.body.style.overflow='hidden';
-  });
-});
-var db=document.getElementById('demobutton');
-if(db){db.addEventListener('click',function(e){
-  e.preventDefault();
-  document.getElementById('divemailpopup').classList.add('show');
-  document.body.style.overflow='hidden';
-});}
-document.getElementById('close-contact-modal').addEventListener('click',function(){
-  document.getElementById('divemailpopup').classList.remove('show');
-  document.body.style.overflow='auto';
-  document.getElementById('emailsuccessmsg').style.display='none';
-  document.getElementById('form-body').style.display='block';
-      if(typeof resetRecaptcha==='function')resetRecaptcha();
-});
-document.getElementById('divemailpopup').addEventListener('click',function(e){
-  if(e.target===this){
-    this.classList.remove('show');
+  });}
+  document.getElementById('close-contact-modal').addEventListener('click',function(){
+    document.getElementById('divemailpopup').classList.remove('show');
     document.body.style.overflow='auto';
-  }
-});
-document.querySelector('.send-again-btn').addEventListener('click',function(){
-  document.getElementById('emailsuccessmsg').style.display='none';
-  document.getElementById('form-body').style.display='block';
-      if(typeof resetRecaptcha==='function')resetRecaptcha();
+    document.getElementById('emailsuccessmsg').style.display='none';
+    document.getElementById('form-body').style.display='block';
+    if(typeof resetRecaptcha==='function')resetRecaptcha();
+  });
+  document.getElementById('divemailpopup').addEventListener('click',function(e){
+    if(e.target===this){
+      this.classList.remove('show');
+      document.body.style.overflow='auto';
+    }
+  });
+  document.querySelector('.send-again-btn').addEventListener('click',function(){
+    document.getElementById('emailsuccessmsg').style.display='none';
+    document.getElementById('form-body').style.display='block';
+    if(typeof resetRecaptcha==='function')resetRecaptcha();
+  });
 });
 
 // EmailJS init
@@ -486,57 +486,50 @@ if(phoneInput){
 }
 
 // Form submit
-window.__gxOldSubmitDisabled = async function(e){
-  e.preventDefault();
-  if(typeof grecaptcha==="undefined"||!grecaptcha.getResponse().length){
+var formEl = document.getElementById('contact-form');
+if(formEl){
+  formEl.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if(typeof grecaptcha==="undefined"||!grecaptcha.getResponse().length){
+      document.getElementById('recaptcha-error').style.display='block';
+      return false;
+    }
+    document.getElementById('recaptcha-error').style.display='none';
+    var loader=document.getElementById('loader');
+    if(loader) loader.classList.add('show');
+    
+    var fullNumber = phoneInput && typeof iti !== 'undefined' ? iti.getNumber() : (phoneInput ? phoneInput.value : '');
+
+    var userIp = '';
+    try {
+      var ipRes = await fetch('https://api.ipify.org?format=json');
+      var ipData = await ipRes.json();
+      userIp = ipData.ip || '';
+    } catch(err) {
+      userIp = '';
+    }
+
+    emailjs.send('service_1o6wljl','template_6dewzmp',{
+      firstname: document.getElementById('first-name').value,
+      lastname: document.getElementById('last-name').value,
+      company: document.getElementById('company').value,
+      email: document.getElementById('email').value,
+      phonenumber: fullNumber,
+      message: document.querySelector('#contact-form textarea[name="message"]') ? document.querySelector('#contact-form textarea[name="message"]').value : '',
+      ip_address: userIp
+    }).then(function(){
+      if(loader) loader.classList.remove('show');
+      document.getElementById('form-body').style.display='none';
+      document.getElementById('emailsuccessmsg').style.display='block';
+    },function(err){
+      if(loader) loader.classList.remove('show');
+      var eb=document.getElementById('emailerrormsg');
+      if(eb){eb.style.display='block';}
+      else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
+    });
     return false;
-  }
-  document.getElementById("recaptcha-error").style.display="none";
-  var loader=document.getElementById('loader');
-  loader.classList.add('show');
-  document.getElementById('divemailpopup').classList.add('show');
-  
-  var fullNumber=iti ? iti.getNumber() : phoneInput.value;
-  
-  
-
-      var userIp = '';
-
-      try {
-
-        var ipRes = await fetch('https://api.ipify.org?format=json');
-
-        var ipData = await ipRes.json();
-
-        userIp = ipData.ip || '';
-
-      } catch(err) {
-
-        userIp = '';
-
-      }
-
-      return; void('service_1o6wljl','template_6dewzmp',{
-    firstname:document.getElementById('first-name').value,
-    lastname:document.getElementById('last-name').value,
-    company:document.getElementById('company').value,
-    email:document.getElementById('email').value,
-    phonenumber:fullNumber,
-    message:this.message.value,
-
-        ip_address: userIp
-
-      }).then(function(){
-    loader.classList.remove('show');
-    document.getElementById('form-body').style.display='none';
-    document.getElementById('emailsuccessmsg').style.display='block';
-  },function(err){
-    loader.classList.remove('show');
-    var eb=document.getElementById('emailerrormsg');
-    if(eb){eb.style.display='block';}
-    else{alert('Sorry, submission failed. Please call us at +91 7710862007 or email sales@gymex.online.');}
   });
-};
+}
 
 // ESC to close
 document.addEventListener('keydown',function(e){
