@@ -34,7 +34,7 @@ body[data-page] .mm-btn:hover {
 /* Orange variant — home ka exact box (chhota pill + bada left padding) */
 .mm-btn-orange,
 body[data-page] .mm-btn-orange {
-  background: linear-gradient(135deg, var(--orange-100), #e0450b) !important;
+  background: linear-gradient(135deg, #FE4F0D, #e0450b) !important;
   color: #fff !important;
   padding: 6px 6px 6px 28px !important;
   gap: 12px !important;
@@ -53,7 +53,7 @@ body[data-page] .mm-btn-orange i {
   min-width: 44px !important;
   border-radius: 50% !important;
   background: #fff !important;
-  color: var(--orange-100) !important;
+  color: #FE4F0D !important;
   font-size: 16px !important;
   padding: 0 !important;
   line-height: 1 !important;
