@@ -42,6 +42,11 @@ body[data-page] .mm-btn-orange {
   text-decoration: none !important;
 }
 
+/* Nav demo button — restore orange (only yoga page had --orange-100 turned blue) */
+.nav .button {
+  background: linear-gradient(135deg, #FE4F0D, #e0450b) !important;
+}
+
 /* Arrow ka white circle — home par hamesha 44px rehta hai */
 .mm-btn-orange i,
 body[data-page] .mm-btn-orange i {
