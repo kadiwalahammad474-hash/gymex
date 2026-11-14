@@ -181,7 +181,11 @@ h5, h6 { font-size: 14px; }
 
 /* ── HERO SECTION ── */
 .mm-hero {
-  padding: 120px 24px 80px;
+  padding: 56px 24px 16px;
+  min-height: 31vw;
+  background:
+    url("../assets/home%20page%20banner%20image.png") center top / 100% auto no-repeat,
+    var(--BG);
 }
 
 .mm-hero-grid {
@@ -193,10 +197,23 @@ h5, h6 { font-size: 14px; }
   margin: 0 auto;
 }
 
-/* hero text poori width le (right column khaali tha, h1 aadha width me
-   toot ke 3-4 lines me ja raha tha) */
-.mm-hero-grid .mm-h1 { max-width: 940px; }
-.mm-hero-grid .mm-desc { max-width: 780px; }
+/* hero text banner ke khaali left side me rahe, laptop/phone art ke upar na chadhe */
+.mm-hero-grid .mm-h1 { max-width: 600px; }
+.mm-hero-grid .mm-desc { max-width: 520px; }
+
+/* mobile pe banner subtler: overlay ke saath neeche */
+@media (max-width: 820px) {
+  .mm-hero {
+    padding: 44px 16px 40px;
+    min-height: 0;
+    background:
+      linear-gradient(180deg, rgba(245, 248, 255, .95) 0%, rgba(245, 248, 255, .88) 55%, rgba(245, 248, 255, .72) 100%),
+      url("../assets/home%20page%20banner%20image.png") center bottom / contain no-repeat,
+      var(--BG);
+  }
+  .mm-hero-grid .mm-h1 { max-width: 100%; }
+  .mm-hero-grid .mm-desc { max-width: 100%; }
+}
 
 .mm-hero-eyebrow {
   font-size: 14px;
