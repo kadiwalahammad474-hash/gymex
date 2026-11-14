@@ -14,7 +14,7 @@
   margin-top: 72px;
   padding: 64px 40px 170px;
   background:
-    url("../assets/contact%20us%20banner%20image.png") center top / 100% auto no-repeat,
+    url("../assets/contact%20us%20page%20banner%20image.png") center top / 100% auto no-repeat,
     var(--BG);
   overflow: hidden;
 }
@@ -173,7 +173,7 @@
     padding: 44px 24px 150px;
     background:
       linear-gradient(180deg, rgba(245, 248, 255, .95) 0%, rgba(245, 248, 255, .88) 55%, rgba(245, 248, 255, .7) 100%),
-      url("../assets/contact%20us%20banner%20image.png") center bottom / contain no-repeat,
+      url("../assets/contact%20us%20page%20banner%20image.png") center bottom / contain no-repeat,
       var(--BG);
   }
   .ct-info { grid-template-columns: 1fr; margin-top: -60px; }
