@@ -18,7 +18,12 @@
     url("../assets/contact%20us%20page%20banner%20image.png") center top / 100% auto no-repeat,
     var(--BG);
   overflow: hidden;
-  box-shadow: 0 10px 26px rgba(16, 40, 100, .08);
+}
+/* banner ka bottom edge page background me blend ho jaye, hard line na dikhe */
+.ct-hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
+  background: linear-gradient(180deg, rgba(245, 248, 255, 0) 0%, rgba(245, 248, 255, .85) 60%, var(--BG) 100%);
+  pointer-events: none;
 }
 .ct-hero__inner { max-width: 1180px; margin: 0 auto; }
 .ct-hero__title {
