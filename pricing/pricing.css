@@ -182,10 +182,8 @@ h5, h6 { font-size: 14px; }
 /* ── HERO SECTION ── */
 .mm-hero {
   position: relative;
-  z-index: 1;
-  padding: 32px 24px 24px;
+  padding: 32px 24px 60px;
   min-height: 33.34vw;
-  box-shadow: 0 12px 28px rgba(16, 40, 100, .12);
   background:
     url("../assets/pricing%20page%20home%20banner%20image.png") right top / 114% auto no-repeat,
     var(--BG);
@@ -201,8 +199,12 @@ h5, h6 { font-size: 14px; }
 }
 
 /* hero text banner ke khaali left side me rahe, laptop/phone art ke upar na chadhe */
-/* shadow ko dikhne ke liye banner aur neeche wale section ke beech thoda gap */
-.mm-hero + .mm-section { margin-top: 18px !important; }
+/* banner ka bottom edge page background me blend ho jaye, hard line na dikhe */
+.mm-hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 60px;
+  background: linear-gradient(180deg, rgba(245, 248, 255, 0) 0%, rgba(245, 248, 255, .82) 55%, var(--BG) 100%);
+  pointer-events: none;
+}
 
 .mm-hero-grid .mm-h1 { max-width: 660px; }
 .mm-hero-grid .mm-desc { max-width: 600px; }
