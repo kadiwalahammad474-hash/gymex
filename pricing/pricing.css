@@ -181,8 +181,11 @@ h5, h6 { font-size: 14px; }
 
 /* ── HERO SECTION ── */
 .mm-hero {
+  position: relative;
+  z-index: 1;
   padding: 32px 24px 24px;
   min-height: 33.34vw;
+  box-shadow: 0 10px 24px rgba(16, 40, 100, .10);
   background:
     url("../assets/pricing%20page%20home%20banner%20image.png") right top / 114% auto no-repeat,
     var(--BG);
