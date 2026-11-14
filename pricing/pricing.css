@@ -184,7 +184,7 @@ h5, h6 { font-size: 14px; }
   padding: 56px 24px 16px;
   min-height: 31vw;
   background:
-    url("../assets/home%20page%20banner%20image.png") center top / 100% auto no-repeat,
+    url("../assets/pricing%20page%20home%20banner%20image.png") center top / 100% auto no-repeat,
     var(--BG);
 }
 
@@ -208,7 +208,7 @@ h5, h6 { font-size: 14px; }
     min-height: 0;
     background:
       linear-gradient(180deg, rgba(245, 248, 255, .95) 0%, rgba(245, 248, 255, .88) 55%, rgba(245, 248, 255, .72) 100%),
-      url("../assets/home%20page%20banner%20image.png") center bottom / contain no-repeat,
+      url("../assets/pricing%20page%20home%20banner%20image.png") center bottom / contain no-repeat,
       var(--BG);
   }
   .mm-hero-grid .mm-h1 { max-width: 100%; }
