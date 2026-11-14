@@ -56,7 +56,7 @@
 /* ── GET IN TOUCH / OUR OFFICE CARDS ── */
 .ct-info {
   position: relative; z-index: 2;
-  max-width: 1180px; margin: 0 auto; padding: 0 40px;
+  max-width: 1180px; margin: 40px auto 0; padding: 0 40px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 }
 .ct-card {
@@ -178,7 +178,7 @@
       url("../assets/contact%20us%20page%20banner%20image.png") center bottom / contain no-repeat,
       var(--BG);
   }
-  .ct-info { grid-template-columns: 1fr; }
+  .ct-info { grid-template-columns: 1fr; margin-top: 28px; }
   .ct-trust__inner { grid-template-columns: 1fr; padding: 18px 10px; }
   .ct-trust__item {
     border-right: none; border-bottom: 1px solid #eef2f9;
@@ -190,7 +190,7 @@
   .ct-hero { padding: 32px 16px 40px; }
   .ct-hero__desc { font-size: 14px; }
   .ct-btn { width: 100%; font-size: 13px; }
-  .ct-info { padding: 0 16px; }
+  .ct-info { padding: 0 16px; margin-top: 24px; }
   .ct-card { padding: 22px 18px; }
   .ct-trust { padding: 0 16px; margin-bottom: 40px; }
   .ct-ico { width: 46px; height: 46px; }
