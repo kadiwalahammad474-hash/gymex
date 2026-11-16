@@ -420,3 +420,14 @@
     justify-content: center;
   }
 }
+
+/* Section rhythm parity with the rest of the site (64px desktop) */
+@media (min-width: 901px) {
+  .our-story-section,
+  .stats-section,
+  .belief-section,
+  .why-section,
+  .team-section,
+  .awards-section,
+  .bottom-cta-section { padding-top: 64px; padding-bottom: 64px; }
+}
