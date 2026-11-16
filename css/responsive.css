@@ -1,0 +1,105 @@
+/* ==========================================================================
+   GLOBAL MOBILE HARDENING — loaded last on every page.
+   Only touches small screens, so desktop layout stays exactly as designed.
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  html, body { overflow-x: hidden; }
+  img, picture, video, canvas, iframe { max-width: 100%; }
+  body img { height: auto; }
+}
+
+@media (max-width: 900px) {
+  /* --- Hero text must never be squeezed into a narrow flex item --- */
+  .mm-hero { display: block !important; }
+  .mm-hero-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+  .mm-h1, .sm-h1 {
+    font-size: clamp(26px, 7.4vw, 36px) !important;
+    line-height: 1.16 !important;
+    max-width: 100% !important;
+  }
+  .mm-desc, .sm-desc { max-width: 100% !important; }
+  /* nowrap words/headings must wrap on phones */
+  .mm-h1 span[style*="nowrap"],
+  .sm-h1 span[style*="nowrap"],
+  h1 span[style*="nowrap"] { white-space: normal !important; }
+  h1[style*="nowrap"], h2[style*="nowrap"], h3[style*="nowrap"],
+  .sm-heading h2, .mm-heading h2, .sm-heading h3, .mm-heading h3 {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+  }
+  /* inline-styled nowrap labels inside content columns */
+  section .sm-wrap [style*="nowrap"],
+  section .fx-split [style*="nowrap"],
+  .mm-hero [style*="nowrap"] {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+  }
+
+  /* --- Full-bleed sections (100vw trick) stay inside the screen --- */
+  section[style*="100vw"] {
+    width: auto !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  /* --- Blog article: content column must stretch, not shrink-to-fit --- */
+  .art-page { align-items: stretch !important; }
+  .art-wrap table, .art-wrap pre { display: block; max-width: 100%; overflow-x: auto; }
+
+  /* --- Mega menus full width on small screens --- */
+  .dropdown-content.mega-menu.features-mega { width: 100% !important; max-width: 100% !important; }
+}
+
+@media (max-width: 600px) {
+  /* --- Section vertical rhythm gets tighter on phones --- */
+  .sm-section, .mm-section { padding-top: 44px; padding-bottom: 44px; }
+
+  /* --- Card grids collapse instead of squeezing --- */
+  .mk-camp-grid,
+  .mk-camp-tiles,
+  .nf-grid,
+  .nf-two,
+  .nf-three,
+  .pay-logo-grid,
+  .wax-grid3,
+  .alert-channels-grid,
+  .blog-cats-grid,
+  .blog-dash-stats,
+  .pr-advantage-row,
+  .pm-salary-grid,
+  .pm-metrics-grid,
+  .mm-type-grid,
+  .mm-awards-stats { grid-template-columns: 1fr !important; }
+
+  .mk-camp-perks { grid-template-columns: 1fr 1fr !important; gap: 14px !important; }
+  .mk-camp-divider { margin: 30px 0 18px !important; }
+
+  .sm-schedule-days { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* --- Containers and grid children must never exceed the screen --- */
+  .sm-wrap, .mk-wrap, .nf-wrap { max-width: 100% !important; box-sizing: border-box; }
+  .fx-split, .fx-split > *, .sm-wrap > *, .alert-channels-grid, .alert-channels-grid > *,
+  .nf-grid > *, .mk-camp-tiles > *, .mk-camp-grid > * { min-width: 0 !important; }
+
+  /* --- Stronger wins for pages that hard-code 2/4 column grids inline --- */
+  body .alert-channels-grid,
+  body .nf-grid,
+  body .nf-three,
+  body .pay-logo-grid,
+  body .wax-grid3,
+  body .blog-cats-grid,
+  body .pm-salary-grid,
+  body .mk-camp-grid { grid-template-columns: 1fr !important; }
+
+  /* --- Buttons: keep the label inside the pill --- */
+  .mm-btn { padding: 14px 20px !important; font-size: 13px !important; white-space: normal; }
+  .mk-camp-btn { width: 100%; justify-content: center; }
+}
