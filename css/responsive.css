@@ -103,3 +103,15 @@
   .mm-btn { padding: 14px 20px !important; font-size: 13px !important; white-space: normal; }
   .mk-camp-btn { width: 100%; justify-content: center; }
 }
+
+/* ==========================================================================
+   DESKTOP SECTION RHYTHM — one vertical spacing scale for every page.
+   Heroes, promo banners and CTA bands keep their own padding.
+   ========================================================================== */
+@media (min-width: 901px) {
+  section.sm-section:not([class*="hero"]):not([class*="banner"]):not([class*="cta"]):not([class*="band"]),
+  section.mm-section:not([class*="hero"]):not([class*="banner"]):not([class*="cta"]):not([class*="band"]) {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}

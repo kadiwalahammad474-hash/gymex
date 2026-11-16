@@ -15,12 +15,12 @@
 /* ---------- DESKTOP (canonical scale) ---------- */
 h1,.mm-h1,.sm-hero h1,.nf-hero h1,.mm-hero .mm-h1,
 body[data-page] h1,body[data-page] .mm-h1
-  { font-size: 44px !important; line-height: 1.15 !important; }
+  { font-size: 44px !important; line-height: 1.15 !important; font-weight: 800 !important; }
 
 h2,.mm-heading h2,body[data-page] h2,body[data-page] .mm-heading h2,
 section[style*="background:#0b1a3d"] h2,
 body[data-page] .sm-section[style*="1565C0"] h2
-  { font-size: 36px !important; line-height: 1.2  !important; }
+  { font-size: 36px !important; line-height: 1.2  !important; font-weight: 800 !important; }
 
 h3,.mm-stat h3,.mm-feature-card h3,body[data-page] h3,
 body[data-page] .mm-feature-card h3
