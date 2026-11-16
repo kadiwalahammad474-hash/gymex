@@ -51,13 +51,14 @@
   font-weight: 800;
   margin: 0 0 16px;
   text-transform: uppercase;
+  max-width: 580px;
 }
 .sm-hero h1 .accent { color: var(--blue, #028ece); }
 .sm-hero p.sm-desc {
   color: var(--gray-80, #6b7589);
   font-size: 14px;
   line-height: 1.7;
-  max-width: 480px;
+  max-width: 470px;
   margin-bottom: 26px;
 }
 .sm-hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
