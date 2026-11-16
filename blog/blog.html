@@ -619,13 +619,13 @@ s0.parentNode.insertBefore(s1,s0);
 <script>
 const ALL_ARTICLES = [
   { id:1, title:"10 Proven Ways To Improve Gym Member Retention", category:"member-retention", catLabel:"Member Retention", bg:"bg1", date:"Jun 10, 2025", read:"5 Min read", img:"assets/blog-1.jpeg", desc:"Learn practical strategies to reduce cancellations and keep members engaged longer." },
-  { id:2, title:"How Automated Billing Saves Gym Owners Time", category:"billing-payments", catLabel:"Billing & Payments", bg:"bg2", date:"Jun 8, 2025", read:"6 Min read", img:"assets/blog-2.jpeg", desc:"Eliminate manual payment collection and reduce missed renewals." },
+  { id:2, title:"Gym Billing Software: How to Automate Membership Payments, Renewals and Outstanding Dues", url:"gym-billing-software.html", category:"billing-payments", catLabel:"Billing & Payments", bg:"bg2", date:"Nov 16, 2026", read:"9 Min read", img:"../assets/About us pg - Helping Fitness Businesses Work Smarter Since 2016 sectin ka image.png", desc:"How gym billing software simplifies membership payments, renewals and outstanding dues." },
   { id:3, title:"Why Every Gym Needs A CRM System In 2026", category:"crm", catLabel:"Fitness CRM", bg:"bg3", date:"Jun 5, 2025", read:"7 Min read", img:"assets/blog-3.jpeg", desc:"Manage leads, follow-ups and member communication efficiently." },
   { id:4, title:"Top 5 Features Every Gym Management Software Must Have", category:"gym-management", catLabel:"Gym Management", bg:"bg4", date:"Jun 3, 2025", read:"6 Min read", img:"assets/blog-4.jpeg", desc:"From attendance tracking to billing automation — here's what matters most." },
   { id:5, title:"How To Get More Gym Members With Digital Marketing", category:"marketing", catLabel:"Marketing", bg:"bg5", date:"Jun 1, 2025", read:"5 Min read", img:"assets/blog-5.jpeg", desc:"Practical tips on social media, Google Ads, and local SEO to grow your gym." },
   { id:6, title:"5 Email Strategies To Re-Engage Inactive Gym Members", category:"member-retention", catLabel:"Member Retention", bg:"bg6", date:"May 28, 2025", read:"4 Min read", img:"assets/blog-6.jpeg", desc:"Win back lost members with targeted email campaigns and special offers." },
   { id:7, title:"Best Gym Management Software For Modern Fitness Centers", category:"gym-management", catLabel:"Gym Management", bg:"bg1", date:"May 25, 2025", read:"8 Min read", img:"assets/blog-7.jpeg", desc:"A deep dive into the top gym software options available today." },
-  { id:8, title:"How To Set Up Automated Payments For Your Gym", category:"billing-payments", catLabel:"Billing & Payments", bg:"bg2", date:"May 22, 2025", read:"5 Min read", img:"assets/blog-8.jpeg", desc:"Step-by-step guide to automating membership fee collection." },
+  { id:8, title:"How To Set Up Automated Payments For Your Gym", url:"gym-billing-software.html", category:"billing-payments", catLabel:"Billing & Payments", bg:"bg2", date:"May 22, 2025", read:"5 Min read", img:"assets/blog-8.jpeg", desc:"Step-by-step guide to automating membership fee collection." },
   { id:9, title:"Using WhatsApp Marketing To Grow Your Gym", category:"marketing", catLabel:"Marketing", bg:"bg3", date:"May 19, 2025", read:"4 Min read", img:"assets/blog-9.jpeg", desc:"Leverage WhatsApp to communicate, convert and retain gym members." },
   { id:10, title:"CRM Best Practices For Gym Owners", category:"crm", catLabel:"Fitness CRM", bg:"bg4", date:"May 16, 2025", read:"6 Min read", img:"assets/blog-10.jpeg", desc:"Learn how to build better member relationships using a CRM." },
   { id:11, title:"Gym Attendance Tracking: Why It Matters", category:"gym-management", catLabel:"Gym Management", bg:"bg5", date:"May 13, 2025", read:"5 Min read", desc:"Track who shows up and use that data to reduce dropout rates." },
@@ -653,7 +653,7 @@ function renderPopular(){
   const rank = ['gold','silver','bronze'];
   document.getElementById('popularGrid').innerHTML = sorted.map(function(a,i){
     const t = a.title.replace(/'/g,"\\'");
-    return '<div class="blog-pop-card" onclick="trackClick(\''+t+'\', \'article.html\')">'
+    return '<div class="blog-pop-card" onclick="trackClick(\''+t+'\', \''+(a.url||'article.html')+'\')">'
       + '<div class="blog-pop-rank '+rank[i]+'">'+(i+1)+'</div>'
       + '<div class="blog-pop-img"><img src="'+(a.img||'assets/most-popular.png')+'" alt="'+esc(a.title)+'"></div>'
       + '<div class="blog-pop-body"><div class="blog-pop-cat">'+a.catLabel+'</div>'
@@ -681,7 +681,7 @@ function renderArticles(){
   noResults.classList.add('hidden');
   grid.innerHTML = pageItems.map(function(a){
     const t = a.title.replace(/'/g,"\\'");
-    return '<div class="blog-article-card" onclick="trackClick(\''+t+'\', \'article.html\')">'
+    return '<div class="blog-article-card" onclick="trackClick(\''+t+'\', \''+(a.url||'article.html')+'\')">'
       + '<div class="blog-art-img"><div class="blog-art-placeholder '+a.bg+'"><img src="'+(a.img||'assets/latest-article.png')+'" alt="'+esc(a.title)+'"></div></div>'
       + '<div class="blog-art-body"><div class="blog-art-cat">'+a.catLabel+'</div>'
       + '<h3>'+esc(a.title)+'</h3><p>'+esc(a.desc)+'</p>'
