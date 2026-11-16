@@ -4,17 +4,35 @@
 
 /* Hero */
 .about-hero {
+  position: relative;
   margin-top: 72px;
-  background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-  padding: 80px 0 60px;
+  min-height: 30vw;
+  padding: 64px 40px 56px;
+  background:
+    url("../assets/about%20us%20page%20hero%20image.jpeg") center top / 100% auto no-repeat,
+    linear-gradient(135deg, #f5f8ff 0%, #ffffff 100%);
+  overflow: hidden;
+}
+/* banner ka bottom edge page background me blend ho jaye, hard line na dikhe */
+.about-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(180deg, rgba(245, 248, 255, 0) 0%, rgba(245, 248, 255, .85) 60%, #f5f8ff 100%);
+  pointer-events: none;
 }
 .about-hero-container {
-  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;
 }
 .about-hero-content {
-  max-width: 700px;
+  max-width: 640px;
 }
 .about-hero-label {
   display: inline-block;
@@ -27,15 +45,18 @@
 .about-hero-title {
   font-size: 44px;
   font-weight: 800;
-  line-height: 1.2;
-  color: #111;
-  margin-bottom: 20px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1c2436;
+  margin-bottom: 18px;
 }
 .about-hero-desc {
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
-  line-height: 1.8;
-  margin-bottom: 32px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 .btn-orange {
   background: #f26522;
@@ -398,9 +419,19 @@
   }
 }
 
+@media (max-width: 820px) {
+  .about-hero {
+    padding: 40px 24px calc(31.6vw + 16px);
+    min-height: 0;
+    background:
+      url("../assets/about%20us%20page%20hero%20image.jpeg") center bottom / 100% auto no-repeat,
+      #f5f8ff;
+  }
+}
+
 @media (max-width: 640px) {
   .about-hero {
-    padding: 60px 0 40px;
+    padding: 32px 16px calc(31.6vw + 12px);
   }
   .about-hero-title {
     font-size: 32px;
