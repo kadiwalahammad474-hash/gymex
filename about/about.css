@@ -6,23 +6,12 @@
 .about-hero {
   position: relative;
   margin-top: 72px;
-  min-height: 30vw;
+  min-height: 31.6vw; /* banner ki apni height — image kabhi cut na ho */
   padding: 64px 40px 56px;
   background:
     url("../assets/about%20us%20page%20hero%20image.jpeg") center top / 100% auto no-repeat,
     linear-gradient(135deg, #f5f8ff 0%, #ffffff 100%);
   overflow: hidden;
-}
-/* banner ka bottom edge page background me blend ho jaye, hard line na dikhe */
-.about-hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 90px;
-  background: linear-gradient(180deg, rgba(245, 248, 255, 0) 0%, rgba(245, 248, 255, .85) 60%, #f5f8ff 100%);
-  pointer-events: none;
 }
 .about-hero-container {
   position: relative;
@@ -416,6 +405,16 @@
   }
   .stat-divider {
     display: none;
+  }
+}
+
+/* Tablet/small laptop: banner ko height ke hisaab se fill karo, right side (laptop) intact rahe */
+@media (min-width: 821px) and (max-width: 1199px) {
+  .about-hero {
+    min-height: 0;
+    background:
+      url("../assets/about%20us%20page%20hero%20image.jpeg") right top / cover no-repeat,
+      #f5f8ff;
   }
 }
 
