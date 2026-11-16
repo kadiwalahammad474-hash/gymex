@@ -869,3 +869,10 @@ body[data-page="pricing"] .pr-why-title {
   .pr-final-cta { padding: 60px 16px; }
   .pr-final-copy { max-width: 100%; }
 }
+
+/* Hero heading: "Stage of Your Fitness Business" ek hi line me */
+.mm-hero .mm-h1 { max-width: 900px !important; }
+.mm-hero .mm-h1 .pr-h1-line { display: inline-block; white-space: nowrap; }
+@media (max-width: 1024px) {
+  .mm-hero .mm-h1 .pr-h1-line { white-space: normal; }
+}
