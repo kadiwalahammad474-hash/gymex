@@ -13,11 +13,20 @@
     linear-gradient(135deg, #f5f8ff 0%, #ffffff 100%);
   overflow: hidden;
 }
-/* banner ke neeche content sheet ki shadow — banner ke bottom pe halki dark line */
-.our-story-section {
-  position: relative;
+/* banner ka bottom edge white section me blend ho jaye — hard line na dikhe */
+.about-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .55) 45%, #ffffff 100%);
+  pointer-events: none;
   z-index: 2;
-  box-shadow: 0 -20px 40px -4px rgba(11, 26, 61, .40);
+}
+.about-hero-container {
+  z-index: 3;
 }
 .about-hero-container {
   position: relative;
