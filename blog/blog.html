@@ -650,11 +650,9 @@ function renderPopular(){
   const clicks = getClicks();
   const sorted = ALL_ARTICLES.map(function(a){ return Object.assign({}, a, { clicks: clicks[a.title]||0 }); })
     .sort(function(a,b){ return b.clicks - a.clicks; }).slice(0,3);
-  const rank = ['gold','silver','bronze'];
   document.getElementById('popularGrid').innerHTML = sorted.map(function(a,i){
     const t = a.title.replace(/'/g,"\\'");
     return '<div class="blog-pop-card" onclick="trackClick(\''+t+'\', \''+(a.url||'article.html')+'\')">'
-      + '<div class="blog-pop-rank '+rank[i]+'">'+(i+1)+'</div>'
       + '<div class="blog-pop-img"><img src="'+(a.img||'assets/most-popular.png')+'" alt="'+esc(a.title)+'"></div>'
       + '<div class="blog-pop-body"><div class="blog-pop-cat">'+a.catLabel+'</div>'
       + '<h3>'+esc(a.title)+'</h3>'
