@@ -179,6 +179,7 @@
   .art-bcta-right { display: none; }
   .art-app-cols { grid-template-columns: 1fr; }
   .art-two-col-list { grid-template-columns: 1fr; grid-template-rows: auto; grid-auto-flow: row; }
+  .art-two-col { grid-template-columns: 1fr; }
 }
 
 @media(max-width:768px) {
@@ -191,6 +192,23 @@
   .art-bcta-right { flex: none; height: 150px; }
   .art-prev-next { flex-direction: column; gap: 16px; }
   .art-pn-link.right { align-items: flex-start; text-align: left; }
+}
+@media(max-width:600px) {
+  .art-page { padding: 16px 14px 36px; }
+  .art-hero-img { height: auto; }
+  .art-hero-img img { height: auto; max-height: none; }
+  .art-title { font-size: 24px; line-height: 1.3; }
+  .art-section-heading { font-size: 21px; }
+  .art-intro, .art-section-text { font-size: 14px; }
+  .art-toc { padding: 16px 18px; }
+  .art-toc-list li a { font-size: 13.5px; }
+  .art-two-col { grid-template-columns: 1fr; }
+  .art-bullet-list li, .art-check-list li { font-size: 13.5px; }
+  .art-faq-item summary { font-size: 14px; }
+  .art-bottom-cta { margin: 28px 0 24px; }
+  .art-bcta-left { padding: 24px 20px; }
+  .art-bcta-left h3 { font-size: 16px; }
+  .art-prev-next { padding-top: 20px; }
 }
 </style>
   <script type="application/ld+json">
