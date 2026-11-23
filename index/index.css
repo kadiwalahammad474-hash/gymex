@@ -351,6 +351,7 @@ body { position: relative; z-index: 1; }
   background: linear-gradient(135deg, #eef4ff, #fff);
   border-radius: var(--radius); box-shadow: var(--shadow);
   padding: 36px 20px; margin-bottom: 46px;
+  grid-auto-flow: column;
 }
 .mm-stat { position: relative; padding: 0 14px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100%; }
 .mm-stat + .mm-stat::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: #dbe4f7; }
