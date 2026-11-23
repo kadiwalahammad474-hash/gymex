@@ -1268,12 +1268,6 @@ body { position: relative; z-index: 1; }
     min-width: 100px;
     height: 80px;
   }
-  .mm-awards-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 24px 16px;
-    border-radius: 16px;
-  }
   .mm-stat { padding: 8px; }
   .mm-stat h3 { font-size: 16px; }
   .mm-stat p { font-size: 14px; }
@@ -1288,10 +1282,6 @@ body { position: relative; z-index: 1; }
     font-size: 12px;
   }
 }
-@media (max-width: 600px) {
-  .mm-awards-stats {
-    grid-template-columns: 1fr 1fr;
-  }
   .mm-awards-badges {
     gap: 12px;
     padding: 16px 10px;
